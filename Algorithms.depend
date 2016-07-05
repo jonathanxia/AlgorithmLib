@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1467695849 source:d:\data\desktop\algorithms\main.cpp
+	<iostream>
+	<vector>
+	"./sorting/sorting.h"
+
+1467685420 source:d:\data\desktop\algorithms\sorting.cpp
+	<vector>
+
+1467683821 d:\data\desktop\algorithms\sorting.h
+	"sorting.cpp"
+
+1467669583 source:d:\data\desktop\algorithms\add.cpp
+
+1467685420 d:\data\desktop\algorithms\sorting.cpp
+	<vector>
+
+1467695390 source:d:\data\desktop\algorithms\sorting\sorting.cpp
+	<vector>
+	<iostream>
+
+1467695898 d:\data\desktop\algorithms\sorting\sorting.h
+	"sorting.cpp"
+
+1467695390 d:\data\desktop\algorithms\sorting\sorting.cpp
+	<vector>
+	<iostream>
+
