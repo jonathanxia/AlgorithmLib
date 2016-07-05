@@ -30,7 +30,10 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="main.cpp" />
-		<Unit filename="sorting/sorting.cpp" />
+		<Unit filename="searching/binarysearch.cpp" />
+		<Unit filename="searching/searching.h" />
+		<Unit filename="sorting/insertionsort.cpp" />
+		<Unit filename="sorting/mergesort.cpp" />
 		<Unit filename="sorting/sorting.h" />
 		<Extensions>
 			<code_completion />

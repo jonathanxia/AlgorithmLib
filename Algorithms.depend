@@ -1,8 +1,9 @@
 # depslib dependency file v1.0
-1467695849 source:d:\data\desktop\algorithms\main.cpp
+1467743597 source:d:\data\desktop\algorithms\main.cpp
 	<iostream>
 	<vector>
 	"./sorting/sorting.h"
+	"./searching/searching.h"
 
 1467685420 source:d:\data\desktop\algorithms\sorting.cpp
 	<vector>
@@ -19,7 +20,7 @@
 	<vector>
 	<iostream>
 
-1467697742 d:\data\desktop\algorithms\sorting\sorting.h
+1467697905 d:\data\desktop\algorithms\sorting\sorting.h
 	"insertionsort.cpp"
 	"mergesort.cpp"
 
@@ -27,14 +28,24 @@
 	<vector>
 	<iostream>
 
-1467697722 d:\data\desktop\algorithms\sorting\insertionsort.cpp
+1467697905 d:\data\desktop\algorithms\sorting\insertionsort.cpp
 	<vector>
 	<iostream>
 
-1467697773 d:\data\desktop\algorithms\sorting\mergesort.cpp
+1467697905 d:\data\desktop\algorithms\sorting\mergesort.cpp
 	<vector>
 
-1467697722 source:d:\data\desktop\algorithms\sorting\insertionsort.cpp
+1467697905 source:d:\data\desktop\algorithms\sorting\insertionsort.cpp
 	<vector>
 	<iostream>
+
+1467697905 source:d:\data\desktop\algorithms\sorting\mergesort.cpp
+	<vector>
+
+1467743942 source:d:\data\desktop\algorithms\searching\binarysearch.cpp
+
+1467743209 d:\data\desktop\algorithms\searching\searching.h
+	"binarysearch.cpp"
+
+1467743942 d:\data\desktop\algorithms\searching\binarysearch.cpp
 
