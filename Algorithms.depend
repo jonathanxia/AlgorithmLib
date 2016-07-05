@@ -19,10 +19,22 @@
 	<vector>
 	<iostream>
 
-1467695898 d:\data\desktop\algorithms\sorting\sorting.h
-	"sorting.cpp"
+1467697742 d:\data\desktop\algorithms\sorting\sorting.h
+	"insertionsort.cpp"
+	"mergesort.cpp"
 
 1467695390 d:\data\desktop\algorithms\sorting\sorting.cpp
+	<vector>
+	<iostream>
+
+1467697722 d:\data\desktop\algorithms\sorting\insertionsort.cpp
+	<vector>
+	<iostream>
+
+1467697773 d:\data\desktop\algorithms\sorting\mergesort.cpp
+	<vector>
+
+1467697722 source:d:\data\desktop\algorithms\sorting\insertionsort.cpp
 	<vector>
 	<iostream>
 
