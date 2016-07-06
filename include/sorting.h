@@ -1,7 +1,7 @@
 #ifndef SORTING_H
 #define SORTING_H
-#include "insertionsort.cpp"
-#include "mergesort.cpp"
+#include "../sorting/insertionsort.cpp"
+#include "../sorting/mergesort.cpp"
 template <typename T>
 void insertionSort(vector<T>& arr);
 

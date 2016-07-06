@@ -12,8 +12,13 @@
 				<Option type="1" />
 				<Option compiler="cygwin" />
 				<Compiler>
+					<Add option="-std=c++14" />
 					<Add option="-g" />
 				</Compiler>
+				<Linker>
+					<Add library="../asdf/bin/Debug/libasdf.a" />
+					<Add directory="../asdf/bin/Debug" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/Algorithms" prefix_auto="1" extension_auto="1" />
@@ -29,12 +34,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Polynomial.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="searching/binarysearch.cpp" />
 		<Unit filename="searching/searching.h" />
 		<Unit filename="sorting/insertionsort.cpp" />
 		<Unit filename="sorting/mergesort.cpp" />
 		<Unit filename="sorting/sorting.h" />
+		<Unit filename="src/Polynomial.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

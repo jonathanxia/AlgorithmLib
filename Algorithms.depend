@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1467743972 source:d:\data\desktop\algorithms\main.cpp
+1467832601 source:d:\data\desktop\algorithms\main.cpp
 	<iostream>
 	<vector>
 	"./sorting/sorting.h"
@@ -42,11 +42,18 @@
 1467697905 source:d:\data\desktop\algorithms\sorting\mergesort.cpp
 	<vector>
 
-1467743942 source:d:\data\desktop\algorithms\searching\binarysearch.cpp
+1467752802 source:d:\data\desktop\algorithms\searching\binarysearch.cpp
+	<stdexcept>
 
 1467743209 d:\data\desktop\algorithms\searching\searching.h
 	"binarysearch.cpp"
 
 1467752802 d:\data\desktop\algorithms\searching\binarysearch.cpp
 	<stdexcept>
+
+1467753163 source:d:\data\desktop\algorithms\src\polynomial.cpp
+	"Polynomial.h"
+
+1467841596 d:\data\desktop\algorithms\include\polynomial.h
+	<vector>
 
