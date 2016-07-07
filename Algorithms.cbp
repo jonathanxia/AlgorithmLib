@@ -8,22 +8,24 @@
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/Algorithms" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
 				<Option object_output="obj/Debug/" />
-				<Option type="1" />
+				<Option type="2" />
 				<Option compiler="cygwin" />
 				<Compiler>
 					<Add option="-std=c++14" />
 					<Add option="-g" />
+					<Add directory="D:/Data/Desktop/Algorithms/include" />
 				</Compiler>
 				<Linker>
-					<Add library="../asdf/bin/Debug/libasdf.a" />
-					<Add directory="../asdf/bin/Debug" />
+					<Add directory="D:/Data/Desktop/Algorithms/" />
 				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/Algorithms" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
 				<Option object_output="obj/Release/" />
-				<Option type="1" />
+				<Option type="2" />
 				<Option compiler="cygwin" />
 				<Compiler>
 					<Add option="-O2" />
@@ -35,13 +37,15 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Polynomial.h" />
-		<Unit filename="main.cpp" />
+		<Unit filename="include/searching.h" />
+		<Unit filename="include/sorting.h" />
 		<Unit filename="searching/binarysearch.cpp" />
-		<Unit filename="searching/searching.h" />
 		<Unit filename="sorting/insertionsort.cpp" />
 		<Unit filename="sorting/mergesort.cpp" />
-		<Unit filename="sorting/sorting.h" />
-		<Unit filename="src/Polynomial.cpp" />
+		<Unit filename="src/Polynomial.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />
