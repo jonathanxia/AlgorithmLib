@@ -83,6 +83,22 @@ Polynomial<coeff> Polynomial<coeff>::operator-(const Polynomial<coeff>& other) c
 }
 
 template <typename coeff>
+Polynomial<coeff> Polynomial<coeff>::operator* (const Polynomial<coeff>& other) const
+{
+    // Time to multiply polynomials! Here we go
+    std::vector<coeff> ret(mCoeff.size() + other.mCoeff.size()); // We must add the degrees together
+
+    for(int i = 0; i < other.mCoeff.size(); i++)
+    {
+        for(int j = 0; j < mCoeff.size(); j++)
+        {
+            ret[i+j] += other.mCoeff[i] * mCoeff[j];
+        }
+    }
+    return Polynomial(ret);
+}
+
+template <typename coeff>
 Polynomial<coeff>::~Polynomial()
 {
     //dtor
