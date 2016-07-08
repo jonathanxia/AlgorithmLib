@@ -20,7 +20,7 @@ class Polynomial
         Polynomial<coeff> operator- (const Polynomial<coeff>& other) const;
         Polynomial<coeff> operator* (const Polynomial<coeff>& other) const;
 
-        Polynomial<coeff> operator* (coeff constant);
+        Polynomial<coeff> operator* (coeff constant) const;
         virtual ~Polynomial();
 
     protected:

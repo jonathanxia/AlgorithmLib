@@ -99,6 +99,18 @@ Polynomial<coeff> Polynomial<coeff>::operator* (const Polynomial<coeff>& other) 
 }
 
 template <typename coeff>
+Polynomial<coeff> Polynomial<coeff>::operator* (const coeff constant) const
+{
+    std::vector<coeff> kek(mCoeff.size());
+
+    for(int i = 0; i < mCoeff.size(); i++)
+    {
+        kek[i] = mCoeff[i] * constant;
+    }
+    return Polynomial(kek);
+}
+
+template <typename coeff>
 Polynomial<coeff>::~Polynomial()
 {
     //dtor
