@@ -12,6 +12,9 @@ class Polynomial
         Polynomial(std::initializer_list<coeff> args);
         Polynomial(std::vector<coeff> coefficients);
 
+        Polynomial(const Polynomial<coeff>& rhs); // copy ctor
+        Polynomial& operator= (const Polynomial<coeff>& rhs);
+
         int getDegree() const;
         std::vector<coeff> getCoefficients() const;
 

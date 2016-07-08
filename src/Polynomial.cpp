@@ -24,6 +24,24 @@ Polynomial<coeff>::Polynomial(std::vector<coeff> coefficients) :
 
 }
 
+//copy ctor
+template <typename coeff>
+Polynomial<coeff>::Polynomial(const Polynomial<coeff>& rhs) :
+    mCoeff(rhs.mCoeff)
+{
+
+}
+
+//assignment operator
+template <typename coeff>
+Polynomial<coeff>& Polynomial<coeff>::operator= (const Polynomial<coeff>& rhs)
+{
+    mCoeff.resize(rhs.mCoeff.size());
+    for(int i = 0; i < rhs.mCoeff.size(); i++)
+    {
+        mCoeff[i] = rhs.mCoeff[i];
+    }
+}
 template <typename coeff>
 int Polynomial<coeff>::getDegree() const
 {
