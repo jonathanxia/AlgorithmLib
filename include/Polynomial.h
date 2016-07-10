@@ -39,9 +39,9 @@ namespace AlgLib
         virtual ~Polynomial();
 
     protected:
+        std::vector<coeff> mCoeff;
 
     private:
-        std::vector<coeff> mCoeff;
         coeff getLeadingCoeff() const;
         void stripZ();
 
@@ -51,8 +51,14 @@ namespace AlgLib
     {
     public:
         IntegerPolynomial(std::vector<int>& coefficients);
+        IntegerPolynomial(std::initializer_list<int> args);
+        IntegerPolynomial(const Polynomial<int>& other);
+        IntegerPolynomial& operator=(const Polynomial<int>& other);
+        IntegerPolynomial();
 
         IntegerPolynomial operator% (int mod) const;
+
+        std::vector<int> moduloRoots(int mod) const;
     };
 }
 
