@@ -3,10 +3,11 @@
 
 #include <vector>
 #include <initializer_list>
-
-template <typename coeff>
-class Polynomial
+namespace AlgLib
 {
+    template <typename coeff>
+    class Polynomial
+    {
     public:
         Polynomial(); // Constructs the 0 polynomial
         Polynomial(std::initializer_list<coeff> args);
@@ -30,6 +31,8 @@ class Polynomial
         Polynomial<coeff> operator+ (const Polynomial<coeff>& other) const; // Adds two polynomials
         Polynomial<coeff> operator- (const Polynomial<coeff>& other) const; // Subtracts two polynomials
         Polynomial<coeff> operator* (const Polynomial<coeff>& other) const; // Multiplies two polynomials
+        Polynomial<coeff> operator/ (const Polynomial<coeff>& other) const; // Returns the polynomial quotient
+        Polynomial<coeff> operator% (const Polynomial<coeff>& other) const; // Returns the polynomial remainder
 
         Polynomial<coeff> operator* (coeff constant) const; // Multiplies polynomial by a scalar constant
 
@@ -39,9 +42,21 @@ class Polynomial
 
     private:
         std::vector<coeff> mCoeff;
+        coeff getLeadingCoeff() const;
+        void stripZ();
 
-};
+    };
+
+    class IntegerPolynomial : public Polynomial<int>
+    {
+    public:
+        IntegerPolynomial(std::vector<int>& coefficients);
+
+        IntegerPolynomial operator% (int mod) const;
+    };
+}
+
 
 #include "../src/Polynomial/Polynomial.cpp"
-
+#include "../src/Polynomial/IntPolynomial.cpp"
 #endif // POLYNOMIAL_H

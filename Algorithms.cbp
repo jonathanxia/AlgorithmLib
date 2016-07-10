@@ -52,7 +52,7 @@
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
-		<Unit filename="src/Polynomial.cpp">
+		<Unit filename="src/Polynomial/Polynomial.cpp">
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
