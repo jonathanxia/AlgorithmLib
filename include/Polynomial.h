@@ -13,17 +13,26 @@ class Polynomial
         Polynomial(std::vector<coeff> coefficients);
 
         Polynomial(const Polynomial<coeff>& rhs); // copy ctor
-        Polynomial& operator= (const Polynomial<coeff>& rhs);
+        Polynomial& operator= (const Polynomial<coeff>& rhs); // assignment operator
 
         int getDegree() const;
         std::vector<coeff> getCoefficients() const;
 
-        coeff operator() (coeff input) const;
-        Polynomial<coeff> operator+ (const Polynomial<coeff>& other) const;
-        Polynomial<coeff> operator- (const Polynomial<coeff>& other) const;
-        Polynomial<coeff> operator* (const Polynomial<coeff>& other) const;
+        //Calculus
+        //------------------------------------------------------------------
+        Polynomial<coeff> derivative() const;
+        Polynomial<coeff> antideriv(coeff C = 0) const; // C represents the constant after integrating
+        coeff integral(coeff lower, coeff upper) const; // lower and upper are the boundaries for integration
 
-        Polynomial<coeff> operator* (coeff constant) const;
+        // Overloaded operators
+        // -----------------------------------------------------------------
+        coeff operator() (coeff input) const; // Function call on the polynomial. Plugs in the input value
+        Polynomial<coeff> operator+ (const Polynomial<coeff>& other) const; // Adds two polynomials
+        Polynomial<coeff> operator- (const Polynomial<coeff>& other) const; // Subtracts two polynomials
+        Polynomial<coeff> operator* (const Polynomial<coeff>& other) const; // Multiplies two polynomials
+
+        Polynomial<coeff> operator* (coeff constant) const; // Multiplies polynomial by a scalar constant
+
         virtual ~Polynomial();
 
     protected:
@@ -33,6 +42,6 @@ class Polynomial
 
 };
 
-#include "../src/Polynomial.cpp"
+#include "../src/Polynomial/Polynomial.cpp"
 
 #endif // POLYNOMIAL_H

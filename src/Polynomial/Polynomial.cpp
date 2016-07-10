@@ -6,7 +6,6 @@ Polynomial<coeff>::Polynomial() :
 {
 
 }
-
 template <typename coeff>
 Polynomial<coeff>::Polynomial(std::initializer_list<coeff> args)
 {
@@ -16,14 +15,12 @@ Polynomial<coeff>::Polynomial(std::initializer_list<coeff> args)
         mCoeff.push_back(c);
     }
 }
-
 template <typename coeff>
 Polynomial<coeff>::Polynomial(std::vector<coeff> coefficients) :
     mCoeff(coefficients)
 {
 
 }
-
 //copy ctor
 template <typename coeff>
 Polynomial<coeff>::Polynomial(const Polynomial<coeff>& rhs) :
@@ -31,7 +28,6 @@ Polynomial<coeff>::Polynomial(const Polynomial<coeff>& rhs) :
 {
 
 }
-
 //assignment operator
 template <typename coeff>
 Polynomial<coeff>& Polynomial<coeff>::operator= (const Polynomial<coeff>& rhs)
@@ -49,11 +45,38 @@ int Polynomial<coeff>::getDegree() const
 {
     return mCoeff.size() - 1;
 }
-
 template <typename coeff>
 std::vector<coeff> Polynomial<coeff>::getCoefficients() const
 {
     return mCoeff;
+}
+
+template <typename coeff>
+Polynomial<coeff> Polynomial<coeff>::derivative() const
+{
+    std::vector<coeff> derivCoeff(mCoeff.size() - 1);
+    for(unsigned int i = 0; i < derivCoeff.size(); i++)
+    {
+        derivCoeff[i] = (i + 1) * mCoeff[i+1];
+    }
+    return Polynomial(derivCoeff);
+}
+template <typename coeff>
+Polynomial<coeff> Polynomial<coeff>::antideriv(coeff C) const
+{
+    std::vector<coeff> retCoeff(mCoeff.size() + 1);
+    for(int i = 1; i < retCoeff.size(); i++)
+    {
+        retCoeff[i] = mCoeff[i-1] / i;
+    }
+    retCoeff[0] = C;
+    return Polynomial(retCoeff);
+}
+template <typename coeff>
+coeff Polynomial<coeff>::integral(coeff lower, coeff upper) const
+{
+    Polynomial<coeff> f = this->antideriv();
+    return f(upper) - f(lower);
 }
 
 template <typename coeff>
@@ -67,7 +90,6 @@ coeff Polynomial<coeff>::operator() (coeff input) const
     }
     return sum;
 }
-
 template <typename coeff>
 Polynomial<coeff> Polynomial<coeff>::operator+(const Polynomial<coeff>& other) const
 {
@@ -89,7 +111,6 @@ Polynomial<coeff> Polynomial<coeff>::operator+(const Polynomial<coeff>& other) c
     }
     return ret;
 }
-
 template <typename coeff>
 Polynomial<coeff> Polynomial<coeff>::operator-(const Polynomial<coeff>& other) const
 {
@@ -101,7 +122,6 @@ Polynomial<coeff> Polynomial<coeff>::operator-(const Polynomial<coeff>& other) c
     Polynomial<coeff> poly(ret);
     return *this + poly;
 }
-
 template <typename coeff>
 Polynomial<coeff> Polynomial<coeff>::operator* (const Polynomial<coeff>& other) const
 {
@@ -117,7 +137,6 @@ Polynomial<coeff> Polynomial<coeff>::operator* (const Polynomial<coeff>& other) 
     }
     return Polynomial(ret);
 }
-
 template <typename coeff>
 Polynomial<coeff> Polynomial<coeff>::operator* (const coeff constant) const
 {
@@ -129,7 +148,6 @@ Polynomial<coeff> Polynomial<coeff>::operator* (const coeff constant) const
     }
     return Polynomial(kek);
 }
-
 template <typename coeff>
 Polynomial<coeff>::~Polynomial()
 {
