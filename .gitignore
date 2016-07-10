@@ -77,3 +77,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Tae Hyung's excluded stuff
+/.vscode
