@@ -32,8 +32,7 @@
 	<vector>
 	<iostream>
 
-1467697905 d:\data\desktop\algorithms\sorting\mergesort.cpp
-	<vector>
+1468012896 d:\data\desktop\algorithms\sorting\mergesort.cpp
 
 1467697905 source:d:\data\desktop\algorithms\sorting\insertionsort.cpp
 	<vector>
@@ -56,4 +55,33 @@
 
 1467841596 d:\data\desktop\algorithms\include\polynomial.h
 	<vector>
+
+1467964116 source:d:\data\desktop\algorithms\include\polynomial.h
+	<vector>
+	<initializer_list>
+	"../src/Polynomial.cpp"
+
+1468013815 d:\data\desktop\algorithms\src\polynomial.cpp
+	<initializer_list>
+
+1468013560 source:d:\data\desktop\algorithms\include\searching.h
+	"../searching/binarysearch.cpp"
+	"../searching/inversion.cpp"
+
+1468014214 d:\data\desktop\algorithms\searching\inversion.cpp
+	"sorting.h"
+	"searching.h"
+	<vector>
+
+1468012810 d:\data\desktop\algorithms\include\sorting.h
+	"../sorting/insertionsort.cpp"
+	"../sorting/mergesort.cpp"
+
+1468013560 d:\data\desktop\algorithms\include\searching.h
+	"../searching/binarysearch.cpp"
+	"../searching/inversion.cpp"
+
+1468012810 source:d:\data\desktop\algorithms\include\sorting.h
+	"../sorting/insertionsort.cpp"
+	"../sorting/mergesort.cpp"
 

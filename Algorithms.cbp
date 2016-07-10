@@ -40,8 +40,18 @@
 		<Unit filename="include/searching.h" />
 		<Unit filename="include/sorting.h" />
 		<Unit filename="searching/binarysearch.cpp" />
-		<Unit filename="sorting/insertionsort.cpp" />
-		<Unit filename="sorting/mergesort.cpp" />
+		<Unit filename="searching/inversion.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="sorting/insertionsort.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="sorting/mergesort.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="src/Polynomial.cpp">
 			<Option compile="0" />
 			<Option link="0" />

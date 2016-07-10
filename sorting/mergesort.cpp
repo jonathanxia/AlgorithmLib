@@ -1,25 +1,24 @@
-#include <vector>
-using namespace std;
+
 
 template <typename T>
-vector<T> MERGE(vector<T>&, vector<T>&);
+T MERGE(T&, T&);
 /**
-* mergeSort(vector<T> & arr)
+* mergeSort(T & arr)
 *
 * Sort the elements in container arr with merge sort algorithm
 * Parameters:
-*   vector<T>& arr: the container to be sorted
+*   T& arr: the container to be sorted
 * Returns: void
 * Additional notes: Sorts in O(n lg n) time
 */
 
 template <typename T>
-void mergeSort(vector<T>& arr)
+void mergeSort(T& arr)
 {
     if(arr.size() < 2)
         return;
 
-    vector<T> leftPart, rightPart; //These are the left and right partitions.
+    T leftPart, rightPart; //These are the left and right partitions.
     //The following code partitions the arr
     //leftPart takes from index 0 to index arr.size() / 2 (excluding the upper bound)
     //rightPart takes the rest
@@ -34,10 +33,10 @@ void mergeSort(vector<T>& arr)
 }
 
 template <typename T>
-vector<T> MERGE(vector<T>& leftPart, vector<T>& rightPart)
+T MERGE(T& leftPart, T& rightPart)
 {
     int totalSize = leftPart.size() + rightPart.size(); //totalSize is the combined size of the two vectors
-    vector<T> merged(totalSize); //The merged (returned) vector
+    T merged(totalSize); //The merged (returned) vector
 
     int lIndex = 0, rIndex = 0;
     while(lIndex < leftPart.size() && rIndex < rightPart.size())

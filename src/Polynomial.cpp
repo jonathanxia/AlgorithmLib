@@ -37,11 +37,13 @@ template <typename coeff>
 Polynomial<coeff>& Polynomial<coeff>::operator= (const Polynomial<coeff>& rhs)
 {
     mCoeff.resize(rhs.mCoeff.size());
-    for(int i = 0; i < rhs.mCoeff.size(); i++)
+    for(unsigned int i = 0; i < rhs.mCoeff.size(); i++)
     {
         mCoeff[i] = rhs.mCoeff[i];
     }
+    return *this;
 }
+
 template <typename coeff>
 int Polynomial<coeff>::getDegree() const
 {
@@ -121,7 +123,7 @@ Polynomial<coeff> Polynomial<coeff>::operator* (const coeff constant) const
 {
     std::vector<coeff> kek(mCoeff.size());
 
-    for(int i = 0; i < mCoeff.size(); i++)
+    for(unsigned int i = 0; i < mCoeff.size(); i++)
     {
         kek[i] = mCoeff[i] * constant;
     }

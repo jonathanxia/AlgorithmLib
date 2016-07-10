@@ -3,10 +3,10 @@
 #include "../sorting/insertionsort.cpp"
 #include "../sorting/mergesort.cpp"
 template <typename T>
-void insertionSort(vector<T>& arr);
+void insertionSort(T& arr);
 
 template <typename T>
-void mergeSort(vector<T>& arr);
+void mergeSort(T& arr);
 template <typename T>
-vector<T> MERGE(vector<T>& left, vector<T>& right);
+T MERGE(T& left, T& right);
 #endif // SORTING_H
