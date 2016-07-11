@@ -32,6 +32,7 @@ AlgLib::Polynomial<coeff>::Polynomial(const Polynomial<coeff>& rhs) :
 template <typename coeff>
 AlgLib::Polynomial<coeff>& AlgLib::Polynomial<coeff>::operator= (const AlgLib::Polynomial<coeff>& rhs)
 {
+    if(this == &rhs) {return *this;}
     mCoeff.resize(rhs.mCoeff.size());
     for(unsigned int i = 0; i < rhs.mCoeff.size(); i++)
     {
