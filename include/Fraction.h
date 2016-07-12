@@ -18,16 +18,12 @@ namespace AlgLib
              *  \param other Object to assign from
              *  \return A reference to this
              */
+            friend Fraction operator+(const Fraction& f1, const Fraction& f2);
+            friend Fraction operator-(const Fraction& f1, const Fraction& f2);
+            friend Fraction operator*(const Fraction& f1, const Fraction& f2);
+            friend Fraction operator/(const Fraction& f1, const Fraction& f2);
             Fraction& operator=(const Fraction& other);
             Fraction& operator=(const int n);
-            Fraction operator+(const Fraction& other) const;
-            Fraction operator-(const Fraction& other) const;
-            Fraction operator*(const Fraction& other) const;
-            Fraction operator/(const Fraction& other) const;
-            Fraction operator+(const int other) const;
-            Fraction operator-(const int other) const;
-            Fraction operator*(const int other) const;
-            Fraction operator/(const int other) const;
             Fraction& operator+=(const int other);
             Fraction& operator-=(const int other);
             Fraction& operator*=(const int other);

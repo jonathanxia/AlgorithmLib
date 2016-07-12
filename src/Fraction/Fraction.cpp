@@ -1,5 +1,26 @@
 #include "Fraction.h"
 #include <sstream>
+namespace AlgLib
+{
+    Fraction operator+(const Fraction& f1, const Fraction& f2)
+    {
+        return Fraction(f1.mNumerator * f2.mDenominator + f2.mNumerator * f1.mDenominator, f1.mDenominator * f2.mDenominator);
+    }
+    Fraction operator-(const Fraction& f1, const Fraction& f2)
+    {
+        return Fraction(f1.mNumerator * f2.mDenominator - f2.mNumerator * f1.mDenominator, f1.mDenominator * f2.mDenominator);
+    }
+    Fraction operator*(const Fraction& f1, const Fraction& f2)
+    {
+        return Fraction(f1.mNumerator * f2.mNumerator, f1.mDenominator * f2.mDenominator);
+    }
+    Fraction operator/(const Fraction& f1, const Fraction& f2)
+    {
+        return Fraction(f1.mNumerator * f2.mDenominator, f1.mDenominator * f2.mNumerator);
+    }
+}
+
+
 AlgLib::Fraction::Fraction() :
     mNumerator(0),
     mDenominator(1)
@@ -29,38 +50,6 @@ AlgLib::Fraction& AlgLib::Fraction::operator=(const Fraction& rhs)
     return *this;
 }
 
-AlgLib::Fraction AlgLib::Fraction::operator+(const Fraction& other) const
-{
-    return Fraction(mNumerator * other.mDenominator + mDenominator * other.mNumerator, mDenominator * other.mDenominator);
-}
-AlgLib::Fraction AlgLib::Fraction::operator-(const Fraction& other) const
-{
-    return Fraction(mNumerator * other.mDenominator - mDenominator * other.mNumerator, mDenominator * other.mDenominator);
-}
-AlgLib::Fraction AlgLib::Fraction::operator*(const Fraction& other) const
-{
-    return Fraction(mNumerator * other.mNumerator, mDenominator * other.mDenominator);
-}
-AlgLib::Fraction AlgLib::Fraction::operator/(const Fraction& other) const
-{
-    return Fraction(mNumerator * other.mDenominator, mDenominator * other.mNumerator);
-}
-AlgLib::Fraction AlgLib::Fraction::operator+(const int other) const
-{
-    return (*this) + Fraction(other, 1);
-}
-AlgLib::Fraction AlgLib::Fraction::operator-(const int other) const
-{
-    return (*this) - Fraction(other, 1);
-}
-AlgLib::Fraction AlgLib::Fraction::operator*(const int other) const
-{
-    return (*this) * Fraction(other, 1);
-}
-AlgLib::Fraction AlgLib::Fraction::operator/(const int other) const
-{
-    return (*this) / Fraction(other, 1);
-}
 AlgLib::Fraction& AlgLib::Fraction::operator+=(const int other)
 {
     *this = *this + other;
@@ -109,7 +98,7 @@ AlgLib::Fraction& AlgLib::Fraction::operator/=(const Fraction& other)
     return *this;
 }
 
-AlgLib::Fraction& operator=(const int n)
+AlgLib::Fraction& AlgLib::Fraction::operator=(const int n)
 {
     mDenominator = 1;
     mNumerator = n;
@@ -170,4 +159,9 @@ void AlgLib::Fraction::simplify()
     int g = gcd(mNumerator, mDenominator);
     mNumerator /= g;
     mDenominator /= g;
+    if(mDenominator < 0)
+    {
+        mDenominator *= -1;
+        mNumerator *= -1;
+    }
 }
