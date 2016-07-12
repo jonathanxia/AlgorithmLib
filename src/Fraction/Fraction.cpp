@@ -29,6 +29,11 @@ AlgLib::Fraction& AlgLib::Fraction::operator=(const Fraction& rhs)
     return *this;
 }
 
+AlgLib::Fraction AlgLib::Fraction::operator+(const Fraction& other) const
+{
+    return Fraction(mNumerator * other.mDenominator + mDenominator * other.mNumerator, mDenominator * other.mDenominator);
+}
+
 /** @brief (one liner)
   *
   * (documentation goes here)

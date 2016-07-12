@@ -19,6 +19,10 @@ namespace AlgLib
              *  \return A reference to this
              */
             Fraction& operator=(const Fraction& other);
+            Fraction operator+(const Fraction& other) const;
+            Fraction operator-(const Fraction& other) const;
+            Fraction operator*(const Fraction& other) const;
+            Fraction operator/(const Fraction& other) const;
 
             Fraction(int n, int d);
 
