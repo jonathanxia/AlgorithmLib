@@ -2,19 +2,32 @@
 #define PERMUTATION_H
 
 #include <initializer_list>
+#include <vector>
+#include <utility>
 
 namespace AlgLib {
+	template <typename T>
     class Permutation {
-        public:
-        Permutation(); // Identity
-        Permutation(std::initializer_list<int> list);
+    public:
+		// Constructors
+        Permutation(); 
+        Permutation(std::initializer_list<int> p);
+		Permutation(std::initializer_list<initializer_list<T>> p)
         
+		// Multiply
         Permutation operator* (const Permutation& other) const;
-        vector<int> permute(vector<int> li);
+		// Permute
+        std::vector<int> operator() (const std::vector<int>& li) const;
+		// Inverse
+		Permutation inverse();
+		// Order
+		Permutation order();
+		// Cycles
+		Permutation cycles();
+		
 
-        private:
-        std::vector<int> mPermutation;
-
+    private:
+        std::vector<std::pair<T,T>> mPermutation; 
     };
 }
 

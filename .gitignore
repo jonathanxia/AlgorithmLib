@@ -89,4 +89,5 @@ $RECYCLE.BIN/
 *.vcxproj
 *.vcxproj.filters
 *.suo
+*.vcxproj.user
 /Debug
