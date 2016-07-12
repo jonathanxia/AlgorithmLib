@@ -22,5 +22,7 @@ Fraction& Fraction::operator=(const Fraction& rhs)
 {
     if (this == &rhs) return *this; // handle self assignment
     //assignment operator
+    mNumerator = rhs.mNumerator;
+    mDenominator = rhs.mDenominator;
     return *this;
 }
