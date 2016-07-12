@@ -109,6 +109,12 @@ AlgLib::Fraction& AlgLib::Fraction::operator/=(const Fraction& other)
     return *this;
 }
 
+AlgLib::Fraction& operator=(const int n)
+{
+    mDenominator = 1;
+    mNumerator = n;
+    return *this;
+}
 
 
 

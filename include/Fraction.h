@@ -19,6 +19,7 @@ namespace AlgLib
              *  \return A reference to this
              */
             Fraction& operator=(const Fraction& other);
+            Fraction& operator=(const int n);
             Fraction operator+(const Fraction& other) const;
             Fraction operator-(const Fraction& other) const;
             Fraction operator*(const Fraction& other) const;
@@ -36,7 +37,7 @@ namespace AlgLib
             Fraction& operator*=(const Fraction& other);
             Fraction& operator/=(const Fraction& other);
 
-            Fraction(int n, int d);
+            Fraction(int n, int d = 1);
 
             static int gcd(int a, int b); // takes the gcd of two numbers
             static int lcm(int a, int b);
