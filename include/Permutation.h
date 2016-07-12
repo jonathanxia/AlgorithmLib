@@ -7,12 +7,13 @@ namespace AlgLib {
     class Permutation {
         public:
         Permutation(); // Identity
-        Permutation(std::vector<int> list);
+        Permutation(std::initializer_list<int> list);
         
         Permutation operator* (const Permutation& other) const;
+        vector<int> permute(vector<int> li);
 
         private:
-        std::vector<int> myPermutation;
+        std::vector<int> mPermutation;
 
     };
 }
