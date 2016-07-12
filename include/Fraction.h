@@ -27,6 +27,14 @@ namespace AlgLib
             Fraction operator-(const int other) const;
             Fraction operator*(const int other) const;
             Fraction operator/(const int other) const;
+            Fraction& operator+=(const int other);
+            Fraction& operator-=(const int other);
+            Fraction& operator*=(const int other);
+            Fraction& operator/=(const int other);
+            Fraction& operator+=(const Fraction& other);
+            Fraction& operator-=(const Fraction& other);
+            Fraction& operator*=(const Fraction& other);
+            Fraction& operator/=(const Fraction& other);
 
             Fraction(int n, int d);
 

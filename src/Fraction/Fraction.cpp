@@ -61,6 +61,57 @@ AlgLib::Fraction AlgLib::Fraction::operator/(const int other) const
 {
     return (*this) / Fraction(other, 1);
 }
+AlgLib::Fraction& AlgLib::Fraction::operator+=(const int other)
+{
+    *this = *this + other;
+    return *this;
+}
+
+AlgLib::Fraction& AlgLib::Fraction::operator-=(const int other)
+{
+    *this = *this - other;
+    return *this;
+}
+
+AlgLib::Fraction& AlgLib::Fraction::operator*=(const int other)
+{
+    *this = *this * other;
+    return *this;
+}
+
+AlgLib::Fraction& AlgLib::Fraction::operator/=(const int other)
+{
+    *this = *this / other;
+    return *this;
+}
+
+AlgLib::Fraction& AlgLib::Fraction::operator+=(const Fraction& other)
+{
+    *this = *this + other;
+    return *this;
+}
+
+AlgLib::Fraction& AlgLib::Fraction::operator-=(const Fraction& other)
+{
+    *this = *this - other;
+    return *this;
+}
+
+AlgLib::Fraction& AlgLib::Fraction::operator*=(const Fraction& other)
+{
+    *this = *this * other;
+    return *this;
+}
+
+AlgLib::Fraction& AlgLib::Fraction::operator/=(const Fraction& other)
+{
+    *this = *this / other;
+    return *this;
+}
+
+
+
+
 /** @brief (one liner)
   *
   * (documentation goes here)
