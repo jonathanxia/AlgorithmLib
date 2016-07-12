@@ -1,6 +1,6 @@
 #ifndef FRACTION_H
 #define FRACTION_H
-
+#include <string>
 namespace AlgLib
 {
     class Fraction
@@ -25,11 +25,14 @@ namespace AlgLib
             static int gcd(int a, int b); // takes the gcd of two numbers
             static int lcm(int a, int b);
 
+            std::string toString();
+
         protected:
 
         private:
             int mNumerator = 0;
             int mDenominator = 1;
+            void simplify();
     };
 
 }
