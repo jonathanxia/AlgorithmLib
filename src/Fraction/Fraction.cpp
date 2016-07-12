@@ -33,7 +33,34 @@ AlgLib::Fraction AlgLib::Fraction::operator+(const Fraction& other) const
 {
     return Fraction(mNumerator * other.mDenominator + mDenominator * other.mNumerator, mDenominator * other.mDenominator);
 }
-
+AlgLib::Fraction AlgLib::Fraction::operator-(const Fraction& other) const
+{
+    return Fraction(mNumerator * other.mDenominator - mDenominator * other.mNumerator, mDenominator * other.mDenominator);
+}
+AlgLib::Fraction AlgLib::Fraction::operator*(const Fraction& other) const
+{
+    return Fraction(mNumerator * other.mNumerator, mDenominator * other.mDenominator);
+}
+AlgLib::Fraction AlgLib::Fraction::operator/(const Fraction& other) const
+{
+    return Fraction(mNumerator * other.mDenominator, mDenominator * other.mNumerator);
+}
+AlgLib::Fraction AlgLib::Fraction::operator+(const int other) const
+{
+    return (*this) + Fraction(other, 1);
+}
+AlgLib::Fraction AlgLib::Fraction::operator-(const int other) const
+{
+    return (*this) - Fraction(other, 1);
+}
+AlgLib::Fraction AlgLib::Fraction::operator*(const int other) const
+{
+    return (*this) * Fraction(other, 1);
+}
+AlgLib::Fraction AlgLib::Fraction::operator/(const int other) const
+{
+    return (*this) / Fraction(other, 1);
+}
 /** @brief (one liner)
   *
   * (documentation goes here)
@@ -48,17 +75,22 @@ AlgLib::Fraction::Fraction(int n, int d) :
 int AlgLib::Fraction::gcd(int a, int b)
 {
     // Now we use the Euclidean algorithm
+    // First take the absolute value of a and b
+    if(a < 0) {a *= -1;}
+    if(b < 0) {b *= -1;}
+    //Now switch in case a < b
     if(a < b)
     {
         int tmp = a;
         a = b;
         b = tmp; // Does the switcheroo
     }
+    //Termination condition
     if(b == 0)
     {
         return a;
     }
-    else
+    else // EA recursion
     {
         return gcd(b, a % b);
     }
