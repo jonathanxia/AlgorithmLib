@@ -5,7 +5,7 @@
 #include <utility>
 #include "..\..\include\Permutation.h"
 
-// TODO: add precondition checking... 
+// TODO: add precondition checking...
 
 
 // Constructors
@@ -18,7 +18,7 @@ AlgLib::Permutation<T>::Permutation(std::initializer_list<int> word) {
 	mPermutation.reserve(word.size());
 	int i = 1;
 	for (auto c : word) {
-		mPermutation.push_back(make_pair(i, c));
+		mPermutation.push_back(std::make_pair(i, c));
 		i++;
 	}
 }
@@ -26,11 +26,11 @@ AlgLib::Permutation<T>::Permutation(std::initializer_list<int> word) {
 template<typename T>
 AlgLib::Permutation<T>::Permutation(std::initializer_list<std::initializer_list<T>> cycles) {
 	for (auto iter = cycles.begin(); iter != cycles.end(); iter++) {
-		std::initializer_list<T>::iterator i;
+		typename std::initializer_list<T>::iterator i;
 		for (i = iter->begin(); i + 1 != iter->end(); i++) {
-			mPermutation.push_back(make_pair(*i, *(i + 1)));
+			mPermutation.push_back(std::make_pair(*i, *(i + 1)));
 		}
-		mPermutation.push_back(make_pair(*i, *iter->begin()));
+		mPermutation.push_back(std::make_pair(*i, *iter->begin()));
 	}
 }
 
