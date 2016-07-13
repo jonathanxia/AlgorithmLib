@@ -26,8 +26,9 @@ namespace AlgLib {
 
 		Permutation<T> inverse();
 		int order();
-		Permutation<T> cycles();
-		
+		/* For some reason this is creating an error...
+		vector<Permutation<T>> cycles();
+		*/
 
     private:
         std::vector<std::pair<T,T>> mPermutation; 

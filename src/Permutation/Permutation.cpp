@@ -5,6 +5,9 @@
 #include <utility>
 #include "..\..\include\Permutation.h"
 
+// TODO: add precondition checking... 
+
+
 // Constructors
 template<typename T>
 AlgLib::Permutation<T>::Permutation() {
@@ -72,7 +75,7 @@ template<typename T> // Not tested yet
 AlgLib::Permutation<T> AlgLib::Permutation<T>::inverse() {
 	std::vector < std::pair<T, T>> pairs;
 	for (auto i : mPermutation) {
-		pairs.push_back(make_pair(i->second, i->first));
+		pairs.push_back(make_pair(i.second, i.first));
 	}
 	AlgLib::Permutation<T> inv(pairs);
 	return inv;
@@ -82,18 +85,58 @@ template<typename T> // Not Tested yet
 AlgLib::Permutation<T> AlgLib::Permutation<T>::operator*(const Permutation<T>& other) const {
 	std::vector<std::pair<T, T>> pairs;
 	for (auto i = other.mPermutation.begin(); i != other.mPermutation.end(); i++) {
-		pairs.push_back(std::make_pair(i->first, this(i->second));
+		pairs.push_back(std::make_pair(i->first, (*this)(i->second)));
 	}
+	AlgLib::Permutation<T> prod(pairs);
+	return prod;
 }
 
 template<typename T> // Not tested and this seems sketchy but idk it might work
 int AlgLib::Permutation<T>::order() {
-	AlgLib::Permutation<T> permutation = this;
+	AlgLib::Permutation<T> permutation = *this;
 	AlgLib::Permutation<T> identity;
 	int counter = 1;
 	while (permutation != identity) {
-		permutation = permutation * this;
+		permutation = permutation * (*this);
 		counter++;
 	}
 	return counter;
+}
+
+template<typename T>
+bool AlgLib::Permutation<T>::operator==(const AlgLib::Permutation<T>& other) const {
+	for (auto i = other.mPermutation.begin(); i != other.mPermutation.end(); i++) {
+		bool exists = false;
+		if (i->first == i->second) {
+			continue;
+		}
+		for (auto j = this->mPermutation.begin(); j != this->mPermutation.end(); j++) {
+			if (i->first == j->first && i->second == j->second) {
+				exists = true;
+			}
+		}
+		if (!exists) {
+			return false;
+		}
+	}
+	for (auto i = this->mPermutation.begin(); i != this->mPermutation.end(); i++) {
+		bool exists = false;
+		if (i->first == i->second) {
+			continue;
+		}
+		for (auto j = other.mPermutation.begin(); j != other.mPermutation.end(); j++) {
+			if (i->first == j->first && i->second == j->second) {
+				exists = true;
+			}
+		}
+		if (!exists) {
+			return false;
+		}
+	}
+	return true;
+}
+
+template<typename T>
+bool AlgLib::Permutation<T>::operator!=(const AlgLib::Permutation<T>& other) const {
+	return !(*this == other);
 }
