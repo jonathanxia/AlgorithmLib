@@ -1,3 +1,5 @@
+// TODO: make sure to overload == and != function.
+
 #ifndef PERMUTATION_H
 #define PERMUTATION_H
 
@@ -11,19 +13,20 @@ namespace AlgLib {
     public:
 		// Constructors
         Permutation(); 
-        Permutation(std::initializer_list<int> p);
-		Permutation(std::initializer_list<initializer_list<T>> p)
-        
-		// Multiply
-        Permutation operator* (const Permutation& other) const;
-		// Permute
-        std::vector<int> operator() (const std::vector<int>& li) const;
-		// Inverse
-		Permutation inverse();
-		// Order
-		Permutation order();
-		// Cycles
-		Permutation cycles();
+        Permutation(std::initializer_list<int> word);
+		Permutation(std::initializer_list<std::initializer_list<T>> cycles);
+		Permutation(std::vector<std::pair<T, T>> pairs);
+
+		// Operators
+        Permutation<T> operator* (const Permutation<T>& other) const;
+        std::vector<T> operator() (const std::vector<T>& li) const;
+		bool operator!= (const Permutation<T>& other) const;
+		bool operator== (const Permutation<T>& other) const;
+		T operator() (const T elem) const;
+
+		Permutation<T> inverse();
+		int order();
+		Permutation<T> cycles();
 		
 
     private:
@@ -32,4 +35,5 @@ namespace AlgLib {
 }
 
 #include "../src/Permutation/Permutation.cpp"
+
 #endif
