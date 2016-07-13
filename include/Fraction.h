@@ -39,6 +39,7 @@ namespace AlgLib
             static int lcm(int a, int b);
 
             std::string toString();
+            double getValue() const;
 
         protected:
 

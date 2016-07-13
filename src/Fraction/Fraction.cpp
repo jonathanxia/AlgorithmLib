@@ -18,6 +18,10 @@ namespace AlgLib
     {
         return Fraction(f1.mNumerator * f2.mDenominator, f1.mDenominator * f2.mNumerator);
     }
+    double Fraction::getValue() const
+    {
+        return (double) mNumerator / mDenominator;
+    }
 }
 
 
