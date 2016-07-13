@@ -7,7 +7,7 @@
 		<Option compiler="cygwin" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/Algorithms" prefix_auto="1" extension_auto="1" />
+				<Option output="Algorithms" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option object_output="obj/Debug/" />
 				<Option type="2" />
@@ -16,6 +16,7 @@
 					<Add option="-std=c++14" />
 					<Add option="-g" />
 					<Add directory="D:/Data/Desktop/Algorithms/include" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add directory="D:/Data/Desktop/Algorithms/" />
@@ -29,6 +30,7 @@
 				<Option compiler="cygwin" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -36,10 +38,15 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Fraction.h" />
+		<Unit filename="include/Permutation.h" />
 		<Unit filename="include/Polynomial.h" />
 		<Unit filename="include/searching.h" />
 		<Unit filename="include/sorting.h" />
-		<Unit filename="searching/binarysearch.cpp" />
+		<Unit filename="searching/binarysearch.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="searching/inversion.cpp">
 			<Option compile="0" />
 			<Option link="0" />
@@ -49,6 +56,11 @@
 			<Option link="0" />
 		</Unit>
 		<Unit filename="sorting/mergesort.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="src/Fraction/Fraction.cpp" />
+		<Unit filename="src/Polynomial/IntPolynomial.cpp">
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
