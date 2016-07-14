@@ -32,6 +32,12 @@ namespace AlgLib
             Fraction& operator-=(const Fraction& other);
             Fraction& operator*=(const Fraction& other);
             Fraction& operator/=(const Fraction& other);
+            bool operator>(const Fraction& other);
+            bool operator<(const Fraction& other);
+            bool operator==(const Fraction& other);
+            bool operator!=(const Fraction& other);
+            bool operator>=(const Fraction& other);
+            bool operator<=(const Fraction& other);
 
             Fraction(int n, int d = 1);
 

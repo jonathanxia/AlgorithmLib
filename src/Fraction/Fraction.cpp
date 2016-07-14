@@ -22,6 +22,37 @@ namespace AlgLib
     {
         return (double) mNumerator / mDenominator;
     }
+    bool Fraction::operator<=(const Fraction& other)
+    {
+        return mNumerator * other.mDenominator <= mDenominator * other.mNumerator;
+    }
+
+    bool Fraction::operator>=(const Fraction& other)
+    {
+        return mNumerator * other.mDenominator >= mDenominator * other.mNumerator;
+    }
+
+    bool Fraction::operator!=(const Fraction& other)
+    {
+        return mNumerator * other.mDenominator != mDenominator * other.mNumerator;
+    }
+
+    bool Fraction::operator==(const Fraction& other)
+    {
+        return mNumerator * other.mDenominator == mDenominator * other.mNumerator;
+    }
+
+    bool Fraction::operator<(const Fraction& other)
+    {
+        return mNumerator * other.mDenominator < mDenominator * other.mNumerator;
+    }
+
+    bool Fraction::operator>(const Fraction& other)
+    {
+        return mNumerator * other.mDenominator > mDenominator * other.mNumerator;
+    }
+
+
 }
 
 
