@@ -14,7 +14,6 @@ namespace AlgLib
     Heap<T>::Heap(std::vector<T> container) :
         mContainer(container)
     {
-        mContainer.makeHeap();
         heapSize = container.size();
         makeHeap();
     }
@@ -35,6 +34,25 @@ namespace AlgLib
             i++;
         }
         makeHeap();
+    }
+
+    template <typename T>
+    T Heap<T>::top()
+    {
+        return mContainer[0];
+    }
+
+    template <typename T>
+    T Heap<T>::pop()
+    {
+        T retValue = mContainer[0];
+        mContainer[0] = mContainer[heapSize - 1]; // moves the last element in the container to the top
+        //Now resize and perform heap action
+        heapSize--;
+        mContainer.resize(heapSize);
+
+        eHeapify(0);
+        return retValue;
     }
 
     template <typename T>

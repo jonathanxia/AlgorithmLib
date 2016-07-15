@@ -27,6 +27,9 @@ namespace AlgLib
              */
             void SetContainer(std::vector<T> val) { mContainer = val; }
 
+            T pop(); // returns the highest parent and then removes it
+            T top();
+
         protected:
 
         private:
