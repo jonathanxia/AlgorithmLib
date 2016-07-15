@@ -2,6 +2,7 @@
 #define HEAP_H
 #include <vector>
 #include <initializer_list>
+#include <functional>
 namespace AlgLib
 {
     template <typename T>
@@ -34,6 +35,8 @@ namespace AlgLib
             int parent(int index);
             int left(int index);
             int right(int index);
+            void eHeapify(int index);
+            void makeHeap();
     };
 }
 #include "../src/Heap/Heap.cpp"

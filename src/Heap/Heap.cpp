@@ -1,5 +1,6 @@
 #include <vector>
 #include <initializer_list>
+#include <functional>
 namespace AlgLib
 {
     template <typename T>
@@ -15,6 +16,7 @@ namespace AlgLib
     {
         mContainer.makeHeap();
         heapSize = container.size();
+        makeHeap();
     }
 
     template <typename T>
@@ -23,7 +25,8 @@ namespace AlgLib
       * (documentation goes here)
       */
     Heap<T>::Heap(std::initializer_list<T> args) :
-        mContainer(args.size())
+        mContainer(args.size()),
+        heapSize(args.size())
     {
         int i = 0;
         for(auto c : args)
@@ -31,9 +34,8 @@ namespace AlgLib
             mContainer[i] = c;
             i++;
         }
+        makeHeap();
     }
-
-
 
     template <typename T>
     Heap<T>::~Heap()
@@ -71,5 +73,38 @@ namespace AlgLib
         return (index - 1) / 2;
     }
 
+    template <typename T>
+    // Assumes that the Heaps rooted to the left and right are max-heaps
+    // but element at index might not be
+    void Heap<T>::eHeapify(int index)
+    {
+        int l = left(index);
+        int r = right(index);
+        int largest = index;
+        if(l < heapSize && mContainer[l] > mContainer[index])
+        {
+            largest = l;
+        }
+        if(r < heapSize && mContainer[r] > mContainer[largest])
+        {
+            largest = r;
+        }
+        if(largest != index)
+        {
+            T tmp = mContainer[index];
+            mContainer[index] = mContainer[largest];
+            mContainer[largest] = tmp;
+            eHeapify(largest);
+        }
+    }
+
+    template <typename T>
+    void Heap<T>::makeHeap()
+    {
+        for(int i = (heapSize + 1) / 2; i >= 0; i--)
+        {
+            eHeapify(i);
+        }
+    }
 
 }
