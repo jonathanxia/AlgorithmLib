@@ -21,14 +21,15 @@ namespace AlgLib
             /** Access mContainer
              * \return The current value of mContainer
              */
-            std::vector<T> GetContainer() { return mContainer; }
+            virtual std::vector<T> getContainer() { return mContainer; }
             /** Set mContainer
              * \param val New value to set
              */
-            void SetContainer(std::vector<T> val) { mContainer = val; }
+            virtual void setContainer(std::vector<T> val) { mContainer = val; }
 
-            T pop(); // returns the highest parent and then removes it
-            T top();
+            virtual T pop(); // returns the highest parent and then removes it
+            virtual T top();
+            virtual void push(T elem);
 
         protected:
 

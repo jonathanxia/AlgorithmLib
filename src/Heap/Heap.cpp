@@ -124,5 +124,13 @@ namespace AlgLib
             eHeapify(i);
         }
     }
+    /** @brief (one liner)
+      *
+      * (documentation goes here)
+      */
+    void Heap::push(T elem)
+    {
+
+    }
 
 }
