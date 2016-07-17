@@ -11,21 +11,10 @@
         key: the element to be found
 *   Returns:
         the index the element key is at. Returns -1 if doesn't exist.
-*   Exceptions:
-*       std::invalid_argument: "Input container is not sorted"
 */
 template <typename cont, typename T>
 int binarysearch(cont A, T key)
 {
-    // Check if A is sorted:
-
-    for(int i = 1; i < A.size(); i++)
-    {
-        if(A[i-1] > A[i])
-        {
-            throw std::invalid_argument("Input container is not sorted");
-        }
-    }
     // We are searching for the key in between A[lowerInd] and A[upperInd - 1]
     // The midpoint will be the average, and then we shall confine our search there.
     int lowerInd = 0;
