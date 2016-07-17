@@ -41,6 +41,7 @@ namespace AlgLib
             int right(int index);
             void eHeapify(int index);
             void makeHeap();
+            void increaseKey(int index, T key);
     };
 }
 #include "../src/Heap/Heap.cpp"

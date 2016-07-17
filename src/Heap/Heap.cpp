@@ -1,6 +1,7 @@
 #include <vector>
 #include <initializer_list>
 #include <functional>
+#include <stdexcept>
 namespace AlgLib
 {
     template <typename T>
@@ -128,9 +129,45 @@ namespace AlgLib
       *
       * (documentation goes here)
       */
-    void Heap::push(T elem)
+    template <typename T>
+    void Heap<T>::push(T elem)
     {
+        mContainer.push_back(elem);
+        heapSize++;
 
+        int index = heapSize - 1;
+        while(index > 0 && elem > mContainer[parent(index)])
+        {
+            mContainer[index] = mContainer[parent(index)];
+            mContainer[parent(index)] = elem;
+            index = parent(index);
+        }
     }
+
+    /** @brief (one liner)
+      *
+      * (documentation goes here)
+      */
+    template <typename T>
+    void Heap<T>::increaseKey(int index, T key)
+    {
+        //PRECONDITION: make sure that key really does increase it
+        if(mContainer[index] > key)
+        {
+            throw std::invalid_argument("key is not bigger than mContainer[index]");
+        }
+
+        mContainer[index] = key;
+        while(index > 0 && mContainer[index] > mContainer[parent(index)])
+        {
+            // This exchanges mContainer[index] with its parent
+            T tmp = mContainer[index];
+            mContainer[index] = mContainer[parent(index)];
+            mContainer[parent(index)] = tmp;
+
+            index = parent(index); // Updates the index to the parent index to continue looping
+        }
+    }
+
 
 }
