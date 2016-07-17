@@ -16,25 +16,25 @@ namespace AlgLib
         Polynomial(const Polynomial<coeff>& rhs); // copy ctor
         Polynomial& operator= (const Polynomial<coeff>& rhs); // assignment operator
 
-        int getDegree() const;
-        std::vector<coeff> getCoefficients() const;
+        virtual int getDegree() const;
+        virtual std::vector<coeff> getCoefficients() const;
 
         //Calculus
         //------------------------------------------------------------------
-        Polynomial<coeff> derivative() const;
-        Polynomial<coeff> antideriv(coeff C = 0) const; // C represents the constant after integrating
-        coeff integral(coeff lower, coeff upper) const; // lower and upper are the boundaries for integration
+        virtual Polynomial<coeff> derivative() const;
+        virtual Polynomial<coeff> antideriv(coeff C = 0) const; // C represents the constant after integrating
+        virtual coeff integral(coeff lower, coeff upper) const; // lower and upper are the boundaries for integration
 
         // Overloaded operators
         // -----------------------------------------------------------------
-        coeff operator() (coeff input) const; // Function call on the polynomial. Plugs in the input value
-        Polynomial<coeff> operator+ (const Polynomial<coeff>& other) const; // Adds two polynomials
-        Polynomial<coeff> operator- (const Polynomial<coeff>& other) const; // Subtracts two polynomials
-        Polynomial<coeff> operator* (const Polynomial<coeff>& other) const; // Multiplies two polynomials
-        Polynomial<coeff> operator/ (const Polynomial<coeff>& other) const; // Returns the polynomial quotient
-        Polynomial<coeff> operator% (const Polynomial<coeff>& other) const; // Returns the polynomial remainder
+        virtual coeff operator() (coeff input) const; // Function call on the polynomial. Plugs in the input value
+        virtual Polynomial<coeff> operator+ (const Polynomial<coeff>& other) const; // Adds two polynomials
+        virtual Polynomial<coeff> operator- (const Polynomial<coeff>& other) const; // Subtracts two polynomials
+        virtual Polynomial<coeff> operator* (const Polynomial<coeff>& other) const; // Multiplies two polynomials
+        virtual Polynomial<coeff> operator/ (const Polynomial<coeff>& other) const; // Returns the polynomial quotient
+        virtual Polynomial<coeff> operator% (const Polynomial<coeff>& other) const; // Returns the polynomial remainder
 
-        Polynomial<coeff> operator* (coeff constant) const; // Multiplies polynomial by a scalar constant
+        virtual Polynomial<coeff> operator* (coeff constant) const; // Multiplies polynomial by a scalar constant
 
         virtual ~Polynomial();
 
@@ -56,9 +56,9 @@ namespace AlgLib
         IntegerPolynomial& operator=(const Polynomial<int>& other);
         IntegerPolynomial();
 
-        IntegerPolynomial operator% (int mod) const;
+        virtual IntegerPolynomial operator% (int mod) const;
 
-        std::vector<int> moduloRoots(int mod) const;
+        virtual std::vector<int> moduloRoots(int mod) const;
     };
 }
 

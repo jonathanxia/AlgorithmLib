@@ -22,30 +22,30 @@ namespace AlgLib
             friend Fraction operator-(const Fraction& f1, const Fraction& f2);
             friend Fraction operator*(const Fraction& f1, const Fraction& f2);
             friend Fraction operator/(const Fraction& f1, const Fraction& f2);
-            Fraction& operator=(const Fraction& other);
-            Fraction& operator=(const int n);
-            Fraction& operator+=(const int other);
-            Fraction& operator-=(const int other);
-            Fraction& operator*=(const int other);
-            Fraction& operator/=(const int other);
-            Fraction& operator+=(const Fraction& other);
-            Fraction& operator-=(const Fraction& other);
-            Fraction& operator*=(const Fraction& other);
-            Fraction& operator/=(const Fraction& other);
-            bool operator>(const Fraction& other);
-            bool operator<(const Fraction& other);
-            bool operator==(const Fraction& other);
-            bool operator!=(const Fraction& other);
-            bool operator>=(const Fraction& other);
-            bool operator<=(const Fraction& other);
+            virtual Fraction& operator=(const Fraction& other);
+            virtual Fraction& operator=(const int n);
+            virtual Fraction& operator+=(const int other);
+            virtual Fraction& operator-=(const int other);
+            virtual Fraction& operator*=(const int other);
+            virtual Fraction& operator/=(const int other);
+            virtual Fraction& operator+=(const Fraction& other);
+            virtual Fraction& operator-=(const Fraction& other);
+            virtual Fraction& operator*=(const Fraction& other);
+            virtual Fraction& operator/=(const Fraction& other);
+            virtual bool operator>(const Fraction& other);
+            virtual bool operator<(const Fraction& other);
+            virtual bool operator==(const Fraction& other);
+            virtual bool operator!=(const Fraction& other);
+            virtual bool operator>=(const Fraction& other);
+            virtual bool operator<=(const Fraction& other);
 
             Fraction(int n, int d = 1);
 
             static int gcd(int a, int b); // takes the gcd of two numbers
             static int lcm(int a, int b);
 
-            std::string toString();
-            double getValue() const;
+            virtual std::string toString();
+            virtual double getValue() const;
 
         protected:
 
