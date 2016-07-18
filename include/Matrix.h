@@ -26,10 +26,10 @@ namespace AlgLib {
 		virtual Matrix transpose();
 		virtual int determinant(); */
 
-		//virtual void toString(); // Temporary solution to viewing... i just found out that you can return an output stream object
+		virtual std::vector< std::vector<T> > getVectors() const;
 
 	private:
-		std::vector<std::vector<T>> mMatrix;
+		std::vector< std::vector<T> > mMatrix;
 	};
 }
 

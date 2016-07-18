@@ -27,7 +27,7 @@ namespace AlgLib
             c++;
         }
         // Create matrix
-        std::vector<std::vector<T>> m;
+        std::vector< std::vector<T> > m;
         for (auto i = matrix.begin(); i != matrix.end(); i++) {
             std::vector<T> row;
             row.reserve(c);
@@ -51,7 +51,8 @@ namespace AlgLib
 
     }
     //Let's avoid the code below for now --Jonathan Xia 07/18/2016
-    /*template<typename T>
+    /*
+    template<typename T>
     void Matrix<T>::toString() { // Temporary sol until i figure out how to return output streams
         for (auto i = mMatrix.begin(); i != mMatrix.end(); i++) {
             cout << "[ ";
@@ -60,5 +61,14 @@ namespace AlgLib
             }
             cout << " ]\n";
         }
-    } */
+    }
+    */
+
+    template <typename T>
+    std::vector< std::vector<T> > Matrix<T>::getVectors() const
+    {
+        return mMatrix;
+    }
+
+
 }
