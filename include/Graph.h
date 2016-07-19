@@ -16,6 +16,20 @@ namespace AlgLib
             /** Default destructor */
             virtual ~Graph();
 
+            virtual void addVertex();
+            virtual void addEdge(int nodeS, int nodeE, double weight = 1);
+            virtual void deleteEdge(int nodeS, int nodeE);
+            virtual void deleteVertex(int node);
+            virtual int numVertex() const;
+            virtual int inDegree(int node) const;
+            virtual int outDegree(int node) const;
+            virtual double inWeight(int node) const;
+            virtual double outWeight(int node) const;
+            virtual double getWeight(int nodeS, int nodeE) const;
+            virtual bool inGraph(int node) const;
+            virtual std::vector< std::tuple <int, double> > outAdj(int node) const;
+            virtual std::vector< std::tuple <int, double> > inAdj(int node) const;
+
         protected:
 
         private:
