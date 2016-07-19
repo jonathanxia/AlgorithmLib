@@ -22,7 +22,7 @@ namespace AlgLib {
 
 		virtual std::vector<T>& operator[](int row); // Only row because we can't nest it from this class. The vector class can take care of the other
 
-		/*virtual Matrix operator*(const Matrix& other) const;*/
+		virtual Matrix operator*(const Matrix& other) const;
 		virtual Matrix operator+(const Matrix& other) const;
 		virtual Matrix operator-(const Matrix& other) const;
 		/*virtual Matrix inverse();

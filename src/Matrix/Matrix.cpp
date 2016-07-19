@@ -133,4 +133,26 @@ namespace AlgLib
         return Matrix(retMatrix);
     }
 
+    template <typename T>
+    Matrix<T> Matrix<T>::operator* (const Matrix<T>& other) const
+    {
+        // Jonathan Xia 7/18/16: may implement Strassen's Algorithm later
+        if(mMatrix[0].size() != other.mMatrix.size())
+            throw std::invalid_argument("Attempted Matrix multiplication with mismatched dimensions");
+        std::vector< std::vector<T> > retMatrix(mMatrix.size(), std::vector<T>(other.mMatrix[0].size()));
+        for(int r = 0; r < (int) mMatrix.size(); r++)
+        {
+            for(int c = 0; c < (int) other.mMatrix[0].size(); c++)
+            {
+                T sum = T(0);
+                for(int run = 0; run < mMatrix[0].size(); run++)
+                {
+                    sum += mMatrix[r][run] * other.mMatrix[run][c];
+                }
+                retMatrix[r][c] = sum;
+            }
+        }
+        return retMatrix;
+    }
+
 }
