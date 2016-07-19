@@ -13,6 +13,7 @@ namespace AlgLib
     Graph::~Graph()
     {
         delete mGraph;
+        mGraph = nullptr;
     }
 
     void Graph::addVertex()
