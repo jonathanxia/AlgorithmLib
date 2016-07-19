@@ -1,6 +1,6 @@
 #include <vector>
 #include <string>
-#include <iostream>
+#include <stdexcept>
 namespace AlgLib
 {
     template <typename T>
@@ -70,5 +70,17 @@ namespace AlgLib
         return mMatrix;
     }
 
+    template <typename T>
+    void Matrix<T>::setValue(int row, int col, T value)
+    {
+        if(row >= mMatrix.size() || row < 0 || col < 0 || col >= mMatrix[0].size())
+            throw std::out_of_range("Attempted to set value for Matrix out of range");
+        mMatrix[row][col] = value;
+    }
 
+    template <typename T>
+    std::vector<T>& Matrix<T>::operator[](int row)
+    {
+        return mMatrix[row];
+    }
 }

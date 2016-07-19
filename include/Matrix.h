@@ -19,6 +19,8 @@ namespace AlgLib {
 		*/
 		Matrix(const Matrix& rhs);
 
+		virtual std::vector<T>& operator[](int row); // Only row because we can't nest it from this class. The vector class can take care of the other
+
 		/*virtual Matrix operator*(const Matrix& other) const;
 		virtual Matrix operator+(const Matrix& other) const;
 		virtual Matrix operator-(const Matrix& other) const;
@@ -27,6 +29,7 @@ namespace AlgLib {
 		virtual int determinant(); */
 
 		virtual std::vector< std::vector<T> > getVectors() const;
+		virtual void setValue(int row, int col, T value);
 
 	private:
 		std::vector< std::vector<T> > mMatrix;
