@@ -16,6 +16,7 @@ namespace AlgLib
         public:
             /** Constructor */
             Graph(int numVertices, dbType storageType = dbType::ADJACENCY_MATRIX);
+            Graph(const std::vector< std::tuple<int, int, double> >& edgepairs);
             /** Default destructor */
             virtual ~Graph();
 
