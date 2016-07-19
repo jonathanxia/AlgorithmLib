@@ -25,9 +25,12 @@ namespace AlgLib {
 		virtual Matrix operator*(const Matrix& other) const;
 		virtual Matrix operator+(const Matrix& other) const;
 		virtual Matrix operator-(const Matrix& other) const;
-		/*virtual Matrix inverse();
+		/*
+		* Pushing implementation until later - 7/18/16 Jonathan Xia
+		virtual Matrix inverse();
 		virtual Matrix transpose();
-		virtual int determinant(); */
+		virtual int determinant();
+		*/
 
 		virtual std::vector< std::vector<T> > getVectors() const;
 		virtual void setValue(int row, int col, T value);
