@@ -12,26 +12,26 @@ namespace AlgLib {
     class Permutation {
     public:
 		// Constructors
-        Permutation(); 
+        Permutation();
         Permutation(std::initializer_list<int> word);
 		Permutation(std::initializer_list<std::initializer_list<T>> cycles);
 		Permutation(std::vector<std::pair<T, T>> pairs);
 
 		// Operators
-        Permutation<T> operator* (const Permutation<T>& other) const;
-        std::vector<T> operator() (const std::vector<T>& li) const;
-		bool operator!= (const Permutation<T>& other) const;
-		bool operator== (const Permutation<T>& other) const;
-		T operator() (const T elem) const;
+        virtual Permutation<T> operator* (const Permutation<T>& other) const;
+        virtual std::vector<T> operator() (const std::vector<T>& li) const;
+		virtual bool operator!= (const Permutation<T>& other) const;
+		virtual bool operator== (const Permutation<T>& other) const;
+		virtual T operator() (const T elem) const;
 
-		Permutation<T> inverse();
-		int order();
+		virtual Permutation<T> inverse();
+		virtual int order();
 		/* For some reason this is creating an error...
 		vector<Permutation<T>> cycles();
 		*/
 
     private:
-        std::vector<std::pair<T,T>> mPermutation; 
+        std::vector<std::pair<T,T>> mPermutation;
     };
 }
 

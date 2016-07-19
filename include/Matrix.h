@@ -12,19 +12,31 @@ namespace AlgLib {
 
 	public:
 		Matrix(int row, int column);
+		Matrix(const std::vector< std::vector<T> >& theMatrix);
 		Matrix(std::initializer_list<std::initializer_list<T> > m); // Probably should add more constructors later
 
-		Matrix operator*(const Matrix& other) const;
-		Matrix operator+(const Matrix& other) const;
-		Matrix operator-(const Matrix& other) const;
-		Matrix inverse();
-		Matrix transpose();
-		int determinant();
+		/**
+		* Copy constructor
+		*/
+		Matrix(const Matrix& rhs);
 
-		void toString(); // Temporary solution to viewing... i just found out that you can return an output stream object
+		virtual std::vector<T>& operator[](int row); // Only row because we can't nest it from this class. The vector class can take care of the other
+
+		virtual Matrix operator*(const Matrix& other) const;
+		virtual Matrix operator+(const Matrix& other) const;
+		virtual Matrix operator-(const Matrix& other) const;
+		/*
+		* Pushing implementation until later - 7/18/16 Jonathan Xia
+		virtual Matrix inverse();
+		virtual Matrix transpose();
+		virtual int determinant();
+		*/
+
+		virtual std::vector< std::vector<T> > getVectors() const;
+		virtual void setValue(int row, int col, T value);
 
 	private:
-		std::vector<std::vector<T>> mMatrix;
+		std::vector< std::vector<T> > mMatrix;
 	};
 }
 
