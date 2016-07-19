@@ -22,7 +22,8 @@ namespace AlgLib {
 		mlist.push_back(adj);
 	}
 
-	void adjList::addEdge(int nodeS, int nodeE, double weight = 1) {
+	void adjList::addEdge(int nodeS, int nodeE, double weight)
+	{
 		mlist[nodeS].push_back(std::make_tuple(nodeE, weight));
 	}
 
@@ -74,7 +75,7 @@ namespace AlgLib {
 	double adjList::inWeight(int node) const {
 		double weight = 0;
 		for (auto i = mlist.begin(); i != mlist.end(); i++) {
-			for (auto j = i->begin; j != i->end(); j++) {
+			for (auto j = i->begin(); j != i->end(); j++) {
 				if (j->first == node) {
 					weight += j->second;
 				}
@@ -100,7 +101,7 @@ namespace AlgLib {
 	}
 
 	std::vector< std::tuple <int, double> > adjList::inAdj(int node) const {
-		std::vector< std::tuple <int, double> > in; 
+		std::vector< std::tuple <int, double> > in;
 		for (auto i = mlist.begin(); i != mlist.end(); i++) {
 			for (auto j = i->begin(); j != i->end(); j++) {
 				if (std::get<0>(*j) == node) {

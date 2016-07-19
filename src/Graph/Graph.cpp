@@ -2,7 +2,7 @@
 
 namespace AlgLib
 {
-    Graph::Graph(int numVertices, dbType storageType = dbType::ADJACENCY_MATRIX)
+    Graph::Graph(int numVertices, dbType storageType)
     {
         if(storageType == dbType::ADJACENCY_MATRIX)
         {
