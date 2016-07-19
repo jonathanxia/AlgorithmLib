@@ -24,6 +24,7 @@ namespace AlgLib
             virtual int outDegree(int node) const override;
             virtual double inWeight(int node) const override;
             virtual double outWeight(int node) const override;
+            virtual bool inGraph(int node) const;
 
         protected:
 

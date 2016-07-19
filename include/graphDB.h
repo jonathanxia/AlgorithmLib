@@ -17,15 +17,16 @@ namespace AlgLib
              */
             virtual graphDB& operator=(const graphDB& other) = 0;
 
-            virtual int inDegree(int node) = 0;
-            virtual int outDegree(int node) = 0;
-            virtual double inWeight(int node) = 0;
-            virtual double outWeight(int node) = 0;
+            virtual int inDegree(int node) const = 0;
+            virtual int outDegree(int node) const = 0;
+            virtual double inWeight(int node) const = 0;
+            virtual double outWeight(int node) const = 0;
             virtual int numVertex() const = 0;
             virtual void deleteVertex(int node) = 0;
             virtual void deleteEdge(int nodeS, int nodeE) = 0;
             virtual void addVertex() = 0;
             virtual void addEdge(int nodeS, int nodeE, double weight = 1) = 0;
+            virtual bool inGraph(int node) const = 0;
 
         protected:
 

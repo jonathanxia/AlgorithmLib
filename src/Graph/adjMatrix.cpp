@@ -93,4 +93,9 @@ namespace AlgLib
         }
         return weight;
     }
+
+    bool adjMatrix::inGraph(int node) const
+    {
+        return isInGraph[node];
+    }
 }
