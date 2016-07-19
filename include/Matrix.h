@@ -12,6 +12,7 @@ namespace AlgLib {
 
 	public:
 		Matrix(int row, int column);
+		Matrix(const std::vector< std::vector<T> >& theMatrix);
 		Matrix(std::initializer_list<std::initializer_list<T> > m); // Probably should add more constructors later
 
 		/**
@@ -21,10 +22,10 @@ namespace AlgLib {
 
 		virtual std::vector<T>& operator[](int row); // Only row because we can't nest it from this class. The vector class can take care of the other
 
-		/*virtual Matrix operator*(const Matrix& other) const;
+		/*virtual Matrix operator*(const Matrix& other) const;*/
 		virtual Matrix operator+(const Matrix& other) const;
 		virtual Matrix operator-(const Matrix& other) const;
-		virtual Matrix inverse();
+		/*virtual Matrix inverse();
 		virtual Matrix transpose();
 		virtual int determinant(); */
 

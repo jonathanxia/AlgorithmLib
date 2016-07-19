@@ -18,6 +18,17 @@ namespace AlgLib
         mMatrix = rows;
     }
 
+    template <typename T>
+    Matrix<T>::Matrix(const std::vector< std::vector<T> >& theMatrix)
+    {
+        for(int i = 0; i < (int) theMatrix.size() - 1; i++)
+        {
+            if(theMatrix[i].size() != theMatrix[i+1].size())
+                throw std::invalid_argument("Matrix has inconsistent dimensions");
+        }
+        mMatrix = theMatrix;
+    }
+
     template<typename T>
     Matrix<T>::Matrix(std::initializer_list<std::initializer_list<T> > matrix) {
         // Find r and c
@@ -83,4 +94,43 @@ namespace AlgLib
     {
         return mMatrix[row];
     }
+
+    template <typename T>
+    Matrix<T> Matrix<T>::operator+ (const Matrix<T>& other) const
+    {
+        if(other.mMatrix.size() != mMatrix.size() || other.mMatrix[0].size() != mMatrix[0].size())
+            throw std::invalid_argument("Attempted Matrix addition with mismatched dimensions");
+        int row = mMatrix.size();
+        int col = mMatrix[0].size();
+
+        std::vector< std::vector<T> > retMatrix(row, std::vector<T>(col));
+        for(int i = 0; i < row; i++)
+        {
+            for(int j = 0; j < col; j++)
+            {
+                retMatrix[i][j] = mMatrix[i][j] + other.mMatrix[i][j];
+            }
+        }
+        return Matrix(retMatrix);
+    }
+
+    template <typename T>
+    Matrix<T> Matrix<T>::operator- (const Matrix<T>& other) const
+    {
+        if(other.mMatrix.size() != mMatrix.size() || other.mMatrix[0].size() != mMatrix[0].size())
+            throw std::invalid_argument("Attempted Matrix addition with mismatched dimensions");
+        int row = mMatrix.size();
+        int col = mMatrix[0].size();
+
+        std::vector< std::vector<T> > retMatrix(row, std::vector<T>(col));
+        for(int i = 0; i < row; i++)
+        {
+            for(int j = 0; j < col; j++)
+            {
+                retMatrix[i][j] = mMatrix[i][j] - other.mMatrix[i][j];
+            }
+        }
+        return Matrix(retMatrix);
+    }
+
 }
