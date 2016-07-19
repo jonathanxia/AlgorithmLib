@@ -1,61 +1,63 @@
 
-
-template <typename T>
-T MERGE(T&, T&);
-/**
-* mergeSort(T & arr)
-*
-* Sort the elements in container arr with merge sort algorithm
-* Parameters:
-*   T& arr: the container to be sorted
-* Returns: void
-* Additional notes: Sorts in O(n lg n) time
-*/
-
-template <typename T>
-void mergeSort(T& arr)
+namespace AlgLib
 {
-    if(arr.size() < 2)
-        return;
+    template <typename T>
+    T MERGE(T&, T&);
+    /**
+    * mergeSort(T & arr)
+    *
+    * Sort the elements in container arr with merge sort algorithm
+    * Parameters:
+    *   T& arr: the container to be sorted
+    * Returns: void
+    * Additional notes: Sorts in O(n lg n) time
+    */
 
-    T leftPart, rightPart; //These are the left and right partitions.
-    //The following code partitions the arr
-    //leftPart takes from index 0 to index arr.size() / 2 (excluding the upper bound)
-    //rightPart takes the rest
-    for(int i = 0; i < arr.size() / 2; i++)
-        leftPart.push_back(arr[i]);
-    for(int i = arr.size() / 2; i < arr.size(); i++)
-        rightPart.push_back(arr[i]);
-
-    mergeSort(leftPart);
-    mergeSort(rightPart);
-    arr = MERGE<T>(leftPart, rightPart);
-}
-
-template <typename T>
-T MERGE(T& leftPart, T& rightPart)
-{
-    int totalSize = leftPart.size() + rightPart.size(); //totalSize is the combined size of the two vectors
-    T merged(totalSize); //The merged (returned) vector
-
-    int lIndex = 0, rIndex = 0;
-    while(lIndex < leftPart.size() && rIndex < rightPart.size())
+    template <typename T>
+    void mergeSort(T& arr)
     {
-        merged[lIndex + rIndex] = (leftPart[lIndex] < rightPart[rIndex] ? leftPart[lIndex] : rightPart[rIndex]); //Places the smallest one in merged
-        leftPart[lIndex] < rightPart[rIndex] ? lIndex++ : rIndex++; //Updates the indices
+        if(arr.size() < 2)
+            return;
+
+        T leftPart, rightPart; //These are the left and right partitions.
+        //The following code partitions the arr
+        //leftPart takes from index 0 to index arr.size() / 2 (excluding the upper bound)
+        //rightPart takes the rest
+        for(int i = 0; i < arr.size() / 2; i++)
+            leftPart.push_back(arr[i]);
+        for(int i = arr.size() / 2; i < arr.size(); i++)
+            rightPart.push_back(arr[i]);
+
+        mergeSort(leftPart);
+        mergeSort(rightPart);
+        arr = MERGE<T>(leftPart, rightPart);
     }
-    //The following two while loops will grab the remains
-    //One of them is guaranteed to be useless
-    while(lIndex < leftPart.size())
+
+    template <typename T>
+    T MERGE(T& leftPart, T& rightPart)
     {
-        merged[lIndex + rIndex] = leftPart[lIndex];
-        lIndex++;
+        int totalSize = leftPart.size() + rightPart.size(); //totalSize is the combined size of the two vectors
+        T merged(totalSize); //The merged (returned) vector
+
+        int lIndex = 0, rIndex = 0;
+        while(lIndex < leftPart.size() && rIndex < rightPart.size())
+        {
+            merged[lIndex + rIndex] = (leftPart[lIndex] < rightPart[rIndex] ? leftPart[lIndex] : rightPart[rIndex]); //Places the smallest one in merged
+            leftPart[lIndex] < rightPart[rIndex] ? lIndex++ : rIndex++; //Updates the indices
+        }
+        //The following two while loops will grab the remains
+        //One of them is guaranteed to be useless
+        while(lIndex < leftPart.size())
+        {
+            merged[lIndex + rIndex] = leftPart[lIndex];
+            lIndex++;
+        }
+        while(rIndex < rightPart.size())
+        {
+            merged[lIndex + rIndex] = rightPart[rIndex];
+            rIndex++;
+        }
+        return merged;
     }
-    while(rIndex < rightPart.size())
-    {
-        merged[lIndex + rIndex] = rightPart[rIndex];
-        rIndex++;
-    }
-    return merged;
 }
 

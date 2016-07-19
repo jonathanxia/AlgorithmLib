@@ -1,10 +1,13 @@
 #include "Heap.h"
-template <typename T, typename S>
-void heapSort(T & arr)
+namespace AlgLib
 {
-    AlgLib::Heap<S> arrHeap(arr);
-    for(int i = arr.size() - 1; i >= 0; i--)
+    template <typename T, typename S>
+    void heapSort(T & arr)
     {
-        arr[i] = arrHeap.pop();
+        AlgLib::Heap<S> arrHeap(arr);
+        for(int i = arr.size() - 1; i >= 0; i--)
+        {
+            arr[i] = arrHeap.pop();
+        }
     }
 }
