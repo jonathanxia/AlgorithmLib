@@ -85,3 +85,9 @@ $RECYCLE.BIN/
 
 # Tae Hyung's excluded stuff
 /.vscode
+/Debug
+/.vs
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
