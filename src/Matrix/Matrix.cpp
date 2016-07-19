@@ -34,7 +34,7 @@ namespace AlgLib
         // Find r and c
         int r = 0, c = 0;
         for (auto i = matrix.begin(); i != matrix.end(); i++) {
-            r = i->size() > r ? i->size() : r;
+            r = (int) i->size() > r ? i->size() : r;
             c++;
         }
         // Create matrix
@@ -84,7 +84,7 @@ namespace AlgLib
     template <typename T>
     void Matrix<T>::setValue(int row, int col, T value)
     {
-        if(row >= mMatrix.size() || row < 0 || col < 0 || col >= mMatrix[0].size())
+        if(row >= (int) mMatrix.size() || row < 0 || col < 0 || col >= (int) mMatrix[0].size())
             throw std::out_of_range("Attempted to set value for Matrix out of range");
         mMatrix[row][col] = value;
     }
@@ -145,7 +145,7 @@ namespace AlgLib
             for(int c = 0; c < (int) other.mMatrix[0].size(); c++)
             {
                 T sum = T(0);
-                for(int run = 0; run < mMatrix[0].size(); run++)
+                for(int run = 0; run < (int) mMatrix[0].size(); run++)
                 {
                     sum += mMatrix[r][run] * other.mMatrix[run][c];
                 }
@@ -155,4 +155,35 @@ namespace AlgLib
         return retMatrix;
     }
 
+    template <typename T>
+    int Matrix<T>::numRows() const
+    {
+        return mMatrix.size();
+    }
+    template <typename T>
+    int Matrix<T>::numColumns() const
+    {
+        return mMatrix[0].size();
+    }
+
+    template <typename T>
+    void Matrix<T>::addRow()
+    {
+        mMatrix.push_back(std::vector<T>(mMatrix[0].size()));
+    }
+
+    template <typename T>
+    void Matrix<T>::addColumn()
+    {
+        for(int i = 0; i < (int)mMatrix.size(); i++)
+        {
+            mMatrix[i].push_back( T(0) );
+        }
+    }
+
+    template <typename T>
+    T Matrix<T>::getValue(int row, int col) const
+    {
+        return mMatrix[row][col];
+    }
 }
