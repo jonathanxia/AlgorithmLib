@@ -1,6 +1,7 @@
 #ifndef GRAPHDB_H
 #define GRAPHDB_H
-
+#include <vector>
+#include <tuple>
 namespace AlgLib
 {
     class graphDB
@@ -11,16 +12,20 @@ namespace AlgLib
             /** Default destructor */
             virtual ~graphDB();
 
-            /** Assignment operator
-             *  \param other Object to assign from
-             *  \return A reference to this
-             */
-            virtual graphDB& operator=(const graphDB& other) = 0;
+            virtual int inDegree(int node) const = 0;
+            virtual int outDegree(int node) const = 0;
+            virtual double getWeight(int nodeS, int nodeE) const = 0;
+            virtual double inWeight(int node) const = 0;
+            virtual double outWeight(int node) const = 0;
+            virtual std::vector< std::tuple <int, double> > outAdj(int node) const = 0;
+            virtual std::vector< std::tuple <int, double> > inAdj(int node) const = 0;
+            virtual int numVertex() const = 0;
+            virtual void deleteVertex(int node) = 0;
+            virtual void deleteEdge(int nodeS, int nodeE) = 0;
+            virtual void addVertex() = 0;
+            virtual void addEdge(int nodeS, int nodeE, double weight = 1) = 0;
+            virtual bool inGraph(int node) const = 0;
 
-            virtual int getDegree(int node) = 0;
-            virtual int numVertex() = 0;
-            virtual int deleteVertex(int node) = 0;
-            virtual int deleteEdge(int nodeS, int nodeE) = 0;
 
         protected:
 

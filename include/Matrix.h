@@ -34,6 +34,13 @@ namespace AlgLib {
 
 		virtual std::vector< std::vector<T> > getVectors() const;
 		virtual void setValue(int row, int col, T value);
+		virtual T getValue(int row, int col) const;
+		virtual int numRows() const;
+		virtual int numColumns() const;
+
+	protected:
+        virtual void addRow();
+        virtual void addColumn();
 
 	private:
 		std::vector< std::vector<T> > mMatrix;
