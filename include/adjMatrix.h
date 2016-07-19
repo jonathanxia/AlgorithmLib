@@ -4,6 +4,7 @@
 #include "graphDb.h"
 #include "Matrix.h"
 #include <vector>
+#include <tuple>
 namespace AlgLib
 {
     class adjMatrix : public graphDB, protected Matrix<double>
@@ -24,7 +25,11 @@ namespace AlgLib
             virtual int outDegree(int node) const override;
             virtual double inWeight(int node) const override;
             virtual double outWeight(int node) const override;
-            virtual bool inGraph(int node) const;
+            virtual double getWeight(int nodeS, int nodeE) const override;
+            virtual bool inGraph(int node) const override;
+            virtual std::vector< std::tuple <int, double> > outAdj(int node) const override;
+            virtual std::vector< std::tuple <int, double> > inAdj(int node) const override;
+
 
         protected:
 

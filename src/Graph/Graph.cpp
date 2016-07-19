@@ -1,11 +1,17 @@
 #include "Graph.h"
 
-Graph::Graph()
+namespace AlgLib
 {
-    //ctor
-}
+    Graph::Graph(int numVertices, dbType storageType = dbType::ADJACENCY_MATRIX)
+    {
+        if(storageType == dbType::ADJACENCY_MATRIX)
+        {
+            mGraph = new adjMatrix(numVertices);
+        }
+    }
 
-Graph::~Graph()
-{
-    //dtor
+    Graph::~Graph()
+    {
+        delete mGraph;
+    }
 }
