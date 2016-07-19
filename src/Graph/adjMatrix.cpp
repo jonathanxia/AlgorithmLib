@@ -54,13 +54,13 @@ namespace AlgLib
 
     int adjMatrix::inDegree(int node) const
     {
-        int deg = 0;
+        int degree = 0;
         for(int i = 0; i < (*this).numRows(); i++)
         {
             if( this->getValue(i, node) > 0 )
-                deg++;
+                degree++;
         }
-        return deg;
+        return degree;
     }
 
     int adjMatrix::outDegree(int node) const

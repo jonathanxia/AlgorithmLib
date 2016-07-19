@@ -11,12 +11,6 @@ namespace AlgLib
             /** Default destructor */
             virtual ~graphDB();
 
-            /** Assignment operator
-             *  \param other Object to assign from
-             *  \return A reference to this
-             */
-            virtual graphDB& operator=(const graphDB& other) = 0;
-
             virtual int inDegree(int node) const = 0;
             virtual int outDegree(int node) const = 0;
             virtual double inWeight(int node) const = 0;
