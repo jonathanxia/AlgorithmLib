@@ -33,4 +33,4 @@ namespace AlgLib {
 }
 
 
-#endif ADJLIST_H
+#endif

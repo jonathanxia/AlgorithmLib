@@ -1,5 +1,7 @@
 #include "Graph.h"
-
+#include "graphDB.h"
+#include "adjMatrix.h"
+#include "adjList.h"
 namespace AlgLib
 {
     Graph::Graph(int numVertices, dbType storageType)

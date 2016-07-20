@@ -76,8 +76,8 @@ namespace AlgLib {
 		double weight = 0;
 		for (auto i = mlist.begin(); i != mlist.end(); i++) {
 			for (auto j = i->begin(); j != i->end(); j++) {
-				if (j->first == node) {
-					weight += j->second;
+				if (std::get<0>(*j) == node) {
+					weight += std::get<1>(*j);
 				}
 			}
 		}
@@ -92,8 +92,10 @@ namespace AlgLib {
 		return weight;
 	}
 
-	bool adjList::inGraph(int node) const {
-		return node < mlist.size();
+	/* Will look at this again */
+	bool adjList::inGraph(int node) const
+	{
+		return node < (int) mlist.size();
 	}
 
 	std::vector< std::tuple <int, double> > adjList::outAdj(int node) const {
@@ -112,11 +114,15 @@ namespace AlgLib {
 		return in;
 	}
 
-	double adjList::getWeight(int nodeS, int nodeE) const {
-		for (auto i = mlist[nodeS].begin(); i != mlist[nodeS].end(); i++) {
-			if (std::get<0>(*i) == nodeE) {
+	double adjList::getWeight(int nodeS, int nodeE) const
+	{
+		for (auto i = mlist[nodeS].begin(); i != mlist[nodeS].end(); i++)
+        {
+			if (std::get<0>(*i) == nodeE)
+			{
 				return std::get<1>(*i);
 			}
 		}
+		return 0;
 	}
 }
