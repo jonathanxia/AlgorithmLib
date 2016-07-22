@@ -72,11 +72,15 @@ namespace AlgLib {
 		return degree;
 	}
 
-	double adjList::inWeight(int node) const {
+	double adjList::inWeight(int node) const
+	{
 		double weight = 0;
-		for (auto i = mlist.begin(); i != mlist.end(); i++) {
-			for (auto j = i->begin(); j != i->end(); j++) {
-				if (std::get<0>(*j) == node) {
+		for (auto i = mlist.begin(); i != mlist.end(); i++)
+        {
+			for (auto j = i->begin(); j != i->end(); j++)
+			{
+				if (std::get<0>(*j) == node)
+				{
 					weight += std::get<1>(*j);
 				}
 			}
