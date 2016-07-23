@@ -64,5 +64,4 @@ namespace AlgLib
 
 
 #include "../src/Polynomial/Polynomial.cpp"
-#include "../src/Polynomial/IntPolynomial.cpp"
 #endif // POLYNOMIAL_H

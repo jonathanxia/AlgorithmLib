@@ -1,7 +1,9 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 #include "graphDB.h"
-
+#include <vector>
+#include <tuple>
+#include <initializer_list>
 namespace AlgLib
 {
     enum class dbType
@@ -12,7 +14,9 @@ namespace AlgLib
     class Graph
     {
         public:
+            /** Constructor */
             Graph(int numVertices, dbType storageType = dbType::ADJACENCY_MATRIX);
+            Graph(const std::vector< std::tuple<int, int, double> >& edgepairs);
             /** Default destructor */
             virtual ~Graph();
 
