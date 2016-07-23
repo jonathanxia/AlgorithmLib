@@ -29,8 +29,9 @@ namespace AlgLib {
 		virtual std::vector< std::tuple <int, double> > inAdj(int node) const override;
 	private:
 		std::vector<std::vector<std::tuple<int, double>>> mlist;
+		std::vector<bool> isInGraph;
 	};
 }
 
 
-#endif ADJLIST_H
+#endif

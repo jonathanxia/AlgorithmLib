@@ -66,7 +66,7 @@ template <typename coeff>
 AlgLib::Polynomial<coeff> AlgLib::Polynomial<coeff>::antideriv(coeff C) const
 {
     std::vector<coeff> retCoeff(mCoeff.size() + 1);
-    for(int i = 1; i < retCoeff.size(); i++)
+    for(int i = 1; i < (int)retCoeff.size(); i++)
     {
         retCoeff[i] = mCoeff[i-1] / i;
     }

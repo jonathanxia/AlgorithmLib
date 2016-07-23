@@ -1,7 +1,7 @@
 #ifndef ADJMATRIX_H
 #define ADJMATRIX_H
 
-#include "graphDb.h"
+#include "graphDB.h"
 #include "Matrix.h"
 #include <vector>
 #include <tuple>

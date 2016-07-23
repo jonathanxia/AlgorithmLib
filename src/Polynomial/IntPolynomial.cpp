@@ -1,5 +1,6 @@
 #include <vector>
 #include <stdexcept>
+#include "Polynomial.h"
 /** @brief Takes modulo something
   *
   * Return Polynomial that takes the mod of the coefficients
