@@ -1,6 +1,7 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 #include "graphDB.h"
+#include "Matrix.h"
 #include <vector>
 #include <tuple>
 #include <initializer_list>
@@ -16,7 +17,9 @@ namespace AlgLib
         public:
             /** Constructor */
             Graph(int numVertices, dbType storageType = dbType::ADJACENCY_MATRIX);
-            Graph(const std::vector< std::tuple<int, int, double> >& edgepairs);
+            Graph(const std::vector< std::tuple<int, int, double> >& edgepairs, dbType storageType = dbType::ADJACENCY_LIST);
+            Graph(const Matrix& adjMat, dbType storageType = dbType::ADJACENCY_MATRIX);
+            Graph(const std::vector< std::vector<int, int, double> >& inAdjList, dbType storageType = dbType::ADJACENCY_LIST);
             /** Default destructor */
             virtual ~Graph();
 

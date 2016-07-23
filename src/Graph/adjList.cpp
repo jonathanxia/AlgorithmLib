@@ -1,11 +1,13 @@
 #include "adjList.h"
+#include "graphDB.h"
 #include <vector>
 #include <utility>
 #include <tuple>
 #include <stdexcept>
-namespace AlgLib {
+namespace AlgLib
+{
 	adjList::adjList(int numVertices) :
-	    isInGraph(numVertices, true)
+	    graphDB(numVertices)
 	{
 		mlist.reserve(numVertices);
 		for (int i = 0; i < numVertices; i++)
@@ -63,19 +65,6 @@ namespace AlgLib {
 		}
 	}
 
-	int adjList::numVertex() const
-	{
-		int numVertices = 0;
-		for (auto i = isInGraph.begin(); i != isInGraph.end(); i++)
-        {
-            if(*i)
-            {
-                numVertices++;
-            }
-        }
-        return numVertices;
-	}
-
 	int adjList::inDegree(int node) const{
 		int degree = 0;
 		for (auto i = mlist.begin(); i != mlist.end(); i++)
@@ -123,11 +112,6 @@ namespace AlgLib {
 			weight += std::get<1>(*i);
 		}
 		return weight;
-	}
-
-	bool adjList::inGraph(int node) const
-	{
-		return isInGraph[node];
 	}
 
 	std::vector< std::tuple <int, double> > adjList::outAdj(int node) const
