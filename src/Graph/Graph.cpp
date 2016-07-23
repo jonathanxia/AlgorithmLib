@@ -24,7 +24,7 @@ namespace AlgLib
     Graph::Graph(const std::vector<std::tuple<int, int, double>>& edgepairs, dbType storageType)
     {
         int numVertices = 0;
-        for(auto it = edgepairs.begin(); it != edgepairs.end(); it++)
+        for(auto it = edgepairs.begin(); it != edgepairs.end(); ++it)
         {
             if(std::get<0>(*it) > numVertices)
             {
@@ -37,19 +37,28 @@ namespace AlgLib
         }
         if(storageType == dbType::ADJACENCY_LIST)
         {
-
+            mGraph = new adjList(numVertices);
+            for(auto it = edgepairs.begin(); it != edgepairs.end(); ++it)
+            {
+                mGraph->addEdge(std::get<0>(*it), std::get<1>(*it), std::get<2>(*it));
+            }
         }
     }
 
-    Graph::Graph(const Matrix& adjMat, dbType storageType)
+    Graph::Graph(const Matrix<double>& adjMat, dbType storageType)
     {
 
     }
 
-    Graph::Graph(const std::vector<std::vector<int, int, double>>& inAdjList, dbType storageType)
+    /** @brief (one liner)
+      *
+      * (documentation goes here)
+      */
+    Graph::Graph(const std::vector<std::vector<std::tuple<int, double>>>& inAdjList, dbType storageType)
     {
 
     }
+
 
     Graph::~Graph()
     {

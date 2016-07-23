@@ -4,6 +4,7 @@
 #include <utility>
 #include <tuple>
 #include <stdexcept>
+#include "sorting.h"
 namespace AlgLib
 {
 	adjList::adjList(int numVertices) :
@@ -32,6 +33,8 @@ namespace AlgLib
 	{
 	    if(nodeS >= (int) mlist.size() || nodeE >= (int) mlist.size() || nodeS < 0 || nodeE < 0)
             throw std::out_of_range("Node does not exist");
+
+        // The nodes should be kept in order -- will change
 		mlist[nodeS].push_back(std::make_tuple(nodeE, weight));
 	}
 

@@ -18,8 +18,8 @@ namespace AlgLib
             /** Constructor */
             Graph(int numVertices, dbType storageType = dbType::ADJACENCY_MATRIX);
             Graph(const std::vector< std::tuple<int, int, double> >& edgepairs, dbType storageType = dbType::ADJACENCY_LIST);
-            Graph(const Matrix& adjMat, dbType storageType = dbType::ADJACENCY_MATRIX);
-            Graph(const std::vector< std::vector<int, int, double> >& inAdjList, dbType storageType = dbType::ADJACENCY_LIST);
+            Graph(const Matrix<double>& adjMat, dbType storageType = dbType::ADJACENCY_MATRIX);
+            Graph(const std::vector< std::vector< std::tuple<int, double> > >& inAdjList, dbType storageType = dbType::ADJACENCY_LIST);
             /** Default destructor */
             virtual ~Graph();
 
