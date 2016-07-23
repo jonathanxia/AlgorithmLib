@@ -3,8 +3,10 @@
 
 #include<Permutation.h>
 
-namespace AlgLib {
-	class GroupElement {
+namespace AlgLib
+{
+	class GroupElement
+	{
 	public:
 		GroupElement();
 		virtual ~GroupElement();
@@ -12,14 +14,5 @@ namespace AlgLib {
 		virtual GroupElement compose(GroupElement other); // not overloading operator since groups can be both additive and multiplicative
 	};
 
-
-	template<typename T : GroupElement>
-	class Group {
-
-	};
-
-
 }
-
-
 #endif
