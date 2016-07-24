@@ -3,6 +3,7 @@
 #include "adjMatrix.h"
 #include "adjList.h"
 #include "Matrix.h"
+#include "searching.h"
 #include <tuple>
 #include <utility>
 
@@ -38,16 +39,41 @@ namespace AlgLib
         if(storageType == dbType::ADJACENCY_LIST)
         {
             mGraph = new adjList(numVertices);
-            for(auto it = edgepairs.begin(); it != edgepairs.end(); ++it)
-            {
-                mGraph->addEdge(std::get<0>(*it), std::get<1>(*it), std::get<2>(*it));
-            }
+        }
+        else if(storageType == dbType::ADJACENCY_MATRIX)
+        {
+            mGraph = new adjMatrix(numVertices);
+        }
+        for(auto it = edgepairs.begin(); it != edgepairs.end(); ++it)
+        {
+            mGraph->addEdge(std::get<0>(*it), std::get<1>(*it), std::get<2>(*it));
         }
     }
 
     Graph::Graph(const Matrix<double>& adjMat, dbType storageType)
     {
-
+        if(adjMat.numRows() != adjMat.numColumns())
+        {
+            throw std::invalid_argument("adjacency matrix is not a square matrix");
+        }
+        if(storageType == dbType::ADJACENCY_MATRIX)
+        {
+            mGraph = new adjMatrix(adjMat);
+        }
+        else if (storageType == dbType::ADJACENCY_LIST)
+        {
+            mGraph = new adjList(adjMat.numRows());
+            for(int i = 0; i < adjMat.numRows(); i++)
+            {
+                for(int j = 0; j < adjMat.numColumns(); j++)
+                {
+                    if(adjMat.getValue(i, j) > 0)
+                    {
+                        mGraph->addEdge(i, j, adjMat.getValue(i, j));
+                    }
+                }
+            }
+        }
     }
 
     /** @brief (one liner)
@@ -56,7 +82,21 @@ namespace AlgLib
       */
     Graph::Graph(const std::vector<std::vector<std::tuple<int, double>>>& inAdjList, dbType storageType)
     {
-
+        if(storageType == dbType::ADJACENCY_LIST)
+        {
+            mGraph = new adjList(inAdjList.size());
+        }
+        else if (storageType == dbType::ADJACENCY_MATRIX)
+        {
+            mGraph = new adjMatrix(inAdjList.size());
+        }
+        for(auto it = inAdjList.begin(); it != inAdjList.end(); ++it)
+        {
+            for(auto jt = (*it).begin(); jt != (*it).end(); ++jt)
+            {
+                mGraph->addEdge(std::get<0>(*jt), std::get<1>(*jt), std::get<2>(*jt));
+            }
+        }
     }
 
 

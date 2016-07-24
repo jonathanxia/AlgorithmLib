@@ -1,4 +1,5 @@
 #include "adjMatrix.h"
+#include "Matrix.h"
 #include "graphDB.h"
 #include <vector>
 #include <array>
@@ -11,6 +12,13 @@ namespace AlgLib
      adjMatrix::adjMatrix(int numVertices) :
          graphDB(numVertices),
          Matrix<double>(numVertices, numVertices)
+    {
+
+    }
+
+    adjMatrix::adjMatrix(const Matrix<double>& other) :
+        graphDB(other.numRows()),
+        Matrix<double>(other)
     {
 
     }

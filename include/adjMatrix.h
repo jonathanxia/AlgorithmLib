@@ -13,6 +13,7 @@ namespace AlgLib
             using Matrix<double>::Matrix;
             /** Default constructor */
             adjMatrix(int numVertices = 0);
+            adjMatrix(const Matrix<double>& other);
             /** Default destructor */
             virtual ~adjMatrix();
 
