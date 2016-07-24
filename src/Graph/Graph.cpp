@@ -94,7 +94,7 @@ namespace AlgLib
         {
             for(auto jt = (*it).begin(); jt != (*it).end(); ++jt)
             {
-                mGraph->addEdge(std::get<0>(*jt), std::get<1>(*jt), std::get<2>(*jt));
+                mGraph->addEdge(it - inAdjList.begin(), std::get<0>(*jt), std::get<1>(*jt));
             }
         }
     }
