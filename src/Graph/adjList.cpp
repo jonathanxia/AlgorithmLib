@@ -4,10 +4,11 @@
 #include <tuple>
 #include <stdexcept>
 #include "searching.h"
+#include "graphDB.h"
 namespace AlgLib
 {
 	adjList::adjList(int numVertices) :
-	    graphDB(numVertices)
+	    isInGraph(numVertices, true)
 	{
 		mlist.reserve(numVertices);
 		for (int i = 0; i < numVertices; i++)

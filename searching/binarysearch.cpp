@@ -12,36 +12,54 @@ namespace AlgLib
             A: the container that has the elements of type T
             key: the element to be found
     *   Returns:
-            the index the element key is at. Returns -1 if doesn't exist.
+            the index the element key is at if the key is in A
+            if not in A, if the element would be between position x and x+1
+                then the value of -x-2 is returned
     */
     template <typename cont, typename T>
     int binarysearch(cont A, T key)
     {
-        // We are searching for the key in between A[lowerInd] and A[upperInd - 1]
-        // The midpoint will be the average, and then we shall confine our search there.
-        int lowerInd = 0;
-        int upperInd = A.size();
-        int midpoint = (lowerInd + upperInd) / 2;
-
-        while(lowerInd != upperInd) //if lowerInd == midpoint, then that means lowerInd and upperInd differ by
-            //at most 1
+        int index = 0;
+        int sizeofcont = A.size();
+        int power = 1; // This will store a power of 2
+        if(key < A[0])
         {
-            if(key == A[midpoint])
+            return -1;
+        }
+        while(power < sizeofcont)
+        {
+            power *= 2;
+        }
+        power /= 2; // Power is now the largest power of 2 < sizeofcont
+
+        // power will be chopped in half until it is 0
+        // basically, we are going to find the base-2 representation of index
+        while(power > 0)
+        {
+            if(index + power < sizeofcont && A[index + power] > key)
             {
-                return midpoint;
+                // This means that we set the digit in index to 0
+                power /= 2;
             }
-            else if (key < A[midpoint]) //We constrain our search from lowerInd to midpoint
+            else if(index + power < sizeofcont && A[index + power] < key)
             {
-                upperInd = midpoint;
-                midpoint = (lowerInd + upperInd) / 2;
+                // We add power to index so that we mark that digit as a 1
+                index += power;
+                power /= 2;
+            }
+            else if(index + power < sizeofcont && A[index + power] == key)
+            {
+                //Success!!
+                return index+power;
             }
             else
             {
-                lowerInd = midpoint;
-                midpoint = (lowerInd + upperInd) / 2;
+                // This means index + power exceeded the maximum size
+                // We therefore must decrease the power of 2
+                power /= 2;
             }
         }
-
-        return -1;
+        // If element not found, this indicates between which indices it would be between
+        return -index - 2;
     }
 }
