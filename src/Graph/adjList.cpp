@@ -1,14 +1,14 @@
 #include "adjList.h"
+#include "graphDB.h"
 #include <vector>
 #include <utility>
 #include <tuple>
 #include <stdexcept>
 #include "searching.h"
-#include "graphDB.h"
 namespace AlgLib
 {
 	adjList::adjList(int numVertices) :
-	    isInGraph(numVertices, true)
+	    graphDB(numVertices)
 	{
 		mlist.reserve(numVertices);
 		for (int i = 0; i < numVertices; i++)
@@ -33,7 +33,23 @@ namespace AlgLib
 	{
 	    if(nodeS >= (int) mlist.size() || nodeE >= (int) mlist.size() || nodeS < 0 || nodeE < 0)
             throw std::out_of_range("Node does not exist");
-		mlist[nodeS].push_back(std::make_tuple(nodeE, weight));
+        if(weight < 0)
+        {
+            throw std::invalid_argument("Weight is negative");
+        }
+
+		/* This will search for the index. Since binarysearch currently does not have comparison operators overloaded
+		the weight is set to -1 so binarysearch will indicate that it would come before the actual node */
+		int ind = binarysearch(mlist[nodeS], std::make_tuple(nodeE, -1));
+		// then, -potentialequalindex - 1 = ind so potentialequalindex = -ind - 1
+		if (std::get<0>(mlist[nodeS][-ind-1]) == nodeE)
+        {
+            std::get<1>(mlist[nodeS][-ind-1]) = weight;
+        }
+        else
+        {
+            mlist[nodeS].insert(mlist[nodeS].begin()-ind-1, std::make_tuple(nodeE, weight));
+        }
 	}
 
 	void adjList::deleteEdge(int nodeS, int nodeE)
@@ -64,19 +80,6 @@ namespace AlgLib
 				}
 			}
 		}
-	}
-
-	int adjList::numVertex() const
-	{
-		int numVertices = 0;
-		for (auto i = isInGraph.begin(); i != isInGraph.end(); i++)
-        {
-            if(*i)
-            {
-                numVertices++;
-            }
-        }
-        return numVertices;
 	}
 
 	int adjList::inDegree(int node) const{
@@ -126,11 +129,6 @@ namespace AlgLib
 			weight += std::get<1>(*i);
 		}
 		return weight;
-	}
-
-	bool adjList::inGraph(int node) const
-	{
-		return isInGraph[node];
 	}
 
 	std::vector< std::tuple <int, double> > adjList::outAdj(int node) const
