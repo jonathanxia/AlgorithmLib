@@ -1,0 +1,9 @@
+digraph "AlgLib::Polynomial::getCoefficients"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="AlgLib::Polynomial\l::getCoefficients",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="AlgLib::IntegerPolynomial\l::operator=",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_alg_lib_1_1_integer_polynomial.html#a6ce9a26baa35c33c35b91be4a930cf95"];
+}

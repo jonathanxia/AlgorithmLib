@@ -1,0 +1,12 @@
+digraph "src/Permutation" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_68267d1309a1af8e8297ef4c3efbcdba {
+    graph [ bgcolor="#ddddee", pencolor="black", label="src" fontname="Helvetica", fontsize="10", URL="dir_68267d1309a1af8e8297ef4c3efbcdba.html"]
+  dir_009a17f6745cd801639d3511c02ca8d1 [shape=box, label="Permutation", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_009a17f6745cd801639d3511c02ca8d1.html"];
+  }
+  dir_d44c64559bbebec7f509842c48db8b23 [shape=box label="include" URL="dir_d44c64559bbebec7f509842c48db8b23.html"];
+  dir_009a17f6745cd801639d3511c02ca8d1->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="1", labeldistance=1.5 headhref="dir_000008_000000.html"];
+  dir_d44c64559bbebec7f509842c48db8b23->dir_009a17f6745cd801639d3511c02ca8d1 [headlabel="1", labeldistance=1.5 headhref="dir_000000_000008.html"];
+}

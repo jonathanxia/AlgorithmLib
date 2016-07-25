@@ -1,0 +1,9 @@
+digraph "AlgLib::binarysearch"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="AlgLib::binarysearch",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="AlgLib::adjList::addEdge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_alg_lib_1_1adj_list.html#a1010763e586866d884ebb769df8fba52"];
+}

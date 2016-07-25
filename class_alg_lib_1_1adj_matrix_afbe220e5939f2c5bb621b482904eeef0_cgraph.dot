@@ -1,0 +1,11 @@
+digraph "AlgLib::adjMatrix::outDegree"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="AlgLib::adjMatrix::\loutDegree",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="AlgLib::Matrix\< double\l \>::numColumns",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_alg_lib_1_1_matrix.html#ac9a4892052b6d988fc79390528122f00"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="AlgLib::Matrix\< double\l \>::getValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_alg_lib_1_1_matrix.html#a99342d63d4ed38c0289f14566381958e"];
+}

@@ -1,0 +1,11 @@
+digraph "AlgLib::adjMatrix::addVertex"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="AlgLib::adjMatrix::\laddVertex",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="AlgLib::Matrix::addColumn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_alg_lib_1_1_matrix.html#a960028989285032b7c5847235358f894"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="AlgLib::Matrix::addRow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_alg_lib_1_1_matrix.html#acb50a61a0a93f26ad60829edef419a3a"];
+}
