@@ -1,0 +1,93 @@
+D:/Data/Desktop/Github/src/Graph/Graph.cpp:25: warning: no matching class member found for 
+  AlgLib::Graph::Graph(const  std::vector< std::tuple< int, int, double >> &edgepairs, dbType storageType)
+Possible candidates:
+  AlgLib::Graph::Graph(int numVertices, dbType storageType=dbType::ADJACENCY_MATRIX)
+  AlgLib::Graph::Graph(const std::vector< std::tuple< int, int, double > > &edgepairs, dbType storageType=dbType::ADJACENCY_LIST)
+  AlgLib::Graph::Graph(const Matrix< double > &adjMat, dbType storageType=dbType::ADJACENCY_MATRIX)
+  AlgLib::Graph::Graph(const std::vector< std::vector< std::tuple< int, double > > > &inAdjList, dbType storageType=dbType::ADJACENCY_LIST)
+
+D:/Data/Desktop/Github/src/Graph/Graph.cpp:83: warning: no matching class member found for 
+  AlgLib::Graph::Graph(const  std::vector< std::vector< std::tuple< int, double >>> &inAdjList, dbType storageType)
+Possible candidates:
+  AlgLib::Graph::Graph(int numVertices, dbType storageType=dbType::ADJACENCY_MATRIX)
+  AlgLib::Graph::Graph(const std::vector< std::tuple< int, int, double > > &edgepairs, dbType storageType=dbType::ADJACENCY_LIST)
+  AlgLib::Graph::Graph(const Matrix< double > &adjMat, dbType storageType=dbType::ADJACENCY_MATRIX)
+  AlgLib::Graph::Graph(const std::vector< std::vector< std::tuple< int, double > > > &inAdjList, dbType storageType=dbType::ADJACENCY_LIST)
+
+D:/Data/Desktop/Github/include/Fraction.h:17: warning: argument 'other' of command @param is not found in the argument list of AlgLib::Fraction::operator+(const Fraction &f1, const Fraction &f2)
+D:/Data/Desktop/Github/include/Fraction.h:21: warning: The following parameters of AlgLib::Fraction::operator+(const Fraction &f1, const Fraction &f2) are not documented:
+  parameter 'f1'
+  parameter 'f2'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1_integer_polynomial__inherit__graph.dot" -Tpng -o "D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1_integer_polynomial__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1_heap_a0c406e0e00559e3372637d1547af1023_cgraph.dot" -Tpng -o "D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1_heap_a0c406e0e00559e3372637d1547af1023_cgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1_integer_polynomial__coll__graph.dot" -Tpng -o "D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1_integer_polynomial__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1adj_matrix_afed0a27060baa109a23159a5f2685914_cgraph.dot" -Tpng -o "D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1adj_matrix_afed0a27060baa109a23159a5f2685914_cgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1adj_matrix__inherit__graph.dot" -Tpng -o "D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1adj_matrix__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1graph_d_b__inherit__graph.dot" -Tpng -o "D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1graph_d_b__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1_integer_polynomial_a655e9a0c3787323872d78194fb4321da_cgraph.dot" -Tpng -o "D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1_integer_polynomial_a655e9a0c3787323872d78194fb4321da_cgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Data/Desktop/Github/doxygen/html/graph_legend.dot" -Tpng -o "D:/Data/Desktop/Github/doxygen/html/graph_legend.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Data/Desktop/Github/doxygen/html/inherit_graph_2.dot" -Tpng -o "D:/Data/Desktop/Github/doxygen/html/inherit_graph_2.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Data/Desktop/Github/doxygen/html/inherit_graph_0.dot" -Tpng -o "D:/Data/Desktop/Github/doxygen/html/inherit_graph_0.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Data/Desktop/Github/doxygen/html/inherit_graph_3.dot" -Tpng -o "D:/Data/Desktop/Github/doxygen/html/inherit_graph_3.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Data/Desktop/Github/doxygen/html/inherit_graph_1.dot" -Tpng -o "D:/Data/Desktop/Github/doxygen/html/inherit_graph_1.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Data/Desktop/Github/doxygen/html/inherit_graph_4.dot" -Tpng -o "D:/Data/Desktop/Github/doxygen/html/inherit_graph_4.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Data/Desktop/Github/doxygen/html/inherit_graph_5.dot" -Tpng -o "D:/Data/Desktop/Github/doxygen/html/inherit_graph_5.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1adj_list__coll__graph.dot" -Tpng -o "D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1adj_list__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1adj_matrix__coll__graph.dot" -Tpng -o "D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1adj_matrix__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Data/Desktop/Github/doxygen/html/inherit_graph_6.dot" -Tpng -o "D:/Data/Desktop/Github/doxygen/html/inherit_graph_6.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1adj_list__inherit__graph.dot" -Tpng -o "D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1adj_list__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Data/Desktop/Github/doxygen/html/inherit_graph_7.dot" -Tpng -o "D:/Data/Desktop/Github/doxygen/html/inherit_graph_7.png"'
+error: problems opening map file D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1adj_list__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1adj_list__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1adj_matrix__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1adj_matrix__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1adj_matrix_afed0a27060baa109a23159a5f2685914_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1graph_d_b__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1_heap_a0c406e0e00559e3372637d1547af1023_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1_integer_polynomial__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1_integer_polynomial__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Data/Desktop/Github/doxygen/html/class_alg_lib_1_1_integer_polynomial_a655e9a0c3787323872d78194fb4321da_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Data/Desktop/Github/doxygen/html/inherit_graph_0.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Data/Desktop/Github/doxygen/html/inherit_graph_1.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Data/Desktop/Github/doxygen/html/inherit_graph_2.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Data/Desktop/Github/doxygen/html/inherit_graph_3.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Data/Desktop/Github/doxygen/html/inherit_graph_4.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Data/Desktop/Github/doxygen/html/inherit_graph_5.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Data/Desktop/Github/doxygen/html/inherit_graph_6.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Data/Desktop/Github/doxygen/html/inherit_graph_7.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.

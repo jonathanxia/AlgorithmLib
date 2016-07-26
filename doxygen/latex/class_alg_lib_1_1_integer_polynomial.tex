@@ -1,0 +1,146 @@
+\hypertarget{class_alg_lib_1_1_integer_polynomial}{}\section{Alg\+Lib\+:\+:Integer\+Polynomial Class Reference}
+\label{class_alg_lib_1_1_integer_polynomial}\index{Alg\+Lib\+::\+Integer\+Polynomial@{Alg\+Lib\+::\+Integer\+Polynomial}}
+
+
+{\ttfamily \#include $<$Polynomial.\+h$>$}
+
+
+
+Inheritance diagram for Alg\+Lib\+:\+:Integer\+Polynomial\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_alg_lib_1_1_integer_polynomial__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Alg\+Lib\+:\+:Integer\+Polynomial\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_alg_lib_1_1_integer_polynomial__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_alg_lib_1_1_integer_polynomial_a655e9a0c3787323872d78194fb4321da}{Integer\+Polynomial} (std\+::vector$<$ int $>$ \&coefficients)
+\begin{DoxyCompactList}\small\item\em (one liner) \end{DoxyCompactList}\item 
+\hyperlink{class_alg_lib_1_1_integer_polynomial_a61873b5d4a577020238163251566077e}{Integer\+Polynomial} (std\+::initializer\+\_\+list$<$ int $>$ args)
+\item 
+\hyperlink{class_alg_lib_1_1_integer_polynomial_ae2f5396eab8162b3550db51bbcb30c55}{Integer\+Polynomial} (const \hyperlink{class_alg_lib_1_1_polynomial}{Polynomial}$<$ int $>$ \&other)
+\item 
+\hyperlink{class_alg_lib_1_1_integer_polynomial}{Integer\+Polynomial} \& \hyperlink{class_alg_lib_1_1_integer_polynomial_a6ce9a26baa35c33c35b91be4a930cf95}{operator=} (const \hyperlink{class_alg_lib_1_1_polynomial}{Polynomial}$<$ int $>$ \&other)
+\item 
+\hyperlink{class_alg_lib_1_1_integer_polynomial_ae74ad4d007e847f6bb385b93865bb88a}{Integer\+Polynomial} ()
+\item 
+virtual \hyperlink{class_alg_lib_1_1_integer_polynomial}{Integer\+Polynomial} \hyperlink{class_alg_lib_1_1_integer_polynomial_a2589da92ddd64bb3d2b52b7dbd197c07}{operator\%} (int mod) const 
+\begin{DoxyCompactList}\small\item\em Takes modulo something. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ int $>$ \hyperlink{class_alg_lib_1_1_integer_polynomial_ab0549a5f249b0b1c2868a784cd9b890b}{modulo\+Roots} (int mod) const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 50 of file Polynomial.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Alg\+Lib\+::\+Integer\+Polynomial@{Alg\+Lib\+::\+Integer\+Polynomial}!Integer\+Polynomial@{Integer\+Polynomial}}
+\index{Integer\+Polynomial@{Integer\+Polynomial}!Alg\+Lib\+::\+Integer\+Polynomial@{Alg\+Lib\+::\+Integer\+Polynomial}}
+\subsubsection[{\texorpdfstring{Integer\+Polynomial(std\+::vector$<$ int $>$ \&coefficients)}{IntegerPolynomial(std::vector< int > &coefficients)}}]{\setlength{\rightskip}{0pt plus 5cm}Alg\+Lib\+::\+Integer\+Polynomial\+::\+Integer\+Polynomial (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ int $>$ \&}]{coefficients}
+\end{DoxyParamCaption}
+)}\hypertarget{class_alg_lib_1_1_integer_polynomial_a655e9a0c3787323872d78194fb4321da}{}\label{class_alg_lib_1_1_integer_polynomial_a655e9a0c3787323872d78194fb4321da}
+
+
+(one liner) 
+
+(documentation goes here) 
+
+Definition at line 22 of file Int\+Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Integer\+Polynomial@{Alg\+Lib\+::\+Integer\+Polynomial}!Integer\+Polynomial@{Integer\+Polynomial}}
+\index{Integer\+Polynomial@{Integer\+Polynomial}!Alg\+Lib\+::\+Integer\+Polynomial@{Alg\+Lib\+::\+Integer\+Polynomial}}
+\subsubsection[{\texorpdfstring{Integer\+Polynomial(std\+::initializer\+\_\+list$<$ int $>$ args)}{IntegerPolynomial(std::initializer_list< int > args)}}]{\setlength{\rightskip}{0pt plus 5cm}Alg\+Lib\+::\+Integer\+Polynomial\+::\+Integer\+Polynomial (
+\begin{DoxyParamCaption}
+\item[{std\+::initializer\+\_\+list$<$ int $>$}]{args}
+\end{DoxyParamCaption}
+)}\hypertarget{class_alg_lib_1_1_integer_polynomial_a61873b5d4a577020238163251566077e}{}\label{class_alg_lib_1_1_integer_polynomial_a61873b5d4a577020238163251566077e}
+
+
+Definition at line 35 of file Int\+Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Integer\+Polynomial@{Alg\+Lib\+::\+Integer\+Polynomial}!Integer\+Polynomial@{Integer\+Polynomial}}
+\index{Integer\+Polynomial@{Integer\+Polynomial}!Alg\+Lib\+::\+Integer\+Polynomial@{Alg\+Lib\+::\+Integer\+Polynomial}}
+\subsubsection[{\texorpdfstring{Integer\+Polynomial(const Polynomial$<$ int $>$ \&other)}{IntegerPolynomial(const Polynomial< int > &other)}}]{\setlength{\rightskip}{0pt plus 5cm}Alg\+Lib\+::\+Integer\+Polynomial\+::\+Integer\+Polynomial (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polynomial}$<$ int $>$ \&}]{other}
+\end{DoxyParamCaption}
+)}\hypertarget{class_alg_lib_1_1_integer_polynomial_ae2f5396eab8162b3550db51bbcb30c55}{}\label{class_alg_lib_1_1_integer_polynomial_ae2f5396eab8162b3550db51bbcb30c55}
+
+
+Definition at line 31 of file Int\+Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Integer\+Polynomial@{Alg\+Lib\+::\+Integer\+Polynomial}!Integer\+Polynomial@{Integer\+Polynomial}}
+\index{Integer\+Polynomial@{Integer\+Polynomial}!Alg\+Lib\+::\+Integer\+Polynomial@{Alg\+Lib\+::\+Integer\+Polynomial}}
+\subsubsection[{\texorpdfstring{Integer\+Polynomial()}{IntegerPolynomial()}}]{\setlength{\rightskip}{0pt plus 5cm}Alg\+Lib\+::\+Integer\+Polynomial\+::\+Integer\+Polynomial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_alg_lib_1_1_integer_polynomial_ae74ad4d007e847f6bb385b93865bb88a}{}\label{class_alg_lib_1_1_integer_polynomial_ae74ad4d007e847f6bb385b93865bb88a}
+
+
+Definition at line 39 of file Int\+Polynomial.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Alg\+Lib\+::\+Integer\+Polynomial@{Alg\+Lib\+::\+Integer\+Polynomial}!modulo\+Roots@{modulo\+Roots}}
+\index{modulo\+Roots@{modulo\+Roots}!Alg\+Lib\+::\+Integer\+Polynomial@{Alg\+Lib\+::\+Integer\+Polynomial}}
+\subsubsection[{\texorpdfstring{modulo\+Roots(int mod) const }{moduloRoots(int mod) const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ int $>$ Alg\+Lib\+::\+Integer\+Polynomial\+::modulo\+Roots (
+\begin{DoxyParamCaption}
+\item[{int}]{mod}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_integer_polynomial_ab0549a5f249b0b1c2868a784cd9b890b}{}\label{class_alg_lib_1_1_integer_polynomial_ab0549a5f249b0b1c2868a784cd9b890b}
+
+
+Definition at line 44 of file Int\+Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Integer\+Polynomial@{Alg\+Lib\+::\+Integer\+Polynomial}!operator\%@{operator\%}}
+\index{operator\%@{operator\%}!Alg\+Lib\+::\+Integer\+Polynomial@{Alg\+Lib\+::\+Integer\+Polynomial}}
+\subsubsection[{\texorpdfstring{operator\%(int mod) const }{operator%(int mod) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alg\+Lib\+::\+Integer\+Polynomial} Alg\+Lib\+::\+Integer\+Polynomial\+::operator\% (
+\begin{DoxyParamCaption}
+\item[{int}]{mod}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_integer_polynomial_a2589da92ddd64bb3d2b52b7dbd197c07}{}\label{class_alg_lib_1_1_integer_polynomial_a2589da92ddd64bb3d2b52b7dbd197c07}
+
+
+Takes modulo something. 
+
+Return \hyperlink{class_alg_lib_1_1_polynomial}{Polynomial} that takes the mod of the coefficients 
+
+Definition at line 8 of file Int\+Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Integer\+Polynomial@{Alg\+Lib\+::\+Integer\+Polynomial}!operator=@{operator=}}
+\index{operator=@{operator=}!Alg\+Lib\+::\+Integer\+Polynomial@{Alg\+Lib\+::\+Integer\+Polynomial}}
+\subsubsection[{\texorpdfstring{operator=(const Polynomial$<$ int $>$ \&other)}{operator=(const Polynomial< int > &other)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alg\+Lib\+::\+Integer\+Polynomial} \& Alg\+Lib\+::\+Integer\+Polynomial\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polynomial}$<$ int $>$ \&}]{other}
+\end{DoxyParamCaption}
+)}\hypertarget{class_alg_lib_1_1_integer_polynomial_a6ce9a26baa35c33c35b91be4a930cf95}{}\label{class_alg_lib_1_1_integer_polynomial_a6ce9a26baa35c33c35b91be4a930cf95}
+
+
+Definition at line 26 of file Int\+Polynomial.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Data/\+Desktop/\+Github/include/\hyperlink{_polynomial_8h}{Polynomial.\+h}\item 
+D\+:/\+Data/\+Desktop/\+Github/src/\+Polynomial/\hyperlink{_int_polynomial_8cpp}{Int\+Polynomial.\+cpp}\end{DoxyCompactItemize}

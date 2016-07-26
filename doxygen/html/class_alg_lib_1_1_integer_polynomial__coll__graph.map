@@ -1,0 +1,4 @@
+<map id="AlgLib::IntegerPolynomial" name="AlgLib::IntegerPolynomial">
+<area shape="rect" id="node2" href="$class_alg_lib_1_1_polynomial.html" title="{AlgLib::Polynomial\l\&lt; int \&gt;\n|# mCoeff\l|+ Polynomial()\l+ Polynomial()\l+ Polynomial()\l+ Polynomial()\l+ operator=()\l+ getDegree()\l+ getCoefficients()\l+ derivative()\l+ antideriv()\l+ integral()\land 8 more...\l}" alt="" coords="25,307,155,545"/>
+<area shape="rect" id="node3" href="$class_alg_lib_1_1_polynomial.html" title="{AlgLib::Polynomial\l\&lt; coeff \&gt;\n|# mCoeff\l|+ Polynomial()\l+ Polynomial()\l+ Polynomial()\l+ Polynomial()\l+ operator=()\l+ getDegree()\l+ getCoefficients()\l+ derivative()\l+ antideriv()\l+ integral()\land 8 more...\l}" alt="" coords="25,5,155,244"/>
+</map>

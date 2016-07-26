@@ -1,15 +1,7 @@
 #include<stdexcept>
 namespace AlgLib
 {
-    /**
-    *   \brief Searches a sorted container A for an element key
-    *   @param cont the container that contains the elements of type T
-    *   @param T the type of the elements in the container
-    *   @param A the container that has the elements of type T
-    *   @param key the element to be found
-    *   @return the index the element key is at if the key is in A. If not in A, if the element would be between position x and x+1
-                then the value of -x-2 is returned.
-    */
+
     template <typename cont, typename T>
     int binarysearch(cont A, T key)
     {

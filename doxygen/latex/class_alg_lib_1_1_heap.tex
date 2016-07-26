@@ -1,0 +1,175 @@
+\hypertarget{class_alg_lib_1_1_heap}{}\section{Alg\+Lib\+:\+:Heap$<$ T $>$ Class Template Reference}
+\label{class_alg_lib_1_1_heap}\index{Alg\+Lib\+::\+Heap$<$ T $>$@{Alg\+Lib\+::\+Heap$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Heap.\+h$>$}
+
+
+
+Collaboration diagram for Alg\+Lib\+:\+:Heap$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{class_alg_lib_1_1_heap__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_alg_lib_1_1_heap_aba2cc050f886d9a8247f24347d9c9b55}{Heap} ()
+\item 
+\hyperlink{class_alg_lib_1_1_heap_a068f2a62a4468625b4ad14507a386fc8}{Heap} (std\+::vector$<$ T $>$ container)
+\item 
+\hyperlink{class_alg_lib_1_1_heap_a7b009e741c0442339eb54d992d3c74da}{Heap} (std\+::initializer\+\_\+list$<$ T $>$ args)
+\begin{DoxyCompactList}\small\item\em (one liner) \end{DoxyCompactList}\item 
+virtual \hyperlink{class_alg_lib_1_1_heap_a0d6a73495b76725db1d612050c090c73}{$\sim$\+Heap} ()
+\item 
+virtual std\+::vector$<$ T $>$ \hyperlink{class_alg_lib_1_1_heap_a26fff42a724f914607f61c25dc4f80bd}{get\+Container} ()
+\item 
+virtual void \hyperlink{class_alg_lib_1_1_heap_a0c406e0e00559e3372637d1547af1023}{set\+Container} (std\+::vector$<$ T $>$ val)
+\item 
+virtual T \hyperlink{class_alg_lib_1_1_heap_a827f1aa55e4d2b366e3c2e1753b2bb38}{pop} ()
+\item 
+virtual T \hyperlink{class_alg_lib_1_1_heap_a4f1ab496a7f4a4cc4d5c917fe10514ff}{top} ()
+\item 
+virtual void \hyperlink{class_alg_lib_1_1_heap_a37d97dc0bc90f4b1dedfaa3378133f89}{push} (T elem)
+\begin{DoxyCompactList}\small\item\em (one liner) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\\*
+class Alg\+Lib\+::\+Heap$<$ T $>$}
+
+
+
+Definition at line 9 of file Heap.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Alg\+Lib\+::\+Heap@{Alg\+Lib\+::\+Heap}!Heap@{Heap}}
+\index{Heap@{Heap}!Alg\+Lib\+::\+Heap@{Alg\+Lib\+::\+Heap}}
+\subsubsection[{\texorpdfstring{Heap()}{Heap()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Alg\+Lib\+::\+Heap}$<$ T $>$\+::{\bf Heap} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_alg_lib_1_1_heap_aba2cc050f886d9a8247f24347d9c9b55}{}\label{class_alg_lib_1_1_heap_aba2cc050f886d9a8247f24347d9c9b55}
+Default constructor 
+
+Definition at line 8 of file Heap.\+cpp.
+
+\index{Alg\+Lib\+::\+Heap@{Alg\+Lib\+::\+Heap}!Heap@{Heap}}
+\index{Heap@{Heap}!Alg\+Lib\+::\+Heap@{Alg\+Lib\+::\+Heap}}
+\subsubsection[{\texorpdfstring{Heap(std\+::vector$<$ T $>$ container)}{Heap(std::vector< T > container)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Alg\+Lib\+::\+Heap}$<$ T $>$\+::{\bf Heap} (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ T $>$}]{container}
+\end{DoxyParamCaption}
+)}\hypertarget{class_alg_lib_1_1_heap_a068f2a62a4468625b4ad14507a386fc8}{}\label{class_alg_lib_1_1_heap_a068f2a62a4468625b4ad14507a386fc8}
+Constructor that takes in vector$<$\+T$>$ 
+
+Definition at line 15 of file Heap.\+cpp.
+
+\index{Alg\+Lib\+::\+Heap@{Alg\+Lib\+::\+Heap}!Heap@{Heap}}
+\index{Heap@{Heap}!Alg\+Lib\+::\+Heap@{Alg\+Lib\+::\+Heap}}
+\subsubsection[{\texorpdfstring{Heap(std\+::initializer\+\_\+list$<$ T $>$ args)}{Heap(std::initializer_list< T > args)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Alg\+Lib\+::\+Heap}$<$ T $>$\+::{\bf Heap} (
+\begin{DoxyParamCaption}
+\item[{std\+::initializer\+\_\+list$<$ T $>$}]{args}
+\end{DoxyParamCaption}
+)}\hypertarget{class_alg_lib_1_1_heap_a7b009e741c0442339eb54d992d3c74da}{}\label{class_alg_lib_1_1_heap_a7b009e741c0442339eb54d992d3c74da}
+
+
+(one liner) 
+
+Initializer list constructor
+
+(documentation goes here) 
+
+Definition at line 27 of file Heap.\+cpp.
+
+\index{Alg\+Lib\+::\+Heap@{Alg\+Lib\+::\+Heap}!````~Heap@{$\sim$\+Heap}}
+\index{````~Heap@{$\sim$\+Heap}!Alg\+Lib\+::\+Heap@{Alg\+Lib\+::\+Heap}}
+\subsubsection[{\texorpdfstring{$\sim$\+Heap()}{~Heap()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Alg\+Lib\+::\+Heap}$<$ T $>$\+::$\sim${\bf Heap} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_heap_a0d6a73495b76725db1d612050c090c73}{}\label{class_alg_lib_1_1_heap_a0d6a73495b76725db1d612050c090c73}
+Default destructor 
+
+Definition at line 60 of file Heap.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Alg\+Lib\+::\+Heap@{Alg\+Lib\+::\+Heap}!get\+Container@{get\+Container}}
+\index{get\+Container@{get\+Container}!Alg\+Lib\+::\+Heap@{Alg\+Lib\+::\+Heap}}
+\subsubsection[{\texorpdfstring{get\+Container()}{getContainer()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ virtual std\+::vector$<$T$>$ {\bf Alg\+Lib\+::\+Heap}$<$ T $>$\+::get\+Container (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_heap_a26fff42a724f914607f61c25dc4f80bd}{}\label{class_alg_lib_1_1_heap_a26fff42a724f914607f61c25dc4f80bd}
+Access m\+Container \begin{DoxyReturn}{Returns}
+The current value of m\+Container 
+\end{DoxyReturn}
+
+
+Definition at line 24 of file Heap.\+h.
+
+\index{Alg\+Lib\+::\+Heap@{Alg\+Lib\+::\+Heap}!pop@{pop}}
+\index{pop@{pop}!Alg\+Lib\+::\+Heap@{Alg\+Lib\+::\+Heap}}
+\subsubsection[{\texorpdfstring{pop()}{pop()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T {\bf Alg\+Lib\+::\+Heap}$<$ T $>$\+::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_heap_a827f1aa55e4d2b366e3c2e1753b2bb38}{}\label{class_alg_lib_1_1_heap_a827f1aa55e4d2b366e3c2e1753b2bb38}
+
+
+Definition at line 47 of file Heap.\+cpp.
+
+\index{Alg\+Lib\+::\+Heap@{Alg\+Lib\+::\+Heap}!push@{push}}
+\index{push@{push}!Alg\+Lib\+::\+Heap@{Alg\+Lib\+::\+Heap}}
+\subsubsection[{\texorpdfstring{push(\+T elem)}{push(T elem)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Alg\+Lib\+::\+Heap}$<$ T $>$\+::push (
+\begin{DoxyParamCaption}
+\item[{T}]{elem}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_heap_a37d97dc0bc90f4b1dedfaa3378133f89}{}\label{class_alg_lib_1_1_heap_a37d97dc0bc90f4b1dedfaa3378133f89}
+
+
+(one liner) 
+
+(documentation goes here) 
+
+Definition at line 133 of file Heap.\+cpp.
+
+\index{Alg\+Lib\+::\+Heap@{Alg\+Lib\+::\+Heap}!set\+Container@{set\+Container}}
+\index{set\+Container@{set\+Container}!Alg\+Lib\+::\+Heap@{Alg\+Lib\+::\+Heap}}
+\subsubsection[{\texorpdfstring{set\+Container(std\+::vector$<$ T $>$ val)}{setContainer(std::vector< T > val)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ virtual void {\bf Alg\+Lib\+::\+Heap}$<$ T $>$\+::set\+Container (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ T $>$}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_heap_a0c406e0e00559e3372637d1547af1023}{}\label{class_alg_lib_1_1_heap_a0c406e0e00559e3372637d1547af1023}
+Set m\+Container 
+\begin{DoxyParams}{Parameters}
+{\em val} & New value to set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 28 of file Heap.\+h.
+
+\index{Alg\+Lib\+::\+Heap@{Alg\+Lib\+::\+Heap}!top@{top}}
+\index{top@{top}!Alg\+Lib\+::\+Heap@{Alg\+Lib\+::\+Heap}}
+\subsubsection[{\texorpdfstring{top()}{top()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T {\bf Alg\+Lib\+::\+Heap}$<$ T $>$\+::top (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_heap_a4f1ab496a7f4a4cc4d5c917fe10514ff}{}\label{class_alg_lib_1_1_heap_a4f1ab496a7f4a4cc4d5c917fe10514ff}
+
+
+Definition at line 41 of file Heap.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Data/\+Desktop/\+Github/include/\hyperlink{_heap_8h}{Heap.\+h}\item 
+D\+:/\+Data/\+Desktop/\+Github/src/\+Heap/\hyperlink{_heap_8cpp}{Heap.\+cpp}\end{DoxyCompactItemize}

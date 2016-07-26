@@ -1,0 +1,299 @@
+\hypertarget{class_alg_lib_1_1_polynomial}{}\section{Alg\+Lib\+:\+:Polynomial$<$ coeff $>$ Class Template Reference}
+\label{class_alg_lib_1_1_polynomial}\index{Alg\+Lib\+::\+Polynomial$<$ coeff $>$@{Alg\+Lib\+::\+Polynomial$<$ coeff $>$}}
+
+
+{\ttfamily \#include $<$Polynomial.\+h$>$}
+
+
+
+Inheritance diagram for Alg\+Lib\+:\+:Polynomial$<$ coeff $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_alg_lib_1_1_polynomial__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Alg\+Lib\+:\+:Polynomial$<$ coeff $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_alg_lib_1_1_polynomial__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_alg_lib_1_1_polynomial_a33a0ad0b646bcf6b0295d597097fed85}{Polynomial} ()
+\item 
+\hyperlink{class_alg_lib_1_1_polynomial_a53075cc00bf37bcaf2ff6c8d18ec3206}{Polynomial} (std\+::initializer\+\_\+list$<$ coeff $>$ args)
+\item 
+\hyperlink{class_alg_lib_1_1_polynomial_ad75097bb323e32318e6b508532ebce7a}{Polynomial} (std\+::vector$<$ coeff $>$ coefficients)
+\item 
+\hyperlink{class_alg_lib_1_1_polynomial_af16630d7204b1bb4f4353682a851abdb}{Polynomial} (const \hyperlink{class_alg_lib_1_1_polynomial}{Polynomial}$<$ coeff $>$ \&rhs)
+\item 
+\hyperlink{class_alg_lib_1_1_polynomial}{Polynomial} \& \hyperlink{class_alg_lib_1_1_polynomial_adb6aa23b16a21e65973e771c9eddeed8}{operator=} (const \hyperlink{class_alg_lib_1_1_polynomial}{Polynomial}$<$ coeff $>$ \&rhs)
+\item 
+virtual int \hyperlink{class_alg_lib_1_1_polynomial_a788df01d92661cedc88ae68060670ce4}{get\+Degree} () const 
+\item 
+virtual std\+::vector$<$ coeff $>$ \hyperlink{class_alg_lib_1_1_polynomial_a815ce4eb1ae0edbb6981baab2489b636}{get\+Coefficients} () const 
+\item 
+virtual \hyperlink{class_alg_lib_1_1_polynomial}{Polynomial}$<$ coeff $>$ \hyperlink{class_alg_lib_1_1_polynomial_aae19d2ebb49d017d64a70c23c8294b4f}{derivative} () const 
+\item 
+virtual \hyperlink{class_alg_lib_1_1_polynomial}{Polynomial}$<$ coeff $>$ \hyperlink{class_alg_lib_1_1_polynomial_adba823edd7b425b451b2b550fe5727d0}{antideriv} (coeff C=0) const 
+\item 
+virtual coeff \hyperlink{class_alg_lib_1_1_polynomial_a81380711ec4e7c9be6f0a4bfc608c301}{integral} (coeff lower, coeff upper) const 
+\item 
+virtual coeff \hyperlink{class_alg_lib_1_1_polynomial_a07d802dde3e665ad427a6932fa99f691}{operator()} (coeff input) const 
+\item 
+virtual \hyperlink{class_alg_lib_1_1_polynomial}{Polynomial}$<$ coeff $>$ \hyperlink{class_alg_lib_1_1_polynomial_ad651de00803bc2bfc17f684dd6183e7e}{operator+} (const \hyperlink{class_alg_lib_1_1_polynomial}{Polynomial}$<$ coeff $>$ \&other) const 
+\item 
+virtual \hyperlink{class_alg_lib_1_1_polynomial}{Polynomial}$<$ coeff $>$ \hyperlink{class_alg_lib_1_1_polynomial_aa6ed3795fcb099987ff7fb8747203b43}{operator-\/} (const \hyperlink{class_alg_lib_1_1_polynomial}{Polynomial}$<$ coeff $>$ \&other) const 
+\item 
+virtual \hyperlink{class_alg_lib_1_1_polynomial}{Polynomial}$<$ coeff $>$ \hyperlink{class_alg_lib_1_1_polynomial_a68b9b745dabf414a81fb8d35e6f233ba}{operator$\ast$} (const \hyperlink{class_alg_lib_1_1_polynomial}{Polynomial}$<$ coeff $>$ \&other) const 
+\item 
+virtual \hyperlink{class_alg_lib_1_1_polynomial}{Polynomial}$<$ coeff $>$ \hyperlink{class_alg_lib_1_1_polynomial_a507bf9649c02111574112ddb0baf0973}{operator/} (const \hyperlink{class_alg_lib_1_1_polynomial}{Polynomial}$<$ coeff $>$ \&other) const 
+\item 
+virtual \hyperlink{class_alg_lib_1_1_polynomial}{Polynomial}$<$ coeff $>$ \hyperlink{class_alg_lib_1_1_polynomial_a8e63ddfc3bd81bc300781f526bbd70d6}{operator\%} (const \hyperlink{class_alg_lib_1_1_polynomial}{Polynomial}$<$ coeff $>$ \&other) const 
+\item 
+virtual \hyperlink{class_alg_lib_1_1_polynomial}{Polynomial}$<$ coeff $>$ \hyperlink{class_alg_lib_1_1_polynomial_ad69fdd8f1a1bd9999fd19b337c429d3f}{operator$\ast$} (coeff constant) const 
+\item 
+virtual \hyperlink{class_alg_lib_1_1_polynomial_ad9c5777af178f70a1ef83abfdf1b2397}{$\sim$\+Polynomial} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ coeff $>$ \hyperlink{class_alg_lib_1_1_polynomial_a1df73412faaadb6cbac4b7fad0135079}{m\+Coeff}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename coeff$>$\\*
+class Alg\+Lib\+::\+Polynomial$<$ coeff $>$}
+
+
+
+Definition at line 9 of file Polynomial.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}!Polynomial@{Polynomial}}
+\index{Polynomial@{Polynomial}!Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}}
+\subsubsection[{\texorpdfstring{Polynomial()}{Polynomial()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename coeff $>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$\+::{\bf Polynomial} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_alg_lib_1_1_polynomial_a33a0ad0b646bcf6b0295d597097fed85}{}\label{class_alg_lib_1_1_polynomial_a33a0ad0b646bcf6b0295d597097fed85}
+
+
+Definition at line 4 of file Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}!Polynomial@{Polynomial}}
+\index{Polynomial@{Polynomial}!Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}}
+\subsubsection[{\texorpdfstring{Polynomial(std\+::initializer\+\_\+list$<$ coeff $>$ args)}{Polynomial(std::initializer_list< coeff > args)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename coeff$>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$\+::{\bf Polynomial} (
+\begin{DoxyParamCaption}
+\item[{std\+::initializer\+\_\+list$<$ coeff $>$}]{args}
+\end{DoxyParamCaption}
+)}\hypertarget{class_alg_lib_1_1_polynomial_a53075cc00bf37bcaf2ff6c8d18ec3206}{}\label{class_alg_lib_1_1_polynomial_a53075cc00bf37bcaf2ff6c8d18ec3206}
+
+
+Definition at line 10 of file Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}!Polynomial@{Polynomial}}
+\index{Polynomial@{Polynomial}!Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}}
+\subsubsection[{\texorpdfstring{Polynomial(std\+::vector$<$ coeff $>$ coefficients)}{Polynomial(std::vector< coeff > coefficients)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename coeff$>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$\+::{\bf Polynomial} (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ coeff $>$}]{coefficients}
+\end{DoxyParamCaption}
+)}\hypertarget{class_alg_lib_1_1_polynomial_ad75097bb323e32318e6b508532ebce7a}{}\label{class_alg_lib_1_1_polynomial_ad75097bb323e32318e6b508532ebce7a}
+
+
+Definition at line 19 of file Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}!Polynomial@{Polynomial}}
+\index{Polynomial@{Polynomial}!Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}}
+\subsubsection[{\texorpdfstring{Polynomial(const Polynomial$<$ coeff $>$ \&rhs)}{Polynomial(const Polynomial< coeff > &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename coeff$>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$\+::{\bf Polynomial} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polynomial}$<$ coeff $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{class_alg_lib_1_1_polynomial_af16630d7204b1bb4f4353682a851abdb}{}\label{class_alg_lib_1_1_polynomial_af16630d7204b1bb4f4353682a851abdb}
+
+
+Definition at line 26 of file Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}!````~Polynomial@{$\sim$\+Polynomial}}
+\index{````~Polynomial@{$\sim$\+Polynomial}!Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}}
+\subsubsection[{\texorpdfstring{$\sim$\+Polynomial()}{~Polynomial()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename coeff $>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$\+::$\sim${\bf Polynomial} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_polynomial_ad9c5777af178f70a1ef83abfdf1b2397}{}\label{class_alg_lib_1_1_polynomial_ad9c5777af178f70a1ef83abfdf1b2397}
+
+
+Definition at line 183 of file Polynomial.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}!antideriv@{antideriv}}
+\index{antideriv@{antideriv}!Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}}
+\subsubsection[{\texorpdfstring{antideriv(coeff C=0) const }{antideriv(coeff C=0) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename coeff$>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$\+::antideriv (
+\begin{DoxyParamCaption}
+\item[{coeff}]{C = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_polynomial_adba823edd7b425b451b2b550fe5727d0}{}\label{class_alg_lib_1_1_polynomial_adba823edd7b425b451b2b550fe5727d0}
+
+
+Definition at line 66 of file Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}!derivative@{derivative}}
+\index{derivative@{derivative}!Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}}
+\subsubsection[{\texorpdfstring{derivative() const }{derivative() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename coeff $>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$\+::derivative (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_polynomial_aae19d2ebb49d017d64a70c23c8294b4f}{}\label{class_alg_lib_1_1_polynomial_aae19d2ebb49d017d64a70c23c8294b4f}
+
+
+Definition at line 56 of file Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}!get\+Coefficients@{get\+Coefficients}}
+\index{get\+Coefficients@{get\+Coefficients}!Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}}
+\subsubsection[{\texorpdfstring{get\+Coefficients() const }{getCoefficients() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename coeff $>$ std\+::vector$<$ coeff $>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$\+::get\+Coefficients (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_polynomial_a815ce4eb1ae0edbb6981baab2489b636}{}\label{class_alg_lib_1_1_polynomial_a815ce4eb1ae0edbb6981baab2489b636}
+
+
+Definition at line 50 of file Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}!get\+Degree@{get\+Degree}}
+\index{get\+Degree@{get\+Degree}!Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}}
+\subsubsection[{\texorpdfstring{get\+Degree() const }{getDegree() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename coeff $>$ int {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$\+::get\+Degree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_polynomial_a788df01d92661cedc88ae68060670ce4}{}\label{class_alg_lib_1_1_polynomial_a788df01d92661cedc88ae68060670ce4}
+
+
+Definition at line 45 of file Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}!integral@{integral}}
+\index{integral@{integral}!Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}}
+\subsubsection[{\texorpdfstring{integral(coeff lower, coeff upper) const }{integral(coeff lower, coeff upper) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename coeff$>$ coeff {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$\+::integral (
+\begin{DoxyParamCaption}
+\item[{coeff}]{lower, }
+\item[{coeff}]{upper}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_polynomial_a81380711ec4e7c9be6f0a4bfc608c301}{}\label{class_alg_lib_1_1_polynomial_a81380711ec4e7c9be6f0a4bfc608c301}
+
+
+Definition at line 77 of file Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}!operator\%@{operator\%}}
+\index{operator\%@{operator\%}!Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}}
+\subsubsection[{\texorpdfstring{operator\%(const Polynomial$<$ coeff $>$ \&other) const }{operator%(const Polynomial< coeff > &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename coeff$>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$\+::operator\% (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polynomial}$<$ coeff $>$ \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_polynomial_a8e63ddfc3bd81bc300781f526bbd70d6}{}\label{class_alg_lib_1_1_polynomial_a8e63ddfc3bd81bc300781f526bbd70d6}
+
+
+Definition at line 163 of file Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}!operator()@{operator()}}
+\index{operator()@{operator()}!Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}}
+\subsubsection[{\texorpdfstring{operator()(coeff input) const }{operator()(coeff input) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename coeff$>$ coeff {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{coeff}]{input}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_polynomial_a07d802dde3e665ad427a6932fa99f691}{}\label{class_alg_lib_1_1_polynomial_a07d802dde3e665ad427a6932fa99f691}
+
+
+Definition at line 84 of file Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const Polynomial$<$ coeff $>$ \&other) const }{operator*(const Polynomial< coeff > &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename coeff$>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polynomial}$<$ coeff $>$ \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_polynomial_a68b9b745dabf414a81fb8d35e6f233ba}{}\label{class_alg_lib_1_1_polynomial_a68b9b745dabf414a81fb8d35e6f233ba}
+
+
+Definition at line 127 of file Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}}
+\subsubsection[{\texorpdfstring{operator$\ast$(coeff constant) const }{operator*(coeff constant) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename coeff$>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{coeff}]{constant}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_polynomial_ad69fdd8f1a1bd9999fd19b337c429d3f}{}\label{class_alg_lib_1_1_polynomial_ad69fdd8f1a1bd9999fd19b337c429d3f}
+
+
+Definition at line 172 of file Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}!operator+@{operator+}}
+\index{operator+@{operator+}!Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}}
+\subsubsection[{\texorpdfstring{operator+(const Polynomial$<$ coeff $>$ \&other) const }{operator+(const Polynomial< coeff > &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename coeff$>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polynomial}$<$ coeff $>$ \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_polynomial_ad651de00803bc2bfc17f684dd6183e7e}{}\label{class_alg_lib_1_1_polynomial_ad651de00803bc2bfc17f684dd6183e7e}
+
+
+Definition at line 95 of file Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}}
+\subsubsection[{\texorpdfstring{operator-\/(const Polynomial$<$ coeff $>$ \&other) const }{operator-(const Polynomial< coeff > &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename coeff$>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polynomial}$<$ coeff $>$ \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_polynomial_aa6ed3795fcb099987ff7fb8747203b43}{}\label{class_alg_lib_1_1_polynomial_aa6ed3795fcb099987ff7fb8747203b43}
+
+
+Definition at line 116 of file Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}!operator/@{operator/}}
+\index{operator/@{operator/}!Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}}
+\subsubsection[{\texorpdfstring{operator/(const Polynomial$<$ coeff $>$ \&other) const }{operator/(const Polynomial< coeff > &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename coeff$>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$\+::operator/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polynomial}$<$ coeff $>$ \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_polynomial_a507bf9649c02111574112ddb0baf0973}{}\label{class_alg_lib_1_1_polynomial_a507bf9649c02111574112ddb0baf0973}
+
+
+Definition at line 142 of file Polynomial.\+cpp.
+
+\index{Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}!operator=@{operator=}}
+\index{operator=@{operator=}!Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}}
+\subsubsection[{\texorpdfstring{operator=(const Polynomial$<$ coeff $>$ \&rhs)}{operator=(const Polynomial< coeff > &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename coeff$>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$ \& {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polynomial}$<$ coeff $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{class_alg_lib_1_1_polynomial_adb6aa23b16a21e65973e771c9eddeed8}{}\label{class_alg_lib_1_1_polynomial_adb6aa23b16a21e65973e771c9eddeed8}
+
+
+Definition at line 33 of file Polynomial.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}!m\+Coeff@{m\+Coeff}}
+\index{m\+Coeff@{m\+Coeff}!Alg\+Lib\+::\+Polynomial@{Alg\+Lib\+::\+Polynomial}}
+\subsubsection[{\texorpdfstring{m\+Coeff}{mCoeff}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename coeff$>$ std\+::vector$<$coeff$>$ {\bf Alg\+Lib\+::\+Polynomial}$<$ coeff $>$\+::m\+Coeff\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_alg_lib_1_1_polynomial_a1df73412faaadb6cbac4b7fad0135079}{}\label{class_alg_lib_1_1_polynomial_a1df73412faaadb6cbac4b7fad0135079}
+
+
+Definition at line 42 of file Polynomial.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Data/\+Desktop/\+Github/include/\hyperlink{_polynomial_8h}{Polynomial.\+h}\item 
+D\+:/\+Data/\+Desktop/\+Github/src/\+Polynomial/\hyperlink{_polynomial_8cpp}{Polynomial.\+cpp}\end{DoxyCompactItemize}

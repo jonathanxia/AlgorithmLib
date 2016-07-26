@@ -1,0 +1,271 @@
+\hypertarget{namespace_alg_lib}{}\section{Alg\+Lib Namespace Reference}
+\label{namespace_alg_lib}\index{Alg\+Lib@{Alg\+Lib}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_alg_lib_1_1adj_list}{adj\+List}
+\item 
+class \hyperlink{class_alg_lib_1_1adj_matrix}{adj\+Matrix}
+\item 
+class \hyperlink{class_alg_lib_1_1_fraction}{Fraction}
+\item 
+class \hyperlink{class_alg_lib_1_1_graph}{Graph}
+\item 
+class \hyperlink{class_alg_lib_1_1graph_d_b}{graph\+DB}
+\item 
+class \hyperlink{class_alg_lib_1_1_heap}{Heap}
+\item 
+class \hyperlink{class_alg_lib_1_1_integer_polynomial}{Integer\+Polynomial}
+\item 
+class \hyperlink{class_alg_lib_1_1_matrix}{Matrix}
+\item 
+class \hyperlink{class_alg_lib_1_1_permutation}{Permutation}
+\item 
+class \hyperlink{class_alg_lib_1_1_polynomial}{Polynomial}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespace_alg_lib_a11966d2ea6c430adfb83a6ebaa05e337}{db\+Type} \{ \hyperlink{namespace_alg_lib_a11966d2ea6c430adfb83a6ebaa05e337a9d8e68c3898f769422174fed0be93fd2}{db\+Type\+::\+A\+D\+J\+A\+C\+E\+N\+C\+Y\+\_\+\+M\+A\+T\+R\+IX}, 
+\hyperlink{namespace_alg_lib_a11966d2ea6c430adfb83a6ebaa05e337a6d02e698876f8aa2b2e975e8c0010c10}{db\+Type\+::\+A\+D\+J\+A\+C\+E\+N\+C\+Y\+\_\+\+L\+I\+ST}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename cont , typename T $>$ }\\int \hyperlink{namespace_alg_lib_a42bfc6dd0232e3e7d0a460a5bb74059a}{binarysearch} (cont A, T key)
+\begin{DoxyCompactList}\small\item\em Searches a sorted container A for an element key. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename cont $>$ }\\int \hyperlink{namespace_alg_lib_a97a13becf845332c126803e014b03286}{inversions} (const cont \&A)
+\begin{DoxyCompactList}\small\item\em Counts the number of inversions in a container A. An inversion is a pair of elements A\mbox{[}i\mbox{]} and A\mbox{[}j\mbox{]} such that i $<$ j and A\mbox{[}i\mbox{]} $>$ A\mbox{[}j\mbox{]}. Finds in O(n log n) time. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{namespace_alg_lib_a285a3cda7220504508dbb7d0df3dba21}{insertion\+Sort} (T \&arr)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{namespace_alg_lib_a50103bb855668c829f3d0def288521a8}{merge\+Sort} (T \&arr)
+\begin{DoxyCompactList}\small\item\em Sort the elements in container arr with merge sort algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespace_alg_lib_a964728cae397746308b2d688e6f85d01}{M\+E\+R\+GE} (T \&left, T \&right)
+\item 
+{\footnotesize template$<$typename T , typename S $>$ }\\void \hyperlink{namespace_alg_lib_a09ea4c537af6d2dcc36a9753b7af7c05}{heap\+Sort} (T \&arr)
+\item 
+{\footnotesize template$<$typename cont $>$ }\\int \hyperlink{namespace_alg_lib_ab90b28703ab96313011a0fc73af136e0}{inversion\+Ref} (cont \&A)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{namespace_alg_lib_aaa2cce44d615ee89d16ed8f5595189d4}{insertion\+Sort} (std\+::vector$<$ T $>$ \&arr)
+\item 
+\hyperlink{class_alg_lib_1_1_fraction}{Fraction} \hyperlink{namespace_alg_lib_ade570114b2ba76f3c9742dd9ca92387c}{operator+} (const \hyperlink{class_alg_lib_1_1_fraction}{Fraction} \&f1, const \hyperlink{class_alg_lib_1_1_fraction}{Fraction} \&f2)
+\item 
+\hyperlink{class_alg_lib_1_1_fraction}{Fraction} \hyperlink{namespace_alg_lib_a8d6284ffd8dfa09154f65a0957ac6801}{operator-\/} (const \hyperlink{class_alg_lib_1_1_fraction}{Fraction} \&f1, const \hyperlink{class_alg_lib_1_1_fraction}{Fraction} \&f2)
+\item 
+\hyperlink{class_alg_lib_1_1_fraction}{Fraction} \hyperlink{namespace_alg_lib_aabcf6f54d813c4b6d701163009d268d9}{operator$\ast$} (const \hyperlink{class_alg_lib_1_1_fraction}{Fraction} \&f1, const \hyperlink{class_alg_lib_1_1_fraction}{Fraction} \&f2)
+\item 
+\hyperlink{class_alg_lib_1_1_fraction}{Fraction} \hyperlink{namespace_alg_lib_ab98deb23af06c328aede79f2fe4d2563}{operator/} (const \hyperlink{class_alg_lib_1_1_fraction}{Fraction} \&f1, const \hyperlink{class_alg_lib_1_1_fraction}{Fraction} \&f2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\index{Alg\+Lib@{Alg\+Lib}!db\+Type@{db\+Type}}
+\index{db\+Type@{db\+Type}!Alg\+Lib@{Alg\+Lib}}
+\subsubsection[{\texorpdfstring{db\+Type}{dbType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Alg\+Lib\+::db\+Type}\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{namespace_alg_lib_a11966d2ea6c430adfb83a6ebaa05e337}{}\label{namespace_alg_lib_a11966d2ea6c430adfb83a6ebaa05e337}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+D\+J\+A\+C\+E\+N\+C\+Y\+\_\+\+M\+A\+T\+R\+IX@{A\+D\+J\+A\+C\+E\+N\+C\+Y\+\_\+\+M\+A\+T\+R\+IX}!Alg\+Lib@{Alg\+Lib}}\index{Alg\+Lib@{Alg\+Lib}!A\+D\+J\+A\+C\+E\+N\+C\+Y\+\_\+\+M\+A\+T\+R\+IX@{A\+D\+J\+A\+C\+E\+N\+C\+Y\+\_\+\+M\+A\+T\+R\+IX}}\item[{\em 
+A\+D\+J\+A\+C\+E\+N\+C\+Y\+\_\+\+M\+A\+T\+R\+IX\hypertarget{namespace_alg_lib_a11966d2ea6c430adfb83a6ebaa05e337a9d8e68c3898f769422174fed0be93fd2}{}\label{namespace_alg_lib_a11966d2ea6c430adfb83a6ebaa05e337a9d8e68c3898f769422174fed0be93fd2}
+}]\index{A\+D\+J\+A\+C\+E\+N\+C\+Y\+\_\+\+L\+I\+ST@{A\+D\+J\+A\+C\+E\+N\+C\+Y\+\_\+\+L\+I\+ST}!Alg\+Lib@{Alg\+Lib}}\index{Alg\+Lib@{Alg\+Lib}!A\+D\+J\+A\+C\+E\+N\+C\+Y\+\_\+\+L\+I\+ST@{A\+D\+J\+A\+C\+E\+N\+C\+Y\+\_\+\+L\+I\+ST}}\item[{\em 
+A\+D\+J\+A\+C\+E\+N\+C\+Y\+\_\+\+L\+I\+ST\hypertarget{namespace_alg_lib_a11966d2ea6c430adfb83a6ebaa05e337a6d02e698876f8aa2b2e975e8c0010c10}{}\label{namespace_alg_lib_a11966d2ea6c430adfb83a6ebaa05e337a6d02e698876f8aa2b2e975e8c0010c10}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 10 of file Graph.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{Alg\+Lib@{Alg\+Lib}!binarysearch@{binarysearch}}
+\index{binarysearch@{binarysearch}!Alg\+Lib@{Alg\+Lib}}
+\subsubsection[{\texorpdfstring{binarysearch(cont A, T key)}{binarysearch(cont A, T key)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename cont , typename T $>$ int Alg\+Lib\+::binarysearch (
+\begin{DoxyParamCaption}
+\item[{cont}]{A, }
+\item[{T}]{key}
+\end{DoxyParamCaption}
+)}\hypertarget{namespace_alg_lib_a42bfc6dd0232e3e7d0a460a5bb74059a}{}\label{namespace_alg_lib_a42bfc6dd0232e3e7d0a460a5bb74059a}
+
+
+Searches a sorted container A for an element key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cont} & the container that contains the elements of type T \\
+\hline
+{\em T} & the type of the elements in the container \\
+\hline
+{\em A} & the container that has the elements of type T \\
+\hline
+{\em key} & the element to be found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the index the element key is at if the key is in A. If not in A, if the element would be between position x and x+1 then the value of -\/x-\/2 is returned. 
+\end{DoxyReturn}
+
+
+Definition at line 6 of file binarysearch.\+cpp.
+
+\index{Alg\+Lib@{Alg\+Lib}!heap\+Sort@{heap\+Sort}}
+\index{heap\+Sort@{heap\+Sort}!Alg\+Lib@{Alg\+Lib}}
+\subsubsection[{\texorpdfstring{heap\+Sort(\+T \&arr)}{heapSort(T &arr)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename S $>$ void Alg\+Lib\+::heap\+Sort (
+\begin{DoxyParamCaption}
+\item[{T \&}]{arr}
+\end{DoxyParamCaption}
+)}\hypertarget{namespace_alg_lib_a09ea4c537af6d2dcc36a9753b7af7c05}{}\label{namespace_alg_lib_a09ea4c537af6d2dcc36a9753b7af7c05}
+
+
+Definition at line 5 of file heapsort.\+cpp.
+
+\index{Alg\+Lib@{Alg\+Lib}!insertion\+Sort@{insertion\+Sort}}
+\index{insertion\+Sort@{insertion\+Sort}!Alg\+Lib@{Alg\+Lib}}
+\subsubsection[{\texorpdfstring{insertion\+Sort(\+T \&arr)}{insertionSort(T &arr)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void Alg\+Lib\+::insertion\+Sort (
+\begin{DoxyParamCaption}
+\item[{T \&}]{arr}
+\end{DoxyParamCaption}
+)}\hypertarget{namespace_alg_lib_a285a3cda7220504508dbb7d0df3dba21}{}\label{namespace_alg_lib_a285a3cda7220504508dbb7d0df3dba21}
+\index{Alg\+Lib@{Alg\+Lib}!insertion\+Sort@{insertion\+Sort}}
+\index{insertion\+Sort@{insertion\+Sort}!Alg\+Lib@{Alg\+Lib}}
+\subsubsection[{\texorpdfstring{insertion\+Sort(std\+::vector$<$ T $>$ \&arr)}{insertionSort(std::vector< T > &arr)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void Alg\+Lib\+::insertion\+Sort (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ T $>$ \&}]{arr}
+\end{DoxyParamCaption}
+)}\hypertarget{namespace_alg_lib_aaa2cce44d615ee89d16ed8f5595189d4}{}\label{namespace_alg_lib_aaa2cce44d615ee89d16ed8f5595189d4}
+insertion\+Sort(vector$<$\+T$>$\& arr)
+
+Sorts the elements of container arr using the insertion sort algorithm Parameters\+: vector$<$\+T$>$\& arr\+: a reference to the container to be sorted
+
+Returns\+: void Additional Notes\+: Runs in O(n$^\wedge$2) time 
+
+Definition at line 17 of file insertionsort.\+cpp.
+
+\index{Alg\+Lib@{Alg\+Lib}!inversion\+Ref@{inversion\+Ref}}
+\index{inversion\+Ref@{inversion\+Ref}!Alg\+Lib@{Alg\+Lib}}
+\subsubsection[{\texorpdfstring{inversion\+Ref(cont \&\+A)}{inversionRef(cont &A)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename cont $>$ int Alg\+Lib\+::inversion\+Ref (
+\begin{DoxyParamCaption}
+\item[{cont \&}]{A}
+\end{DoxyParamCaption}
+)}\hypertarget{namespace_alg_lib_ab90b28703ab96313011a0fc73af136e0}{}\label{namespace_alg_lib_ab90b28703ab96313011a0fc73af136e0}
+
+
+Definition at line 7 of file inversion.\+cpp.
+
+\index{Alg\+Lib@{Alg\+Lib}!inversions@{inversions}}
+\index{inversions@{inversions}!Alg\+Lib@{Alg\+Lib}}
+\subsubsection[{\texorpdfstring{inversions(const cont \&\+A)}{inversions(const cont &A)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename cont $>$ int Alg\+Lib\+::inversions (
+\begin{DoxyParamCaption}
+\item[{const cont \&}]{A}
+\end{DoxyParamCaption}
+)}\hypertarget{namespace_alg_lib_a97a13becf845332c126803e014b03286}{}\label{namespace_alg_lib_a97a13becf845332c126803e014b03286}
+
+
+Counts the number of inversions in a container A. An inversion is a pair of elements A\mbox{[}i\mbox{]} and A\mbox{[}j\mbox{]} such that i $<$ j and A\mbox{[}i\mbox{]} $>$ A\mbox{[}j\mbox{]}. Finds in O(n log n) time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cont} & the type of the container \\
+\hline
+{\em A} & the container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of inversions 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file inversion.\+cpp.
+
+\index{Alg\+Lib@{Alg\+Lib}!M\+E\+R\+GE@{M\+E\+R\+GE}}
+\index{M\+E\+R\+GE@{M\+E\+R\+GE}!Alg\+Lib@{Alg\+Lib}}
+\subsubsection[{\texorpdfstring{M\+E\+R\+G\+E(\+T \&left, T \&right)}{MERGE(T &left, T &right)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T Alg\+Lib\+::\+M\+E\+R\+GE (
+\begin{DoxyParamCaption}
+\item[{T \&}]{left, }
+\item[{T \&}]{right}
+\end{DoxyParamCaption}
+)}\hypertarget{namespace_alg_lib_a964728cae397746308b2d688e6f85d01}{}\label{namespace_alg_lib_a964728cae397746308b2d688e6f85d01}
+
+
+Definition at line 33 of file mergesort.\+cpp.
+
+\index{Alg\+Lib@{Alg\+Lib}!merge\+Sort@{merge\+Sort}}
+\index{merge\+Sort@{merge\+Sort}!Alg\+Lib@{Alg\+Lib}}
+\subsubsection[{\texorpdfstring{merge\+Sort(\+T \&arr)}{mergeSort(T &arr)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void Alg\+Lib\+::merge\+Sort (
+\begin{DoxyParamCaption}
+\item[{T \&}]{arr}
+\end{DoxyParamCaption}
+)}\hypertarget{namespace_alg_lib_a50103bb855668c829f3d0def288521a8}{}\label{namespace_alg_lib_a50103bb855668c829f3d0def288521a8}
+
+
+Sort the elements in container arr with merge sort algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the container to be sorted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 13 of file mergesort.\+cpp.
+
+\index{Alg\+Lib@{Alg\+Lib}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Alg\+Lib@{Alg\+Lib}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const Fraction \&f1, const Fraction \&f2)}{operator*(const Fraction &f1, const Fraction &f2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Fraction} Alg\+Lib\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Fraction} \&}]{f1, }
+\item[{const {\bf Fraction} \&}]{f2}
+\end{DoxyParamCaption}
+)}\hypertarget{namespace_alg_lib_aabcf6f54d813c4b6d701163009d268d9}{}\label{namespace_alg_lib_aabcf6f54d813c4b6d701163009d268d9}
+
+
+Definition at line 13 of file Fraction.\+cpp.
+
+\index{Alg\+Lib@{Alg\+Lib}!operator+@{operator+}}
+\index{operator+@{operator+}!Alg\+Lib@{Alg\+Lib}}
+\subsubsection[{\texorpdfstring{operator+(const Fraction \&f1, const Fraction \&f2)}{operator+(const Fraction &f1, const Fraction &f2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Fraction} Alg\+Lib\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Fraction} \&}]{f1, }
+\item[{const {\bf Fraction} \&}]{f2}
+\end{DoxyParamCaption}
+)}\hypertarget{namespace_alg_lib_ade570114b2ba76f3c9742dd9ca92387c}{}\label{namespace_alg_lib_ade570114b2ba76f3c9742dd9ca92387c}
+Assignment operator 
+\begin{DoxyParams}{Parameters}
+{\em other} & Object to assign from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to this 
+\end{DoxyReturn}
+
+
+Definition at line 5 of file Fraction.\+cpp.
+
+\index{Alg\+Lib@{Alg\+Lib}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Alg\+Lib@{Alg\+Lib}}
+\subsubsection[{\texorpdfstring{operator-\/(const Fraction \&f1, const Fraction \&f2)}{operator-(const Fraction &f1, const Fraction &f2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Fraction} Alg\+Lib\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Fraction} \&}]{f1, }
+\item[{const {\bf Fraction} \&}]{f2}
+\end{DoxyParamCaption}
+)}\hypertarget{namespace_alg_lib_a8d6284ffd8dfa09154f65a0957ac6801}{}\label{namespace_alg_lib_a8d6284ffd8dfa09154f65a0957ac6801}
+
+
+Definition at line 9 of file Fraction.\+cpp.
+
+\index{Alg\+Lib@{Alg\+Lib}!operator/@{operator/}}
+\index{operator/@{operator/}!Alg\+Lib@{Alg\+Lib}}
+\subsubsection[{\texorpdfstring{operator/(const Fraction \&f1, const Fraction \&f2)}{operator/(const Fraction &f1, const Fraction &f2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Fraction} Alg\+Lib\+::operator/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Fraction} \&}]{f1, }
+\item[{const {\bf Fraction} \&}]{f2}
+\end{DoxyParamCaption}
+)}\hypertarget{namespace_alg_lib_ab98deb23af06c328aede79f2fe4d2563}{}\label{namespace_alg_lib_ab98deb23af06c328aede79f2fe4d2563}
+
+
+Definition at line 17 of file Fraction.\+cpp.
+

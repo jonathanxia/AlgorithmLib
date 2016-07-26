@@ -1,0 +1,5 @@
+<map id="AlgLib::adjMatrix" name="AlgLib::adjMatrix">
+<area shape="rect" id="node2" href="$class_alg_lib_1_1graph_d_b.html" title="{AlgLib::graphDB\n|# isInGraph\l|+ graphDB()\l+ ~graphDB()\l+ inGraph()\l+ numVertex()\l+ highestNode()\l+ inDegree()\l+ outDegree()\l+ getWeight()\l+ inWeight()\l+ outWeight()\land 6 more...\l}" alt="" coords="5,380,121,604"/>
+<area shape="rect" id="node3" href="$class_alg_lib_1_1_matrix.html" title="{AlgLib::Matrix\&lt; double \&gt;\n||+ Matrix()\l+ Matrix()\l+ Matrix()\l+ Matrix()\l+ operator[]()\l+ operator*()\l+ operator+()\l+ operator&#45;()\l+ getVectors()\l+ setValue()\l+ getValue()\l+ numRows()\l+ numColumns()\l# addRow()\l# addColumn()\l}" alt="" coords="145,351,309,633"/>
+<area shape="rect" id="node4" href="$class_alg_lib_1_1_matrix.html" title="{AlgLib::Matrix\&lt; T \&gt;\n||+ Matrix()\l+ Matrix()\l+ Matrix()\l+ Matrix()\l+ operator[]()\l+ operator*()\l+ operator+()\l+ operator&#45;()\l+ getVectors()\l+ setValue()\l+ getValue()\l+ numRows()\l+ numColumns()\l# addRow()\l# addColumn()\l}" alt="" coords="161,5,294,288"/>
+</map>

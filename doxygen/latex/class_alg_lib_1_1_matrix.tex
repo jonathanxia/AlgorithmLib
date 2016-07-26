@@ -1,0 +1,251 @@
+\hypertarget{class_alg_lib_1_1_matrix}{}\section{Alg\+Lib\+:\+:Matrix$<$ T $>$ Class Template Reference}
+\label{class_alg_lib_1_1_matrix}\index{Alg\+Lib\+::\+Matrix$<$ T $>$@{Alg\+Lib\+::\+Matrix$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Matrix.\+h$>$}
+
+
+
+Inheritance diagram for Alg\+Lib\+:\+:Matrix$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_alg_lib_1_1_matrix__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Alg\+Lib\+:\+:Matrix$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{class_alg_lib_1_1_matrix__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_alg_lib_1_1_matrix_aa928f1b4f97f3689739fb76f37ea8b32}{Matrix} (int row, int column)
+\item 
+\hyperlink{class_alg_lib_1_1_matrix_ae5fe940d778538e4e9b92e559d4892f9}{Matrix} (const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&the\+Matrix)
+\item 
+\hyperlink{class_alg_lib_1_1_matrix_a3c8f9c4d2a7a1d6235e364081c7b2291}{Matrix} (std\+::initializer\+\_\+list$<$ std\+::initializer\+\_\+list$<$ T $>$ $>$ m)
+\item 
+\hyperlink{class_alg_lib_1_1_matrix_af032730ee4314ca530b7926441135377}{Matrix} (const \hyperlink{class_alg_lib_1_1_matrix}{Matrix} \&rhs)
+\item 
+virtual std\+::vector$<$ T $>$ \& \hyperlink{class_alg_lib_1_1_matrix_aad964932a50c21c7b6f49f5193f42b3c}{operator\mbox{[}$\,$\mbox{]}} (int row)
+\item 
+virtual \hyperlink{class_alg_lib_1_1_matrix}{Matrix} \hyperlink{class_alg_lib_1_1_matrix_abd934caac0e4025576d38f2b9ebc85d0}{operator$\ast$} (const \hyperlink{class_alg_lib_1_1_matrix}{Matrix} \&other) const 
+\item 
+virtual \hyperlink{class_alg_lib_1_1_matrix}{Matrix} \hyperlink{class_alg_lib_1_1_matrix_ac85ab14586f80045033981c7751fd124}{operator+} (const \hyperlink{class_alg_lib_1_1_matrix}{Matrix} \&other) const 
+\item 
+virtual \hyperlink{class_alg_lib_1_1_matrix}{Matrix} \hyperlink{class_alg_lib_1_1_matrix_ae947b17fc992a714c6fc5dfa7365deb8}{operator-\/} (const \hyperlink{class_alg_lib_1_1_matrix}{Matrix} \&other) const 
+\item 
+virtual std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \hyperlink{class_alg_lib_1_1_matrix_a5c651bc81f24c02ccbee007f4be49dfa}{get\+Vectors} () const 
+\item 
+virtual void \hyperlink{class_alg_lib_1_1_matrix_a434ac30c8fe0674d740ab8e513318cae}{set\+Value} (int row, int col, T value)
+\item 
+virtual T \hyperlink{class_alg_lib_1_1_matrix_a99342d63d4ed38c0289f14566381958e}{get\+Value} (int row, int col) const 
+\item 
+virtual int \hyperlink{class_alg_lib_1_1_matrix_ae78e1e7470110c5d8e43fe1199c6540e}{num\+Rows} () const 
+\item 
+virtual int \hyperlink{class_alg_lib_1_1_matrix_ac9a4892052b6d988fc79390528122f00}{num\+Columns} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_alg_lib_1_1_matrix_acb50a61a0a93f26ad60829edef419a3a}{add\+Row} ()
+\item 
+virtual void \hyperlink{class_alg_lib_1_1_matrix_a960028989285032b7c5847235358f894}{add\+Column} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\\*
+class Alg\+Lib\+::\+Matrix$<$ T $>$}
+
+
+
+Definition at line 11 of file Matrix.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{Matrix(int row, int column)}{Matrix(int row, int column)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Alg\+Lib\+::\+Matrix}$<$ T $>$\+::{\bf Matrix} (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{column}
+\end{DoxyParamCaption}
+)}\hypertarget{class_alg_lib_1_1_matrix_aa928f1b4f97f3689739fb76f37ea8b32}{}\label{class_alg_lib_1_1_matrix_aa928f1b4f97f3689739fb76f37ea8b32}
+
+
+Definition at line 7 of file Matrix.\+cpp.
+
+\index{Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{Matrix(const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&the\+Matrix)}{Matrix(const std::vector< std::vector< T > > &theMatrix)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Alg\+Lib\+::\+Matrix}$<$ T $>$\+::{\bf Matrix} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&}]{the\+Matrix}
+\end{DoxyParamCaption}
+)}\hypertarget{class_alg_lib_1_1_matrix_ae5fe940d778538e4e9b92e559d4892f9}{}\label{class_alg_lib_1_1_matrix_ae5fe940d778538e4e9b92e559d4892f9}
+
+
+Definition at line 22 of file Matrix.\+cpp.
+
+\index{Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{Matrix(std\+::initializer\+\_\+list$<$ std\+::initializer\+\_\+list$<$ T $>$ $>$ m)}{Matrix(std::initializer_list< std::initializer_list< T > > m)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Alg\+Lib\+::\+Matrix}$<$ T $>$\+::{\bf Matrix} (
+\begin{DoxyParamCaption}
+\item[{std\+::initializer\+\_\+list$<$ std\+::initializer\+\_\+list$<$ T $>$ $>$}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{class_alg_lib_1_1_matrix_a3c8f9c4d2a7a1d6235e364081c7b2291}{}\label{class_alg_lib_1_1_matrix_a3c8f9c4d2a7a1d6235e364081c7b2291}
+
+
+Definition at line 33 of file Matrix.\+cpp.
+
+\index{Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{Matrix(const Matrix \&rhs)}{Matrix(const Matrix &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Alg\+Lib\+::\+Matrix}$<$ T $>$\+::{\bf Matrix} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{class_alg_lib_1_1_matrix_af032730ee4314ca530b7926441135377}{}\label{class_alg_lib_1_1_matrix_af032730ee4314ca530b7926441135377}
+Copy constructor 
+
+Definition at line 59 of file Matrix.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}!add\+Column@{add\+Column}}
+\index{add\+Column@{add\+Column}!Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{add\+Column()}{addColumn()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Alg\+Lib\+::\+Matrix}$<$ T $>$\+::add\+Column (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_matrix_a960028989285032b7c5847235358f894}{}\label{class_alg_lib_1_1_matrix_a960028989285032b7c5847235358f894}
+
+
+Definition at line 176 of file Matrix.\+cpp.
+
+\index{Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}!add\+Row@{add\+Row}}
+\index{add\+Row@{add\+Row}!Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{add\+Row()}{addRow()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Alg\+Lib\+::\+Matrix}$<$ T $>$\+::add\+Row (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_matrix_acb50a61a0a93f26ad60829edef419a3a}{}\label{class_alg_lib_1_1_matrix_acb50a61a0a93f26ad60829edef419a3a}
+
+
+Definition at line 170 of file Matrix.\+cpp.
+
+\index{Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{get\+Value(int row, int col) const }{getValue(int row, int col) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T {\bf Alg\+Lib\+::\+Matrix}$<$ T $>$\+::get\+Value (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{col}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_matrix_a99342d63d4ed38c0289f14566381958e}{}\label{class_alg_lib_1_1_matrix_a99342d63d4ed38c0289f14566381958e}
+
+
+Definition at line 185 of file Matrix.\+cpp.
+
+\index{Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}!get\+Vectors@{get\+Vectors}}
+\index{get\+Vectors@{get\+Vectors}!Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{get\+Vectors() const }{getVectors() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::vector$<$ std\+::vector$<$ T $>$ $>$ {\bf Alg\+Lib\+::\+Matrix}$<$ T $>$\+::get\+Vectors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_matrix_a5c651bc81f24c02ccbee007f4be49dfa}{}\label{class_alg_lib_1_1_matrix_a5c651bc81f24c02ccbee007f4be49dfa}
+
+
+Definition at line 79 of file Matrix.\+cpp.
+
+\index{Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}!num\+Columns@{num\+Columns}}
+\index{num\+Columns@{num\+Columns}!Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{num\+Columns() const }{numColumns() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ int {\bf Alg\+Lib\+::\+Matrix}$<$ T $>$\+::num\+Columns (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_matrix_ac9a4892052b6d988fc79390528122f00}{}\label{class_alg_lib_1_1_matrix_ac9a4892052b6d988fc79390528122f00}
+
+
+Definition at line 164 of file Matrix.\+cpp.
+
+\index{Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}!num\+Rows@{num\+Rows}}
+\index{num\+Rows@{num\+Rows}!Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{num\+Rows() const }{numRows() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ int {\bf Alg\+Lib\+::\+Matrix}$<$ T $>$\+::num\+Rows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_matrix_ae78e1e7470110c5d8e43fe1199c6540e}{}\label{class_alg_lib_1_1_matrix_ae78e1e7470110c5d8e43fe1199c6540e}
+
+
+Definition at line 159 of file Matrix.\+cpp.
+
+\index{Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const Matrix \&other) const }{operator*(const Matrix &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Matrix}$<$ T $>$ {\bf Alg\+Lib\+::\+Matrix}$<$ T $>$\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix}$<$ T $>$ \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_matrix_abd934caac0e4025576d38f2b9ebc85d0}{}\label{class_alg_lib_1_1_matrix_abd934caac0e4025576d38f2b9ebc85d0}
+
+
+Definition at line 137 of file Matrix.\+cpp.
+
+\index{Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{operator+(const Matrix \&other) const }{operator+(const Matrix &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Matrix}$<$ T $>$ {\bf Alg\+Lib\+::\+Matrix}$<$ T $>$\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix}$<$ T $>$ \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_matrix_ac85ab14586f80045033981c7751fd124}{}\label{class_alg_lib_1_1_matrix_ac85ab14586f80045033981c7751fd124}
+
+
+Definition at line 99 of file Matrix.\+cpp.
+
+\index{Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{operator-\/(const Matrix \&other) const }{operator-(const Matrix &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Matrix}$<$ T $>$ {\bf Alg\+Lib\+::\+Matrix}$<$ T $>$\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix}$<$ T $>$ \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_matrix_ae947b17fc992a714c6fc5dfa7365deb8}{}\label{class_alg_lib_1_1_matrix_ae947b17fc992a714c6fc5dfa7365deb8}
+
+
+Definition at line 118 of file Matrix.\+cpp.
+
+\index{Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{operator[](int row)}{operator[](int row)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::vector$<$ T $>$ \& {\bf Alg\+Lib\+::\+Matrix}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{row}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_matrix_aad964932a50c21c7b6f49f5193f42b3c}{}\label{class_alg_lib_1_1_matrix_aad964932a50c21c7b6f49f5193f42b3c}
+
+
+Definition at line 93 of file Matrix.\+cpp.
+
+\index{Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!Alg\+Lib\+::\+Matrix@{Alg\+Lib\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{set\+Value(int row, int col, T value)}{setValue(int row, int col, T value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Alg\+Lib\+::\+Matrix}$<$ T $>$\+::set\+Value (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{col, }
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_alg_lib_1_1_matrix_a434ac30c8fe0674d740ab8e513318cae}{}\label{class_alg_lib_1_1_matrix_a434ac30c8fe0674d740ab8e513318cae}
+
+
+Definition at line 85 of file Matrix.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Data/\+Desktop/\+Github/include/\hyperlink{_matrix_8h}{Matrix.\+h}\item 
+D\+:/\+Data/\+Desktop/\+Github/src/\+Matrix/\hyperlink{_matrix_8cpp}{Matrix.\+cpp}\end{DoxyCompactItemize}

@@ -131,6 +131,11 @@ namespace AlgLib
         return mGraph->numVertex();
     }
 
+    int Graph::highestNode() const
+    {
+        return mGraph->highestNode();
+    }
+
     int Graph::inDegree(int node) const
     {
         return mGraph->inDegree(node);
