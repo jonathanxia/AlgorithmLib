@@ -5,6 +5,7 @@
 #include<vector>
 #include<iostream>
 #include<string>
+#include "Permutation.h"
 
 namespace AlgLib {
 	template<typename T>
@@ -44,6 +45,14 @@ namespace AlgLib {
 
 	private:
 		std::vector< std::vector<T> > mMatrix;
+	};
+
+	class PermutationMatrix : public Matrix<bool> {
+	public:
+		PermutationMatrix(const Permutation<int>& p, int n);
+
+		template<typename T>
+		std::vector<T> operator* (const std::vector<T>& other) const;
 	};
 }
 

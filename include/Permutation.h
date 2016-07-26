@@ -6,9 +6,11 @@
 #include <initializer_list>
 #include <vector>
 #include <utility>
+#include "Matrix.h"
 
 namespace AlgLib {
 	template <typename T>
+
     class Permutation {
     public:
 		// Constructors
@@ -24,14 +26,17 @@ namespace AlgLib {
 		virtual bool operator== (const Permutation<T>& other) const;
 		virtual T operator() (const T elem) const;
 
-		virtual Permutation<T> inverse();
-		virtual int order();
+		virtual Permutation<T> inverse() const;
+		virtual int order() const;
+		friend PermutationMatrix::PermutationMatrix(const Permutation<int>& p, int n);
 		/* For some reason this is creating an error...
 		vector<Permutation<T>> cycles();
 		*/
 
     private:
         std::vector<std::pair<T,T>> mPermutation;
+		
+		
     };
 }
 

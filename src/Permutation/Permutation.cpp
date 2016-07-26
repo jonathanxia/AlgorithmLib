@@ -72,7 +72,7 @@ T AlgLib::Permutation<T>::operator() (const T elem) const {
 }
 
 template<typename T> // Not tested yet
-AlgLib::Permutation<T> AlgLib::Permutation<T>::inverse() {
+AlgLib::Permutation<T> AlgLib::Permutation<T>::inverse() const{
 	std::vector < std::pair<T, T>> pairs;
 	for (auto i : mPermutation) {
 		pairs.push_back(make_pair(i.second, i.first));
@@ -92,7 +92,7 @@ AlgLib::Permutation<T> AlgLib::Permutation<T>::operator*(const Permutation<T>& o
 }
 
 template<typename T> // Not tested and this seems sketchy but idk it might work
-int AlgLib::Permutation<T>::order() {
+int AlgLib::Permutation<T>::order() const {
 	AlgLib::Permutation<T> permutation = *this;
 	AlgLib::Permutation<T> identity;
 	int counter = 1;

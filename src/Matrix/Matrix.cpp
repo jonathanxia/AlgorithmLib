@@ -1,6 +1,8 @@
 #include <vector>
 #include <string>
 #include <stdexcept>
+#include "Permutation.h"
+
 namespace AlgLib
 {
     template <typename T>
@@ -186,4 +188,33 @@ namespace AlgLib
     {
         return mMatrix[row][col];
     }
+
+	PermutationMatrix::PermutationMatrix(const Permutation<int>& p, int n) : Matrix(n,n) {
+		for (int i = 0; i < n; i++) {
+			setValue(i + 1, i + 1, 1);
+		}
+		for (auto i = p.mPermutation.begin(); i != p.mPermutation.end(); i++) {
+			setValue(i->first, i->first, 0);
+			setValue(i->first, i->second, 1);
+		}
+	}
+
+	template<typename T>
+	std::vector<T> PermutationMatrix::operator* (const std::vector<T>& other) const {
+		int n = numRows();
+		std::vector<T> permuted;
+		permuted.reserve(n);
+		for (int i = 0; i < n; i++) {
+			permuted.push_back(0);
+		}
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				if (this[i][j] == 1) {
+					permuted[j] = other[i];
+				}
+			}
+		}
+		return permuted;
+	}
 }
+
