@@ -20,10 +20,6 @@ namespace AlgLib
     }
 
     template <typename T>
-    /** @brief (one liner)
-      *
-      * (documentation goes here)
-      */
     Heap<T>::Heap(std::initializer_list<T> args) :
         mContainer(args.size()),
         heapSize(args.size())
@@ -62,10 +58,6 @@ namespace AlgLib
         //dtor
     }
 
-    /** @brief gets the index of the child to the right
-      *
-      * (documentation goes here)
-      */
     template <typename T>
     int Heap<T>::right(int index)
     {

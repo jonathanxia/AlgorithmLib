@@ -11,11 +11,24 @@ namespace AlgLib
     {
         public:
             using Matrix<double>::Matrix;
-            /** Default constructor */
+
+            /**
+            * \brief Constructor that takes in number of vertices
+            * \param numVertices Defaults to 0. Is the number of vertices for the adjMatrix to have
+            */
             adjMatrix(int numVertices = 0);
+
+            /** \brief A copy constructor
+             *
+             * \param other The Matrix<double> to be copied. Note that since adjMatrix inherits from Matrix<double>
+             *        this parameter can be of type adjMatrix
+             *
+             */
             adjMatrix(const Matrix<double>& other);
+
             /** Default destructor */
             virtual ~adjMatrix();
+
 
             virtual void addVertex() override;
             virtual void addEdge(int nodeS, int nodeE, double weight = 1) override;

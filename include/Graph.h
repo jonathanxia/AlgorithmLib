@@ -7,6 +7,12 @@
 #include <initializer_list>
 namespace AlgLib
 {
+    /**
+    * \brief Specifies the method of data storage for the Graph
+    *
+    * \param ADJACENCY_MATRIX will flag the Graph object to store as an adjacency matrix
+    * \param ADJACENCY_LIST will flag the Graph object to store as an adjacency list
+    */
     enum class dbType
     {
         ADJACENCY_MATRIX,
