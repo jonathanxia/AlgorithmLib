@@ -17,5 +17,5 @@ var searchData=
   ['adjmatrix_2eh',['adjMatrix.h',['../adj_matrix_8h.html',1,'']]],
   ['alglib',['AlgLib',['../namespace_alg_lib.html',1,'']]],
   ['antideriv',['antideriv',['../class_alg_lib_1_1_polynomial.html#adba823edd7b425b451b2b550fe5727d0',1,'AlgLib::Polynomial']]],
-  ['algorithmlib',['AlgorithmLib',['../md_README.html',1,'']]]
+  ['algorithmlib',['AlgorithmLib',['../md_D:_Data_Desktop_Github_README.html',1,'']]]
 ];

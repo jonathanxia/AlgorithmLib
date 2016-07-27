@@ -1,7 +1,7 @@
 var NAVTREE =
 [
   [ "AlgorithmLib", "index.html", [
-    [ "AlgorithmLib", "md_README.html", null ],
+    [ "AlgorithmLib", "md_D:_Data_Desktop_Github_README.html", null ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [

@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -33,7 +39,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AlgorithmLib
    </div>
-   <div id="projectbrief">A C++ library with algorithms and mathematical objects</div>
+   <div id="projectbrief">A C++ library for mathematical objects and algorithms</div>
   </td>
  </tr>
  </tbody>
@@ -115,37 +121,59 @@ $(document).ready(function(){initNavTree('class_alg_lib_1_1_heap.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>A class for a <a class="el" href="class_alg_lib_1_1_heap.html" title="A class for a Heap object. ">Heap</a> object.  
+ <a href="class_alg_lib_1_1_heap.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_heap_8h_source.html">Heap.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for AlgLib::Heap&lt; T &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_alg_lib_1_1_heap__coll__graph.png" border="0" usemap="#_alg_lib_1_1_heap_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aba2cc050f886d9a8247f24347d9c9b55"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_heap.html#aba2cc050f886d9a8247f24347d9c9b55">Heap</a> ()</td></tr>
+<tr class="memdesc:aba2cc050f886d9a8247f24347d9c9b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#aba2cc050f886d9a8247f24347d9c9b55">More...</a><br /></td></tr>
 <tr class="separator:aba2cc050f886d9a8247f24347d9c9b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a068f2a62a4468625b4ad14507a386fc8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_heap.html#a068f2a62a4468625b4ad14507a386fc8">Heap</a> (std::vector&lt; T &gt; container)</td></tr>
+<tr class="memdesc:a068f2a62a4468625b4ad14507a386fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that takes in <code>std::vector&lt;T&gt;</code>  <a href="#a068f2a62a4468625b4ad14507a386fc8">More...</a><br /></td></tr>
 <tr class="separator:a068f2a62a4468625b4ad14507a386fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b009e741c0442339eb54d992d3c74da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_heap.html#a7b009e741c0442339eb54d992d3c74da">Heap</a> (std::initializer_list&lt; T &gt; args)</td></tr>
-<tr class="memdesc:a7b009e741c0442339eb54d992d3c74da"><td class="mdescLeft">&#160;</td><td class="mdescRight">(one liner)  <a href="#a7b009e741c0442339eb54d992d3c74da">More...</a><br /></td></tr>
+<tr class="memdesc:a7b009e741c0442339eb54d992d3c74da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializer list constructor.  <a href="#a7b009e741c0442339eb54d992d3c74da">More...</a><br /></td></tr>
 <tr class="separator:a7b009e741c0442339eb54d992d3c74da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d6a73495b76725db1d612050c090c73"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_heap.html#a0d6a73495b76725db1d612050c090c73">~Heap</a> ()</td></tr>
+<tr class="memdesc:a0d6a73495b76725db1d612050c090c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor.  <a href="#a0d6a73495b76725db1d612050c090c73">More...</a><br /></td></tr>
 <tr class="separator:a0d6a73495b76725db1d612050c090c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26fff42a724f914607f61c25dc4f80bd"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_heap.html#a26fff42a724f914607f61c25dc4f80bd">getContainer</a> ()</td></tr>
+<tr class="memdesc:a26fff42a724f914607f61c25dc4f80bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access mContainer.  <a href="#a26fff42a724f914607f61c25dc4f80bd">More...</a><br /></td></tr>
 <tr class="separator:a26fff42a724f914607f61c25dc4f80bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c406e0e00559e3372637d1547af1023"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_heap.html#a0c406e0e00559e3372637d1547af1023">setContainer</a> (std::vector&lt; T &gt; val)</td></tr>
+<tr class="memdesc:a0c406e0e00559e3372637d1547af1023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mContainer.  <a href="#a0c406e0e00559e3372637d1547af1023">More...</a><br /></td></tr>
 <tr class="separator:a0c406e0e00559e3372637d1547af1023"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a827f1aa55e4d2b366e3c2e1753b2bb38"><td class="memItemLeft" align="right" valign="top">virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_heap.html#a827f1aa55e4d2b366e3c2e1753b2bb38">pop</a> ()</td></tr>
+<tr class="memdesc:a827f1aa55e4d2b366e3c2e1753b2bb38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the largest element of the <a class="el" href="class_alg_lib_1_1_heap.html" title="A class for a Heap object. ">Heap</a> and removes it.  <a href="#a827f1aa55e4d2b366e3c2e1753b2bb38">More...</a><br /></td></tr>
 <tr class="separator:a827f1aa55e4d2b366e3c2e1753b2bb38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f1ab496a7f4a4cc4d5c917fe10514ff"><td class="memItemLeft" align="right" valign="top">virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_heap.html#a4f1ab496a7f4a4cc4d5c917fe10514ff">top</a> ()</td></tr>
+<tr class="memdesc:a4f1ab496a7f4a4cc4d5c917fe10514ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the largest element of the <a class="el" href="class_alg_lib_1_1_heap.html" title="A class for a Heap object. ">Heap</a>.  <a href="#a4f1ab496a7f4a4cc4d5c917fe10514ff">More...</a><br /></td></tr>
 <tr class="separator:a4f1ab496a7f4a4cc4d5c917fe10514ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37d97dc0bc90f4b1dedfaa3378133f89"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_heap.html#a37d97dc0bc90f4b1dedfaa3378133f89">push</a> (T elem)</td></tr>
-<tr class="memdesc:a37d97dc0bc90f4b1dedfaa3378133f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">(one liner)  <a href="#a37d97dc0bc90f4b1dedfaa3378133f89">More...</a><br /></td></tr>
+<tr class="memdesc:a37d97dc0bc90f4b1dedfaa3378133f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts the element <code>elem</code> into the <a class="el" href="class_alg_lib_1_1_heap.html" title="A class for a Heap object. ">Heap</a>.  <a href="#a37d97dc0bc90f4b1dedfaa3378133f89">More...</a><br /></td></tr>
 <tr class="separator:a37d97dc0bc90f4b1dedfaa3378133f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class AlgLib::Heap&lt; T &gt;</h3>
 
+<p>A class for a <a class="el" href="class_alg_lib_1_1_heap.html" title="A class for a Heap object. ">Heap</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">T</td><td>The type of the objects stored in the <a class="el" href="class_alg_lib_1_1_heap.html" title="A class for a Heap object. ">Heap</a> </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="_heap_8h_source.html#l00009">9</a> of file <a class="el" href="_heap_8h_source.html">Heap.h</a>.</p>
+<p>Definition at line <a class="el" href="_heap_8h_source.html#l00012">12</a> of file <a class="el" href="_heap_8h_source.html">Heap.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aba2cc050f886d9a8247f24347d9c9b55"></a>
 <div class="memitem">
@@ -161,7 +189,8 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Default constructor </p>
+
+<p>Default constructor. </p>
 
 <p>Definition at line <a class="el" href="_heap_8cpp_source.html#l00008">8</a> of file <a class="el" href="_heap_8cpp_source.html">Heap.cpp</a>.</p>
 
@@ -182,7 +211,8 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructor that takes in vector&lt;T&gt; </p>
+
+<p>Constructor that takes in <code>std::vector&lt;T&gt;</code> </p>
 
 <p>Definition at line <a class="el" href="_heap_8cpp_source.html#l00015">15</a> of file <a class="el" href="_heap_8cpp_source.html">Heap.cpp</a>.</p>
 
@@ -204,11 +234,9 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>(one liner) </p>
-<p>Initializer list constructor</p>
-<p>(documentation goes here) </p>
+<p>Initializer list constructor. </p>
 
-<p>Definition at line <a class="el" href="_heap_8cpp_source.html#l00027">27</a> of file <a class="el" href="_heap_8cpp_source.html">Heap.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_heap_8cpp_source.html#l00023">23</a> of file <a class="el" href="_heap_8cpp_source.html">Heap.cpp</a>.</p>
 
 </div>
 </div>
@@ -234,9 +262,10 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Default destructor </p>
 
-<p>Definition at line <a class="el" href="_heap_8cpp_source.html#l00060">60</a> of file <a class="el" href="_heap_8cpp_source.html">Heap.cpp</a>.</p>
+<p>Default destructor. </p>
+
+<p>Definition at line <a class="el" href="_heap_8cpp_source.html#l00056">56</a> of file <a class="el" href="_heap_8cpp_source.html">Heap.cpp</a>.</p>
 
 </div>
 </div>
@@ -263,9 +292,11 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Access mContainer </p><dl class="section return"><dt>Returns</dt><dd>The current value of mContainer </dd></dl>
 
-<p>Definition at line <a class="el" href="_heap_8h_source.html#l00024">24</a> of file <a class="el" href="_heap_8h_source.html">Heap.h</a>.</p>
+<p>Access mContainer. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current value of the container </dd></dl>
+
+<p>Definition at line <a class="el" href="_heap_8h_source.html#l00027">27</a> of file <a class="el" href="_heap_8h_source.html">Heap.h</a>.</p>
 
 </div>
 </div>
@@ -292,18 +323,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_heap_8cpp_source.html#l00047">47</a> of file <a class="el" href="_heap_8cpp_source.html">Heap.cpp</a>.</p>
+<p>Returns the largest element of the <a class="el" href="class_alg_lib_1_1_heap.html" title="A class for a Heap object. ">Heap</a> and removes it. </p>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_heap_a827f1aa55e4d2b366e3c2e1753b2bb38_icgraph.png" border="0" usemap="#class_alg_lib_1_1_heap_a827f1aa55e4d2b366e3c2e1753b2bb38_icgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_heap_a827f1aa55e4d2b366e3c2e1753b2bb38_icgraph" id="class_alg_lib_1_1_heap_a827f1aa55e4d2b366e3c2e1753b2bb38_icgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_heap.html#a0c406e0e00559e3372637d1547af1023" title="AlgLib::Heap::setContainer" alt="" coords="179,5,356,32"/>
-<area shape="rect" id="node3" href="namespace_alg_lib.html#a09ea4c537af6d2dcc36a9753b7af7c05" title="AlgLib::heapSort" alt="" coords="208,56,327,83"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_heap_8cpp_source.html#l00043">43</a> of file <a class="el" href="_heap_8cpp_source.html">Heap.cpp</a>.</p>
 
 </div>
 </div>
@@ -331,20 +353,11 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>(one liner) </p>
+<p>Inserts the element <code>elem</code> into the <a class="el" href="class_alg_lib_1_1_heap.html" title="A class for a Heap object. ">Heap</a>. </p>
+<p>(one liner)</p>
 <p>(documentation goes here) </p>
 
-<p>Definition at line <a class="el" href="_heap_8cpp_source.html#l00133">133</a> of file <a class="el" href="_heap_8cpp_source.html">Heap.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_heap_a37d97dc0bc90f4b1dedfaa3378133f89_icgraph.png" border="0" usemap="#class_alg_lib_1_1_heap_a37d97dc0bc90f4b1dedfaa3378133f89_icgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_heap_a37d97dc0bc90f4b1dedfaa3378133f89_icgraph" id="class_alg_lib_1_1_heap_a37d97dc0bc90f4b1dedfaa3378133f89_icgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_heap.html#a0c406e0e00559e3372637d1547af1023" title="AlgLib::Heap::setContainer" alt="" coords="185,5,363,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_heap_8cpp_source.html#l00125">125</a> of file <a class="el" href="_heap_8cpp_source.html">Heap.cpp</a>.</p>
 
 </div>
 </div>
@@ -371,26 +384,16 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set mContainer </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Set mContainer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">val</td><td>New value to set </td></tr>
+    <tr><td class="paramname">val</td><td>New value to set. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_heap_8h_source.html#l00028">28</a> of file <a class="el" href="_heap_8h_source.html">Heap.h</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_heap_a0c406e0e00559e3372637d1547af1023_cgraph.png" border="0" usemap="#class_alg_lib_1_1_heap_a0c406e0e00559e3372637d1547af1023_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_heap_a0c406e0e00559e3372637d1547af1023_cgraph" id="class_alg_lib_1_1_heap_a0c406e0e00559e3372637d1547af1023_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_heap.html#a827f1aa55e4d2b366e3c2e1753b2bb38" title="AlgLib::Heap::pop" alt="" coords="234,5,359,32"/>
-<area shape="rect" id="node3" href="class_alg_lib_1_1_heap.html#a4f1ab496a7f4a4cc4d5c917fe10514ff" title="AlgLib::Heap::top" alt="" coords="235,56,358,83"/>
-<area shape="rect" id="node4" href="class_alg_lib_1_1_heap.html#a37d97dc0bc90f4b1dedfaa3378133f89" title="(one liner) " alt="" coords="231,107,363,133"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_heap_8h_source.html#l00031">31</a> of file <a class="el" href="_heap_8h_source.html">Heap.h</a>.</p>
 
 </div>
 </div>
@@ -417,24 +420,12 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_heap_8cpp_source.html#l00041">41</a> of file <a class="el" href="_heap_8cpp_source.html">Heap.cpp</a>.</p>
+<p>Returns the largest element of the <a class="el" href="class_alg_lib_1_1_heap.html" title="A class for a Heap object. ">Heap</a>. </p>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_heap_a4f1ab496a7f4a4cc4d5c917fe10514ff_icgraph.png" border="0" usemap="#class_alg_lib_1_1_heap_a4f1ab496a7f4a4cc4d5c917fe10514ff_icgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_heap_a4f1ab496a7f4a4cc4d5c917fe10514ff_icgraph" id="class_alg_lib_1_1_heap_a4f1ab496a7f4a4cc4d5c917fe10514ff_icgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_heap.html#a0c406e0e00559e3372637d1547af1023" title="AlgLib::Heap::setContainer" alt="" coords="176,5,353,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_heap_8cpp_source.html#l00037">37</a> of file <a class="el" href="_heap_8cpp_source.html">Heap.cpp</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="_heap_8h_source.html">Heap.h</a></li>
-<li>src/Heap/<a class="el" href="_heap_8cpp_source.html">Heap.cpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

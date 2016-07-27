@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -33,7 +39,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AlgorithmLib
    </div>
-   <div id="projectbrief">A C++ library with algorithms and mathematical objects</div>
+   <div id="projectbrief">A C++ library for mathematical objects and algorithms</div>
   </td>
  </tr>
  </tbody>
@@ -127,21 +133,25 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1graph_d_b.html">graphDB</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_heap.html">Heap</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class for a <a class="el" href="class_alg_lib_1_1_heap.html" title="A class for a Heap object. ">Heap</a> object.  <a href="class_alg_lib_1_1_heap.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_integer_polynomial.html">IntegerPolynomial</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> class, which stores a rectangular <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>.  <a href="class_alg_lib_1_1_matrix.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_polynomial.html">Polynomial</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class for Polynomials.  <a href="class_alg_lib_1_1_polynomial.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:a11966d2ea6c430adfb83a6ebaa05e337"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337">dbType</a> { <a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337a9d8e68c3898f769422174fed0be93fd2">dbType::ADJACENCY_MATRIX</a>, 
 <a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337a6d02e698876f8aa2b2e975e8c0010c10">dbType::ADJACENCY_LIST</a>
- }</td></tr>
+ }<tr class="memdesc:a11966d2ea6c430adfb83a6ebaa05e337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies the method of data storage for the Graph.  <a href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:a11966d2ea6c430adfb83a6ebaa05e337"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -152,6 +162,7 @@ Functions</h2></td></tr>
 <tr class="separator:a42bfc6dd0232e3e7d0a460a5bb74059a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97a13becf845332c126803e014b03286"><td class="memTemplParams" colspan="2">template&lt;typename cont &gt; </td></tr>
 <tr class="memitem:a97a13becf845332c126803e014b03286"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_alg_lib.html#a97a13becf845332c126803e014b03286">inversions</a> (const cont &amp;A)</td></tr>
+<tr class="memdesc:a97a13becf845332c126803e014b03286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts the number of inversions in a container A. An inversion is a pair of elements A[i] and A[j] such that i &lt; j and A[i] &gt; A[j]. Finds in O(n log n) time.  <a href="#a97a13becf845332c126803e014b03286">More...</a><br /></td></tr>
 <tr class="separator:a97a13becf845332c126803e014b03286"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a285a3cda7220504508dbb7d0df3dba21"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a285a3cda7220504508dbb7d0df3dba21"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_alg_lib.html#a285a3cda7220504508dbb7d0df3dba21">insertionSort</a> (T &amp;arr)</td></tr>
@@ -199,6 +210,15 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Specifies the method of data storage for the <a class="el" href="class_alg_lib_1_1_graph.html">Graph</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ADJACENCY_MATRIX</td><td>will flag the <a class="el" href="class_alg_lib_1_1_graph.html">Graph</a> object to store as an adjacency matrix </td></tr>
+    <tr><td class="paramname">ADJACENCY_LIST</td><td>will flag the <a class="el" href="class_alg_lib_1_1_graph.html">Graph</a> object to store as an adjacency list </td></tr>
+  </table>
+  </dd>
+</dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a11966d2ea6c430adfb83a6ebaa05e337a9d8e68c3898f769422174fed0be93fd2"></a>ADJACENCY_MATRIX&#160;</td><td class="fielddoc">
 </td></tr>
@@ -206,7 +226,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="_graph_8h_source.html#l00010">10</a> of file <a class="el" href="_graph_8h_source.html">Graph.h</a>.</p>
+<p>Definition at line <a class="el" href="_graph_8h_source.html#l00016">16</a> of file <a class="el" href="_graph_8h_source.html">Graph.h</a>.</p>
 
 </div>
 </div>
@@ -249,17 +269,7 @@ template&lt;typename cont , typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the index the element key is at if the key is in A. If not in A, if the element would be between position x and x+1 then the value of -x-2 is returned. </dd></dl>
 
-<p>Definition at line <a class="el" href="binarysearch_8cpp_source.html#l00014">14</a> of file <a class="el" href="binarysearch_8cpp_source.html">binarysearch.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespace_alg_lib_a42bfc6dd0232e3e7d0a460a5bb74059a_icgraph.png" border="0" usemap="#namespace_alg_lib_a42bfc6dd0232e3e7d0a460a5bb74059a_icgraph" alt=""/></div>
-<map name="namespace_alg_lib_a42bfc6dd0232e3e7d0a460a5bb74059a_icgraph" id="namespace_alg_lib_a42bfc6dd0232e3e7d0a460a5bb74059a_icgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1adj_list.html#a1010763e586866d884ebb769df8fba52" title="AlgLib::adjList::addEdge" alt="" coords="193,5,356,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="binarysearch_8cpp_source.html#l00006">6</a> of file <a class="el" href="binarysearch_8cpp_source.html">binarysearch.cpp</a>.</p>
 
 </div>
 </div>
@@ -280,16 +290,6 @@ template&lt;typename T , typename S &gt; </div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="heapsort_8cpp_source.html#l00005">5</a> of file <a class="el" href="heapsort_8cpp_source.html">heapsort.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespace_alg_lib_a09ea4c537af6d2dcc36a9753b7af7c05_cgraph.png" border="0" usemap="#namespace_alg_lib_a09ea4c537af6d2dcc36a9753b7af7c05_cgraph" alt=""/></div>
-<map name="namespace_alg_lib_a09ea4c537af6d2dcc36a9753b7af7c05_cgraph" id="namespace_alg_lib_a09ea4c537af6d2dcc36a9753b7af7c05_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_heap.html#a827f1aa55e4d2b366e3c2e1753b2bb38" title="AlgLib::Heap::pop" alt="" coords="172,5,297,32"/>
-</map>
-</div>
-</p>
 
 </div>
 </div>
@@ -369,6 +369,16 @@ template&lt;typename cont &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Counts the number of inversions in a container A. An inversion is a pair of elements A[i] and A[j] such that i &lt; j and A[i] &gt; A[j]. Finds in O(n log n) time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cont</td><td>the type of the container </td></tr>
+    <tr><td class="paramname">A</td><td>the container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of inversions </dd></dl>
 
 <p>Definition at line <a class="el" href="inversion_8cpp_source.html#l00061">61</a> of file <a class="el" href="inversion_8cpp_source.html">inversion.cpp</a>.</p>
 
@@ -456,6 +466,14 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f1</td><td>The first <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> </td></tr>
+    <tr><td class="paramname">f2</td><td>The second <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> that is equal to the product of the two Fractions </dd></dl>
 
 <p>Definition at line <a class="el" href="_fraction_8cpp_source.html#l00013">13</a> of file <a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a>.</p>
 
@@ -484,13 +502,14 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Assignment operator </p><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">other</td><td>Object to assign from </td></tr>
+    <tr><td class="paramname">f1</td><td>The first <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> </td></tr>
+    <tr><td class="paramname">f2</td><td>The second <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to this </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> that is equal to the sum of the two Fractions </dd></dl>
 
 <p>Definition at line <a class="el" href="_fraction_8cpp_source.html#l00005">5</a> of file <a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a>.</p>
 
@@ -519,6 +538,14 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f1</td><td>The first <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> </td></tr>
+    <tr><td class="paramname">f2</td><td>The second <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> that is equal to the difference of the two Fractions </dd></dl>
 
 <p>Definition at line <a class="el" href="_fraction_8cpp_source.html#l00009">9</a> of file <a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a>.</p>
 
@@ -547,6 +574,14 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f1</td><td>The first <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> </td></tr>
+    <tr><td class="paramname">f2</td><td>The second <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> that is equal to the quotient of the two Fractions </dd></dl>
 
 <p>Definition at line <a class="el" href="_fraction_8cpp_source.html#l00017">17</a> of file <a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a>.</p>
 

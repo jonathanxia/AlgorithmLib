@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -33,7 +39,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AlgorithmLib
    </div>
-   <div id="projectbrief">A C++ library with algorithms and mathematical objects</div>
+   <div id="projectbrief">A C++ library for mathematical objects and algorithms</div>
   </td>
  </tr>
  </tbody>
@@ -116,43 +122,77 @@ $(document).ready(function(){initNavTree('class_alg_lib_1_1_polynomial.html','')
 </div><!--header-->
 <div class="contents">
 
+<p>A class for Polynomials.  
+ <a href="class_alg_lib_1_1_polynomial.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_polynomial_8h_source.html">Polynomial.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for AlgLib::Polynomial&lt; coeff &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_alg_lib_1_1_polynomial__inherit__graph.png" border="0" usemap="#_alg_lib_1_1_polynomial_3_01coeff_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="_alg_lib_1_1_polynomial_3_01coeff_01_4_inherit__map" id="_alg_lib_1_1_polynomial_3_01coeff_01_4_inherit__map">
+<area shape="rect" id="node2" href="class_alg_lib_1_1_polynomial.html" title="{AlgLib::Polynomial\l\&lt; int \&gt;\n|# mCoeff\l|+ Polynomial()\l+ Polynomial()\l+ Polynomial()\l+ Polynomial()\l+ operator=()\l+ getDegree()\l+ getCoefficients()\l+ derivative()\l+ antideriv()\l+ integral()\land 8 more...\l}" alt="" coords="25,307,155,545"/>
+<area shape="rect" id="node3" href="class_alg_lib_1_1_integer_polynomial.html" title="{AlgLib::IntegerPolynomial\n||+ operator=()\l+ operator%()\l+ moduloRoots()\l}" alt="" coords="5,595,175,701"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for AlgLib::Polynomial&lt; coeff &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_alg_lib_1_1_polynomial__coll__graph.png" border="0" usemap="#_alg_lib_1_1_polynomial_3_01coeff_01_4_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a33a0ad0b646bcf6b0295d597097fed85"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_polynomial.html#a33a0ad0b646bcf6b0295d597097fed85">Polynomial</a> ()</td></tr>
+<tr class="memdesc:a33a0ad0b646bcf6b0295d597097fed85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor Constructs the 0-polynomial.  <a href="#a33a0ad0b646bcf6b0295d597097fed85">More...</a><br /></td></tr>
 <tr class="separator:a33a0ad0b646bcf6b0295d597097fed85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53075cc00bf37bcaf2ff6c8d18ec3206"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_polynomial.html#a53075cc00bf37bcaf2ff6c8d18ec3206">Polynomial</a> (std::initializer_list&lt; coeff &gt; args)</td></tr>
+<tr class="memdesc:a53075cc00bf37bcaf2ff6c8d18ec3206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with initializer list as coefficients.  <a href="#a53075cc00bf37bcaf2ff6c8d18ec3206">More...</a><br /></td></tr>
 <tr class="separator:a53075cc00bf37bcaf2ff6c8d18ec3206"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad75097bb323e32318e6b508532ebce7a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_polynomial.html#ad75097bb323e32318e6b508532ebce7a">Polynomial</a> (std::vector&lt; coeff &gt; coefficients)</td></tr>
+<tr class="memdesc:ad75097bb323e32318e6b508532ebce7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with vector storing the coefficients.  <a href="#ad75097bb323e32318e6b508532ebce7a">More...</a><br /></td></tr>
 <tr class="separator:ad75097bb323e32318e6b508532ebce7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af16630d7204b1bb4f4353682a851abdb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_polynomial.html#af16630d7204b1bb4f4353682a851abdb">Polynomial</a> (const <a class="el" href="class_alg_lib_1_1_polynomial.html">Polynomial</a>&lt; coeff &gt; &amp;rhs)</td></tr>
+<tr class="memdesc:af16630d7204b1bb4f4353682a851abdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#af16630d7204b1bb4f4353682a851abdb">More...</a><br /></td></tr>
 <tr class="separator:af16630d7204b1bb4f4353682a851abdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb6aa23b16a21e65973e771c9eddeed8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_alg_lib_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_polynomial.html#adb6aa23b16a21e65973e771c9eddeed8">operator=</a> (const <a class="el" href="class_alg_lib_1_1_polynomial.html">Polynomial</a>&lt; coeff &gt; &amp;rhs)</td></tr>
+<tr class="memdesc:adb6aa23b16a21e65973e771c9eddeed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The assignment operator.  <a href="#adb6aa23b16a21e65973e771c9eddeed8">More...</a><br /></td></tr>
 <tr class="separator:adb6aa23b16a21e65973e771c9eddeed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a788df01d92661cedc88ae68060670ce4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_polynomial.html#a788df01d92661cedc88ae68060670ce4">getDegree</a> () const </td></tr>
+<tr class="memdesc:a788df01d92661cedc88ae68060670ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the degree of the polynomial.  <a href="#a788df01d92661cedc88ae68060670ce4">More...</a><br /></td></tr>
 <tr class="separator:a788df01d92661cedc88ae68060670ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a815ce4eb1ae0edbb6981baab2489b636"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; coeff &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_polynomial.html#a815ce4eb1ae0edbb6981baab2489b636">getCoefficients</a> () const </td></tr>
+<tr class="memdesc:a815ce4eb1ae0edbb6981baab2489b636"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the coefficients as a <code>std::vector</code>  <a href="#a815ce4eb1ae0edbb6981baab2489b636">More...</a><br /></td></tr>
 <tr class="separator:a815ce4eb1ae0edbb6981baab2489b636"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae19d2ebb49d017d64a70c23c8294b4f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_alg_lib_1_1_polynomial.html">Polynomial</a>&lt; coeff &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_polynomial.html#aae19d2ebb49d017d64a70c23c8294b4f">derivative</a> () const </td></tr>
+<tr class="memdesc:aae19d2ebb49d017d64a70c23c8294b4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the derivative of the <a class="el" href="class_alg_lib_1_1_polynomial.html" title="A class for Polynomials. ">Polynomial</a> object.  <a href="#aae19d2ebb49d017d64a70c23c8294b4f">More...</a><br /></td></tr>
 <tr class="separator:aae19d2ebb49d017d64a70c23c8294b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adba823edd7b425b451b2b550fe5727d0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_alg_lib_1_1_polynomial.html">Polynomial</a>&lt; coeff &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_polynomial.html#adba823edd7b425b451b2b550fe5727d0">antideriv</a> (coeff C=0) const </td></tr>
+<tr class="memdesc:adba823edd7b425b451b2b550fe5727d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the antiderivative of the <a class="el" href="class_alg_lib_1_1_polynomial.html" title="A class for Polynomials. ">Polynomial</a> object.  <a href="#adba823edd7b425b451b2b550fe5727d0">More...</a><br /></td></tr>
 <tr class="separator:adba823edd7b425b451b2b550fe5727d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81380711ec4e7c9be6f0a4bfc608c301"><td class="memItemLeft" align="right" valign="top">virtual coeff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_polynomial.html#a81380711ec4e7c9be6f0a4bfc608c301">integral</a> (coeff lower, coeff upper) const </td></tr>
+<tr class="memdesc:a81380711ec4e7c9be6f0a4bfc608c301"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the integral from lower to upper of the <a class="el" href="class_alg_lib_1_1_polynomial.html" title="A class for Polynomials. ">Polynomial</a>.  <a href="#a81380711ec4e7c9be6f0a4bfc608c301">More...</a><br /></td></tr>
 <tr class="separator:a81380711ec4e7c9be6f0a4bfc608c301"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07d802dde3e665ad427a6932fa99f691"><td class="memItemLeft" align="right" valign="top">virtual coeff&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_polynomial.html#a07d802dde3e665ad427a6932fa99f691">operator()</a> (coeff input) const </td></tr>
+<tr class="memdesc:a07d802dde3e665ad427a6932fa99f691"><td class="mdescLeft">&#160;</td><td class="mdescRight">The () operator which would make it appear like a function call.  <a href="#a07d802dde3e665ad427a6932fa99f691">More...</a><br /></td></tr>
 <tr class="separator:a07d802dde3e665ad427a6932fa99f691"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad651de00803bc2bfc17f684dd6183e7e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_alg_lib_1_1_polynomial.html">Polynomial</a>&lt; coeff &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_polynomial.html#ad651de00803bc2bfc17f684dd6183e7e">operator+</a> (const <a class="el" href="class_alg_lib_1_1_polynomial.html">Polynomial</a>&lt; coeff &gt; &amp;other) const </td></tr>
+<tr class="memdesc:ad651de00803bc2bfc17f684dd6183e7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two polynomials.  <a href="#ad651de00803bc2bfc17f684dd6183e7e">More...</a><br /></td></tr>
 <tr class="separator:ad651de00803bc2bfc17f684dd6183e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6ed3795fcb099987ff7fb8747203b43"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_alg_lib_1_1_polynomial.html">Polynomial</a>&lt; coeff &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_polynomial.html#aa6ed3795fcb099987ff7fb8747203b43">operator-</a> (const <a class="el" href="class_alg_lib_1_1_polynomial.html">Polynomial</a>&lt; coeff &gt; &amp;other) const </td></tr>
+<tr class="memdesc:aa6ed3795fcb099987ff7fb8747203b43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts two polynomials.  <a href="#aa6ed3795fcb099987ff7fb8747203b43">More...</a><br /></td></tr>
 <tr class="separator:aa6ed3795fcb099987ff7fb8747203b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68b9b745dabf414a81fb8d35e6f233ba"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_alg_lib_1_1_polynomial.html">Polynomial</a>&lt; coeff &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_polynomial.html#a68b9b745dabf414a81fb8d35e6f233ba">operator*</a> (const <a class="el" href="class_alg_lib_1_1_polynomial.html">Polynomial</a>&lt; coeff &gt; &amp;other) const </td></tr>
+<tr class="memdesc:a68b9b745dabf414a81fb8d35e6f233ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies two polynomials.  <a href="#a68b9b745dabf414a81fb8d35e6f233ba">More...</a><br /></td></tr>
 <tr class="separator:a68b9b745dabf414a81fb8d35e6f233ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a507bf9649c02111574112ddb0baf0973"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_alg_lib_1_1_polynomial.html">Polynomial</a>&lt; coeff &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_polynomial.html#a507bf9649c02111574112ddb0baf0973">operator/</a> (const <a class="el" href="class_alg_lib_1_1_polynomial.html">Polynomial</a>&lt; coeff &gt; &amp;other) const </td></tr>
+<tr class="memdesc:a507bf9649c02111574112ddb0baf0973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divides two polynomials and returns the quotient, disregarding the remainder.  <a href="#a507bf9649c02111574112ddb0baf0973">More...</a><br /></td></tr>
 <tr class="separator:a507bf9649c02111574112ddb0baf0973"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e63ddfc3bd81bc300781f526bbd70d6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_alg_lib_1_1_polynomial.html">Polynomial</a>&lt; coeff &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_polynomial.html#a8e63ddfc3bd81bc300781f526bbd70d6">operator%</a> (const <a class="el" href="class_alg_lib_1_1_polynomial.html">Polynomial</a>&lt; coeff &gt; &amp;other) const </td></tr>
+<tr class="memdesc:a8e63ddfc3bd81bc300781f526bbd70d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the remainder of the <a class="el" href="class_alg_lib_1_1_polynomial.html" title="A class for Polynomials. ">Polynomial</a>.  <a href="#a8e63ddfc3bd81bc300781f526bbd70d6">More...</a><br /></td></tr>
 <tr class="separator:a8e63ddfc3bd81bc300781f526bbd70d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad69fdd8f1a1bd9999fd19b337c429d3f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_alg_lib_1_1_polynomial.html">Polynomial</a>&lt; coeff &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_polynomial.html#ad69fdd8f1a1bd9999fd19b337c429d3f">operator*</a> (coeff constant) const </td></tr>
+<tr class="memdesc:ad69fdd8f1a1bd9999fd19b337c429d3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the <a class="el" href="class_alg_lib_1_1_polynomial.html" title="A class for Polynomials. ">Polynomial</a> by a constant.  <a href="#ad69fdd8f1a1bd9999fd19b337c429d3f">More...</a><br /></td></tr>
 <tr class="separator:ad69fdd8f1a1bd9999fd19b337c429d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9c5777af178f70a1ef83abfdf1b2397"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_polynomial.html#ad9c5777af178f70a1ef83abfdf1b2397">~Polynomial</a> ()</td></tr>
 <tr class="separator:ad9c5777af178f70a1ef83abfdf1b2397"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,8 +206,15 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><h3>template&lt;typename coeff&gt;<br />
 class AlgLib::Polynomial&lt; coeff &gt;</h3>
 
+<p>A class for Polynomials. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coeff</td><td>The type of the coefficients in the <a class="el" href="class_alg_lib_1_1_polynomial.html" title="A class for Polynomials. ">Polynomial</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="_polynomial_8h_source.html#l00009">9</a> of file <a class="el" href="_polynomial_8h_source.html">Polynomial.h</a>.</p>
+<p>Definition at line <a class="el" href="_polynomial_8h_source.html#l00012">12</a> of file <a class="el" href="_polynomial_8h_source.html">Polynomial.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a33a0ad0b646bcf6b0295d597097fed85"></a>
 <div class="memitem">
@@ -184,21 +231,9 @@ template&lt;typename coeff &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00004">4</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
+<p>Default constructor Constructs the 0-polynomial. </p>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_polynomial_a33a0ad0b646bcf6b0295d597097fed85_icgraph.png" border="0" usemap="#class_alg_lib_1_1_polynomial_a33a0ad0b646bcf6b0295d597097fed85_icgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_polynomial_a33a0ad0b646bcf6b0295d597097fed85_icgraph" id="class_alg_lib_1_1_polynomial_a33a0ad0b646bcf6b0295d597097fed85_icgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_polynomial.html#aae19d2ebb49d017d64a70c23c8294b4f" title="AlgLib::Polynomial\l::derivative" alt="" coords="184,5,315,47"/>
-<area shape="rect" id="node3" href="class_alg_lib_1_1_polynomial.html#adba823edd7b425b451b2b550fe5727d0" title="AlgLib::Polynomial\l::antideriv" alt="" coords="184,71,315,112"/>
-<area shape="rect" id="node5" href="class_alg_lib_1_1_polynomial.html#a68b9b745dabf414a81fb8d35e6f233ba" title="AlgLib::Polynomial\l::operator*" alt="" coords="184,136,315,177"/>
-<area shape="rect" id="node6" href="class_alg_lib_1_1_polynomial.html#a507bf9649c02111574112ddb0baf0973" title="AlgLib::Polynomial\l::operator/" alt="" coords="184,201,315,243"/>
-<area shape="rect" id="node4" href="class_alg_lib_1_1_polynomial.html#a81380711ec4e7c9be6f0a4bfc608c301" title="AlgLib::Polynomial\l::integral" alt="" coords="363,71,493,112"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00004">4</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
 
 </div>
 </div>
@@ -217,6 +252,14 @@ template&lt;typename coeff&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor with initializer list as coefficients. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>The <code>std::initializer_list</code> with the args. Note that the coefficients should be in increasing degree so the degree of the term is equivalent to the index. So, the polynomial \( 1 + 2x + 3x^2 + 4x^3 \) would have {1, 2, 3, 4} passed in. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00010">10</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
 
@@ -238,6 +281,14 @@ template&lt;typename coeff&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Constructor with vector storing the coefficients. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coefficients</td><td>The <code>std::vector&lt;ceoff&gt;</code> with coefficients. Note that the coefficients should be in increasing degree so the degree of the term is equivalent to the index. So, the polynomial \( 1 + 2x + 3x^2 + 4x^3 \) would have {1, 2, 3, 4} passed in. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00019">19</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
 
 </div>
@@ -257,6 +308,14 @@ template&lt;typename coeff&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Copy constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>The Polynomial&lt;coeff&gt; to be copied </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00026">26</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
 
@@ -284,6 +343,7 @@ template&lt;typename coeff &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Default destructor </p>
 
 <p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00183">183</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
 
@@ -314,27 +374,15 @@ template&lt;typename coeff&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the antiderivative of the <a class="el" href="class_alg_lib_1_1_polynomial.html" title="A class for Polynomials. ">Polynomial</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">C</td><td>The constant of integration. Default value is 0. Don't forget your +C. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00066">66</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_polynomial_adba823edd7b425b451b2b550fe5727d0_cgraph.png" border="0" usemap="#class_alg_lib_1_1_polynomial_adba823edd7b425b451b2b550fe5727d0_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_polynomial_adba823edd7b425b451b2b550fe5727d0_cgraph" id="class_alg_lib_1_1_polynomial_adba823edd7b425b451b2b550fe5727d0_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_polynomial.html#a33a0ad0b646bcf6b0295d597097fed85" title="AlgLib::Polynomial\l::Polynomial" alt="" coords="184,5,315,47"/>
-</map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_polynomial_adba823edd7b425b451b2b550fe5727d0_icgraph.png" border="0" usemap="#class_alg_lib_1_1_polynomial_adba823edd7b425b451b2b550fe5727d0_icgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_polynomial_adba823edd7b425b451b2b550fe5727d0_icgraph" id="class_alg_lib_1_1_polynomial_adba823edd7b425b451b2b550fe5727d0_icgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_polynomial.html#a81380711ec4e7c9be6f0a4bfc608c301" title="AlgLib::Polynomial\l::integral" alt="" coords="184,5,315,47"/>
-</map>
-</div>
-</p>
 
 </div>
 </div>
@@ -361,17 +409,9 @@ template&lt;typename coeff &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00056">56</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
+<p>Returns the derivative of the <a class="el" href="class_alg_lib_1_1_polynomial.html" title="A class for Polynomials. ">Polynomial</a> object. </p>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_polynomial_aae19d2ebb49d017d64a70c23c8294b4f_cgraph.png" border="0" usemap="#class_alg_lib_1_1_polynomial_aae19d2ebb49d017d64a70c23c8294b4f_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_polynomial_aae19d2ebb49d017d64a70c23c8294b4f_cgraph" id="class_alg_lib_1_1_polynomial_aae19d2ebb49d017d64a70c23c8294b4f_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_polynomial.html#a33a0ad0b646bcf6b0295d597097fed85" title="AlgLib::Polynomial\l::Polynomial" alt="" coords="184,5,315,47"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00056">56</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
 
 </div>
 </div>
@@ -398,17 +438,10 @@ template&lt;typename coeff &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00050">50</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
+<p>Returns the coefficients as a <code>std::vector</code> </p>
+<dl class="section return"><dt>Returns</dt><dd>The <code>std::vector</code> with the coefficients. The <a class="el" href="class_alg_lib_1_1_polynomial.html" title="A class for Polynomials. ">Polynomial</a> \( 1 + 2x + 3x^2 + 4x^3 \) would return {1, 2, 3, 4} </dd></dl>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_polynomial_a815ce4eb1ae0edbb6981baab2489b636_icgraph.png" border="0" usemap="#class_alg_lib_1_1_polynomial_a815ce4eb1ae0edbb6981baab2489b636_icgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_polynomial_a815ce4eb1ae0edbb6981baab2489b636_icgraph" id="class_alg_lib_1_1_polynomial_a815ce4eb1ae0edbb6981baab2489b636_icgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_integer_polynomial.html#a6ce9a26baa35c33c35b91be4a930cf95" title="AlgLib::IntegerPolynomial\l::operator=" alt="" coords="184,5,353,47"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00050">50</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
 
 </div>
 </div>
@@ -435,17 +468,10 @@ template&lt;typename coeff &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00045">45</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
+<p>Returns the degree of the polynomial. </p>
+<p>Note that the degree is the highest <b>non zero</b> degree term in the <a class="el" href="class_alg_lib_1_1_polynomial.html" title="A class for Polynomials. ">Polynomial</a> </p><dl class="section return"><dt>Returns</dt><dd>The degree of the <a class="el" href="class_alg_lib_1_1_polynomial.html" title="A class for Polynomials. ">Polynomial</a> </dd></dl>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_polynomial_a788df01d92661cedc88ae68060670ce4_icgraph.png" border="0" usemap="#class_alg_lib_1_1_polynomial_a788df01d92661cedc88ae68060670ce4_icgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_polynomial_a788df01d92661cedc88ae68060670ce4_icgraph" id="class_alg_lib_1_1_polynomial_a788df01d92661cedc88ae68060670ce4_icgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_polynomial.html#a507bf9649c02111574112ddb0baf0973" title="AlgLib::Polynomial\l::operator/" alt="" coords="184,5,315,47"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00045">45</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
 
 </div>
 </div>
@@ -483,18 +509,17 @@ template&lt;typename coeff&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00077">77</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
+<p>Returns the integral from lower to upper of the <a class="el" href="class_alg_lib_1_1_polynomial.html" title="A class for Polynomials. ">Polynomial</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lower</td><td>The lower bound of integration </td></tr>
+    <tr><td class="paramname">upper</td><td>The upper bound of integration </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The integral from lower to upper of the <a class="el" href="class_alg_lib_1_1_polynomial.html" title="A class for Polynomials. ">Polynomial</a> </dd></dl>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_polynomial_a81380711ec4e7c9be6f0a4bfc608c301_cgraph.png" border="0" usemap="#class_alg_lib_1_1_polynomial_a81380711ec4e7c9be6f0a4bfc608c301_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_polynomial_a81380711ec4e7c9be6f0a4bfc608c301_cgraph" id="class_alg_lib_1_1_polynomial_a81380711ec4e7c9be6f0a4bfc608c301_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_polynomial.html#adba823edd7b425b451b2b550fe5727d0" title="AlgLib::Polynomial\l::antideriv" alt="" coords="184,5,315,47"/>
-<area shape="rect" id="node3" href="class_alg_lib_1_1_polynomial.html#a33a0ad0b646bcf6b0295d597097fed85" title="AlgLib::Polynomial\l::Polynomial" alt="" coords="363,5,493,47"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00077">77</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
 
 </div>
 </div>
@@ -521,6 +546,8 @@ template&lt;typename coeff&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Gives the remainder of the <a class="el" href="class_alg_lib_1_1_polynomial.html" title="A class for Polynomials. ">Polynomial</a>. </p>
 
 <p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00163">163</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
 
@@ -550,6 +577,9 @@ template&lt;typename coeff&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>The () operator which would make it appear like a function call. </p>
+<p>If we had a <a class="el" href="class_alg_lib_1_1_polynomial.html" title="A class for Polynomials. ">Polynomial</a> object <code>P</code>, for example, writing <code>P(1)</code> would return the value when 1 is plugged into <code>P(x)</code> </p>
+
 <p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00084">84</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
 
 </div>
@@ -578,17 +608,9 @@ template&lt;typename coeff&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00127">127</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
+<p>Multiplies two polynomials. </p>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_polynomial_a68b9b745dabf414a81fb8d35e6f233ba_cgraph.png" border="0" usemap="#class_alg_lib_1_1_polynomial_a68b9b745dabf414a81fb8d35e6f233ba_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_polynomial_a68b9b745dabf414a81fb8d35e6f233ba_cgraph" id="class_alg_lib_1_1_polynomial_a68b9b745dabf414a81fb8d35e6f233ba_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_polynomial.html#a33a0ad0b646bcf6b0295d597097fed85" title="AlgLib::Polynomial\l::Polynomial" alt="" coords="184,5,315,47"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00127">127</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
 
 </div>
 </div>
@@ -616,17 +638,9 @@ template&lt;typename coeff&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00172">172</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
+<p>Multiplies the <a class="el" href="class_alg_lib_1_1_polynomial.html" title="A class for Polynomials. ">Polynomial</a> by a constant. </p>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_polynomial_ad69fdd8f1a1bd9999fd19b337c429d3f_cgraph.png" border="0" usemap="#class_alg_lib_1_1_polynomial_ad69fdd8f1a1bd9999fd19b337c429d3f_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_polynomial_ad69fdd8f1a1bd9999fd19b337c429d3f_cgraph" id="class_alg_lib_1_1_polynomial_ad69fdd8f1a1bd9999fd19b337c429d3f_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_polynomial.html#a33a0ad0b646bcf6b0295d597097fed85" title="AlgLib::Polynomial\l::Polynomial" alt="" coords="184,5,315,47"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00172">172</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
 
 </div>
 </div>
@@ -653,6 +667,8 @@ template&lt;typename coeff&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Adds two polynomials. </p>
 
 <p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00095">95</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
 
@@ -682,6 +698,8 @@ template&lt;typename coeff&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Subtracts two polynomials. </p>
+
 <p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00116">116</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
 
 </div>
@@ -710,18 +728,9 @@ template&lt;typename coeff&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00142">142</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
+<p>Divides two polynomials and returns the quotient, disregarding the remainder. </p>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_polynomial_a507bf9649c02111574112ddb0baf0973_cgraph.png" border="0" usemap="#class_alg_lib_1_1_polynomial_a507bf9649c02111574112ddb0baf0973_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_polynomial_a507bf9649c02111574112ddb0baf0973_cgraph" id="class_alg_lib_1_1_polynomial_a507bf9649c02111574112ddb0baf0973_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_polynomial.html#a788df01d92661cedc88ae68060670ce4" title="AlgLib::Polynomial\l::getDegree" alt="" coords="184,5,315,47"/>
-<area shape="rect" id="node3" href="class_alg_lib_1_1_polynomial.html#a33a0ad0b646bcf6b0295d597097fed85" title="AlgLib::Polynomial\l::Polynomial" alt="" coords="184,71,315,112"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00142">142</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
 
 </div>
 </div>
@@ -740,6 +749,14 @@ template&lt;typename coeff&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The assignment operator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>The right hand side of the assignment </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="_polynomial_8cpp_source.html#l00033">33</a> of file <a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a>.</p>
 
@@ -766,14 +783,10 @@ template&lt;typename coeff&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_polynomial_8h_source.html#l00042">42</a> of file <a class="el" href="_polynomial_8h_source.html">Polynomial.h</a>.</p>
+<p>Definition at line <a class="el" href="_polynomial_8h_source.html#l00094">94</a> of file <a class="el" href="_polynomial_8h_source.html">Polynomial.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="_polynomial_8h_source.html">Polynomial.h</a></li>
-<li>src/Polynomial/<a class="el" href="_polynomial_8cpp_source.html">Polynomial.cpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

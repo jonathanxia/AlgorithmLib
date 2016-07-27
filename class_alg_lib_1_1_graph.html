@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -33,7 +39,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AlgorithmLib
    </div>
-   <div id="projectbrief">A C++ library with algorithms and mathematical objects</div>
+   <div id="projectbrief">A C++ library for mathematical objects and algorithms</div>
   </td>
  </tr>
  </tbody>
@@ -116,49 +122,74 @@ $(document).ready(function(){initNavTree('class_alg_lib_1_1_graph.html','');});
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_graph_8h_source.html">Graph.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for AlgLib::Graph:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_alg_lib_1_1_graph__coll__graph.png" border="0" usemap="#_alg_lib_1_1_graph_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a365631724157558b77009a33f08104bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#a365631724157558b77009a33f08104bd">Graph</a> (int numVertices, <a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337">dbType</a> storageType=<a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337a9d8e68c3898f769422174fed0be93fd2">dbType::ADJACENCY_MATRIX</a>)</td></tr>
+<tr class="memdesc:a365631724157558b77009a33f08104bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor.  <a href="#a365631724157558b77009a33f08104bd">More...</a><br /></td></tr>
 <tr class="separator:a365631724157558b77009a33f08104bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99e286da01db1f3e8130cbef8ead77d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#a99e286da01db1f3e8130cbef8ead77d5">Graph</a> (const std::vector&lt; std::tuple&lt; int, int, double &gt; &gt; &amp;edgepairs, <a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337">dbType</a> storageType=<a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337a6d02e698876f8aa2b2e975e8c0010c10">dbType::ADJACENCY_LIST</a>)</td></tr>
+<tr class="memdesc:a99e286da01db1f3e8130cbef8ead77d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor that takes in edge pairs.  <a href="#a99e286da01db1f3e8130cbef8ead77d5">More...</a><br /></td></tr>
 <tr class="separator:a99e286da01db1f3e8130cbef8ead77d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cc9e7a1ff569edc8c019a5f2d9e4ee8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#a0cc9e7a1ff569edc8c019a5f2d9e4ee8">Graph</a> (const <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a>&lt; double &gt; &amp;adjMat, <a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337">dbType</a> storageType=<a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337a9d8e68c3898f769422174fed0be93fd2">dbType::ADJACENCY_MATRIX</a>)</td></tr>
+<tr class="memdesc:a0cc9e7a1ff569edc8c019a5f2d9e4ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that takes in an adjacency matrix.  <a href="#a0cc9e7a1ff569edc8c019a5f2d9e4ee8">More...</a><br /></td></tr>
 <tr class="separator:a0cc9e7a1ff569edc8c019a5f2d9e4ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abeb1fbb52b7f9ed8346f085b935fb7a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#abeb1fbb52b7f9ed8346f085b935fb7a8">Graph</a> (const std::vector&lt; std::vector&lt; std::tuple&lt; int, double &gt; &gt; &gt; &amp;inAdjList, <a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337">dbType</a> storageType=<a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337a6d02e698876f8aa2b2e975e8c0010c10">dbType::ADJACENCY_LIST</a>)</td></tr>
+<tr class="memdesc:abeb1fbb52b7f9ed8346f085b935fb7a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes in an adjacency list to construct a graph.  <a href="#abeb1fbb52b7f9ed8346f085b935fb7a8">More...</a><br /></td></tr>
 <tr class="separator:abeb1fbb52b7f9ed8346f085b935fb7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32cc4dfc6d81626b0175a237b0f2f765"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#a32cc4dfc6d81626b0175a237b0f2f765">~Graph</a> ()</td></tr>
 <tr class="separator:a32cc4dfc6d81626b0175a237b0f2f765"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48bb6066d823827bf8f030b528383b0a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#a48bb6066d823827bf8f030b528383b0a">addVertex</a> ()</td></tr>
+<tr class="memdesc:a48bb6066d823827bf8f030b528383b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a vertex to the graph.  <a href="#a48bb6066d823827bf8f030b528383b0a">More...</a><br /></td></tr>
 <tr class="separator:a48bb6066d823827bf8f030b528383b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5d14ec7c8cda4468f19777c612fce36"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#af5d14ec7c8cda4468f19777c612fce36">addEdge</a> (int nodeS, int nodeE, double weight=1)</td></tr>
+<tr class="memdesc:af5d14ec7c8cda4468f19777c612fce36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the edge nodeS -&gt; nodeE with the indicated weight.  <a href="#af5d14ec7c8cda4468f19777c612fce36">More...</a><br /></td></tr>
 <tr class="separator:af5d14ec7c8cda4468f19777c612fce36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d92680925dcacb3761cf1c0cfd375a1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#a7d92680925dcacb3761cf1c0cfd375a1">deleteEdge</a> (int nodeS, int nodeE)</td></tr>
+<tr class="memdesc:a7d92680925dcacb3761cf1c0cfd375a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the edge nodeS-&gt;nodeE (really just sets the weight to 0)  <a href="#a7d92680925dcacb3761cf1c0cfd375a1">More...</a><br /></td></tr>
 <tr class="separator:a7d92680925dcacb3761cf1c0cfd375a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44e68263784ec1eac40136fb2880b27f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#a44e68263784ec1eac40136fb2880b27f">deleteVertex</a> (int node)</td></tr>
+<tr class="memdesc:a44e68263784ec1eac40136fb2880b27f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the vertex numbered "node".  <a href="#a44e68263784ec1eac40136fb2880b27f">More...</a><br /></td></tr>
 <tr class="separator:a44e68263784ec1eac40136fb2880b27f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad755bcd2eb09640252df1b137e18d129"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#ad755bcd2eb09640252df1b137e18d129">numVertex</a> () const </td></tr>
+<tr class="memdesc:ad755bcd2eb09640252df1b137e18d129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the number of vertices in the graph.  <a href="#ad755bcd2eb09640252df1b137e18d129">More...</a><br /></td></tr>
 <tr class="separator:ad755bcd2eb09640252df1b137e18d129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcf119c74be1f705e76929fcdf8c6532"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#afcf119c74be1f705e76929fcdf8c6532">highestNode</a> () const </td></tr>
+<tr class="memdesc:afcf119c74be1f705e76929fcdf8c6532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the highest numbered node.  <a href="#afcf119c74be1f705e76929fcdf8c6532">More...</a><br /></td></tr>
+<tr class="separator:afcf119c74be1f705e76929fcdf8c6532"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0d0a75b2003e433cc1f78cc2d528de6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#af0d0a75b2003e433cc1f78cc2d528de6">inDegree</a> (int node) const </td></tr>
+<tr class="memdesc:af0d0a75b2003e433cc1f78cc2d528de6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts the number of edges going into a node.  <a href="#af0d0a75b2003e433cc1f78cc2d528de6">More...</a><br /></td></tr>
 <tr class="separator:af0d0a75b2003e433cc1f78cc2d528de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd5a7862e0d564d4eb35bccae5b13d75"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#afd5a7862e0d564d4eb35bccae5b13d75">outDegree</a> (int node) const </td></tr>
+<tr class="memdesc:afd5a7862e0d564d4eb35bccae5b13d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts the number of edges going out of a node.  <a href="#afd5a7862e0d564d4eb35bccae5b13d75">More...</a><br /></td></tr>
 <tr class="separator:afd5a7862e0d564d4eb35bccae5b13d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a320cb53252cef3ea2f1995dde174c727"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#a320cb53252cef3ea2f1995dde174c727">inWeight</a> (int node) const </td></tr>
+<tr class="memdesc:a320cb53252cef3ea2f1995dde174c727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the total weight going into a node.  <a href="#a320cb53252cef3ea2f1995dde174c727">More...</a><br /></td></tr>
 <tr class="separator:a320cb53252cef3ea2f1995dde174c727"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0d722ed1e8530d3b6cdfa2224facb84"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#ad0d722ed1e8530d3b6cdfa2224facb84">outWeight</a> (int node) const </td></tr>
+<tr class="memdesc:ad0d722ed1e8530d3b6cdfa2224facb84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the total weight going out of a node.  <a href="#ad0d722ed1e8530d3b6cdfa2224facb84">More...</a><br /></td></tr>
 <tr class="separator:ad0d722ed1e8530d3b6cdfa2224facb84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acecdf6452fd10b763e8e9af300126771"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#acecdf6452fd10b763e8e9af300126771">getWeight</a> (int nodeS, int nodeE) const </td></tr>
+<tr class="memdesc:acecdf6452fd10b763e8e9af300126771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the weight of edge nodeS-&gt;nodeE.  <a href="#acecdf6452fd10b763e8e9af300126771">More...</a><br /></td></tr>
 <tr class="separator:acecdf6452fd10b763e8e9af300126771"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b503efefa9c45a6acc9933a3502283c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#a9b503efefa9c45a6acc9933a3502283c">inGraph</a> (int node) const </td></tr>
+<tr class="memdesc:a9b503efefa9c45a6acc9933a3502283c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bool value of whether the number node is in the graph.  <a href="#a9b503efefa9c45a6acc9933a3502283c">More...</a><br /></td></tr>
 <tr class="separator:a9b503efefa9c45a6acc9933a3502283c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7c03a0caa842c589334c3a4aaaf4746"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::tuple&lt; int, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#ab7c03a0caa842c589334c3a4aaaf4746">outAdj</a> (int node) const </td></tr>
+<tr class="memdesc:ab7c03a0caa842c589334c3a4aaaf4746"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the tuples with nodes x such that node-&gt;x.  <a href="#ab7c03a0caa842c589334c3a4aaaf4746">More...</a><br /></td></tr>
 <tr class="separator:ab7c03a0caa842c589334c3a4aaaf4746"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59f621c5416a42b2b040b7bdd2d6b453"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::tuple&lt; int, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#a59f621c5416a42b2b040b7bdd2d6b453">inAdj</a> (int node) const </td></tr>
+<tr class="memdesc:a59f621c5416a42b2b040b7bdd2d6b453"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the tuples with nodes x such that x-&gt;node.  <a href="#a59f621c5416a42b2b040b7bdd2d6b453">More...</a><br /></td></tr>
 <tr class="separator:a59f621c5416a42b2b040b7bdd2d6b453"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_graph_8h_source.html#l00015">15</a> of file <a class="el" href="_graph_8h_source.html">Graph.h</a>.</p>
+<p>Definition at line <a class="el" href="_graph_8h_source.html#l00021">21</a> of file <a class="el" href="_graph_8h_source.html">Graph.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a365631724157558b77009a33f08104bd"></a>
 <div class="memitem">
@@ -183,29 +214,18 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructor </p>
+
+<p>A constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numVertices</td><td>the number of vertices for the graph to have </td></tr>
+    <tr><td class="paramname">storageType</td><td>an optional parameter about how the graph should be stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337" title="Specifies the method of data storage for the Graph. ">dbType</a> for more information on the types of graph databases available </dd></dl>
 
 <p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00012">12</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_graph_a365631724157558b77009a33f08104bd_cgraph.png" border="0" usemap="#class_alg_lib_1_1_graph_a365631724157558b77009a33f08104bd_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_graph_a365631724157558b77009a33f08104bd_cgraph" id="class_alg_lib_1_1_graph_a365631724157558b77009a33f08104bd_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1graph_d_b.html#aeedc15cdbef55a131d7cf3d91778032e" title="AlgLib::graphDB::addEdge" alt="" coords="197,5,372,32"/>
-</map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_graph_a365631724157558b77009a33f08104bd_icgraph.png" border="0" usemap="#class_alg_lib_1_1_graph_a365631724157558b77009a33f08104bd_icgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_graph_a365631724157558b77009a33f08104bd_icgraph" id="class_alg_lib_1_1_graph_a365631724157558b77009a33f08104bd_icgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_graph.html#a0cc9e7a1ff569edc8c019a5f2d9e4ee8" title="AlgLib::Graph::Graph" alt="" coords="197,5,341,32"/>
-</map>
-</div>
-</p>
 
 </div>
 </div>
@@ -233,6 +253,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>A constructor that takes in edge pairs. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">edgepairs</td><td>a vector containing tuples of the form (node1, node2, edgeweight) which will denote an edge from node1 to node 2 with weight edgeweight </td></tr>
+    <tr><td class="paramname">storageType</td><td>an optional parameter about how the graph should be stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337" title="Specifies the method of data storage for the Graph. ">dbType</a> for more information on the types of graph databases available </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a0cc9e7a1ff569edc8c019a5f2d9e4ee8"></a>
@@ -259,21 +289,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00053">53</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Constructor that takes in an adjacency matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">adjMat</td><td>the adjacency matrix to take in. Edge i-&gt;j with weight adjMat[i][j] </td></tr>
+    <tr><td class="paramname">storageType</td><td>an optional parameter about how the graph should be stored </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337" title="Specifies the method of data storage for the Graph. ">dbType</a> for more information on the types of graph databases available </dd></dl>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_graph_a0cc9e7a1ff569edc8c019a5f2d9e4ee8_cgraph.png" border="0" usemap="#class_alg_lib_1_1_graph_a0cc9e7a1ff569edc8c019a5f2d9e4ee8_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_graph_a0cc9e7a1ff569edc8c019a5f2d9e4ee8_cgraph" id="class_alg_lib_1_1_graph_a0cc9e7a1ff569edc8c019a5f2d9e4ee8_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_matrix.html#ae78e1e7470110c5d8e43fe1199c6540e" title="AlgLib::Matrix::numRows" alt="" coords="207,5,374,32"/>
-<area shape="rect" id="node3" href="class_alg_lib_1_1_matrix.html#ac9a4892052b6d988fc79390528122f00" title="AlgLib::Matrix::numColumns" alt="" coords="197,56,384,83"/>
-<area shape="rect" id="node4" href="class_alg_lib_1_1_matrix.html#a99342d63d4ed38c0289f14566381958e" title="AlgLib::Matrix::getValue" alt="" coords="210,107,371,133"/>
-<area shape="rect" id="node5" href="class_alg_lib_1_1graph_d_b.html#aeedc15cdbef55a131d7cf3d91778032e" title="AlgLib::graphDB::addEdge" alt="" coords="432,183,607,209"/>
-<area shape="rect" id="node6" href="class_alg_lib_1_1_graph.html#a365631724157558b77009a33f08104bd" title="AlgLib::Graph::Graph" alt="" coords="219,208,363,235"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00053">53</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -300,6 +326,16 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Takes in an adjacency list to construct a graph. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inAdjList</td><td>the adjacency list to take in. </td></tr>
+    <tr><td class="paramname">storageType</td><td>optional parameter about how the graph should be stored </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337" title="Specifies the method of data storage for the Graph. ">dbType</a> for more information on the types of graph databases available </dd></dl>
 
 </div>
 </div>
@@ -368,17 +404,18 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00114">114</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Adds the edge nodeS -&gt; nodeE with the indicated weight. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nodeS</td><td>the first node (the start) </td></tr>
+    <tr><td class="paramname">nodeE</td><td>the second node (the end) </td></tr>
+    <tr><td class="paramname">weight</td><td>the weight of the edge nodeS-&gt;nodeE</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This will create a directed edge from nodeS to nodeE with weight </p>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_graph_af5d14ec7c8cda4468f19777c612fce36_cgraph.png" border="0" usemap="#class_alg_lib_1_1_graph_af5d14ec7c8cda4468f19777c612fce36_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_graph_af5d14ec7c8cda4468f19777c612fce36_cgraph" id="class_alg_lib_1_1_graph_af5d14ec7c8cda4468f19777c612fce36_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1graph_d_b.html#aeedc15cdbef55a131d7cf3d91778032e" title="AlgLib::graphDB::addEdge" alt="" coords="213,5,388,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00114">114</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -403,17 +440,10 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00109">109</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Adds a vertex to the graph. </p>
+<p>The node number that is added is the graph's highest node number + 1, regardless of whether other nodes deleted. </p>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_graph_a48bb6066d823827bf8f030b528383b0a_cgraph.png" border="0" usemap="#class_alg_lib_1_1_graph_a48bb6066d823827bf8f030b528383b0a_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_graph_a48bb6066d823827bf8f030b528383b0a_cgraph" id="class_alg_lib_1_1_graph_a48bb6066d823827bf8f030b528383b0a_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1graph_d_b.html#af21b1c41a94e6240b661bbe76f9fcb35" title="AlgLib::graphDB::addVertex" alt="" coords="221,5,404,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00109">109</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -449,17 +479,17 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00119">119</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>deletes the edge nodeS-&gt;nodeE (really just sets the weight to 0) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nodeS</td><td>the first node of the edge </td></tr>
+    <tr><td class="paramname">nodeE</td><td>the second node of the edge</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The edge is set to 0. It is no longer considered and adjacent edge of nodeS and nodeE </p>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_graph_a7d92680925dcacb3761cf1c0cfd375a1_cgraph.png" border="0" usemap="#class_alg_lib_1_1_graph_a7d92680925dcacb3761cf1c0cfd375a1_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_graph_a7d92680925dcacb3761cf1c0cfd375a1_cgraph" id="class_alg_lib_1_1_graph_a7d92680925dcacb3761cf1c0cfd375a1_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1graph_d_b.html#a01fcc5af770b56fc187e40fb34ec9c9f" title="AlgLib::graphDB::deleteEdge" alt="" coords="228,5,417,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00119">119</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -485,17 +515,16 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00124">124</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Deletes the vertex numbered "node". </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The node to be removed</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The removal of this vertex will not affect the numbering of the nodes. It will simply be recorded that the node is not in the graph anymore. </p>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_graph_a44e68263784ec1eac40136fb2880b27f_cgraph.png" border="0" usemap="#class_alg_lib_1_1_graph_a44e68263784ec1eac40136fb2880b27f_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_graph_a44e68263784ec1eac40136fb2880b27f_cgraph" id="class_alg_lib_1_1_graph_a44e68263784ec1eac40136fb2880b27f_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1graph_d_b.html#abb3e87cafce37173f075c27c9c129554" title="AlgLib::graphDB::deleteVertex" alt="" coords="236,5,433,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00124">124</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -531,17 +560,46 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00154">154</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Returns the weight of edge nodeS-&gt;nodeE. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nodeS</td><td>the first node </td></tr>
+    <tr><td class="paramname">nodeE</td><td>the second node </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the weight of edge nodeS-&gt;nodeE </dd></dl>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_graph_acecdf6452fd10b763e8e9af300126771_cgraph.png" border="0" usemap="#class_alg_lib_1_1_graph_acecdf6452fd10b763e8e9af300126771_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_graph_acecdf6452fd10b763e8e9af300126771_cgraph" id="class_alg_lib_1_1_graph_acecdf6452fd10b763e8e9af300126771_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1graph_d_b.html#a8b81f180d935d1f80f728c0fef64ca03" title="AlgLib::graphDB::getWeight" alt="" coords="221,5,404,32"/>
-</map>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00159">159</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+
 </div>
-</p>
+</div>
+<a class="anchor" id="afcf119c74be1f705e76929fcdf8c6532"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AlgLib::Graph::highestNode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the highest numbered node. </p>
+<dl class="section return"><dt>Returns</dt><dd>The highest numbered node in the graph. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_alg_lib_1_1_graph.html#ad755bcd2eb09640252df1b137e18d129" title="Gives the number of vertices in the graph. ">numVertex()</a> to find the number of ways to get the number of nodes </dd></dl>
+
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00134">134</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -567,17 +625,16 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00169">169</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Gives the tuples with nodes x such that x-&gt;node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The sink node</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A std::vector of std::tuple&lt;int, double&gt; where the int is the connected node and double is the weight of the edge </dd></dl>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_graph_a59f621c5416a42b2b040b7bdd2d6b453_cgraph.png" border="0" usemap="#class_alg_lib_1_1_graph_a59f621c5416a42b2b040b7bdd2d6b453_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_graph_a59f621c5416a42b2b040b7bdd2d6b453_cgraph" id="class_alg_lib_1_1_graph_a59f621c5416a42b2b040b7bdd2d6b453_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1graph_d_b.html#abf67bacae3ae1faa4a9d5260f52ab1ca" title="AlgLib::graphDB::inAdj" alt="" coords="192,5,345,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00174">174</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -603,17 +660,16 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00134">134</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Counts the number of edges going into a node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The node</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of non zero directed edges going into that node </dd></dl>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_graph_af0d0a75b2003e433cc1f78cc2d528de6_cgraph.png" border="0" usemap="#class_alg_lib_1_1_graph_af0d0a75b2003e433cc1f78cc2d528de6_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_graph_af0d0a75b2003e433cc1f78cc2d528de6_cgraph" id="class_alg_lib_1_1_graph_af0d0a75b2003e433cc1f78cc2d528de6_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1graph_d_b.html#a06faf4feb26d18b4491c5671158155f0" title="AlgLib::graphDB::inDegree" alt="" coords="213,5,388,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00139">139</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -639,17 +695,16 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00159">159</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>A bool value of whether the number node is in the graph. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The number to see if it is a node in the graph</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if node is in the graph, false otherwise. </dd></dl>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_graph_a9b503efefa9c45a6acc9933a3502283c_cgraph.png" border="0" usemap="#class_alg_lib_1_1_graph_a9b503efefa9c45a6acc9933a3502283c_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_graph_a9b503efefa9c45a6acc9933a3502283c_cgraph" id="class_alg_lib_1_1_graph_a9b503efefa9c45a6acc9933a3502283c_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1graph_d_b.html#ab897b7e45cbcfa65bf0c636630b52d93" title="AlgLib::graphDB::inGraph" alt="" coords="208,5,377,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00164">164</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -675,17 +730,16 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00144">144</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Gives the total weight going into a node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The node</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The total weight going into <code>node</code> </dd></dl>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_graph_a320cb53252cef3ea2f1995dde174c727_cgraph.png" border="0" usemap="#class_alg_lib_1_1_graph_a320cb53252cef3ea2f1995dde174c727_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_graph_a320cb53252cef3ea2f1995dde174c727_cgraph" id="class_alg_lib_1_1_graph_a320cb53252cef3ea2f1995dde174c727_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1graph_d_b.html#a873a4aa752f53702fad8cd36ab409c0e" title="AlgLib::graphDB::inWeight" alt="" coords="213,5,388,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00149">149</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -710,17 +764,11 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00129">129</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Gives the number of vertices in the graph. </p>
+<dl class="section return"><dt>Returns</dt><dd>The number of vertices in the graph. Removed nodes are not counted </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_alg_lib_1_1_graph.html#afcf119c74be1f705e76929fcdf8c6532" title="Returns the highest numbered node. ">highestNode()</a> for how to get the highest numbered node </dd></dl>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_graph_ad755bcd2eb09640252df1b137e18d129_cgraph.png" border="0" usemap="#class_alg_lib_1_1_graph_ad755bcd2eb09640252df1b137e18d129_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_graph_ad755bcd2eb09640252df1b137e18d129_cgraph" id="class_alg_lib_1_1_graph_ad755bcd2eb09640252df1b137e18d129_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1graph_d_b.html#a8d64de3b748352ed05aa0272c3a51195" title="AlgLib::graphDB::numVertex" alt="" coords="225,5,412,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00129">129</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -746,17 +794,16 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00164">164</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Gives the tuples with nodes x such that node-&gt;x. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The source node</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A std::vector of std::tuple&lt;int, double&gt; where the int is the connected node and double is the weight of the edge </dd></dl>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_graph_ab7c03a0caa842c589334c3a4aaaf4746_cgraph.png" border="0" usemap="#class_alg_lib_1_1_graph_ab7c03a0caa842c589334c3a4aaaf4746_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_graph_ab7c03a0caa842c589334c3a4aaaf4746_cgraph" id="class_alg_lib_1_1_graph_ab7c03a0caa842c589334c3a4aaaf4746_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1graph_d_b.html#ae3c91d0775e8c2b28824a11f55571665" title="AlgLib::graphDB::outAdj" alt="" coords="200,5,361,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00169">169</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -782,17 +829,16 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00139">139</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Counts the number of edges going out of a node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The node</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of non zero directed edges going out of that node </dd></dl>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_graph_afd5a7862e0d564d4eb35bccae5b13d75_cgraph.png" border="0" usemap="#class_alg_lib_1_1_graph_afd5a7862e0d564d4eb35bccae5b13d75_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_graph_afd5a7862e0d564d4eb35bccae5b13d75_cgraph" id="class_alg_lib_1_1_graph_afd5a7862e0d564d4eb35bccae5b13d75_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1graph_d_b.html#a8ac8d9aa118a2584d36d881f2f22a0c8" title="AlgLib::graphDB::outDegree" alt="" coords="221,5,404,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00144">144</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -818,24 +864,19 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00149">149</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Gives the total weight going out of a node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The node</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The total weight going out of <code>node</code> </dd></dl>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_graph_ad0d722ed1e8530d3b6cdfa2224facb84_cgraph.png" border="0" usemap="#class_alg_lib_1_1_graph_ad0d722ed1e8530d3b6cdfa2224facb84_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_graph_ad0d722ed1e8530d3b6cdfa2224facb84_cgraph" id="class_alg_lib_1_1_graph_ad0d722ed1e8530d3b6cdfa2224facb84_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1graph_d_b.html#a86dea18aed8b3bbcfaf834776d36f20f" title="AlgLib::graphDB::outWeight" alt="" coords="221,5,404,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00154">154</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="_graph_8h_source.html">Graph.h</a></li>
-<li>src/Graph/<a class="el" href="_graph_8cpp_source.html">Graph.cpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

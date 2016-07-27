@@ -10,6 +10,7 @@ var class_alg_lib_1_1_graph =
     [ "deleteEdge", "class_alg_lib_1_1_graph.html#a7d92680925dcacb3761cf1c0cfd375a1", null ],
     [ "deleteVertex", "class_alg_lib_1_1_graph.html#a44e68263784ec1eac40136fb2880b27f", null ],
     [ "getWeight", "class_alg_lib_1_1_graph.html#acecdf6452fd10b763e8e9af300126771", null ],
+    [ "highestNode", "class_alg_lib_1_1_graph.html#afcf119c74be1f705e76929fcdf8c6532", null ],
     [ "inAdj", "class_alg_lib_1_1_graph.html#a59f621c5416a42b2b040b7bdd2d6b453", null ],
     [ "inDegree", "class_alg_lib_1_1_graph.html#af0d0a75b2003e433cc1f78cc2d528de6", null ],
     [ "inGraph", "class_alg_lib_1_1_graph.html#a9b503efefa9c45a6acc9933a3502283c", null ],

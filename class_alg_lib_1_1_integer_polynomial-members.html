@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -33,7 +39,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AlgorithmLib
    </div>
-   <div id="projectbrief">A C++ library with algorithms and mathematical objects</div>
+   <div id="projectbrief">A C++ library for mathematical objects and algorithms</div>
   </td>
  </tr>
  </tbody>
@@ -118,14 +124,10 @@ $(document).ready(function(){initNavTree('class_alg_lib_1_1_integer_polynomial.h
   <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html#aae19d2ebb49d017d64a70c23c8294b4f">derivative</a>() const</td><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html">AlgLib::Polynomial&lt; int &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html#a815ce4eb1ae0edbb6981baab2489b636">getCoefficients</a>() const</td><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html">AlgLib::Polynomial&lt; int &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html#a788df01d92661cedc88ae68060670ce4">getDegree</a>() const</td><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html">AlgLib::Polynomial&lt; int &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_integer_polynomial.html#a655e9a0c3787323872d78194fb4321da">IntegerPolynomial</a>(std::vector&lt; int &gt; &amp;coefficients)</td><td class="entry"><a class="el" href="class_alg_lib_1_1_integer_polynomial.html">AlgLib::IntegerPolynomial</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_integer_polynomial.html#a61873b5d4a577020238163251566077e">IntegerPolynomial</a>(std::initializer_list&lt; int &gt; args)</td><td class="entry"><a class="el" href="class_alg_lib_1_1_integer_polynomial.html">AlgLib::IntegerPolynomial</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_integer_polynomial.html#ae2f5396eab8162b3550db51bbcb30c55">IntegerPolynomial</a>(const Polynomial&lt; int &gt; &amp;other)</td><td class="entry"><a class="el" href="class_alg_lib_1_1_integer_polynomial.html">AlgLib::IntegerPolynomial</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_integer_polynomial.html#ae74ad4d007e847f6bb385b93865bb88a">IntegerPolynomial</a>()</td><td class="entry"><a class="el" href="class_alg_lib_1_1_integer_polynomial.html">AlgLib::IntegerPolynomial</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html#a81380711ec4e7c9be6f0a4bfc608c301">integral</a>(int lower, int upper) const</td><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html">AlgLib::Polynomial&lt; int &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html#a1df73412faaadb6cbac4b7fad0135079">mCoeff</a></td><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html">AlgLib::Polynomial&lt; int &gt;</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_integer_polynomial.html#ab0549a5f249b0b1c2868a784cd9b890b">moduloRoots</a>(int mod) const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_integer_polynomial.html">AlgLib::IntegerPolynomial</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_integer_polynomial.html#a2589da92ddd64bb3d2b52b7dbd197c07">operator%</a>(int mod) const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_integer_polynomial.html">AlgLib::IntegerPolynomial</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_integer_polynomial.html#a32b2897454d948b16a0f747abca2f58a">operator%</a>(int mod) const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_integer_polynomial.html">AlgLib::IntegerPolynomial</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html#a8e63ddfc3bd81bc300781f526bbd70d6">Polynomial&lt; int &gt;::operator%</a>(const Polynomial&lt; int &gt; &amp;other) const</td><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html">AlgLib::Polynomial&lt; int &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html#a07d802dde3e665ad427a6932fa99f691">operator()</a>(int input) const</td><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html">AlgLib::Polynomial&lt; int &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html#a68b9b745dabf414a81fb8d35e6f233ba">operator*</a>(const Polynomial&lt; int &gt; &amp;other) const</td><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html">AlgLib::Polynomial&lt; int &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
@@ -133,7 +135,7 @@ $(document).ready(function(){initNavTree('class_alg_lib_1_1_integer_polynomial.h
   <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html#ad651de00803bc2bfc17f684dd6183e7e">operator+</a>(const Polynomial&lt; int &gt; &amp;other) const</td><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html">AlgLib::Polynomial&lt; int &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html#aa6ed3795fcb099987ff7fb8747203b43">operator-</a>(const Polynomial&lt; int &gt; &amp;other) const</td><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html">AlgLib::Polynomial&lt; int &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html#a507bf9649c02111574112ddb0baf0973">operator/</a>(const Polynomial&lt; int &gt; &amp;other) const</td><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html">AlgLib::Polynomial&lt; int &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_integer_polynomial.html#a6ce9a26baa35c33c35b91be4a930cf95">operator=</a>(const Polynomial&lt; int &gt; &amp;other)</td><td class="entry"><a class="el" href="class_alg_lib_1_1_integer_polynomial.html">AlgLib::IntegerPolynomial</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_integer_polynomial.html#a0f5c4a5a82f8189686828ade7724a1b4">operator=</a>(const Polynomial&lt; int &gt; &amp;other)</td><td class="entry"><a class="el" href="class_alg_lib_1_1_integer_polynomial.html">AlgLib::IntegerPolynomial</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html#a33a0ad0b646bcf6b0295d597097fed85">Polynomial</a>()</td><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html">AlgLib::Polynomial&lt; int &gt;</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html#a53075cc00bf37bcaf2ff6c8d18ec3206">Polynomial</a>(std::initializer_list&lt; int &gt; args)</td><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html">AlgLib::Polynomial&lt; int &gt;</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html#ad75097bb323e32318e6b508532ebce7a">Polynomial</a>(std::vector&lt; int &gt; coefficients)</td><td class="entry"><a class="el" href="class_alg_lib_1_1_polynomial.html">AlgLib::Polynomial&lt; int &gt;</a></td><td class="entry"></td></tr>

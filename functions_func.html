@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -33,7 +39,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AlgorithmLib
    </div>
-   <div id="projectbrief">A C++ library with algorithms and mathematical objects</div>
+   <div id="projectbrief">A C++ library for mathematical objects and algorithms</div>
   </td>
  </tr>
  </tbody>
@@ -232,7 +238,8 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_alg_lib_1_1_heap.html#aba2cc050f886d9a8247f24347d9c9b55">AlgLib::Heap&lt; T &gt;</a>
 </li>
 <li>highestNode()
-: <a class="el" href="class_alg_lib_1_1graph_d_b.html#a068476d8649ba9d30d32ed3f14dc2f6c">AlgLib::graphDB</a>
+: <a class="el" href="class_alg_lib_1_1_graph.html#afcf119c74be1f705e76929fcdf8c6532">AlgLib::Graph</a>
+, <a class="el" href="class_alg_lib_1_1graph_d_b.html#a068476d8649ba9d30d32ed3f14dc2f6c">AlgLib::graphDB</a>
 </li>
 </ul>
 
@@ -253,9 +260,6 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>inGraph()
 : <a class="el" href="class_alg_lib_1_1_graph.html#a9b503efefa9c45a6acc9933a3502283c">AlgLib::Graph</a>
 , <a class="el" href="class_alg_lib_1_1graph_d_b.html#ab897b7e45cbcfa65bf0c636630b52d93">AlgLib::graphDB</a>
-</li>
-<li>IntegerPolynomial()
-: <a class="el" href="class_alg_lib_1_1_integer_polynomial.html#a655e9a0c3787323872d78194fb4321da">AlgLib::IntegerPolynomial</a>
 </li>
 <li>integral()
 : <a class="el" href="class_alg_lib_1_1_polynomial.html#a81380711ec4e7c9be6f0a4bfc608c301">AlgLib::Polynomial&lt; coeff &gt;</a>
@@ -309,7 +313,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="class_alg_lib_1_1_permutation.html#a195d7015d44c650db9b7fec897b165a0">AlgLib::Permutation&lt; T &gt;</a>
 </li>
 <li>operator%()
-: <a class="el" href="class_alg_lib_1_1_integer_polynomial.html#a2589da92ddd64bb3d2b52b7dbd197c07">AlgLib::IntegerPolynomial</a>
+: <a class="el" href="class_alg_lib_1_1_integer_polynomial.html#a32b2897454d948b16a0f747abca2f58a">AlgLib::IntegerPolynomial</a>
 , <a class="el" href="class_alg_lib_1_1_polynomial.html#a8e63ddfc3bd81bc300781f526bbd70d6">AlgLib::Polynomial&lt; coeff &gt;</a>
 </li>
 <li>operator()()
@@ -352,7 +356,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </li>
 <li>operator=()
 : <a class="el" href="class_alg_lib_1_1_fraction.html#a93407b0ce7ebfd38f07a25e476243e46">AlgLib::Fraction</a>
-, <a class="el" href="class_alg_lib_1_1_integer_polynomial.html#a6ce9a26baa35c33c35b91be4a930cf95">AlgLib::IntegerPolynomial</a>
+, <a class="el" href="class_alg_lib_1_1_integer_polynomial.html#a0f5c4a5a82f8189686828ade7724a1b4">AlgLib::IntegerPolynomial</a>
 , <a class="el" href="class_alg_lib_1_1_polynomial.html#adb6aa23b16a21e65973e771c9eddeed8">AlgLib::Polynomial&lt; coeff &gt;</a>
 </li>
 <li>operator==()

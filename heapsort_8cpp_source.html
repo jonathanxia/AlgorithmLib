@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>AlgorithmLib: sorting/heapsort.cpp Source File</title>
+<title>AlgorithmLib: D:/Data/Desktop/Github/sorting/heapsort.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -33,7 +39,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AlgorithmLib
    </div>
-   <div id="projectbrief">A C++ library with algorithms and mathematical objects</div>
+   <div id="projectbrief">A C++ library for mathematical objects and algorithms</div>
   </td>
  </tr>
  </tbody>
@@ -110,16 +116,16 @@ $(document).ready(function(){initNavTree('heapsort_8cpp_source.html','');});
 </div><!--header-->
 <div class="contents">
 <a href="heapsort_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_heap_8h.html">Heap.h</a>&quot;</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_alg_lib.html">AlgLib</a></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;{</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> S&gt;</div><div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="namespace_alg_lib.html#a09ea4c537af6d2dcc36a9753b7af7c05">    5</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_alg_lib.html#a09ea4c537af6d2dcc36a9753b7af7c05">heapSort</a>(T &amp; arr)</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    {</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <a class="code" href="class_alg_lib_1_1_heap.html">AlgLib::Heap&lt;S&gt;</a> arrHeap(arr);</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = arr.size() - 1; i &gt;= 0; i--)</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        {</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            arr[i] = arrHeap.<a class="code" href="class_alg_lib_1_1_heap.html#a827f1aa55e4d2b366e3c2e1753b2bb38">pop</a>();</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        }</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    }</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div><div class="ttc" id="_heap_8h_html"><div class="ttname"><a href="_heap_8h.html">Heap.h</a></div></div>
-<div class="ttc" id="class_alg_lib_1_1_heap_html"><div class="ttname"><a href="class_alg_lib_1_1_heap.html">AlgLib::Heap</a></div><div class="ttdef"><b>Definition:</b> <a href="_heap_8h_source.html#l00009">Heap.h:9</a></div></div>
+<div class="ttc" id="class_alg_lib_1_1_heap_html"><div class="ttname"><a href="class_alg_lib_1_1_heap.html">AlgLib::Heap</a></div><div class="ttdoc">A class for a Heap object. </div><div class="ttdef"><b>Definition:</b> <a href="_heap_8h_source.html#l00012">Heap.h:12</a></div></div>
 <div class="ttc" id="namespace_alg_lib_html"><div class="ttname"><a href="namespace_alg_lib.html">AlgLib</a></div><div class="ttdef"><b>Definition:</b> <a href="adj_list_8h_source.html#l00009">adjList.h:9</a></div></div>
 <div class="ttc" id="namespace_alg_lib_html_a09ea4c537af6d2dcc36a9753b7af7c05"><div class="ttname"><a href="namespace_alg_lib.html#a09ea4c537af6d2dcc36a9753b7af7c05">AlgLib::heapSort</a></div><div class="ttdeci">void heapSort(T &amp;arr)</div><div class="ttdef"><b>Definition:</b> <a href="heapsort_8cpp_source.html#l00005">heapsort.cpp:5</a></div></div>
-<div class="ttc" id="class_alg_lib_1_1_heap_html_a827f1aa55e4d2b366e3c2e1753b2bb38"><div class="ttname"><a href="class_alg_lib_1_1_heap.html#a827f1aa55e4d2b366e3c2e1753b2bb38">AlgLib::Heap::pop</a></div><div class="ttdeci">virtual T pop()</div><div class="ttdef"><b>Definition:</b> <a href="_heap_8cpp_source.html#l00047">Heap.cpp:47</a></div></div>
+<div class="ttc" id="class_alg_lib_1_1_heap_html_a827f1aa55e4d2b366e3c2e1753b2bb38"><div class="ttname"><a href="class_alg_lib_1_1_heap.html#a827f1aa55e4d2b366e3c2e1753b2bb38">AlgLib::Heap::pop</a></div><div class="ttdeci">virtual T pop()</div><div class="ttdoc">Returns the largest element of the Heap and removes it. </div><div class="ttdef"><b>Definition:</b> <a href="_heap_8cpp_source.html#l00043">Heap.cpp:43</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_bb1b521853a9c46347182a9d10420771.html">sorting</a></li><li class="navelem"><a class="el" href="heapsort_8cpp.html">heapsort.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_69161428018e52ad84691a5947f27cc9.html">Github</a></li><li class="navelem"><a class="el" href="dir_8ed7e02201755b2c50c4a4949faef31b.html">sorting</a></li><li class="navelem"><a class="el" href="heapsort_8cpp.html">heapsort.cpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

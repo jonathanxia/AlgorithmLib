@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -33,7 +39,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AlgorithmLib
    </div>
-   <div id="projectbrief">A C++ library with algorithms and mathematical objects</div>
+   <div id="projectbrief">A C++ library for mathematical objects and algorithms</div>
   </td>
  </tr>
  </tbody>
@@ -123,15 +129,16 @@ $(document).ready(function(){initNavTree('class_alg_lib_1_1_graph.html','');});
   <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#a99e286da01db1f3e8130cbef8ead77d5">Graph</a>(const std::vector&lt; std::tuple&lt; int, int, double &gt; &gt; &amp;edgepairs, dbType storageType=dbType::ADJACENCY_LIST)</td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#a0cc9e7a1ff569edc8c019a5f2d9e4ee8">Graph</a>(const Matrix&lt; double &gt; &amp;adjMat, dbType storageType=dbType::ADJACENCY_MATRIX)</td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#abeb1fbb52b7f9ed8346f085b935fb7a8">Graph</a>(const std::vector&lt; std::vector&lt; std::tuple&lt; int, double &gt; &gt; &gt; &amp;inAdjList, dbType storageType=dbType::ADJACENCY_LIST)</td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#a59f621c5416a42b2b040b7bdd2d6b453">inAdj</a>(int node) const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#af0d0a75b2003e433cc1f78cc2d528de6">inDegree</a>(int node) const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#a9b503efefa9c45a6acc9933a3502283c">inGraph</a>(int node) const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#a320cb53252cef3ea2f1995dde174c727">inWeight</a>(int node) const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#ad755bcd2eb09640252df1b137e18d129">numVertex</a>() const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#ab7c03a0caa842c589334c3a4aaaf4746">outAdj</a>(int node) const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#afd5a7862e0d564d4eb35bccae5b13d75">outDegree</a>(int node) const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#ad0d722ed1e8530d3b6cdfa2224facb84">outWeight</a>(int node) const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#a32cc4dfc6d81626b0175a237b0f2f765">~Graph</a>()</td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#afcf119c74be1f705e76929fcdf8c6532">highestNode</a>() const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#a59f621c5416a42b2b040b7bdd2d6b453">inAdj</a>(int node) const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#af0d0a75b2003e433cc1f78cc2d528de6">inDegree</a>(int node) const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#a9b503efefa9c45a6acc9933a3502283c">inGraph</a>(int node) const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#a320cb53252cef3ea2f1995dde174c727">inWeight</a>(int node) const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#ad755bcd2eb09640252df1b137e18d129">numVertex</a>() const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#ab7c03a0caa842c589334c3a4aaaf4746">outAdj</a>(int node) const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#afd5a7862e0d564d4eb35bccae5b13d75">outDegree</a>(int node) const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#ad0d722ed1e8530d3b6cdfa2224facb84">outWeight</a>(int node) const </td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html#a32cc4dfc6d81626b0175a237b0f2f765">~Graph</a>()</td><td class="entry"><a class="el" href="class_alg_lib_1_1_graph.html">AlgLib::Graph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -33,7 +39,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AlgorithmLib
    </div>
-   <div id="projectbrief">A C++ library with algorithms and mathematical objects</div>
+   <div id="projectbrief">A C++ library for mathematical objects and algorithms</div>
   </td>
  </tr>
  </tbody>
@@ -116,50 +122,89 @@ $(document).ready(function(){initNavTree('class_alg_lib_1_1_matrix.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>The <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> class, which stores a rectangular <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>.  
+ <a href="class_alg_lib_1_1_matrix.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_matrix_8h_source.html">Matrix.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for AlgLib::Matrix&lt; T &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_alg_lib_1_1_matrix__inherit__graph.png" border="0" usemap="#_alg_lib_1_1_matrix_3_01_t_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="_alg_lib_1_1_matrix_3_01_t_01_4_inherit__map" id="_alg_lib_1_1_matrix_3_01_t_01_4_inherit__map">
+<area shape="rect" id="node2" href="class_alg_lib_1_1_matrix.html" title="{AlgLib::Matrix\&lt; double \&gt;\n||+ Matrix()\l+ Matrix()\l+ Matrix()\l+ Matrix()\l+ operator[]()\l+ operator*()\l+ operator+()\l+ operator&#45;()\l+ getVectors()\l+ setValue()\l+ getValue()\l+ numRows()\l+ numColumns()\l# addRow()\l# addColumn()\l}" alt="" coords="5,351,169,633"/>
+<area shape="rect" id="node3" href="class_alg_lib_1_1adj_matrix.html" title="{AlgLib::adjMatrix\n||+ adjMatrix()\l+ adjMatrix()\l+ ~adjMatrix()\l+ addVertex()\l+ addEdge()\l+ deleteEdge()\l+ deleteVertex()\l+ inDegree()\l+ outDegree()\l+ inWeight()\l+ outWeight()\l+ getWeight()\l+ outAdj()\l+ inAdj()\l}" alt="" coords="28,683,147,951"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for AlgLib::Matrix&lt; T &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_alg_lib_1_1_matrix__coll__graph.png" border="0" usemap="#_alg_lib_1_1_matrix_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa928f1b4f97f3689739fb76f37ea8b32"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#aa928f1b4f97f3689739fb76f37ea8b32">Matrix</a> (int row, int column)</td></tr>
+<tr class="memdesc:aa928f1b4f97f3689739fb76f37ea8b32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that takes in row and column. Entries are set to 0.  <a href="#aa928f1b4f97f3689739fb76f37ea8b32">More...</a><br /></td></tr>
 <tr class="separator:aa928f1b4f97f3689739fb76f37ea8b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5fe940d778538e4e9b92e559d4892f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#ae5fe940d778538e4e9b92e559d4892f9">Matrix</a> (const std::vector&lt; std::vector&lt; T &gt; &gt; &amp;theMatrix)</td></tr>
+<tr class="memdesc:ae5fe940d778538e4e9b92e559d4892f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that takes in a 2D-vector.  <a href="#ae5fe940d778538e4e9b92e559d4892f9">More...</a><br /></td></tr>
 <tr class="separator:ae5fe940d778538e4e9b92e559d4892f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c8f9c4d2a7a1d6235e364081c7b2291"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#a3c8f9c4d2a7a1d6235e364081c7b2291">Matrix</a> (std::initializer_list&lt; std::initializer_list&lt; T &gt; &gt; m)</td></tr>
+<tr class="memdesc:a3c8f9c4d2a7a1d6235e364081c7b2291"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that takes in an initializer list.  <a href="#a3c8f9c4d2a7a1d6235e364081c7b2291">More...</a><br /></td></tr>
 <tr class="separator:a3c8f9c4d2a7a1d6235e364081c7b2291"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af032730ee4314ca530b7926441135377"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#af032730ee4314ca530b7926441135377">Matrix</a> (const <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a> &amp;rhs)</td></tr>
+<tr class="memdesc:af032730ee4314ca530b7926441135377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#af032730ee4314ca530b7926441135377">More...</a><br /></td></tr>
 <tr class="separator:af032730ee4314ca530b7926441135377"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad964932a50c21c7b6f49f5193f42b3c"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#aad964932a50c21c7b6f49f5193f42b3c">operator[]</a> (int row)</td></tr>
+<tr class="memdesc:aad964932a50c21c7b6f49f5193f42b3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the row vector.  <a href="#aad964932a50c21c7b6f49f5193f42b3c">More...</a><br /></td></tr>
 <tr class="separator:aad964932a50c21c7b6f49f5193f42b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd934caac0e4025576d38f2b9ebc85d0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#abd934caac0e4025576d38f2b9ebc85d0">operator*</a> (const <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a> &amp;other) const </td></tr>
+<tr class="memdesc:abd934caac0e4025576d38f2b9ebc85d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies two matrices.  <a href="#abd934caac0e4025576d38f2b9ebc85d0">More...</a><br /></td></tr>
 <tr class="separator:abd934caac0e4025576d38f2b9ebc85d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac85ab14586f80045033981c7751fd124"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#ac85ab14586f80045033981c7751fd124">operator+</a> (const <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a> &amp;other) const </td></tr>
+<tr class="memdesc:ac85ab14586f80045033981c7751fd124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two matrices.  <a href="#ac85ab14586f80045033981c7751fd124">More...</a><br /></td></tr>
 <tr class="separator:ac85ab14586f80045033981c7751fd124"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae947b17fc992a714c6fc5dfa7365deb8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#ae947b17fc992a714c6fc5dfa7365deb8">operator-</a> (const <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a> &amp;other) const </td></tr>
+<tr class="memdesc:ae947b17fc992a714c6fc5dfa7365deb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts two matrices.  <a href="#ae947b17fc992a714c6fc5dfa7365deb8">More...</a><br /></td></tr>
 <tr class="separator:ae947b17fc992a714c6fc5dfa7365deb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c651bc81f24c02ccbee007f4be49dfa"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::vector&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#a5c651bc81f24c02ccbee007f4be49dfa">getVectors</a> () const </td></tr>
+<tr class="memdesc:a5c651bc81f24c02ccbee007f4be49dfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the matrix in vector form.  <a href="#a5c651bc81f24c02ccbee007f4be49dfa">More...</a><br /></td></tr>
 <tr class="separator:a5c651bc81f24c02ccbee007f4be49dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a434ac30c8fe0674d740ab8e513318cae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#a434ac30c8fe0674d740ab8e513318cae">setValue</a> (int row, int col, T value)</td></tr>
+<tr class="memdesc:a434ac30c8fe0674d740ab8e513318cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of an entry in the matrix.  <a href="#a434ac30c8fe0674d740ab8e513318cae">More...</a><br /></td></tr>
 <tr class="separator:a434ac30c8fe0674d740ab8e513318cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99342d63d4ed38c0289f14566381958e"><td class="memItemLeft" align="right" valign="top">virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#a99342d63d4ed38c0289f14566381958e">getValue</a> (int row, int col) const </td></tr>
+<tr class="memdesc:a99342d63d4ed38c0289f14566381958e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of an entry in the matrix.  <a href="#a99342d63d4ed38c0289f14566381958e">More...</a><br /></td></tr>
 <tr class="separator:a99342d63d4ed38c0289f14566381958e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae78e1e7470110c5d8e43fe1199c6540e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#ae78e1e7470110c5d8e43fe1199c6540e">numRows</a> () const </td></tr>
+<tr class="memdesc:ae78e1e7470110c5d8e43fe1199c6540e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the number of rows in the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>.  <a href="#ae78e1e7470110c5d8e43fe1199c6540e">More...</a><br /></td></tr>
 <tr class="separator:ae78e1e7470110c5d8e43fe1199c6540e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9a4892052b6d988fc79390528122f00"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#ac9a4892052b6d988fc79390528122f00">numColumns</a> () const </td></tr>
+<tr class="memdesc:ac9a4892052b6d988fc79390528122f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the number of columns in the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>.  <a href="#ac9a4892052b6d988fc79390528122f00">More...</a><br /></td></tr>
 <tr class="separator:ac9a4892052b6d988fc79390528122f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:acb50a61a0a93f26ad60829edef419a3a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#acb50a61a0a93f26ad60829edef419a3a">addRow</a> ()</td></tr>
+<tr class="memdesc:acb50a61a0a93f26ad60829edef419a3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a row to the bottom of the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>.  <a href="#acb50a61a0a93f26ad60829edef419a3a">More...</a><br /></td></tr>
 <tr class="separator:acb50a61a0a93f26ad60829edef419a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a960028989285032b7c5847235358f894"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#a960028989285032b7c5847235358f894">addColumn</a> ()</td></tr>
+<tr class="memdesc:a960028989285032b7c5847235358f894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a column to the right of the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>.  <a href="#a960028989285032b7c5847235358f894">More...</a><br /></td></tr>
 <tr class="separator:a960028989285032b7c5847235358f894"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class AlgLib::Matrix&lt; T &gt;</h3>
 
+<p>The <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> class, which stores a rectangular <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">T</td><td>The type of the objects to be stored in each entry of the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="_matrix_8h_source.html#l00011">11</a> of file <a class="el" href="_matrix_8h_source.html">Matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="_matrix_8h_source.html#l00015">15</a> of file <a class="el" href="_matrix_8h_source.html">Matrix.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa928f1b4f97f3689739fb76f37ea8b32"></a>
 <div class="memitem">
@@ -187,18 +232,16 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00007">7</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+<p>Constructor that takes in row and column. Entries are set to 0. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>The number of rows the matrix has. </td></tr>
+    <tr><td class="paramname">column</td><td>The number of columns the matrix has. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_matrix_aa928f1b4f97f3689739fb76f37ea8b32_icgraph.png" border="0" usemap="#class_alg_lib_1_1_matrix_aa928f1b4f97f3689739fb76f37ea8b32_icgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_matrix_aa928f1b4f97f3689739fb76f37ea8b32_icgraph" id="class_alg_lib_1_1_matrix_aa928f1b4f97f3689739fb76f37ea8b32_icgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_matrix.html#ac85ab14586f80045033981c7751fd124" title="AlgLib::Matrix::operator+" alt="" coords="200,5,365,32"/>
-<area shape="rect" id="node3" href="class_alg_lib_1_1_matrix.html#ae947b17fc992a714c6fc5dfa7365deb8" title="AlgLib::Matrix::operator&#45;" alt="" coords="202,56,363,83"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00007">7</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
 </div>
 </div>
@@ -217,6 +260,14 @@ template&lt;typename T&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor that takes in a 2D-vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">theMatrix</td><td>Each vector should be a row vector. That means that theMatrix[0] should be the first row of the matrix </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00022">22</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
@@ -238,6 +289,14 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Constructor that takes in an initializer list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>The initializer list. See <a class="el" href="class_alg_lib_1_1_matrix.html#ae5fe940d778538e4e9b92e559d4892f9" title="Constructor that takes in a 2D-vector. ">Matrix::Matrix(const std::vector&lt; std::vector&lt;T&gt; &gt;&amp; theMatrix)</a> for how to format. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00033">33</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
 </div>
@@ -257,7 +316,14 @@ template&lt;typename T&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Copy constructor </p>
+
+<p>Copy constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>The <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> object to be copied </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00059">59</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
@@ -287,17 +353,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00176">176</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+<p>Adds a column to the right of the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>. </p>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_matrix_a960028989285032b7c5847235358f894_icgraph.png" border="0" usemap="#class_alg_lib_1_1_matrix_a960028989285032b7c5847235358f894_icgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_matrix_a960028989285032b7c5847235358f894_icgraph" id="class_alg_lib_1_1_matrix_a960028989285032b7c5847235358f894_icgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1adj_matrix.html#a55d736fcb0d25028df7e4775d0b7fa53" title="AlgLib::adjMatrix::\laddVertex" alt="" coords="228,5,355,47"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00176">176</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
 </div>
 </div>
@@ -324,17 +382,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00170">170</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+<p>Adds a row to the bottom of the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>. </p>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_matrix_acb50a61a0a93f26ad60829edef419a3a_icgraph.png" border="0" usemap="#class_alg_lib_1_1_matrix_acb50a61a0a93f26ad60829edef419a3a_icgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_matrix_acb50a61a0a93f26ad60829edef419a3a_icgraph" id="class_alg_lib_1_1_matrix_acb50a61a0a93f26ad60829edef419a3a_icgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1adj_matrix.html#a55d736fcb0d25028df7e4775d0b7fa53" title="AlgLib::adjMatrix::\laddVertex" alt="" coords="209,5,336,47"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00170">170</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
 </div>
 </div>
@@ -372,17 +422,17 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00185">185</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+<p>Gets the value of an entry in the matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>The row number of the entry to be accessed. Numbering starts at 0, so the first row is numbered 0. </td></tr>
+    <tr><td class="paramname">col</td><td>The column number of the entry to be accessed. Numbering starts at 0. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The value at <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>[row][col] </dd></dl>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_matrix_a99342d63d4ed38c0289f14566381958e_icgraph.png" border="0" usemap="#class_alg_lib_1_1_matrix_a99342d63d4ed38c0289f14566381958e_icgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_matrix_a99342d63d4ed38c0289f14566381958e_icgraph" id="class_alg_lib_1_1_matrix_a99342d63d4ed38c0289f14566381958e_icgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_graph.html#a0cc9e7a1ff569edc8c019a5f2d9e4ee8" title="AlgLib::Graph::Graph" alt="" coords="215,5,359,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00185">185</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
 </div>
 </div>
@@ -408,6 +458,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the matrix in vector form. </p>
+<dl class="section return"><dt>Returns</dt><dd>A nested std::vector. Each element of the outer vector is a row vector. So, <code><a class="el" href="class_alg_lib_1_1_matrix.html#a5c651bc81f24c02ccbee007f4be49dfa" title="Returns the matrix in vector form. ">getVectors()</a>[0]</code> would be the first row of the matrix as a std::vector&lt;T&gt; </dd></dl>
 
 <p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00079">79</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
@@ -436,17 +489,10 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00164">164</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+<p>Gives the number of columns in the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>The number of columns in the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> </dd></dl>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_matrix_ac9a4892052b6d988fc79390528122f00_icgraph.png" border="0" usemap="#class_alg_lib_1_1_matrix_ac9a4892052b6d988fc79390528122f00_icgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_matrix_ac9a4892052b6d988fc79390528122f00_icgraph" id="class_alg_lib_1_1_matrix_ac9a4892052b6d988fc79390528122f00_icgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_graph.html#a0cc9e7a1ff569edc8c019a5f2d9e4ee8" title="AlgLib::Graph::Graph" alt="" coords="240,5,384,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00164">164</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
 </div>
 </div>
@@ -473,17 +519,10 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00159">159</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+<p>Gives the number of rows in the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>The number of rows in the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> </dd></dl>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_matrix_ae78e1e7470110c5d8e43fe1199c6540e_icgraph.png" border="0" usemap="#class_alg_lib_1_1_matrix_ae78e1e7470110c5d8e43fe1199c6540e_icgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_matrix_ae78e1e7470110c5d8e43fe1199c6540e_icgraph" id="class_alg_lib_1_1_matrix_ae78e1e7470110c5d8e43fe1199c6540e_icgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_graph.html#a0cc9e7a1ff569edc8c019a5f2d9e4ee8" title="AlgLib::Graph::Graph" alt="" coords="220,5,364,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00159">159</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
 </div>
 </div>
@@ -510,6 +549,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Multiplies two matrices. </p>
 
 <p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00137">137</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
@@ -539,17 +580,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00099">99</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+<p>Adds two matrices. </p>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_matrix_ac85ab14586f80045033981c7751fd124_cgraph.png" border="0" usemap="#class_alg_lib_1_1_matrix_ac85ab14586f80045033981c7751fd124_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_matrix_ac85ab14586f80045033981c7751fd124_cgraph" id="class_alg_lib_1_1_matrix_ac85ab14586f80045033981c7751fd124_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_matrix.html#aa928f1b4f97f3689739fb76f37ea8b32" title="AlgLib::Matrix::Matrix" alt="" coords="219,5,365,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00099">99</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
 </div>
 </div>
@@ -577,17 +610,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00118">118</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+<p>Subtracts two matrices. </p>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_matrix_ae947b17fc992a714c6fc5dfa7365deb8_cgraph.png" border="0" usemap="#class_alg_lib_1_1_matrix_ae947b17fc992a714c6fc5dfa7365deb8_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_matrix_ae947b17fc992a714c6fc5dfa7365deb8_cgraph" id="class_alg_lib_1_1_matrix_ae947b17fc992a714c6fc5dfa7365deb8_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_matrix.html#aa928f1b4f97f3689739fb76f37ea8b32" title="AlgLib::Matrix::Matrix" alt="" coords="215,5,361,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00118">118</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
 </div>
 </div>
@@ -614,6 +639,15 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Accesses the row vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>The row number in the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>. The first row is numbered 0 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A std::vector&lt;T&gt; reference to the row vector. Note that assignment can be done. Use with caution. An element can be accessed like [1][2]. </dd></dl>
 
 <p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00093">93</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
@@ -659,14 +693,20 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Sets the value of an entry in the matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>The row number of the entry. Note that numbering starts at 0, so the first row is numbered 0 </td></tr>
+    <tr><td class="paramname">col</td><td>The column number of the entry. Numbering starts at 0. </td></tr>
+    <tr><td class="paramname">value</td><td>The value that the entry will take on </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Definition at line <a class="el" href="_matrix_8cpp_source.html#l00085">85</a> of file <a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="_matrix_8h_source.html">Matrix.h</a></li>
-<li>src/Matrix/<a class="el" href="_matrix_8cpp_source.html">Matrix.cpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

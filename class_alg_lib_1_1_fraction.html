@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -33,7 +39,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AlgorithmLib
    </div>
-   <div id="projectbrief">A C++ library with algorithms and mathematical objects</div>
+   <div id="projectbrief">A C++ library for mathematical objects and algorithms</div>
   </td>
  </tr>
  </tbody>
@@ -118,6 +124,11 @@ $(document).ready(function(){initNavTree('class_alg_lib_1_1_fraction.html','');}
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_fraction_8h_source.html">Fraction.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for AlgLib::Fraction:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_alg_lib_1_1_fraction__coll__graph.png" border="0" usemap="#_alg_lib_1_1_fraction_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -127,6 +138,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aed844397d914c8b54fc5f8dd1893ea63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d979fdca2756edb38e2f6e02c456945"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_fraction.html#a7d979fdca2756edb38e2f6e02c456945">Fraction</a> (const <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> &amp;other)</td></tr>
 <tr class="separator:a7d979fdca2756edb38e2f6e02c456945"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2b59a227bfcb55e852f07751949ff4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_fraction.html#a6d2b59a227bfcb55e852f07751949ff4">Fraction</a> (int n, int d=1)</td></tr>
+<tr class="memdesc:a6d2b59a227bfcb55e852f07751949ff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that takes in numerator and denominator.  <a href="#a6d2b59a227bfcb55e852f07751949ff4">More...</a><br /></td></tr>
+<tr class="separator:a6d2b59a227bfcb55e852f07751949ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93407b0ce7ebfd38f07a25e476243e46"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_fraction.html#a93407b0ce7ebfd38f07a25e476243e46">operator=</a> (const <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> &amp;other)</td></tr>
 <tr class="separator:a93407b0ce7ebfd38f07a25e476243e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77f3cf204458ae50677be0a3d2fca383"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_fraction.html#a77f3cf204458ae50677be0a3d2fca383">operator=</a> (const int n)</td></tr>
@@ -159,30 +173,35 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac13e475bba27f25e1b1f8b2de3aed36c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13e7582666ef2218c3f430302464f4ac"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_fraction.html#a13e7582666ef2218c3f430302464f4ac">operator&lt;=</a> (const <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> &amp;other)</td></tr>
 <tr class="separator:a13e7582666ef2218c3f430302464f4ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d2b59a227bfcb55e852f07751949ff4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_fraction.html#a6d2b59a227bfcb55e852f07751949ff4">Fraction</a> (int n, int d=1)</td></tr>
-<tr class="memdesc:a6d2b59a227bfcb55e852f07751949ff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">(one liner)  <a href="#a6d2b59a227bfcb55e852f07751949ff4">More...</a><br /></td></tr>
-<tr class="separator:a6d2b59a227bfcb55e852f07751949ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28d61a593ab5abaac86f091398cf7e00"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_fraction.html#a28d61a593ab5abaac86f091398cf7e00">toString</a> ()</td></tr>
+<tr class="memdesc:a28d61a593ab5abaac86f091398cf7e00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of the <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a>.  <a href="#a28d61a593ab5abaac86f091398cf7e00">More...</a><br /></td></tr>
 <tr class="separator:a28d61a593ab5abaac86f091398cf7e00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af56bf89da08dd47e3dfc28d365195d46"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_fraction.html#af56bf89da08dd47e3dfc28d365195d46">getValue</a> () const </td></tr>
+<tr class="memdesc:af56bf89da08dd47e3dfc28d365195d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <code>double</code> value of the <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a>.  <a href="#af56bf89da08dd47e3dfc28d365195d46">More...</a><br /></td></tr>
 <tr class="separator:af56bf89da08dd47e3dfc28d365195d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ab63e88e7785efe993305ff803e35efa2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_fraction.html#ab63e88e7785efe993305ff803e35efa2">gcd</a> (int a, int b)</td></tr>
+<tr class="memdesc:ab63e88e7785efe993305ff803e35efa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the greatest common divisor.  <a href="#ab63e88e7785efe993305ff803e35efa2">More...</a><br /></td></tr>
 <tr class="separator:ab63e88e7785efe993305ff803e35efa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f95fe4660cfda996102bf5f4240fe4c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_fraction.html#a6f95fe4660cfda996102bf5f4240fe4c">lcm</a> (int a, int b)</td></tr>
+<tr class="memdesc:a6f95fe4660cfda996102bf5f4240fe4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the least common multiple.  <a href="#a6f95fe4660cfda996102bf5f4240fe4c">More...</a><br /></td></tr>
 <tr class="separator:a6f95fe4660cfda996102bf5f4240fe4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a225c4aec1a9cdd366b04be2642ecf3bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_fraction.html#a225c4aec1a9cdd366b04be2642ecf3bc">operator+</a> (const <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> &amp;f1, const <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> &amp;f2)</td></tr>
+<tr class="memdesc:a225c4aec1a9cdd366b04be2642ecf3bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two Fractions.  <a href="#a225c4aec1a9cdd366b04be2642ecf3bc">More...</a><br /></td></tr>
 <tr class="separator:a225c4aec1a9cdd366b04be2642ecf3bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa93e0ab89fa477f3b044cf5826df7c14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_fraction.html#aa93e0ab89fa477f3b044cf5826df7c14">operator-</a> (const <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> &amp;f1, const <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> &amp;f2)</td></tr>
+<tr class="memdesc:aa93e0ab89fa477f3b044cf5826df7c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts two Fractions.  <a href="#aa93e0ab89fa477f3b044cf5826df7c14">More...</a><br /></td></tr>
 <tr class="separator:aa93e0ab89fa477f3b044cf5826df7c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad106ee756801021779f14e992439db4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_fraction.html#ad106ee756801021779f14e992439db4a">operator*</a> (const <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> &amp;f1, const <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> &amp;f2)</td></tr>
+<tr class="memdesc:ad106ee756801021779f14e992439db4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies two Fractions.  <a href="#ad106ee756801021779f14e992439db4a">More...</a><br /></td></tr>
 <tr class="separator:ad106ee756801021779f14e992439db4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a185031bd64d6b227509aeacf3b5c69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_fraction.html#a2a185031bd64d6b227509aeacf3b5c69">operator/</a> (const <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> &amp;f1, const <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> &amp;f2)</td></tr>
+<tr class="memdesc:a2a185031bd64d6b227509aeacf3b5c69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divides two Fractions.  <a href="#a2a185031bd64d6b227509aeacf3b5c69">More...</a><br /></td></tr>
 <tr class="separator:a2a185031bd64d6b227509aeacf3b5c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -248,7 +267,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Copy constructor </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">other</td><td>Object to copy from </td></tr>
+    <tr><td class="paramname">other</td><td><a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> to copy from </td></tr>
   </table>
   </dd>
 </dl>
@@ -281,7 +300,15 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>(one liner) </p>
+<p>Constructor that takes in numerator and denominator. </p>
+<p>(one liner)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>The value of the numerator </td></tr>
+    <tr><td class="paramname">d</td><td>The value of the denominator. Default value is 1.</td></tr>
+  </table>
+  </dd>
+</dl>
 <p>(documentation goes here) </p>
 
 <p>Definition at line <a class="el" href="_fraction_8cpp_source.html#l00149">149</a> of file <a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a>.</p>
@@ -321,18 +348,17 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_fraction_8cpp_source.html#l00156">156</a> of file <a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a>.</p>
+<p>Returns the greatest common divisor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td></td></tr>
+    <tr><td class="paramname">b</td><td>These parameters can be negative, but the return value will always be positive. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The greatest positive common divisor of a and b </dd></dl>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_fraction_ab63e88e7785efe993305ff803e35efa2_icgraph.png" border="0" usemap="#class_alg_lib_1_1_fraction_ab63e88e7785efe993305ff803e35efa2_icgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_fraction_ab63e88e7785efe993305ff803e35efa2_icgraph" id="class_alg_lib_1_1_fraction_ab63e88e7785efe993305ff803e35efa2_icgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_fraction.html#a6f95fe4660cfda996102bf5f4240fe4c" title="AlgLib::Fraction::lcm" alt="" coords="208,5,351,32"/>
-<area shape="rect" id="node3" href="class_alg_lib_1_1_fraction.html#a28d61a593ab5abaac86f091398cf7e00" title="AlgLib::Fraction::toString" alt="" coords="196,56,363,83"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_fraction_8cpp_source.html#l00156">156</a> of file <a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a>.</p>
 
 </div>
 </div>
@@ -356,6 +382,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the <code>double</code> value of the <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>The value of the <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> as a double. </dd></dl>
 
 <p>Definition at line <a class="el" href="_fraction_8cpp_source.html#l00021">21</a> of file <a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a>.</p>
 
@@ -393,17 +422,17 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_fraction_8cpp_source.html#l00180">180</a> of file <a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a>.</p>
+<p>Returns the least common multiple. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td></td></tr>
+    <tr><td class="paramname">b</td><td>These parameters can be negative </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>These just uses a * b / gcd(a, b), so to determine the sign of the LCM, refer to that. </dd></dl>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_fraction_a6f95fe4660cfda996102bf5f4240fe4c_cgraph.png" border="0" usemap="#class_alg_lib_1_1_fraction_a6f95fe4660cfda996102bf5f4240fe4c_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_fraction_a6f95fe4660cfda996102bf5f4240fe4c_cgraph" id="class_alg_lib_1_1_fraction_a6f95fe4660cfda996102bf5f4240fe4c_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_fraction.html#ab63e88e7785efe993305ff803e35efa2" title="AlgLib::Fraction::gcd" alt="" coords="196,5,339,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_fraction_8cpp_source.html#l00180">180</a> of file <a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a>.</p>
 
 </div>
 </div>
@@ -714,6 +743,13 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Assignment operator </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> to assign from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to this </dd></dl>
 
 <p>Definition at line <a class="el" href="_fraction_8cpp_source.html#l00078">78</a> of file <a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a>.</p>
 
@@ -740,6 +776,13 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Assignment operator </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Other int to assign from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to this </dd></dl>
 
 <p>Definition at line <a class="el" href="_fraction_8cpp_source.html#l00136">136</a> of file <a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a>.</p>
 
@@ -844,17 +887,10 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_fraction_8cpp_source.html#l00185">185</a> of file <a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a>.</p>
+<p>Returns a string representation of the <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>"numerator/denominator". So, the <code><a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a></code> that has a value of \( \frac{3}{5} \) would cause this to return <code>"3/5"</code>. </dd></dl>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_fraction_a28d61a593ab5abaac86f091398cf7e00_cgraph.png" border="0" usemap="#class_alg_lib_1_1_fraction_a28d61a593ab5abaac86f091398cf7e00_cgraph" alt=""/></div>
-<map name="class_alg_lib_1_1_fraction_a28d61a593ab5abaac86f091398cf7e00_cgraph" id="class_alg_lib_1_1_fraction_a28d61a593ab5abaac86f091398cf7e00_cgraph">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_fraction.html#ab63e88e7785efe993305ff803e35efa2" title="AlgLib::Fraction::gcd" alt="" coords="220,5,363,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="_fraction_8cpp_source.html#l00185">185</a> of file <a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a>.</p>
 
 </div>
 </div>
@@ -891,6 +927,16 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Multiplies two Fractions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f1</td><td>The first <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> </td></tr>
+    <tr><td class="paramname">f2</td><td>The second <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> that is equal to the product of the two Fractions </dd></dl>
+
 <p>Definition at line <a class="el" href="_fraction_8cpp_source.html#l00013">13</a> of file <a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a>.</p>
 
 </div>
@@ -926,13 +972,16 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Assignment operator </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Adds two Fractions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">other</td><td>Object to assign from </td></tr>
+    <tr><td class="paramname">f1</td><td>The first <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> </td></tr>
+    <tr><td class="paramname">f2</td><td>The second <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to this </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> that is equal to the sum of the two Fractions </dd></dl>
 
 <p>Definition at line <a class="el" href="_fraction_8cpp_source.html#l00005">5</a> of file <a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a>.</p>
 
@@ -970,6 +1019,16 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Subtracts two Fractions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f1</td><td>The first <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> </td></tr>
+    <tr><td class="paramname">f2</td><td>The second <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> that is equal to the difference of the two Fractions </dd></dl>
+
 <p>Definition at line <a class="el" href="_fraction_8cpp_source.html#l00009">9</a> of file <a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a>.</p>
 
 </div>
@@ -1006,14 +1065,20 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Divides two Fractions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f1</td><td>The first <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> </td></tr>
+    <tr><td class="paramname">f2</td><td>The second <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> that is equal to the quotient of the two Fractions </dd></dl>
+
 <p>Definition at line <a class="el" href="_fraction_8cpp_source.html#l00017">17</a> of file <a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="_fraction_8h_source.html">Fraction.h</a></li>
-<li>src/Fraction/<a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
