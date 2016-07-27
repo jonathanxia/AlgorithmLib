@@ -1,4 +1,0 @@
-<map id="AlgLib::Matrix&lt; T &gt;" name="AlgLib::Matrix&lt; T &gt;">
-<area shape="rect" id="node2" href="$class_alg_lib_1_1_matrix.html" title="{AlgLib::Matrix\&lt; double \&gt;\n||+ Matrix()\l+ Matrix()\l+ Matrix()\l+ Matrix()\l+ operator[]()\l+ operator*()\l+ operator+()\l+ operator&#45;()\l+ getVectors()\l+ setValue()\l+ getValue()\l+ numRows()\l+ numColumns()\l# addRow()\l# addColumn()\l}" alt="" coords="5,351,169,633"/>
-<area shape="rect" id="node3" href="$class_alg_lib_1_1adj_matrix.html" title="{AlgLib::adjMatrix\n||+ adjMatrix()\l+ adjMatrix()\l+ ~adjMatrix()\l+ addVertex()\l+ addEdge()\l+ deleteEdge()\l+ deleteVertex()\l+ inDegree()\l+ outDegree()\l+ inWeight()\l+ outWeight()\l+ getWeight()\l+ outAdj()\l+ inAdj()\l}" alt="" coords="28,683,147,951"/>
-</map>
