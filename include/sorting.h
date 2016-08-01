@@ -7,7 +7,7 @@ namespace AlgLib
 {
     /** \brief Performs an insertion sort on the container
      *
-     * \param T The type of the container e.g. std::vector<int>
+     * \param T The type of the container e.g. `std::vector<int>`
      * \param arr The container to be sorted
      *
      */
@@ -16,7 +16,7 @@ namespace AlgLib
 
     /** \brief Performs a merge sort on the container
      *
-     * \param T The type of the container e.g. std::vector<int>
+     * \param T The type of the container e.g. `std::vector<int>`
      * \param arr The container to be sorted
      *
      */
@@ -27,7 +27,8 @@ namespace AlgLib
 
     /** \brief Performs a heap sort on the container
      *
-     * \param T The type of the container e.g. std::vector<int>
+     * \param T The type of the container e.g. `std::vector<int>`
+     * \param S The type that is stored in the container e.g. `int`
      * \param arr The container to be sorted
      *
      */
