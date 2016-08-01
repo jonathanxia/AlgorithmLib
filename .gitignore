@@ -29,6 +29,7 @@
 *.cbp
 *.depend
 *.layout
+*.bmarks
 
 # =========================
 # Operating System Files
