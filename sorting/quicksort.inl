@@ -1,4 +1,6 @@
 #include <utility>
+#include <random>
+
 namespace AlgLib
 {
     /** \brief Computes the index `ind` that will partition the container `arr`
@@ -38,6 +40,12 @@ namespace AlgLib
         // We will go through arr to see whether it is bigger or smaller than arr[endIndex]
         // Everything to the left of divider is < arr[endIndex] and everything with index >= divider is >= arr[endIndex]
         int divider = 0;
+        std::random_device rd; // This will generate a random number to act as a seed
+        std::mt19937 gen(rd());
+        std::uniform_int_distribution<> dis(startIndex, endIndex);
+
+        int randomIndex = dis(gen);
+        std::swap(arr[randomIndex], arr[endIndex]);
         for (int i = 0; i < arr.size() - 1; i++) // We stop one short since we don't need to look at arr[endIndex]
         {
             if(arr[i] < arr[endIndex])
