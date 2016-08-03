@@ -1,0 +1,44 @@
+#include <vector>
+namespace AlgLib
+{
+    template <typename T>
+    void countingSort(T& arr)
+    {
+        int minElemI = 0; // the index of the minimum element
+        int maxElemI = 0; // the index of the maximum element
+        // This is linear
+
+        // This will find the values of minElemI and maxElemI
+        for (int i = 0; i < (int) arr.size(); i++)
+        {
+            if(arr[minElemI] > arr[i])
+            {
+                minElemI = i;
+            }
+            if(arr[maxElemI] < arr[i])
+            {
+                maxElemI = i;
+            }
+        }
+
+        // Now we must have a counting container.
+        // counts[i] stores how many occurrences of arr[minElemI] + i there are.
+        std::vector<int> counts(arr[maxElemI] - arr[minElemI] + 1);
+        for(int i = 0; i < (int) arr.size(); i++)
+        {
+            counts[arr[i] - arr[minElemI]]++;
+        }
+
+        int ind = 0;
+        int minElem = arr[minElemI]; // safe-keep this because it will be altered
+        for (int i = 0; i < (int) counts.size(); i++)
+        {
+            for(int j = 0; j < (int)counts[i]; j++)
+            {
+                arr[ind] = minElem + i;
+                ind++;
+            }
+        }
+        // Done!
+    }
+}

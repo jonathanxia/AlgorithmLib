@@ -42,9 +42,21 @@ namespace AlgLib
     */
     template <typename T>
     void quickSort(T& arr);
+
+    /** \brief Performs a counting sort on the container
+    *
+    * Sorts the container `arr` in linear time
+    * \param T The type of the container e.g. `std::vector<int>` that **stores ints**
+    * \param arr The container to be sorted.
+    *
+    * Performs the sort in O(n + k) where n is the number of elements and k is max_element - min_element.
+    */
+    template <typename T>
+    void countingSort(T& arr);
 }
 #include "../sorting/insertionsort.cpp"
 #include "../sorting/mergesort.cpp"
 #include "../sorting/heapsort.cpp"
 #include "../sorting/quicksort.inl"
+#include "../sorting/countingsort.inl"
 #endif // SORTING_H
