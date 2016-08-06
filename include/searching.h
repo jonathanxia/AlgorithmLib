@@ -5,6 +5,10 @@
 namespace AlgLib
 {
     /**
+    * \defgroup searching "searching.h"
+    * @{
+    */
+    /**
     *   \brief Searches a sorted container A for an element key
     *   @param cont the container that contains the elements of type T
     *   @param T the type of the elements in the container
@@ -25,6 +29,10 @@ namespace AlgLib
     */
     template <typename cont>
     int inversions(const cont& A); //returns the number of inversions in A
+
+    /**
+    @}
+    */
 }
 
 #endif // SEARCHING_H_INCLUDED

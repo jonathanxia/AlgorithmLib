@@ -3,6 +3,9 @@
 
 namespace AlgLib
 {
+    /** \defgroup sorting "sorting.h"
+    * @{
+    */
     /** \brief Performs an insertion sort on the container
      *
      * \param T The type of the container e.g. `std::vector<int>`
@@ -53,6 +56,7 @@ namespace AlgLib
     */
     template <typename T>
     void countingSort(T& arr);
+    /**@} */
 }
 #include "../sorting/insertionsort.cpp"
 #include "../sorting/mergesort.cpp"
