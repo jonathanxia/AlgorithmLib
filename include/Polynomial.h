@@ -122,5 +122,5 @@ namespace AlgLib
 }
 
 
-#include "../src/Polynomial/Polynomial.cpp"
+#include "../src/Polynomial/Polynomial.inl"
 #endif // POLYNOMIAL_H

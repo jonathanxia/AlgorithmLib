@@ -35,6 +35,6 @@ namespace AlgLib {
     };
 }
 
-#include "../src/Permutation/Permutation.cpp"
+#include "../src/Permutation/Permutation.inl"
 
 #endif

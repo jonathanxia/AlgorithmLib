@@ -58,9 +58,9 @@ namespace AlgLib
     void countingSort(T& arr);
     /**@} */
 }
-#include "../sorting/insertionsort.cpp"
-#include "../sorting/mergesort.cpp"
-#include "../sorting/heapsort.cpp"
+#include "../sorting/insertionsort.inl"
+#include "../sorting/mergesort.inl"
+#include "../sorting/heapsort.inl"
 #include "../sorting/quicksort.inl"
 #include "../sorting/countingsort.inl"
 #endif // SORTING_H

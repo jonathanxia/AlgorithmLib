@@ -100,6 +100,6 @@ namespace AlgLib {
 	};
 }
 
-#include "../src/Matrix/Matrix.cpp"
+#include "../src/Matrix/Matrix.inl"
 
 #endif

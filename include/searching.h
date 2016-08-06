@@ -1,7 +1,7 @@
 #ifndef SEARCHING_H_INCLUDED
 #define SEARCHING_H_INCLUDED
-#include "../searching/binarysearch.cpp"
-#include "../searching/inversion.cpp"
+#include "../searching/binarysearch.inl"
+#include "../searching/inversion.inl"
 namespace AlgLib
 {
     /**

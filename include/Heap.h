@@ -50,5 +50,5 @@ namespace AlgLib
             void increaseKey(int index, T key);
     };
 }
-#include "../src/Heap/Heap.cpp"
+#include "../src/Heap/Heap.inl"
 #endif // HEAP_H
