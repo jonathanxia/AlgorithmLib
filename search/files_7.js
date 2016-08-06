@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['permutation_2ecpp',['Permutation.cpp',['../_permutation_8cpp.html',1,'']]],
-  ['permutation_2eh',['Permutation.h',['../_permutation_8h.html',1,'']]],
-  ['polynomial_2ecpp',['Polynomial.cpp',['../_polynomial_8cpp.html',1,'']]],
-  ['polynomial_2eh',['Polynomial.h',['../_polynomial_8h.html',1,'']]]
+  ['matrix_2eh',['Matrix.h',['../_matrix_8h.html',1,'']]],
+  ['matrix_2einl',['Matrix.inl',['../_matrix_8inl.html',1,'']]],
+  ['mergesort_2einl',['mergesort.inl',['../mergesort_8inl.html',1,'']]]
 ];

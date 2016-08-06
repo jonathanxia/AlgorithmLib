@@ -1,6 +1,0 @@
-{
-  "name": "Algorithmlib",
-  "tagline": "A library for math and algorithms. ",
-  "body": "AlgorithmLib is a library with mathematical objects and algorithms. \r\n\r\nHere are the classes we have so far:\r\n* [AlgLib::Polynomial](https://github.com/fclvbfm934/AlgorithmLib/wiki/AlgLib::Polynomial)   \r\n   - [AlgLib::IntegerPolynomial](https://github.com/fclvbfm934/AlgorithmLib/wiki/AlgLib::IntegerPolynomial)\r\n* [AlgLib::Fraction](https://github.com/fclvbfm934/AlgorithmLib/wiki/AlgLib::Fraction)\r\n* [AlgLib::Permutation](https://github.com/fclvbfm934/AlgorithmLib/wiki/AlgLib::Permutation)",
-  "note": "Don't delete this file! It's used internally to help with page regeneration."
-}

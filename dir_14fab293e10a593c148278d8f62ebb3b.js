@@ -1,5 +1,5 @@
 var dir_14fab293e10a593c148278d8f62ebb3b =
 [
-    [ "binarysearch.cpp", "binarysearch_8cpp.html", "binarysearch_8cpp" ],
-    [ "inversion.cpp", "inversion_8cpp.html", "inversion_8cpp" ]
+    [ "binarysearch.inl", "binarysearch_8inl.html", "binarysearch_8inl" ],
+    [ "inversion.inl", "inversion_8inl.html", "inversion_8inl" ]
 ];

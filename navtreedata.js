@@ -2,6 +2,7 @@ var NAVTREE =
 [
   [ "AlgorithmLib", "index.html", [
     [ "AlgorithmLib", "md_D:_Data_Desktop_Github_README.html", null ],
+    [ "Modules", "modules.html", "modules" ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -34,7 +35,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_fraction_8cpp.html",
-"pages.html"
+"inversion_8inl.html#ga97a13becf845332c126803e014b03286"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -54,6 +54,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -156,33 +157,50 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a42bfc6dd0232e3e7d0a460a5bb74059a"><td class="memTemplParams" colspan="2">template&lt;typename cont , typename T &gt; </td></tr>
-<tr class="memitem:a42bfc6dd0232e3e7d0a460a5bb74059a"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_alg_lib.html#a42bfc6dd0232e3e7d0a460a5bb74059a">binarysearch</a> (cont A, T key)</td></tr>
-<tr class="memdesc:a42bfc6dd0232e3e7d0a460a5bb74059a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches a sorted container A for an element key.  <a href="#a42bfc6dd0232e3e7d0a460a5bb74059a">More...</a><br /></td></tr>
-<tr class="separator:a42bfc6dd0232e3e7d0a460a5bb74059a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97a13becf845332c126803e014b03286"><td class="memTemplParams" colspan="2">template&lt;typename cont &gt; </td></tr>
-<tr class="memitem:a97a13becf845332c126803e014b03286"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_alg_lib.html#a97a13becf845332c126803e014b03286">inversions</a> (const cont &amp;A)</td></tr>
-<tr class="memdesc:a97a13becf845332c126803e014b03286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts the number of inversions in a container A. An inversion is a pair of elements A[i] and A[j] such that i &lt; j and A[i] &gt; A[j]. Finds in O(n log n) time.  <a href="#a97a13becf845332c126803e014b03286">More...</a><br /></td></tr>
-<tr class="separator:a97a13becf845332c126803e014b03286"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a285a3cda7220504508dbb7d0df3dba21"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a285a3cda7220504508dbb7d0df3dba21"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_alg_lib.html#a285a3cda7220504508dbb7d0df3dba21">insertionSort</a> (T &amp;arr)</td></tr>
-<tr class="separator:a285a3cda7220504508dbb7d0df3dba21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50103bb855668c829f3d0def288521a8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a50103bb855668c829f3d0def288521a8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_alg_lib.html#a50103bb855668c829f3d0def288521a8">mergeSort</a> (T &amp;arr)</td></tr>
-<tr class="memdesc:a50103bb855668c829f3d0def288521a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort the elements in container arr with merge sort algorithm.  <a href="#a50103bb855668c829f3d0def288521a8">More...</a><br /></td></tr>
-<tr class="separator:a50103bb855668c829f3d0def288521a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a964728cae397746308b2d688e6f85d01"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a964728cae397746308b2d688e6f85d01"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_alg_lib.html#a964728cae397746308b2d688e6f85d01">MERGE</a> (T &amp;left, T &amp;right)</td></tr>
-<tr class="separator:a964728cae397746308b2d688e6f85d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09ea4c537af6d2dcc36a9753b7af7c05"><td class="memTemplParams" colspan="2">template&lt;typename T , typename S &gt; </td></tr>
-<tr class="memitem:a09ea4c537af6d2dcc36a9753b7af7c05"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_alg_lib.html#a09ea4c537af6d2dcc36a9753b7af7c05">heapSort</a> (T &amp;arr)</td></tr>
-<tr class="separator:a09ea4c537af6d2dcc36a9753b7af7c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga42bfc6dd0232e3e7d0a460a5bb74059a"><td class="memTemplParams" colspan="2">template&lt;typename cont , typename T &gt; </td></tr>
+<tr class="memitem:ga42bfc6dd0232e3e7d0a460a5bb74059a"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__searching.html#ga42bfc6dd0232e3e7d0a460a5bb74059a">binarysearch</a> (cont A, T key)</td></tr>
+<tr class="memdesc:ga42bfc6dd0232e3e7d0a460a5bb74059a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches a sorted container A for an element key.  <a href="group__searching.html#ga42bfc6dd0232e3e7d0a460a5bb74059a">More...</a><br /></td></tr>
+<tr class="separator:ga42bfc6dd0232e3e7d0a460a5bb74059a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga97a13becf845332c126803e014b03286"><td class="memTemplParams" colspan="2">template&lt;typename cont &gt; </td></tr>
+<tr class="memitem:ga97a13becf845332c126803e014b03286"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__searching.html#ga97a13becf845332c126803e014b03286">inversions</a> (const cont &amp;A)</td></tr>
+<tr class="memdesc:ga97a13becf845332c126803e014b03286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts the number of inversions in a container A. An inversion is a pair of elements A[i] and A[j] such that i &lt; j and A[i] &gt; A[j]. Finds in O(n log n) time.  <a href="group__searching.html#ga97a13becf845332c126803e014b03286">More...</a><br /></td></tr>
+<tr class="separator:ga97a13becf845332c126803e014b03286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga285a3cda7220504508dbb7d0df3dba21"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga285a3cda7220504508dbb7d0df3dba21"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga285a3cda7220504508dbb7d0df3dba21">insertionSort</a> (T &amp;arr)</td></tr>
+<tr class="memdesc:ga285a3cda7220504508dbb7d0df3dba21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs an insertion sort on the container.  <a href="group__sorting.html#ga285a3cda7220504508dbb7d0df3dba21">More...</a><br /></td></tr>
+<tr class="separator:ga285a3cda7220504508dbb7d0df3dba21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga50103bb855668c829f3d0def288521a8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga50103bb855668c829f3d0def288521a8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga50103bb855668c829f3d0def288521a8">mergeSort</a> (T &amp;arr)</td></tr>
+<tr class="memdesc:ga50103bb855668c829f3d0def288521a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a merge sort on the container.  <a href="group__sorting.html#ga50103bb855668c829f3d0def288521a8">More...</a><br /></td></tr>
+<tr class="separator:ga50103bb855668c829f3d0def288521a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga964728cae397746308b2d688e6f85d01"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga964728cae397746308b2d688e6f85d01"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga964728cae397746308b2d688e6f85d01">MERGE</a> (T &amp;left, T &amp;right)</td></tr>
+<tr class="separator:ga964728cae397746308b2d688e6f85d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga09ea4c537af6d2dcc36a9753b7af7c05"><td class="memTemplParams" colspan="2">template&lt;typename T , typename S &gt; </td></tr>
+<tr class="memitem:ga09ea4c537af6d2dcc36a9753b7af7c05"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga09ea4c537af6d2dcc36a9753b7af7c05">heapSort</a> (T &amp;arr)</td></tr>
+<tr class="memdesc:ga09ea4c537af6d2dcc36a9753b7af7c05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a heap sort on the container.  <a href="group__sorting.html#ga09ea4c537af6d2dcc36a9753b7af7c05">More...</a><br /></td></tr>
+<tr class="separator:ga09ea4c537af6d2dcc36a9753b7af7c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1079e0b650cad788132bbee4dac0200a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga1079e0b650cad788132bbee4dac0200a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga1079e0b650cad788132bbee4dac0200a">quickSort</a> (T &amp;arr)</td></tr>
+<tr class="memdesc:ga1079e0b650cad788132bbee4dac0200a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a quick sort on the container.  <a href="group__sorting.html#ga1079e0b650cad788132bbee4dac0200a">More...</a><br /></td></tr>
+<tr class="separator:ga1079e0b650cad788132bbee4dac0200a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1a7cf60f7d342c55a75060a9784797f2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga1a7cf60f7d342c55a75060a9784797f2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga1a7cf60f7d342c55a75060a9784797f2">countingSort</a> (T &amp;arr)</td></tr>
+<tr class="memdesc:ga1a7cf60f7d342c55a75060a9784797f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a counting sort on the container.  <a href="group__sorting.html#ga1a7cf60f7d342c55a75060a9784797f2">More...</a><br /></td></tr>
+<tr class="separator:ga1a7cf60f7d342c55a75060a9784797f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab90b28703ab96313011a0fc73af136e0"><td class="memTemplParams" colspan="2">template&lt;typename cont &gt; </td></tr>
 <tr class="memitem:ab90b28703ab96313011a0fc73af136e0"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_alg_lib.html#ab90b28703ab96313011a0fc73af136e0">inversionRef</a> (cont &amp;A)</td></tr>
 <tr class="separator:ab90b28703ab96313011a0fc73af136e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa2cce44d615ee89d16ed8f5595189d4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aaa2cce44d615ee89d16ed8f5595189d4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_alg_lib.html#aaa2cce44d615ee89d16ed8f5595189d4">insertionSort</a> (std::vector&lt; T &gt; &amp;arr)</td></tr>
 <tr class="separator:aaa2cce44d615ee89d16ed8f5595189d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52bb317a06d130774ae5ac3aa7eb3582"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a52bb317a06d130774ae5ac3aa7eb3582"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_alg_lib.html#a52bb317a06d130774ae5ac3aa7eb3582">PARTITION</a> (T &amp;arr, int startIndex, int endIndex)</td></tr>
+<tr class="memdesc:a52bb317a06d130774ae5ac3aa7eb3582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the index <code>ind</code> that will partition the container <code>arr</code>  <a href="#a52bb317a06d130774ae5ac3aa7eb3582">More...</a><br /></td></tr>
+<tr class="separator:a52bb317a06d130774ae5ac3aa7eb3582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f79dd8c29ec21ff3b1a813ce261ea66"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a6f79dd8c29ec21ff3b1a813ce261ea66"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_alg_lib.html#a6f79dd8c29ec21ff3b1a813ce261ea66">quickSort</a> (T &amp;arr, int startIndex, int endIndex)</td></tr>
+<tr class="separator:a6f79dd8c29ec21ff3b1a813ce261ea66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade570114b2ba76f3c9742dd9ca92387c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_alg_lib.html#ade570114b2ba76f3c9742dd9ca92387c">operator+</a> (const <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> &amp;f1, const <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> &amp;f2)</td></tr>
 <tr class="separator:ade570114b2ba76f3c9742dd9ca92387c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d6284ffd8dfa09154f65a0957ac6801"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_alg_lib.html#a8d6284ffd8dfa09154f65a0957ac6801">operator-</a> (const <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> &amp;f1, const <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> &amp;f2)</td></tr>
@@ -231,86 +249,6 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a42bfc6dd0232e3e7d0a460a5bb74059a"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename cont , typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">int AlgLib::binarysearch </td>
-          <td>(</td>
-          <td class="paramtype">cont&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>key</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Searches a sorted container A for an element key. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">cont</td><td>the container that contains the elements of type T </td></tr>
-    <tr><td class="paramname">T</td><td>the type of the elements in the container </td></tr>
-    <tr><td class="paramname">A</td><td>the container that has the elements of type T </td></tr>
-    <tr><td class="paramname">key</td><td>the element to be found </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the index the element key is at if the key is in A. If not in A, if the element would be between position x and x+1 then the value of -x-2 is returned. </dd></dl>
-
-<p>Definition at line <a class="el" href="binarysearch_8cpp_source.html#l00006">6</a> of file <a class="el" href="binarysearch_8cpp_source.html">binarysearch.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a09ea4c537af6d2dcc36a9753b7af7c05"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename S &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void AlgLib::heapSort </td>
-          <td>(</td>
-          <td class="paramtype">T &amp;&#160;</td>
-          <td class="paramname"><em>arr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="heapsort_8cpp_source.html#l00005">5</a> of file <a class="el" href="heapsort_8cpp_source.html">heapsort.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a285a3cda7220504508dbb7d0df3dba21"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void AlgLib::insertionSort </td>
-          <td>(</td>
-          <td class="paramtype">T &amp;&#160;</td>
-          <td class="paramname"><em>arr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="aaa2cce44d615ee89d16ed8f5595189d4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -330,7 +268,7 @@ template&lt;typename T &gt; </div>
 <p>Sorts the elements of container arr using the insertion sort algorithm Parameters: vector&lt;T&gt;&amp; arr: a reference to the container to be sorted</p>
 <p>Returns: void Additional Notes: Runs in O(n^2) time </p>
 
-<p>Definition at line <a class="el" href="insertionsort_8cpp_source.html#l00017">17</a> of file <a class="el" href="insertionsort_8cpp_source.html">insertionsort.cpp</a>.</p>
+<p>Definition at line <a class="el" href="insertionsort_8inl_source.html#l00017">17</a> of file <a class="el" href="insertionsort_8inl_source.html">insertionsort.inl</a>.</p>
 
 </div>
 </div>
@@ -350,96 +288,7 @@ template&lt;typename cont &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="inversion_8cpp_source.html#l00007">7</a> of file <a class="el" href="inversion_8cpp_source.html">inversion.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a97a13becf845332c126803e014b03286"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename cont &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">int AlgLib::inversions </td>
-          <td>(</td>
-          <td class="paramtype">const cont &amp;&#160;</td>
-          <td class="paramname"><em>A</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Counts the number of inversions in a container A. An inversion is a pair of elements A[i] and A[j] such that i &lt; j and A[i] &gt; A[j]. Finds in O(n log n) time. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">cont</td><td>the type of the container </td></tr>
-    <tr><td class="paramname">A</td><td>the container </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of inversions </dd></dl>
-
-<p>Definition at line <a class="el" href="inversion_8cpp_source.html#l00061">61</a> of file <a class="el" href="inversion_8cpp_source.html">inversion.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a964728cae397746308b2d688e6f85d01"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">T AlgLib::MERGE </td>
-          <td>(</td>
-          <td class="paramtype">T &amp;&#160;</td>
-          <td class="paramname"><em>left</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T &amp;&#160;</td>
-          <td class="paramname"><em>right</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="mergesort_8cpp_source.html#l00033">33</a> of file <a class="el" href="mergesort_8cpp_source.html">mergesort.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a50103bb855668c829f3d0def288521a8"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void AlgLib::mergeSort </td>
-          <td>(</td>
-          <td class="paramtype">T &amp;&#160;</td>
-          <td class="paramname"><em>arr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sort the elements in container arr with merge sort algorithm. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">arr</td><td>the container to be sorted </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-<p>Definition at line <a class="el" href="mergesort_8cpp_source.html#l00013">13</a> of file <a class="el" href="mergesort_8cpp_source.html">mergesort.cpp</a>.</p>
+<p>Definition at line <a class="el" href="inversion_8inl_source.html#l00007">7</a> of file <a class="el" href="inversion_8inl_source.html">inversion.inl</a>.</p>
 
 </div>
 </div>
@@ -584,6 +433,90 @@ template&lt;typename T &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_alg_lib_1_1_fraction.html">Fraction</a> that is equal to the quotient of the two Fractions </dd></dl>
 
 <p>Definition at line <a class="el" href="_fraction_8cpp_source.html#l00017">17</a> of file <a class="el" href="_fraction_8cpp_source.html">Fraction.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a52bb317a06d130774ae5ac3aa7eb3582"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int AlgLib::PARTITION </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>startIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>endIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the index <code>ind</code> that will partition the container <code>arr</code> </p>
+<p>Returns index <code>ind</code> such that <code>A[ind]</code> \( \ge \) <code>A[i]</code> for \( startIndex \le i &lt; ind \) and <code>A[ind]</code> \( \ge \) <code>A[i]</code> for \( ind &lt; i \le endIndex \)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">T</td><td>The type of the container </td></tr>
+    <tr><td class="paramname">startIndex</td><td>The starting index </td></tr>
+    <tr><td class="paramname">endIndex</td><td>The ending index</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Partitions <code>arr</code> into <code>arr[startIndex...ind-1]</code> and <code>arr[ind+1...endIndex]</code> and returns the value of <code>ind</code>. Note that this function will modify the container <code>arr</code> </dd></dl>
+
+<p>Definition at line <a class="el" href="quicksort_8inl_source.html#l00036">36</a> of file <a class="el" href="quicksort_8inl_source.html">quicksort.inl</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6f79dd8c29ec21ff3b1a813ce261ea66"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void AlgLib::quickSort </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>startIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>endIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="quicksort_8inl_source.html#l00025">25</a> of file <a class="el" href="quicksort_8inl_source.html">quicksort.inl</a>.</p>
 
 </div>
 </div>

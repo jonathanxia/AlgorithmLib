@@ -1,6 +1,8 @@
 var dir_8ed7e02201755b2c50c4a4949faef31b =
 [
-    [ "heapsort.cpp", "heapsort_8cpp.html", "heapsort_8cpp" ],
-    [ "insertionsort.cpp", "insertionsort_8cpp.html", "insertionsort_8cpp" ],
-    [ "mergesort.cpp", "mergesort_8cpp.html", "mergesort_8cpp" ]
+    [ "countingsort.inl", "countingsort_8inl.html", "countingsort_8inl" ],
+    [ "heapsort.inl", "heapsort_8inl.html", "heapsort_8inl" ],
+    [ "insertionsort.inl", "insertionsort_8inl.html", "insertionsort_8inl" ],
+    [ "mergesort.inl", "mergesort_8inl.html", "mergesort_8inl" ],
+    [ "quicksort.inl", "quicksort_8inl.html", "quicksort_8inl" ]
 ];

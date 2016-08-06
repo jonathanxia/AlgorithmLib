@@ -54,6 +54,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -118,19 +119,23 @@ $(document).ready(function(){initNavTree('sorting_8h.html','');});
 <div class="title">sorting.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="insertionsort_8cpp_source.html">../sorting/insertionsort.cpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="mergesort_8cpp_source.html">../sorting/mergesort.cpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="heapsort_8cpp_source.html">../sorting/heapsort.cpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="insertionsort_8inl_source.html">../sorting/insertionsort.inl</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mergesort_8inl_source.html">../sorting/mergesort.inl</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="heapsort_8inl_source.html">../sorting/heapsort.inl</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="quicksort_8inl_source.html">../sorting/quicksort.inl</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="countingsort_8inl_source.html">../sorting/countingsort.inl</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for sorting.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="sorting_8h__incl.png" border="0" usemap="#_d_1_2_data_2_desktop_2_github_2include_2sorting_8h" alt=""/></div>
 <map name="_d_1_2_data_2_desktop_2_github_2include_2sorting_8h" id="_d_1_2_data_2_desktop_2_github_2include_2sorting_8h">
-<area shape="rect" id="node2" href="insertionsort_8cpp.html" title="../sorting/insertionsort.cpp" alt="" coords="5,169,179,196"/>
-<area shape="rect" id="node4" href="mergesort_8cpp.html" title="../sorting/mergesort.cpp" alt="" coords="327,95,487,121"/>
-<area shape="rect" id="node5" href="heapsort_8cpp.html" title="../sorting/heapsort.cpp" alt="" coords="151,95,303,121"/>
-<area shape="rect" id="node6" href="_heap_8h.html" title="Heap.h" alt="" coords="203,169,266,196"/>
-<area shape="rect" id="node9" href="_heap_8cpp.html" title="../src/Heap/Heap.cpp" alt="" coords="231,244,377,271"/>
+<area shape="rect" id="node2" href="insertionsort_8inl.html" title="../sorting/insertionsort.inl" alt="" coords="5,244,171,271"/>
+<area shape="rect" id="node4" href="mergesort_8inl.html" title="../sorting/mergesort.inl" alt="" coords="483,95,635,121"/>
+<area shape="rect" id="node5" href="heapsort_8inl.html" title="../sorting/heapsort.inl" alt="" coords="315,95,459,121"/>
+<area shape="rect" id="node11" href="quicksort_8inl.html" title="../sorting/quicksort.inl" alt="" coords="659,95,805,121"/>
+<area shape="rect" id="node14" href="countingsort_8inl.html" title="../sorting/countingsort.inl" alt="" coords="195,244,360,271"/>
+<area shape="rect" id="node6" href="_heap_8h.html" title="Heap.h" alt="" coords="473,169,535,196"/>
+<area shape="rect" id="node9" href="_heap_8inl.html" title="../src/Heap/Heap.inl" alt="" coords="435,244,573,271"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -138,7 +143,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="sorting_8h__dep__incl.png" border="0" usemap="#_d_1_2_data_2_desktop_2_github_2include_2sorting_8hdep" alt=""/></div>
 <map name="_d_1_2_data_2_desktop_2_github_2include_2sorting_8hdep" id="_d_1_2_data_2_desktop_2_github_2include_2sorting_8hdep">
-<area shape="rect" id="node2" href="inversion_8cpp.html" title="D:/Data/Desktop/Github\l/searching/inversion.cpp" alt="" coords="97,95,258,136"/>
+<area shape="rect" id="node2" href="inversion_8inl.html" title="D:/Data/Desktop/Github\l/searching/inversion.inl" alt="" coords="97,95,257,136"/>
 <area shape="rect" id="node3" href="searching_8h.html" title="D:/Data/Desktop/Github\l/include/searching.h" alt="" coords="97,184,257,225"/>
 <area shape="rect" id="node4" href="adj_list_8cpp.html" title="D:/Data/Desktop/Github\l/src/Graph/adjList.cpp" alt="" coords="5,273,165,315"/>
 <area shape="rect" id="node5" href="_graph_8cpp.html" title="D:/Data/Desktop/Github\l/src/Graph/Graph.cpp" alt="" coords="189,273,349,315"/>
@@ -154,19 +159,29 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a285a3cda7220504508dbb7d0df3dba21"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a285a3cda7220504508dbb7d0df3dba21"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_alg_lib.html#a285a3cda7220504508dbb7d0df3dba21">AlgLib::insertionSort</a> (T &amp;arr)</td></tr>
-<tr class="separator:a285a3cda7220504508dbb7d0df3dba21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50103bb855668c829f3d0def288521a8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a50103bb855668c829f3d0def288521a8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_alg_lib.html#a50103bb855668c829f3d0def288521a8">AlgLib::mergeSort</a> (T &amp;arr)</td></tr>
-<tr class="memdesc:a50103bb855668c829f3d0def288521a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort the elements in container arr with merge sort algorithm.  <a href="namespace_alg_lib.html#a50103bb855668c829f3d0def288521a8">More...</a><br /></td></tr>
-<tr class="separator:a50103bb855668c829f3d0def288521a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a964728cae397746308b2d688e6f85d01"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a964728cae397746308b2d688e6f85d01"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_alg_lib.html#a964728cae397746308b2d688e6f85d01">AlgLib::MERGE</a> (T &amp;left, T &amp;right)</td></tr>
-<tr class="separator:a964728cae397746308b2d688e6f85d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09ea4c537af6d2dcc36a9753b7af7c05"><td class="memTemplParams" colspan="2">template&lt;typename T , typename S &gt; </td></tr>
-<tr class="memitem:a09ea4c537af6d2dcc36a9753b7af7c05"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_alg_lib.html#a09ea4c537af6d2dcc36a9753b7af7c05">AlgLib::heapSort</a> (T &amp;arr)</td></tr>
-<tr class="separator:a09ea4c537af6d2dcc36a9753b7af7c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga285a3cda7220504508dbb7d0df3dba21"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga285a3cda7220504508dbb7d0df3dba21"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga285a3cda7220504508dbb7d0df3dba21">AlgLib::insertionSort</a> (T &amp;arr)</td></tr>
+<tr class="memdesc:ga285a3cda7220504508dbb7d0df3dba21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs an insertion sort on the container.  <a href="group__sorting.html#ga285a3cda7220504508dbb7d0df3dba21">More...</a><br /></td></tr>
+<tr class="separator:ga285a3cda7220504508dbb7d0df3dba21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga50103bb855668c829f3d0def288521a8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga50103bb855668c829f3d0def288521a8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga50103bb855668c829f3d0def288521a8">AlgLib::mergeSort</a> (T &amp;arr)</td></tr>
+<tr class="memdesc:ga50103bb855668c829f3d0def288521a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a merge sort on the container.  <a href="group__sorting.html#ga50103bb855668c829f3d0def288521a8">More...</a><br /></td></tr>
+<tr class="separator:ga50103bb855668c829f3d0def288521a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga964728cae397746308b2d688e6f85d01"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga964728cae397746308b2d688e6f85d01"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga964728cae397746308b2d688e6f85d01">AlgLib::MERGE</a> (T &amp;left, T &amp;right)</td></tr>
+<tr class="separator:ga964728cae397746308b2d688e6f85d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga09ea4c537af6d2dcc36a9753b7af7c05"><td class="memTemplParams" colspan="2">template&lt;typename T , typename S &gt; </td></tr>
+<tr class="memitem:ga09ea4c537af6d2dcc36a9753b7af7c05"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga09ea4c537af6d2dcc36a9753b7af7c05">AlgLib::heapSort</a> (T &amp;arr)</td></tr>
+<tr class="memdesc:ga09ea4c537af6d2dcc36a9753b7af7c05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a heap sort on the container.  <a href="group__sorting.html#ga09ea4c537af6d2dcc36a9753b7af7c05">More...</a><br /></td></tr>
+<tr class="separator:ga09ea4c537af6d2dcc36a9753b7af7c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1079e0b650cad788132bbee4dac0200a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga1079e0b650cad788132bbee4dac0200a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga1079e0b650cad788132bbee4dac0200a">AlgLib::quickSort</a> (T &amp;arr)</td></tr>
+<tr class="memdesc:ga1079e0b650cad788132bbee4dac0200a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a quick sort on the container.  <a href="group__sorting.html#ga1079e0b650cad788132bbee4dac0200a">More...</a><br /></td></tr>
+<tr class="separator:ga1079e0b650cad788132bbee4dac0200a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1a7cf60f7d342c55a75060a9784797f2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga1a7cf60f7d342c55a75060a9784797f2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga1a7cf60f7d342c55a75060a9784797f2">AlgLib::countingSort</a> (T &amp;arr)</td></tr>
+<tr class="memdesc:ga1a7cf60f7d342c55a75060a9784797f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a counting sort on the container.  <a href="group__sorting.html#ga1a7cf60f7d342c55a75060a9784797f2">More...</a><br /></td></tr>
+<tr class="separator:ga1a7cf60f7d342c55a75060a9784797f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
