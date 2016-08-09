@@ -8,10 +8,15 @@ namespace AlgLib
     */
     /** \brief Performs an insertion sort on the container
      *
-     * \param T The type of the container e.g. `std::vector<int>`
+     * \tparam T The type of the container e.g. `std::vector<int>`
      * \param arr The container to be sorted
+     * \param start The index of where to start to sort. Defaults to 0.
+     * \param last The index of where to end. Note that the last index is not going to be part of the sort. Defaults to arr.size()
      *
      */
+    template <typename T>
+    void insertionSort(T& arr, int start, int last);
+
     template <typename T>
     void insertionSort(T& arr);
 
