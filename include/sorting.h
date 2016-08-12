@@ -35,10 +35,10 @@ namespace AlgLib
     template <typename T>
     T MERGE(T& left, T& right);
 
-    /** \brief Performs a heap sort on the container
-     *
-     * \param T The type of the container e.g. `std::vector<int>`
-     * \param S The type that is stored in the container e.g. `int`
+    /**
+     * \brief Performs a heap sort on the container
+     * \tparam T The type of the container e.g. `std::vector<int>`
+     * \tparam S The type that is stored in the container e.g. `int`
      * \param arr The container to be sorted
      *
      */
@@ -47,13 +47,17 @@ namespace AlgLib
 
     /** \brief Performs a quick sort on the container
     *
-    * Sorts the container arr in non-decreasing order from `arr[startIndex]` to `arr[endIndex]`
-    * \param T The type of the container e.g. `std::vector<int>`
+    * Sorts the container arr in non-decreasing order from `arr[startIndex]` to `arr[endIndex-1]`
+    * \tparam T The type of the container e.g. `std::vector<int>`
     * \param arr The container to be sorted.
-    *
+    * \param startIndex Where to begin sorting. Defaults to 0.
+    * \param endIndex Where to stop sorting. Note that endIndex will not be included in the sort. Defaults to `arr.size()`.
     */
     template <typename T>
-    void quickSort(T& arr);
+    void quickSort(T & arr, int startIndex, int endIndex);
+
+    template <typename T>
+    void quickSort(T& arr); // simply calls quickSort(arr, 0, arr.size())
 
     /** \brief Performs a counting sort on the container
     *

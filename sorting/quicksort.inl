@@ -20,9 +20,6 @@ namespace AlgLib
     int PARTITION(T & arr, int startIndex, int endIndex);
 
     template <typename T>
-    void quickSort(T & arr, int startIndex, int endIndex);
-
-    template <typename T>
     void quickSort(T & arr, int startIndex, int endIndex)
     {
         if (startIndex < endIndex)
