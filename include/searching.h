@@ -1,7 +1,5 @@
 #ifndef SEARCHING_H_INCLUDED
 #define SEARCHING_H_INCLUDED
-#include "../searching/binarysearch.inl"
-#include "../searching/inversion.inl"
 namespace AlgLib
 {
     /**
@@ -31,8 +29,31 @@ namespace AlgLib
     int inversions(const cont& A); //returns the number of inversions in A
 
     /**
+    * \brief Returns the element that would be at index i if the container A was sorted
+    * \tparam cont The type of the container to be sorted
+    * \tparam E The type of the element stored in the container
+
+    * \param A The container
+    * \param i The index to pass in
+    * \param start The index to start searching in. Defaults to 0 if not provided
+    * \param last The index to end searching. The value of A[last] will not be considered in selection. Defaults to A.size().
+    * \return The index of the object that is the (i+1)-th largest value from A[start...last-1]. In other words, if A[start...last-1] was sorted, then
+    * this function would return the index of the number that would be at index `start + i`.
+    */
+    template <typename cont, typename E>
+    E selection(const cont& A, int i, int start, int last);
+
+    template <typename cont, typename E>
+    E selection(const cont& A, int i);
+
+
+
+    /**
     @}
     */
 }
+#include "../searching/binarysearch.inl"
+#include "../searching/inversion.inl"
+#include "../searching/selection.inl"
 
 #endif // SEARCHING_H_INCLUDED
