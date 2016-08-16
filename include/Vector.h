@@ -9,6 +9,17 @@ namespace AlgLib
     public:
         using std::vector<T>::vector;
         using std::vector<T>::operator=;
+        /** Default constructor */
+        Vector() : std::vector<T>(){}
+
+        /** Constructor that takes in an std::vector<T> */
+        Vector(const std::vector<T>& theVec);
+
+        Vector(const Vector<T>& theVec);
+        /** Default destructor */
+        virtual ~Vector();
+
+        virtual Vector<T>& operator=(const Vector<T>& other);
 
         /** \brief Gives the dot product of two Vector objects
         *

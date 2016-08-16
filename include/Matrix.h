@@ -121,6 +121,11 @@ namespace AlgLib {
 
 	    /** \brief Adds a row to the bottom of the Matrix */
         virtual void addRow();
+        /** \brief Adds a row to the bottom of the Matrix
+        * \param newRow The `std::vector` to add to the bottom of the Matrix
+        * \throw AlgLib::bad_dimension Throws this exception when `newRow` does not match the dimensions of the Matrix
+        */
+        virtual void addRow(const std::vector<T>& newRow);
         /** \brief Adds a column to the right of the Matrix */
         virtual void addColumn();
 

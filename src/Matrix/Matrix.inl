@@ -1,6 +1,7 @@
 #include <vector>
 #include <string>
 #include <stdexcept>
+#include "AlExcept.h"
 namespace AlgLib
 {
     template <typename T>
@@ -184,7 +185,15 @@ namespace AlgLib
     template <typename T>
     void Matrix<T>::addRow()
     {
-        mMatrix.push_back(AlgLib::Vector<T>(this->numRows()));
+        mMatrix.push_back(AlgLib::Vector<T>(this->numColumns()));
+        rows++;
+    }
+
+    template <typename T>
+    void Matrix<T>::addRow(const std::vector<T>& newRow)
+    {
+        AlgLib::Vector<T> theVec(newRow);
+        mMatrix.push_back(theVec);
         rows++;
     }
 
@@ -209,8 +218,8 @@ namespace AlgLib
     {
         // First throw not_square_matrix if not a square matrix
         // Determinants cannot be evaluated for non square matrices
-        /*if(mMatrix.size() != mMatrix[0].size())
-            throw not_square_matrix;*/
+        if(mMatrix.size() != mMatrix[0].size())
+            throw not_square_matrix("Attempted to take determinant of non-square matrix");
 
         // If the matrix is 1x1 then we just return the value in that entry!
         if(mMatrix.size() == 1)

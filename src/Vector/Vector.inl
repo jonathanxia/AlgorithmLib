@@ -2,6 +2,35 @@
 namespace AlgLib
 {
     template <typename T>
+    Vector<T>::Vector(const std::vector<T>& theVec) :
+        std::vector<T>(theVec)
+    {
+    }
+
+    template <typename T>
+    Vector<T>::~Vector<T>()
+    {
+        // dtor
+    }
+    template <typename T>
+    Vector<T>::Vector(const Vector<T>& theVec) :
+        std::vector<T>(theVec.size())
+    {
+        for(int i = 0; i < static_cast<int>(theVec.size()); i++)
+        {
+            (*this)[i] = theVec[i];
+        }
+    }
+
+    template <typename T>
+    Vector<T>& Vector<T>::operator=(const Vector<T>& other)
+    {
+        if(&other == this)
+            return *this;
+        std::vector<T>::operator=(other);
+        return *this;
+    }
+    template <typename T>
     T Vector<T>::operator* (const Vector<T>& other)
     {
         if(this->size() != other.size())
