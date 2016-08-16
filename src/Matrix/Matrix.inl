@@ -4,22 +4,40 @@
 namespace AlgLib
 {
     template <typename T>
-    Matrix<T>::Matrix(int row, int column) { // Creates 0 matrix
-        std::vector< std::vector<T> > rows;
-        rows.reserve(row);
-        for (int i = 0; i < row; i++) {
-            std::vector<T> currentRow; // The current row being built up
-            currentRow.reserve(column);
-            for (int j = 0; j < column; j++) {
-                currentRow.push_back(0);
-            }
-            rows.push_back(currentRow);
-        }
-        mMatrix = rows;
+    Matrix<T>::Matrix(int row, int column) :
+        mMatrix(row, AlgLib::Vector<T>(column, T(0))), // creates 0-matrix
+        rows(row),
+        columns(column)
+    {
     }
 
     template <typename T>
-    Matrix<T>::Matrix(const std::vector< std::vector<T> >& theMatrix)
+    Matrix<T>::Matrix(const std::vector< std::vector<T> >& theMatrix) :
+        rows(theMatrix.size()),
+        columns(theMatrix[0].size())
+    {
+        mMatrix.reserve(rows);
+
+        for(int i = 0; i < (int) theMatrix.size() - 1; i++)
+        {
+            if(theMatrix[i].size() != theMatrix[i+1].size())
+                throw std::invalid_argument("Matrix has inconsistent dimensions");
+        }
+        for(auto it = theMatrix.begin(); it != theMatrix.end(); ++it)
+        {
+            mMatrix.push_back(AlgLib::Vector<T>());
+            for(auto jt = it->begin(); jt != it->end(); ++jt)
+            {
+                mMatrix[it - theMatrix.begin()].push_back(*jt);
+            }
+        }
+    }
+
+    template <typename T>
+    Matrix<T>::Matrix(const std::vector< AlgLib::Vector<T> >& theMatrix) :
+        mMatrix(theMatrix.size()),
+        rows(theMatrix.size()),
+        columns(theMatrix[0].size())
     {
         for(int i = 0; i < (int) theMatrix.size() - 1; i++)
         {
@@ -28,28 +46,24 @@ namespace AlgLib
         }
         mMatrix = theMatrix;
     }
-
     template<typename T>
-    Matrix<T>::Matrix(std::initializer_list<std::initializer_list<T> > matrix) {
-        // Find r and c
-        int r = 0, c = 0;
-        for (auto i = matrix.begin(); i != matrix.end(); i++) {
-            r = (int) i->size() > r ? i->size() : r;
-            c++;
-        }
+    Matrix<T>::Matrix(std::initializer_list<std::initializer_list<T> > matrix) :
+        rows(matrix.size()),
+        columns(matrix.begin()->size())
+    {
         // Create matrix
-        std::vector< std::vector<T> > m;
+        std::vector< AlgLib::Vector<T> > m;
+        int col = matrix.begin()->size();
         for (auto i = matrix.begin(); i != matrix.end(); i++) {
-            std::vector<T> row;
-            row.reserve(c);
+            AlgLib::Vector<T> row;
+            row.reserve( i->size() );
             int counter = 0;
             for (auto j = i->begin(); j != i->end(); j++) {
                 row.push_back(*j);
                 counter++;
             }
-            while (counter < c) {
-                row.push_back(T(0)); // derp idk if this is allowed..
-            }
+            if(counter != col)
+                throw std::invalid_argument("Initializer list did not provide rectangular matrix");
             m.push_back(row);
         }
         mMatrix = m;
@@ -61,24 +75,25 @@ namespace AlgLib
     {
 
     }
-    //Let's avoid the code below for now --Jonathan Xia 07/18/2016
-    /*
-    template<typename T>
-    void Matrix<T>::toString() { // Temporary sol until i figure out how to return output streams
-        for (auto i = mMatrix.begin(); i != mMatrix.end(); i++) {
-            cout << "[ ";
-            for (auto j = i->begin(); j != i->end(); j++) {
-                cout << " " << (*j) << " ";
-            }
-            cout << " ]\n";
-        }
-    }
-    */
 
     template <typename T>
-    std::vector< std::vector<T> > Matrix<T>::getVectors() const
+    std::vector< AlgLib::Vector<T> > Matrix<T>::getRowVectors() const
     {
         return mMatrix;
+    }
+
+    template <typename T>
+    std::vector< AlgLib::Vector<T> > Matrix<T>::getColumnVectors() const
+    {
+        std::vector< AlgLib::Vector<T> > ret(this->numColumns(), AlgLib::Vector<T>(this->numRows()));
+        for (int r = 0; r < this->numRows(); r++)
+        {
+            for (int c = 0; c < this->numColumns(); c++)
+            {
+                ret[c][r] = mMatrix[r][c];
+            }
+        }
+        return ret;
     }
 
     template <typename T>
@@ -158,18 +173,19 @@ namespace AlgLib
     template <typename T>
     int Matrix<T>::numRows() const
     {
-        return mMatrix.size();
+        return rows;
     }
     template <typename T>
     int Matrix<T>::numColumns() const
     {
-        return mMatrix[0].size();
+        return columns;
     }
 
     template <typename T>
     void Matrix<T>::addRow()
     {
-        mMatrix.push_back(std::vector<T>(mMatrix[0].size()));
+        mMatrix.push_back(AlgLib::Vector<T>(this->numRows()));
+        rows++;
     }
 
     template <typename T>
@@ -179,11 +195,75 @@ namespace AlgLib
         {
             mMatrix[i].push_back( T(0) );
         }
+        columns++;
     }
 
     template <typename T>
     T Matrix<T>::getValue(int row, int col) const
     {
         return mMatrix[row][col];
+    }
+
+    template <typename T>
+    T Matrix<T>::det() const
+    {
+        // First throw not_square_matrix if not a square matrix
+        // Determinants cannot be evaluated for non square matrices
+        /*if(mMatrix.size() != mMatrix[0].size())
+            throw not_square_matrix;*/
+
+        // If the matrix is 1x1 then we just return the value in that entry!
+        if(mMatrix.size() == 1)
+            return mMatrix[0][0];
+
+        // Now we do expansion by minors; should replace this algorithm
+        int sign = 1;
+        T ret = T(0);
+        for(int i = 0; i < static_cast<int>(mMatrix.size()); i++)
+        {
+            //if(mMatrix.size() == 3) std::cout << ret << std::endl;
+            ret += this->getValue(0, i) * sign * (this->getMinor(0, i)).det();
+            sign *= -1;
+
+        }
+        return ret;
+
+    }
+
+    template <typename T>
+    Matrix<T> Matrix<T>::getMinor(int i, int j) const
+    {
+        // Should throw exception if i and j are bad
+
+        std::vector< AlgLib::Vector<T> > copyOfMatrix(mMatrix);
+        copyOfMatrix.erase(copyOfMatrix.begin() + i); // erases the i-th row
+
+        // Now to erase the j-th column
+        for(int r = 0; r < static_cast<int>(copyOfMatrix.size()); r++)
+        {
+            copyOfMatrix[r].erase(copyOfMatrix[r].begin() + j);
+        }
+
+        return Matrix(copyOfMatrix);
+    }
+
+    template <typename T>
+    Matrix<T> Matrix<T>::transpose() const
+    {
+        return Matrix<T>(this->getColumnVectors());
+    }
+
+    template <typename T>
+    std::ostream& operator<<(std::ostream& out, const Matrix<T>& m)
+    {
+        for(int i = 0; i < m.numRows(); i++)
+        {
+            for(int j = 0; j < m.numColumns(); j++)
+            {
+                out << m.getValue(i, j) << " ";
+            }
+            out << std::endl;
+        }
+        return out;
     }
 }
