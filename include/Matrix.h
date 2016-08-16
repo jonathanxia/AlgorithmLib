@@ -65,15 +65,12 @@ namespace AlgLib {
 		* \brief Subtracts two matrices
 		*/
 		virtual Matrix operator-(const Matrix& other) const;
-		/*
-		* Pushing implementation until later - 7/18/16 Jonathan Xia
-		virtual Matrix inverse();
-		virtual Matrix transpose();
-		virtual int determinant();
-		*/
 
-		/**
-
+		/** \brief Gives the transpose of the Matrix
+		*
+		* It reverses the indices, basically
+		*
+		* \return The transpose of the Matrix object.
 		*/
 		virtual Matrix transpose() const;
         /** \brief Returns the matrix in vector form
