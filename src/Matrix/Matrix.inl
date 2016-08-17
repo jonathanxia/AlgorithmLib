@@ -2,6 +2,7 @@
 #include <string>
 #include <stdexcept>
 #include "AlExcept.h"
+#include "Vector.h"
 namespace AlgLib
 {
     template <typename T>
@@ -72,7 +73,9 @@ namespace AlgLib
 
     template <typename T>
     Matrix<T>::Matrix(const Matrix<T>& rhs) :
-        mMatrix(rhs.mMatrix)
+        mMatrix(rhs.mMatrix),
+        rows(rhs.rows),
+        columns(rhs.columns)
     {
 
     }
@@ -299,5 +302,20 @@ namespace AlgLib
             tmp[i][i] = T(1);
         }
         return tmp;
+    }
+
+    template <typename T>
+    Matrix<T> Matrix<T>::triangulate() const
+    {
+        auto the_rows = this->getRowVectors();
+        for(int r = 1; r < (int) the_rows.size(); r++)
+        {
+            for(int c = 0; c < r && c < columns; c++)
+            {
+                the_rows[r] = the_rows[r] - (the_rows[r][c] / the_rows[c][c]) * the_rows[c];
+            }
+        }
+        return Matrix<T>(the_rows);
+
     }
 }

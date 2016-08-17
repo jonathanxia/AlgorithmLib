@@ -142,6 +142,13 @@ namespace AlgLib {
         */
         static Matrix<T> identity(int n);
 
+        /** \brief Returns an upper triangular Matrix.
+        *
+        * Anything below the main diagonal will be a 0
+        * \return An upper triangular Matrix that is row-reduced from `this`. Basically, it will have the same determinant as `this`.
+        */
+        virtual Matrix<T> triangulate() const;
+
 	private:
 		std::vector< AlgLib::Vector<T> > mMatrix;
 		int rows;

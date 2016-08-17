@@ -29,7 +29,39 @@ namespace AlgLib
         *
         * \throw std::length_error When the `Vector`s do not have matching dimensions
         */
-        T operator* (const Vector<T>& other);
+        T operator* (const Vector<T>& other) const;
+
+        /** \brief Multiplies the Vector by a scalar
+        * \param scalar The scalar to multiply by
+        * \return The Vector that results when multiplied by the scalar.
+        */
+        Vector<T> operator* (const T& scalar) const;
+
+        template <typename U>
+        friend Vector<U> operator* (const U& scalar, const Vector<U>& vec);
+
+        /** \brief Adds two vectors together
+        * \return The sum of the two Vector objects
+        * \throw std::length_error When the `Vector`s do not have matching dimensions
+        */
+        Vector<T> operator+ (const Vector<T>& other) const;
+
+        /** \brief Subtracts two vectors
+        * \return The difference of the two Vector objects
+        * \throw std::length_error When the `Vector`s do not have matching dimensions
+        */
+        Vector<T> operator- (const Vector<T>& other) const;
+
+        /** \brief Negates the vector object
+        * \return The additive inverse of the current Vector object.
+        */
+        Vector<T> operator-() const;
+
+        /** \brief Overloads the indexing operator. Performs the expected operation.
+        * \throw std::out_of_range This exception is thrown if the argument is out of bounds
+        */
+        const T& operator[](int n) const;
+        T& operator[](int n);
     };
 }
 #include "../src/Vector/Vector.inl"
