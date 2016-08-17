@@ -22,7 +22,7 @@ namespace AlgLib
         for(int i = 0; i < (int) theMatrix.size() - 1; i++)
         {
             if(theMatrix[i].size() != theMatrix[i+1].size())
-                throw std::invalid_argument("Matrix has inconsistent dimensions");
+                throw bad_dimension("Matrix has inconsistent dimensions");
         }
         for(auto it = theMatrix.begin(); it != theMatrix.end(); ++it)
         {
@@ -274,5 +274,30 @@ namespace AlgLib
             out << std::endl;
         }
         return out;
+    }
+
+    template <typename T>
+    void Matrix<T>::addColumn(const std::vector<T>& newColumn)
+    {
+        if(newColumn.size() != rows)
+            throw bad_dimension("The new column does not match the dimensions of the Matrix!");
+        for(int i = 0; i < rows; i++)
+        {
+            mMatrix[i].push_back(newColumn[i]);
+        }
+        columns++;
+    }
+
+    template <typename T>
+    Matrix<T> Matrix<T>::identity(int n)
+    {
+        if(n <= 0)
+            throw std::invalid_argument("Attempted to create an identity Matrix with non-positive dimension");
+        Matrix<T> tmp(n, n); // Constructs the 0 matrix
+        for(int i = 0; i < n; i++)
+        {
+            tmp[i][i] = T(1);
+        }
+        return tmp;
     }
 }

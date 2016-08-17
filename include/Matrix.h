@@ -26,6 +26,7 @@ namespace AlgLib {
 		/** \brief Constructor that takes in a 2D-vector
 		* \param theMatrix Each vector should be a row vector. That means that theMatrix[0] should be
 		*        the first row of the matrix
+		* \throw AlgLib::bad_dimension Throws this exception if the vectors in `theMatrix` have inconsistent dimension
 		*/
 		Matrix(const std::vector< std::vector<T> >& theMatrix);
 
@@ -128,6 +129,18 @@ namespace AlgLib {
         virtual void addRow(const std::vector<T>& newRow);
         /** \brief Adds a column to the right of the Matrix */
         virtual void addColumn();
+        /** \brief Adds a column to the right of the Matrix
+        * \param newColumn The `std::vector` to add to the right of the Matrix
+        * \throw AlgLib::bad_dimension Throws the exception when `newColumn` does not match the dimensions of the Matrix
+        */
+        virtual void addColumn(const std::vector<T>& newColumn);
+
+        /** \brief Returns the n by n identity matrix
+        * \param n The dimension of the identity matrix.
+        * \return The n by n identity matrix
+        * \throw std::invalid_argument This will be thrown if n is not a positive.
+        */
+        static Matrix<T> identity(int n);
 
 	private:
 		std::vector< AlgLib::Vector<T> > mMatrix;
