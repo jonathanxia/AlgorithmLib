@@ -305,14 +305,35 @@ namespace AlgLib
     Matrix<T> Matrix<T>::triangulate() const
     {
         auto the_rows = this->getRowVectors();
-        for(int r = 1; r < (int) the_rows.size(); r++)
+        T zero = T(0);
+        for(int r = 0; r < (int) the_rows.size(); r++)
         {
+            if(r < columns && the_rows[r][r] == zero)
+            {
+                for (int i = r; i < static_cast<int>(the_rows.size()); i++)
+                {
+                    if(the_rows[i][r] != zero)
+                    {
+                        the_rows[r] = the_rows[r] + the_rows[i];
+                        break;
+                    } // This will make the row non zero
+
+                }
+            }
             for(int c = 0; c < r && c < columns; c++)
             {
-                the_rows[r] = the_rows[r] - (the_rows[r][c] / the_rows[c][c]) * the_rows[c];
+                if(the_rows[c][c] != 0)
+                    the_rows[r] = the_rows[r] - (the_rows[r][c] / the_rows[c][c]) * the_rows[c];
             }
         }
         return Matrix<T>(the_rows);
+    }
+
+    template <typename T>
+    Matrix<T> Matrix<T>::rref() const
+    {
+        Matrix<T> triangle = this->triangulate();
+        auto the_rows = triangle.getRowVectors();
 
     }
 }
