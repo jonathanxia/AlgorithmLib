@@ -3,6 +3,7 @@
 #include <stdexcept>
 #include "AlExcept.h"
 #include "Vector.h"
+
 namespace AlgLib
 {
     template <typename T>
@@ -228,18 +229,14 @@ namespace AlgLib
         if(mMatrix.size() == 1)
             return mMatrix[0][0];
 
-        // Now we do expansion by minors; should replace this algorithm
-        int sign = 1;
-        T ret = T(0);
-        for(int i = 0; i < static_cast<int>(mMatrix.size()); i++)
+        // We now have to triangulate this matrix
+        T ret(1);
+        auto triangle = this->triangulate();
+        for(int r = 0; r < rows; r++)
         {
-            //if(mMatrix.size() == 3) std::cout << ret << std::endl;
-            ret += this->getValue(0, i) * sign * (this->getMinor(0, i)).det();
-            sign *= -1;
-
+            ret *= triangle[r][r];
         }
         return ret;
-
     }
 
     template <typename T>
