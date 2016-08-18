@@ -150,4 +150,16 @@ namespace AlgLib
         }
         return *this;
     }
+
+    template <typename T>
+    std::ostream& operator<< (std::ostream& out, const Vector<T> vec)
+    {
+        out << "[";
+        for(int i = 0; i < static_cast<int>(vec.size()) - 1; i++)
+        {
+            out << vec[i] << ", ";
+        }
+        out << vec[vec.size() - 1] << "]";
+        return out;
+    }
 }

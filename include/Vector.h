@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-
+#include <iostream>
 namespace AlgLib
 {
     template <typename T>
