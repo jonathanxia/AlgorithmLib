@@ -14,6 +14,7 @@ namespace AlgLib {
     class Permutation {
     public:
 		// Constructors
+		/** Default constructor */
         Permutation();
         Permutation(std::initializer_list<int> word);
 		Permutation(std::initializer_list<std::initializer_list<T>> cycles);
@@ -40,6 +41,6 @@ namespace AlgLib {
     };
 }
 
-#include "../src/Permutation/Permutation.cpp"
+#include "../src/Permutation/Permutation.inl"
 
 #endif

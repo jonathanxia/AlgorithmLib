@@ -3,16 +3,12 @@ namespace AlgLib
 {
     template <typename T>
     T MERGE(T&, T&);
-    /**
-    * mergeSort(T & arr)
-    *
-    * Sort the elements in container arr with merge sort algorithm
-    * Parameters:
-    *   T& arr: the container to be sorted
-    * Returns: void
-    * Additional notes: Sorts in O(n lg n) time
-    */
 
+    /**
+    * \brief Sort the elements in container arr with merge sort algorithm
+    * @param arr the container to be sorted
+    * @return void
+    */
     template <typename T>
     void mergeSort(T& arr)
     {

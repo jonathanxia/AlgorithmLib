@@ -1,28 +1,18 @@
 #include <vector>
+#include <functional>
 
 namespace AlgLib
 {
-    /**
-    * insertionSort(vector<T>& arr)
-    *
-    * Sorts the elements of container arr using the insertion sort algorithm
-    * Parameters:
-    *      vector<T>& arr: a reference to the container to be sorted
-    *
-    * Returns: void
-    * Additional Notes: Runs in O(n^2) time
-    *
-    */
-    template <typename T>
-    void insertionSort(std::vector<T>& arr)
+    template <typename T, typename E>
+    void insertionSort(T& arr, int start, int last, std::function<bool(E, E)> compare)
     {
 
         //Loop invariant:
         //arr[0] to arr[i-1] inclusive is already sorted
-        for (int i = 1; i < arr.size(); i++)
+        for (int i = start+1; i < last; i++)
         {
-            int newIndex = 0; //newIndex will store where arr[i] should go
-            while(arr[i] > arr[newIndex])
+            int newIndex = start; //newIndex will store where arr[i] should go
+            while(compare(arr[newIndex], arr[i]))
             {
                 newIndex++;
             }
@@ -37,6 +27,11 @@ namespace AlgLib
             arr[newIndex] = temp;
         }
         //return arr;
+    }
+    template <typename T, typename E>
+    void insertionSort(T& arr, std::function<bool(E, E)> compare)
+    {
+        insertionSort<T, E>(arr, 0, arr.size(), compare);
     }
 }
 

@@ -5,30 +5,36 @@
 #include <functional>
 namespace AlgLib
 {
+    /** \brief A class for a Heap object
+    * \param T The type of the objects stored in the Heap
+    */
     template <typename T>
     class Heap
     {
         public:
-            /** Default constructor */
+            /** \brief Default constructor */
             Heap();
-            /** Constructor that takes in vector<T> */
+            /** \brief Constructor that takes in `std::vector<T>` */
             Heap(std::vector<T> container);
-            /** Initializer list constructor */
+            /** \brief Initializer list constructor */
             Heap(std::initializer_list<T> args);
-            /** Default destructor */
+            /** \brief Default destructor */
             virtual ~Heap();
 
-            /** Access mContainer
-             * \return The current value of mContainer
+            /** \brief Access mContainer
+             * \return The current value of the container
              */
             virtual std::vector<T> getContainer() { return mContainer; }
-            /** Set mContainer
-             * \param val New value to set
+            /** \brief Set mContainer
+             * \param val New value to set.
              */
             virtual void setContainer(std::vector<T> val) { mContainer = val; }
 
+            /** \brief Returns the largest element of the Heap and removes it */
             virtual T pop(); // returns the highest parent and then removes it
+            /** \brief Returns the largest element of the Heap */
             virtual T top();
+            /** \brief Inserts the element `elem` into the Heap */
             virtual void push(T elem);
 
         protected:
@@ -44,5 +50,5 @@ namespace AlgLib
             void increaseKey(int index, T key);
     };
 }
-#include "../src/Heap/Heap.cpp"
+#include "../src/Heap/Heap.inl"
 #endif // HEAP_H

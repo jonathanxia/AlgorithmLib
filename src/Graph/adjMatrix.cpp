@@ -1,4 +1,6 @@
 #include "adjMatrix.h"
+#include "Matrix.h"
+#include "graphDB.h"
 #include <vector>
 #include <array>
 namespace AlgLib
@@ -8,8 +10,15 @@ namespace AlgLib
       * (documentation goes here)
       */
      adjMatrix::adjMatrix(int numVertices) :
-         Matrix<double>(numVertices, numVertices),
-         isInGraph(numVertices, true)
+         graphDB(numVertices),
+         Matrix<double>(numVertices, numVertices)
+    {
+
+    }
+
+    adjMatrix::adjMatrix(const Matrix<double>& other) :
+        graphDB(other.numRows()),
+        Matrix<double>(other)
     {
 
     }
@@ -47,11 +56,6 @@ namespace AlgLib
         {
             (*this)[node][j] = 0;
         }
-    }
-
-    int adjMatrix::numVertex() const
-    {
-        return this->numRows();
     }
 
     int adjMatrix::inDegree(int node) const
@@ -94,11 +98,6 @@ namespace AlgLib
             weight += this->getValue(node, i);
         }
         return weight;
-    }
-
-    bool adjMatrix::inGraph(int node) const
-    {
-        return isInGraph[node];
     }
 
     std::vector< std::tuple <int, double> > adjMatrix::outAdj(int node) const
