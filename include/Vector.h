@@ -44,6 +44,8 @@ namespace AlgLib
         */
         virtual Vector<T> operator/ (const T& scalar) const;
 
+        /** \brief Divides the current Vector by a scalar. Equivalent to *this = *this / scalar
+        */
         virtual Vector<T>& operator/= (const T& scalar);
 
         template <typename U>
@@ -66,8 +68,11 @@ namespace AlgLib
         */
         virtual Vector<T> operator-() const;
 
+        /** \brief Adds other onto the current Vector object
+        */
         virtual Vector<T>& operator+=(const Vector<T>& other);
 
+        /** \brief Subtract other from the current Vector object */
         virtual Vector<T>& operator-=(const Vector<T>& other);
 
         /** \brief Overloads the indexing operator. Performs the expected operation.

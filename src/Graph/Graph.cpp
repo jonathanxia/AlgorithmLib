@@ -76,10 +76,6 @@ namespace AlgLib
         }
     }
 
-    /** @brief (one liner)
-      *
-      * (documentation goes here)
-      */
     Graph::Graph(const std::vector<std::vector<std::tuple<int, double>>>& inAdjList, dbType storageType)
     {
         if(storageType == dbType::ADJACENCY_LIST)
