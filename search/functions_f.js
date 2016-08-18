@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['top',['top',['../class_alg_lib_1_1_heap.html#a4f1ab496a7f4a4cc4d5c917fe10514ff',1,'AlgLib::Heap']]],
-  ['tostring',['toString',['../class_alg_lib_1_1_fraction.html#a28d61a593ab5abaac86f091398cf7e00',1,'AlgLib::Fraction']]]
+  ['selection',['selection',['../group__searching.html#gac4c895c828836e66811df932d5bcca7c',1,'AlgLib']]],
+  ['setcontainer',['setContainer',['../class_alg_lib_1_1_heap.html#a0c406e0e00559e3372637d1547af1023',1,'AlgLib::Heap']]],
+  ['setvalue',['setValue',['../class_alg_lib_1_1_matrix.html#a434ac30c8fe0674d740ab8e513318cae',1,'AlgLib::Matrix']]]
 ];

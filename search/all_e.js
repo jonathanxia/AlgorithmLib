@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]]
+  ['rref',['rref',['../class_alg_lib_1_1_matrix.html#af76fd1d1b40ec8b52a361ab6720fea03',1,'AlgLib::Matrix']]]
 ];

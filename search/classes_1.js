@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fraction',['Fraction',['../class_alg_lib_1_1_fraction.html',1,'AlgLib']]]
+  ['bad_5fdimension',['bad_dimension',['../class_alg_lib_1_1bad__dimension.html',1,'AlgLib']]]
 ];

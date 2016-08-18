@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['countingsort',['countingSort',['../group__sorting.html#ga1a7cf60f7d342c55a75060a9784797f2',1,'AlgLib']]],
-  ['countingsort_2einl',['countingsort.inl',['../countingsort_8inl.html',1,'']]]
+  ['countingsort',['countingSort',['../group__sorting.html#ga87b5ee60e61f1c047337760a007db3a3',1,'AlgLib']]]
 ];

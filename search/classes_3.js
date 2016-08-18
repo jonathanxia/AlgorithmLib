@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['heap',['Heap',['../class_alg_lib_1_1_heap.html',1,'AlgLib']]]
+  ['graph',['Graph',['../class_alg_lib_1_1_graph.html',1,'AlgLib']]],
+  ['graphdb',['graphDB',['../class_alg_lib_1_1graph_d_b.html',1,'AlgLib']]]
 ];
