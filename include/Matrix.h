@@ -53,11 +53,16 @@ namespace AlgLib {
 		* \return A std::vector<T> reference to the row vector. Note that assignment can be done. Use with caution. An element can be accessed like [1][2].
 		*/
 		virtual std::vector<T>& operator[](int row); // Only row because we can't nest it from this class. The vector class can take care of the other
-
+        virtual const std::vector<T>& operator[](int row) const;
 		/**
 		* \brief Multiplies two matrices
 		*/
 		virtual Matrix operator*(const Matrix& other) const;
+		/**
+		* \brief Multiplies the Matrix with an std::vector<T>. Note that AlgLib::Vector<T> inherits from std::vector<T>.
+		*/
+		virtual AlgLib::Vector<T> operator* (const std::vector<T>& other) const;
+
 		/**
 		* \brief Adds two matrices
 		*/

@@ -116,6 +116,12 @@ namespace AlgLib
     }
 
     template <typename T>
+    const std::vector<T>& Matrix<T>::operator[](int row) const
+    {
+        return mMatrix[row];
+    }
+
+    template <typename T>
     Matrix<T> Matrix<T>::operator+ (const Matrix<T>& other) const
     {
         if(other.mMatrix.size() != mMatrix.size() || other.mMatrix[0].size() != mMatrix[0].size())
@@ -173,6 +179,20 @@ namespace AlgLib
             }
         }
         return retMatrix;
+    }
+
+    template <typename T>
+    AlgLib::Vector<T> Matrix<T>::operator*(const std::vector<T>& other) const
+    {
+        if((int) other.size() != columns)
+            throw bad_dimension("Tried to multiply a Vector with improper dimensions");
+        std::vector< std::vector<T> > vec(columns, std::vector<T>(1));
+        for(size_t i = 0; i < vec.size(); i++)
+        {
+            vec[i][0] = other[i];
+        }
+        Matrix<T> vecMatrix(vec);
+        return ((*this) * vecMatrix).getColumnVectors()[0];
     }
 
     template <typename T>
