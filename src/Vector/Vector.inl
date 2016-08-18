@@ -106,4 +106,28 @@ namespace AlgLib
     {
         return vec * scalar;
     }
+
+    template <typename T>
+    Vector<T>& Vector<T>::operator+= (const Vector<T>& other)
+    {
+        if(other.size() != this->size())
+            throw std::length_error("Attempted to add Vectors of differing dimensions");
+        for(int i = 0; i < static_cast<int>(this->size()); i++)
+        {
+            (*this)[i] += other[i];
+        }
+        return *this;
+    }
+
+    template <typename T>
+    Vector<T>& Vector<T>::operator-= (const Vector<T>& other)
+    {
+        if(other.size() != this->size())
+            throw std::length_error("Attempted to add Vectors of differing dimensions");
+        for(int i = 0; i < static_cast<int>(this->size()); i++)
+        {
+            (*this)[i] -= other[i];
+        }
+        return *this;
+    }
 }

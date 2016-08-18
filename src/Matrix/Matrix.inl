@@ -279,7 +279,7 @@ namespace AlgLib
     template <typename T>
     void Matrix<T>::addColumn(const std::vector<T>& newColumn)
     {
-        if(newColumn.size() != rows)
+        if((int) newColumn.size() != rows)
             throw bad_dimension("The new column does not match the dimensions of the Matrix!");
         for(int i = 0; i < rows; i++)
         {
@@ -305,25 +305,46 @@ namespace AlgLib
     Matrix<T> Matrix<T>::triangulate() const
     {
         auto the_rows = this->getRowVectors();
-        T zero = T(0);
-        for(int r = 0; r < (int) the_rows.size(); r++)
-        {
-            if(r < columns && the_rows[r][r] == zero)
-            {
-                for (int i = r; i < static_cast<int>(the_rows.size()); i++)
-                {
-                    if(the_rows[i][r] != zero)
-                    {
-                        the_rows[r] = the_rows[r] + the_rows[i];
-                        break;
-                    } // This will make the row non zero
+        T zero = T(0); // Defines zero variable so we don't have to repeatedly construct
+        /* Algorithm:
+         *
+         * Start at the left of the Matrix, with the first row. Find the leftmost column that does contain a non-zero value
+         * Use that to change all entries below it to 0
+         * Move on to the next row.
+         */
 
-                }
-            }
-            for(int c = 0; c < r && c < columns; c++)
+        int pivot = 0; // This is meant to store the left most non-zero value in the Matrix on row r
+
+        for(int r = 0; r < static_cast<int>(the_rows.size()); r++)
+        {
+            /* The value of r will loop through the row indexes */
+            for(int c = pivot; c < columns; c++)
             {
-                if(the_rows[c][c] != 0)
-                    the_rows[r] = the_rows[r] - (the_rows[r][c] / the_rows[c][c]) * the_rows[c];
+                /* Tries to see if there are any nonzero entries from [r][c] to [rows-1][c] */
+                bool allZero = true;
+                int rest;
+                for(rest = r; rest < rows; rest++)
+                {
+                    if (the_rows[rest][c] != zero)
+                    {
+                        allZero = false;
+                        break;
+                    }
+                }
+
+                /* If there is a nonzero... */
+                if(!allZero)
+                {
+                    the_rows[r] += the_rows[rest]; // This will make the_rows[r][c] a nonzero entry
+
+                    /* Time to eliminate everything below the_rows[r][c] */
+                    for(int i = r + 1; i < rows; i++)
+                    {
+                        the_rows[i] -= (the_rows[i][c] / the_rows[r][c]) * the_rows[r];
+                    }
+                    pivot = c + 1; // Put the pivot position one after the column position
+                    break;
+                }
             }
         }
         return Matrix<T>(the_rows);
@@ -334,6 +355,6 @@ namespace AlgLib
     {
         Matrix<T> triangle = this->triangulate();
         auto the_rows = triangle.getRowVectors();
-
+        return *this; //temporary prototyping
     }
 }
