@@ -17,6 +17,5 @@ var class_alg_lib_1_1_polynomial =
     [ "operator+", "class_alg_lib_1_1_polynomial.html#ad651de00803bc2bfc17f684dd6183e7e", null ],
     [ "operator-", "class_alg_lib_1_1_polynomial.html#aa6ed3795fcb099987ff7fb8747203b43", null ],
     [ "operator/", "class_alg_lib_1_1_polynomial.html#a507bf9649c02111574112ddb0baf0973", null ],
-    [ "operator=", "class_alg_lib_1_1_polynomial.html#adb6aa23b16a21e65973e771c9eddeed8", null ],
-    [ "mCoeff", "class_alg_lib_1_1_polynomial.html#a1df73412faaadb6cbac4b7fad0135079", null ]
+    [ "operator=", "class_alg_lib_1_1_polynomial.html#adb6aa23b16a21e65973e771c9eddeed8", null ]
 ];

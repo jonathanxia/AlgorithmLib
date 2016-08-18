@@ -55,7 +55,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="modules.html"><span>Modules</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -115,33 +114,30 @@ $(document).ready(function(){initNavTree('group__sorting.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga285a3cda7220504508dbb7d0df3dba21"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga285a3cda7220504508dbb7d0df3dba21"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga285a3cda7220504508dbb7d0df3dba21">AlgLib::insertionSort</a> (T &amp;arr)</td></tr>
-<tr class="memdesc:ga285a3cda7220504508dbb7d0df3dba21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs an insertion sort on the container.  <a href="group__sorting.html#ga285a3cda7220504508dbb7d0df3dba21">More...</a><br /></td></tr>
-<tr class="separator:ga285a3cda7220504508dbb7d0df3dba21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ed64ebbf3ff0bda9327b5e71706ca48"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E &gt; </td></tr>
+<tr class="memitem:ga1ed64ebbf3ff0bda9327b5e71706ca48"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga1ed64ebbf3ff0bda9327b5e71706ca48">AlgLib::insertionSort</a> (T &amp;arr, int start, int last, std::function&lt; bool(E, E)&gt; compare=[](E x, E y){return x&lt; y;})</td></tr>
+<tr class="memdesc:ga1ed64ebbf3ff0bda9327b5e71706ca48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs an insertion sort on the container.  <a href="group__sorting.html#ga1ed64ebbf3ff0bda9327b5e71706ca48">More...</a><br /></td></tr>
+<tr class="separator:ga1ed64ebbf3ff0bda9327b5e71706ca48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga50103bb855668c829f3d0def288521a8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ga50103bb855668c829f3d0def288521a8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga50103bb855668c829f3d0def288521a8">AlgLib::mergeSort</a> (T &amp;arr)</td></tr>
 <tr class="memdesc:ga50103bb855668c829f3d0def288521a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a merge sort on the container.  <a href="group__sorting.html#ga50103bb855668c829f3d0def288521a8">More...</a><br /></td></tr>
 <tr class="separator:ga50103bb855668c829f3d0def288521a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga964728cae397746308b2d688e6f85d01"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga964728cae397746308b2d688e6f85d01"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga964728cae397746308b2d688e6f85d01">AlgLib::MERGE</a> (T &amp;left, T &amp;right)</td></tr>
-<tr class="separator:ga964728cae397746308b2d688e6f85d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga09ea4c537af6d2dcc36a9753b7af7c05"><td class="memTemplParams" colspan="2">template&lt;typename T , typename S &gt; </td></tr>
 <tr class="memitem:ga09ea4c537af6d2dcc36a9753b7af7c05"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga09ea4c537af6d2dcc36a9753b7af7c05">AlgLib::heapSort</a> (T &amp;arr)</td></tr>
 <tr class="memdesc:ga09ea4c537af6d2dcc36a9753b7af7c05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a heap sort on the container.  <a href="group__sorting.html#ga09ea4c537af6d2dcc36a9753b7af7c05">More...</a><br /></td></tr>
 <tr class="separator:ga09ea4c537af6d2dcc36a9753b7af7c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1079e0b650cad788132bbee4dac0200a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga1079e0b650cad788132bbee4dac0200a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga1079e0b650cad788132bbee4dac0200a">AlgLib::quickSort</a> (T &amp;arr)</td></tr>
-<tr class="memdesc:ga1079e0b650cad788132bbee4dac0200a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a quick sort on the container.  <a href="group__sorting.html#ga1079e0b650cad788132bbee4dac0200a">More...</a><br /></td></tr>
-<tr class="separator:ga1079e0b650cad788132bbee4dac0200a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1a7cf60f7d342c55a75060a9784797f2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga1a7cf60f7d342c55a75060a9784797f2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga1a7cf60f7d342c55a75060a9784797f2">AlgLib::countingSort</a> (T &amp;arr)</td></tr>
-<tr class="memdesc:ga1a7cf60f7d342c55a75060a9784797f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a counting sort on the container.  <a href="group__sorting.html#ga1a7cf60f7d342c55a75060a9784797f2">More...</a><br /></td></tr>
-<tr class="separator:ga1a7cf60f7d342c55a75060a9784797f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7bb839f706c2fbd7015ec074b77fa4b1"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E &gt; </td></tr>
+<tr class="memitem:ga7bb839f706c2fbd7015ec074b77fa4b1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga7bb839f706c2fbd7015ec074b77fa4b1">AlgLib::quickSort</a> (T &amp;arr, int startIndex, int endIndex, std::function&lt; bool(E, E)&gt; compare=[](E x, E y){return x&lt; y;})</td></tr>
+<tr class="memdesc:ga7bb839f706c2fbd7015ec074b77fa4b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a quick sort on the container.  <a href="group__sorting.html#ga7bb839f706c2fbd7015ec074b77fa4b1">More...</a><br /></td></tr>
+<tr class="separator:ga7bb839f706c2fbd7015ec074b77fa4b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga87b5ee60e61f1c047337760a007db3a3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga87b5ee60e61f1c047337760a007db3a3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sorting.html#ga87b5ee60e61f1c047337760a007db3a3">AlgLib::countingSort</a> (T &amp;arr, int start, int last)</td></tr>
+<tr class="memdesc:ga87b5ee60e61f1c047337760a007db3a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a counting sort on the container.  <a href="group__sorting.html#ga87b5ee60e61f1c047337760a007db3a3">More...</a><br /></td></tr>
+<tr class="separator:ga87b5ee60e61f1c047337760a007db3a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga1a7cf60f7d342c55a75060a9784797f2"></a>
+<a class="anchor" id="ga87b5ee60e61f1c047337760a007db3a3"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -151,21 +147,44 @@ template&lt;typename T &gt; </div>
           <td class="memname">void AlgLib::countingSort </td>
           <td>(</td>
           <td class="paramtype">T &amp;&#160;</td>
-          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Performs a counting sort on the container. </p>
-<p>Sorts the container <code>arr</code> in linear time </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+<p>Sorts the container <code>arr</code> in linear time, with the stipulation that <code>arr</code> must be a container of ints </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
     <tr><td class="paramname">T</td><td>The type of the container e.g. <code>std::vector&lt;int&gt;</code> that <b>stores ints</b> </td></tr>
-    <tr><td class="paramname">arr</td><td>The container to be sorted.</td></tr>
   </table>
   </dd>
 </dl>
-<p>Performs the sort in O(n + k) where n is the number of elements and k is max_element - min_element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>The container to be sorted. </td></tr>
+    <tr><td class="paramname">start</td><td>Where to begin sorting. Defaults to 0. </td></tr>
+    <tr><td class="paramname">last</td><td>The index to stop sorting at. Note that last will not be included in the sort. Defaults to arr.size().</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This will sort arr[start....(last-1)]. Performs the sort in O(n + k) where n is the number of elements and k is max_element - min_element. </p>
 
 <p>Definition at line <a class="el" href="countingsort_8inl_source.html#l00005">5</a> of file <a class="el" href="countingsort_8inl_source.html">countingsort.inl</a>.</p>
 
@@ -188,10 +207,15 @@ template&lt;typename T , typename S &gt; </div>
 </div><div class="memdoc">
 
 <p>Performs a heap sort on the container. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
     <tr><td class="paramname">T</td><td>The type of the container e.g. <code>std::vector&lt;int&gt;</code> </td></tr>
     <tr><td class="paramname">S</td><td>The type that is stored in the container e.g. <code>int</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
     <tr><td class="paramname">arr</td><td>The container to be sorted </td></tr>
   </table>
   </dd>
@@ -201,50 +225,35 @@ template&lt;typename T , typename S &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ga285a3cda7220504508dbb7d0df3dba21"></a>
+<a class="anchor" id="ga1ed64ebbf3ff0bda9327b5e71706ca48"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , typename E &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void AlgLib::insertionSort </td>
           <td>(</td>
           <td class="paramtype">T &amp;&#160;</td>
-          <td class="paramname"><em>arr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Performs an insertion sort on the container. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">T</td><td>The type of the container e.g. <code>std::vector&lt;int&gt;</code> </td></tr>
-    <tr><td class="paramname">arr</td><td>The container to be sorted </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga964728cae397746308b2d688e6f85d01"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">T AlgLib::MERGE </td>
-          <td>(</td>
-          <td class="paramtype">T &amp;&#160;</td>
-          <td class="paramname"><em>left</em>, </td>
+          <td class="paramname"><em>arr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">T &amp;&#160;</td>
-          <td class="paramname"><em>right</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; bool(E, E)&gt;&#160;</td>
+          <td class="paramname"><em>compare</em> = <code>[](E&#160;x,&#160;E&#160;y){&#160;return&#160;x&#160;&lt;&#160;y;&#160;}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -254,7 +263,25 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mergesort_8inl_source.html#l00033">33</a> of file <a class="el" href="mergesort_8inl_source.html">mergesort.inl</a>.</p>
+<p>Performs an insertion sort on the container. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the container e.g. <code>std::vector&lt;int&gt;</code> </td></tr>
+    <tr><td class="paramname">E</td><td>The type of the element in the container e.g. <code>int</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>The container to be sorted </td></tr>
+    <tr><td class="paramname">start</td><td>The index of where to start to sort. Defaults to 0. </td></tr>
+    <tr><td class="paramname">last</td><td>The index of where to end. Note that the last index is not going to be part of the sort. Defaults to arr.size(). </td></tr>
+    <tr><td class="paramname">compare</td><td>A function that has prototype <code>bool compare(E x, E y)</code> which returns true if x &lt; y. Defaults to <code>x &lt; y</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="insertionsort_8inl_source.html#l00007">7</a> of file <a class="el" href="insertionsort_8inl_source.html">insertionsort.inl</a>.</p>
 
 </div>
 </div>
@@ -276,9 +303,14 @@ template&lt;typename T &gt; </div>
 
 <p>Performs a merge sort on the container. </p>
 <p>Sort the elements in container arr with merge sort algorithm.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the container e.g. <code>std::vector&lt;int&gt;</code> </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">T</td><td>The type of the container e.g. <code>std::vector&lt;int&gt;</code> </td></tr>
     <tr><td class="paramname">arr</td><td>The container to be sorted</td></tr>
     <tr><td class="paramname">arr</td><td>the container to be sorted </td></tr>
   </table>
@@ -290,32 +322,63 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ga1079e0b650cad788132bbee4dac0200a"></a>
+<a class="anchor" id="ga7bb839f706c2fbd7015ec074b77fa4b1"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , typename E &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void AlgLib::quickSort </td>
           <td>(</td>
           <td class="paramtype">T &amp;&#160;</td>
-          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>startIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>endIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; bool(E, E)&gt;&#160;</td>
+          <td class="paramname"><em>compare</em> = <code>[](E&#160;x,&#160;E&#160;y){&#160;return&#160;x&#160;&lt;&#160;y;&#160;}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Performs a quick sort on the container. </p>
-<p>Sorts the container arr in non-decreasing order from <code>arr[startIndex]</code> to <code>arr[endIndex]</code> </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+<p>Sorts the container arr in non-decreasing order from <code>arr[startIndex]</code> to <code>arr[endIndex-1]</code> </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
     <tr><td class="paramname">T</td><td>The type of the container e.g. <code>std::vector&lt;int&gt;</code> </td></tr>
+    <tr><td class="paramname">E</td><td>The element type that is stored in the container. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
     <tr><td class="paramname">arr</td><td>The container to be sorted. </td></tr>
+    <tr><td class="paramname">startIndex</td><td>Where to begin sorting. Defaults to 0. </td></tr>
+    <tr><td class="paramname">endIndex</td><td>Where to stop sorting. Note that endIndex will not be included in the sort. Defaults to <code>arr.size()</code>. </td></tr>
+    <tr><td class="paramname">compare</td><td>A function that takes two parameters and returns true if the first parameter is less than the second parameter. Defaults to x &lt; y. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="quicksort_8inl_source.html#l00062">62</a> of file <a class="el" href="quicksort_8inl_source.html">quicksort.inl</a>.</p>
+<p>Definition at line <a class="el" href="quicksort_8inl_source.html#l00023">23</a> of file <a class="el" href="quicksort_8inl_source.html">quicksort.inl</a>.</p>
 
 </div>
 </div>

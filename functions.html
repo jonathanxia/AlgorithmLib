@@ -55,7 +55,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -88,7 +87,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
-      <li><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
@@ -105,8 +103,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_n"><span>n</span></a></li>
       <li><a href="#index_o"><span>o</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
+      <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
       <li><a href="#index_t"><span>t</span></a></li>
+      <li><a href="#index_v"><span>v</span></a></li>
       <li class="current"><a href="#index_0x7e"><span>~</span></a></li>
     </ul>
   </div>
@@ -140,7 +140,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
+<div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div>
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
 <li>addColumn()
@@ -189,6 +189,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>derivative()
 : <a class="el" href="class_alg_lib_1_1_polynomial.html#aae19d2ebb49d017d64a70c23c8294b4f">AlgLib::Polynomial&lt; coeff &gt;</a>
 </li>
+<li>det()
+: <a class="el" href="class_alg_lib_1_1_matrix.html#a394689d287a78d058efc092967929a59">AlgLib::Matrix&lt; T &gt;</a>
+</li>
 </ul>
 
 
@@ -206,18 +209,24 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>getCoefficients()
 : <a class="el" href="class_alg_lib_1_1_polynomial.html#a815ce4eb1ae0edbb6981baab2489b636">AlgLib::Polynomial&lt; coeff &gt;</a>
 </li>
+<li>getColumnVectors()
+: <a class="el" href="class_alg_lib_1_1_matrix.html#a7aad85c9e7f48f09a8395b8c388421dd">AlgLib::Matrix&lt; T &gt;</a>
+</li>
 <li>getContainer()
 : <a class="el" href="class_alg_lib_1_1_heap.html#a26fff42a724f914607f61c25dc4f80bd">AlgLib::Heap&lt; T &gt;</a>
 </li>
 <li>getDegree()
 : <a class="el" href="class_alg_lib_1_1_polynomial.html#a788df01d92661cedc88ae68060670ce4">AlgLib::Polynomial&lt; coeff &gt;</a>
 </li>
+<li>getMinor()
+: <a class="el" href="class_alg_lib_1_1_matrix.html#aa20347f305cc8c581009cc9a4a6cfb35">AlgLib::Matrix&lt; T &gt;</a>
+</li>
+<li>getRowVectors()
+: <a class="el" href="class_alg_lib_1_1_matrix.html#a68d07cefcfc76c1cea4907e6931268ae">AlgLib::Matrix&lt; T &gt;</a>
+</li>
 <li>getValue()
 : <a class="el" href="class_alg_lib_1_1_fraction.html#af56bf89da08dd47e3dfc28d365195d46">AlgLib::Fraction</a>
 , <a class="el" href="class_alg_lib_1_1_matrix.html#a99342d63d4ed38c0289f14566381958e">AlgLib::Matrix&lt; T &gt;</a>
-</li>
-<li>getVectors()
-: <a class="el" href="class_alg_lib_1_1_matrix.html#a5c651bc81f24c02ccbee007f4be49dfa">AlgLib::Matrix&lt; T &gt;</a>
 </li>
 <li>getWeight()
 : <a class="el" href="class_alg_lib_1_1adj_list.html#a1f365ed028dd4bdce2fc47119f47dde7">AlgLib::adjList</a>
@@ -226,7 +235,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 , <a class="el" href="class_alg_lib_1_1graph_d_b.html#a8b81f180d935d1f80f728c0fef64ca03">AlgLib::graphDB</a>
 </li>
 <li>Graph()
-: <a class="el" href="class_alg_lib_1_1_graph.html#a365631724157558b77009a33f08104bd">AlgLib::Graph</a>
+: <a class="el" href="class_alg_lib_1_1_graph.html#a0cc9e7a1ff569edc8c019a5f2d9e4ee8">AlgLib::Graph</a>
 </li>
 <li>graphDB()
 : <a class="el" href="class_alg_lib_1_1graph_d_b.html#af5ab632982eda709108278a5153f6c70">AlgLib::graphDB</a>
@@ -246,6 +255,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
+<li>identity()
+: <a class="el" href="class_alg_lib_1_1_matrix.html#ae3392453e679531ed0e5d25a497a690e">AlgLib::Matrix&lt; T &gt;</a>
+</li>
 <li>inAdj()
 : <a class="el" href="class_alg_lib_1_1adj_list.html#a2f8f4af6435990aea3b90b3274bf64bf">AlgLib::adjList</a>
 , <a class="el" href="class_alg_lib_1_1adj_matrix.html#a52a5e7ac8fdd3bf11aa6dcf38d800ecb">AlgLib::adjMatrix</a>
@@ -265,17 +277,11 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>integral()
 : <a class="el" href="class_alg_lib_1_1_polynomial.html#a81380711ec4e7c9be6f0a4bfc608c301">AlgLib::Polynomial&lt; coeff &gt;</a>
 </li>
-<li>inverse()
-: <a class="el" href="class_alg_lib_1_1_permutation.html#ac5f361e8a5cab1dbb331341e9d3c76b0">AlgLib::Permutation&lt; T &gt;</a>
-</li>
 <li>inWeight()
 : <a class="el" href="class_alg_lib_1_1adj_list.html#a74fbc3342cdd18cfbd1a3c26982d03a0">AlgLib::adjList</a>
 , <a class="el" href="class_alg_lib_1_1adj_matrix.html#aab4ecb9801ba43d2ce3c0f542e44643e">AlgLib::adjMatrix</a>
 , <a class="el" href="class_alg_lib_1_1_graph.html#a320cb53252cef3ea2f1995dde174c727">AlgLib::Graph</a>
 , <a class="el" href="class_alg_lib_1_1graph_d_b.html#a873a4aa752f53702fad8cd36ab409c0e">AlgLib::graphDB</a>
-</li>
-<li>isInGraph
-: <a class="el" href="class_alg_lib_1_1graph_d_b.html#adc2ea4ed0aec4a2cd22cbe292c4152ae">AlgLib::graphDB</a>
 </li>
 </ul>
 
@@ -290,9 +296,6 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
 <li>Matrix()
 : <a class="el" href="class_alg_lib_1_1_matrix.html#aa928f1b4f97f3689739fb76f37ea8b32">AlgLib::Matrix&lt; T &gt;</a>
-</li>
-<li>mCoeff
-: <a class="el" href="class_alg_lib_1_1_polynomial.html#a1df73412faaadb6cbac4b7fad0135079">AlgLib::Polynomial&lt; coeff &gt;</a>
 </li>
 <li>moduloRoots()
 : <a class="el" href="class_alg_lib_1_1_integer_polynomial.html#ab0549a5f249b0b1c2868a784cd9b890b">AlgLib::IntegerPolynomial</a>
@@ -315,76 +318,56 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
-<li>operator!=()
-: <a class="el" href="class_alg_lib_1_1_fraction.html#a1e3623fabfa02de42052943a319fc2b5">AlgLib::Fraction</a>
-, <a class="el" href="class_alg_lib_1_1_permutation.html#a195d7015d44c650db9b7fec897b165a0">AlgLib::Permutation&lt; T &gt;</a>
-</li>
 <li>operator%()
 : <a class="el" href="class_alg_lib_1_1_integer_polynomial.html#a32b2897454d948b16a0f747abca2f58a">AlgLib::IntegerPolynomial</a>
 , <a class="el" href="class_alg_lib_1_1_polynomial.html#a8e63ddfc3bd81bc300781f526bbd70d6">AlgLib::Polynomial&lt; coeff &gt;</a>
 </li>
 <li>operator()()
-: <a class="el" href="class_alg_lib_1_1_permutation.html#a1f773aa53b671a8f5930f50daffae15c">AlgLib::Permutation&lt; T &gt;</a>
-, <a class="el" href="class_alg_lib_1_1_polynomial.html#a07d802dde3e665ad427a6932fa99f691">AlgLib::Polynomial&lt; coeff &gt;</a>
+: <a class="el" href="class_alg_lib_1_1_polynomial.html#a07d802dde3e665ad427a6932fa99f691">AlgLib::Polynomial&lt; coeff &gt;</a>
 </li>
 <li>operator*
 : <a class="el" href="class_alg_lib_1_1_fraction.html#ad106ee756801021779f14e992439db4a">AlgLib::Fraction</a>
 , <a class="el" href="class_alg_lib_1_1_matrix.html#abd934caac0e4025576d38f2b9ebc85d0">AlgLib::Matrix&lt; T &gt;</a>
-, <a class="el" href="class_alg_lib_1_1_permutation.html#a495faf3699aa7996f19829816498efdb">AlgLib::Permutation&lt; T &gt;</a>
 , <a class="el" href="class_alg_lib_1_1_polynomial.html#a68b9b745dabf414a81fb8d35e6f233ba">AlgLib::Polynomial&lt; coeff &gt;</a>
-</li>
-<li>operator*=()
-: <a class="el" href="class_alg_lib_1_1_fraction.html#a2fcea0923ebd05d7e5fcbba499734da3">AlgLib::Fraction</a>
+, <a class="el" href="class_alg_lib_1_1_vector.html#ada7ce8cab7c740c45204f1885bd219c1">AlgLib::Vector&lt; T &gt;</a>
 </li>
 <li>operator+
 : <a class="el" href="class_alg_lib_1_1_fraction.html#a225c4aec1a9cdd366b04be2642ecf3bc">AlgLib::Fraction</a>
 , <a class="el" href="class_alg_lib_1_1_matrix.html#ac85ab14586f80045033981c7751fd124">AlgLib::Matrix&lt; T &gt;</a>
 , <a class="el" href="class_alg_lib_1_1_polynomial.html#ad651de00803bc2bfc17f684dd6183e7e">AlgLib::Polynomial&lt; coeff &gt;</a>
+, <a class="el" href="class_alg_lib_1_1_vector.html#a6d49358f6cadc9101857aa25fbf96359">AlgLib::Vector&lt; T &gt;</a>
 </li>
 <li>operator+=()
-: <a class="el" href="class_alg_lib_1_1_fraction.html#afd8e8608c4789bfe09f957e377010275">AlgLib::Fraction</a>
+: <a class="el" href="class_alg_lib_1_1_vector.html#ab509cc5e545a9fdcebc6c4c33c366d7e">AlgLib::Vector&lt; T &gt;</a>
 </li>
 <li>operator-
 : <a class="el" href="class_alg_lib_1_1_fraction.html#aa93e0ab89fa477f3b044cf5826df7c14">AlgLib::Fraction</a>
 , <a class="el" href="class_alg_lib_1_1_matrix.html#ae947b17fc992a714c6fc5dfa7365deb8">AlgLib::Matrix&lt; T &gt;</a>
 , <a class="el" href="class_alg_lib_1_1_polynomial.html#aa6ed3795fcb099987ff7fb8747203b43">AlgLib::Polynomial&lt; coeff &gt;</a>
+, <a class="el" href="class_alg_lib_1_1_vector.html#a0329356233ed82c1933b4f8946ef0794">AlgLib::Vector&lt; T &gt;</a>
 </li>
 <li>operator-=()
-: <a class="el" href="class_alg_lib_1_1_fraction.html#aa54117f58580597ec4159769c25745b0">AlgLib::Fraction</a>
+: <a class="el" href="class_alg_lib_1_1_vector.html#ae633d1f705526cf153b4466a00349003">AlgLib::Vector&lt; T &gt;</a>
 </li>
 <li>operator/
 : <a class="el" href="class_alg_lib_1_1_fraction.html#a2a185031bd64d6b227509aeacf3b5c69">AlgLib::Fraction</a>
 , <a class="el" href="class_alg_lib_1_1_polynomial.html#a507bf9649c02111574112ddb0baf0973">AlgLib::Polynomial&lt; coeff &gt;</a>
+, <a class="el" href="class_alg_lib_1_1_vector.html#a45ad415d4cd2665da0cd500e2800cfdc">AlgLib::Vector&lt; T &gt;</a>
 </li>
 <li>operator/=()
-: <a class="el" href="class_alg_lib_1_1_fraction.html#ad844a41ab7d8a4155e8a563d70fca706">AlgLib::Fraction</a>
+: <a class="el" href="class_alg_lib_1_1_vector.html#a5ad7290d619c2247d9a11bfcfb5f6b04">AlgLib::Vector&lt; T &gt;</a>
 </li>
-<li>operator&lt;()
-: <a class="el" href="class_alg_lib_1_1_fraction.html#aad1c9b3fec500e7538435d4e3e329101">AlgLib::Fraction</a>
-</li>
-<li>operator&lt;=()
-: <a class="el" href="class_alg_lib_1_1_fraction.html#a13e7582666ef2218c3f430302464f4ac">AlgLib::Fraction</a>
+<li>operator&lt;&lt;
+: <a class="el" href="class_alg_lib_1_1_fraction.html#afbea08571b56bc9d49d5d9bc12ce96bb">AlgLib::Fraction</a>
 </li>
 <li>operator=()
 : <a class="el" href="class_alg_lib_1_1_fraction.html#a93407b0ce7ebfd38f07a25e476243e46">AlgLib::Fraction</a>
 , <a class="el" href="class_alg_lib_1_1_integer_polynomial.html#a0f5c4a5a82f8189686828ade7724a1b4">AlgLib::IntegerPolynomial</a>
 , <a class="el" href="class_alg_lib_1_1_polynomial.html#adb6aa23b16a21e65973e771c9eddeed8">AlgLib::Polynomial&lt; coeff &gt;</a>
 </li>
-<li>operator==()
-: <a class="el" href="class_alg_lib_1_1_fraction.html#a5f61edd6dbf3616996fa44195701fc00">AlgLib::Fraction</a>
-, <a class="el" href="class_alg_lib_1_1_permutation.html#a07235b740895334671099e3b02b6168f">AlgLib::Permutation&lt; T &gt;</a>
-</li>
-<li>operator&gt;()
-: <a class="el" href="class_alg_lib_1_1_fraction.html#aa6d4323da2799ffda77543d955ef0ae7">AlgLib::Fraction</a>
-</li>
-<li>operator&gt;=()
-: <a class="el" href="class_alg_lib_1_1_fraction.html#ac13e475bba27f25e1b1f8b2de3aed36c">AlgLib::Fraction</a>
-</li>
 <li>operator[]()
 : <a class="el" href="class_alg_lib_1_1_matrix.html#aad964932a50c21c7b6f49f5193f42b3c">AlgLib::Matrix&lt; T &gt;</a>
-</li>
-<li>order()
-: <a class="el" href="class_alg_lib_1_1_permutation.html#a0241c0e6e52419e08832620e607caeba">AlgLib::Permutation&lt; T &gt;</a>
+, <a class="el" href="class_alg_lib_1_1_vector.html#af21d86dd990d41df800220d3882a73f9">AlgLib::Vector&lt; T &gt;</a>
 </li>
 <li>outAdj()
 : <a class="el" href="class_alg_lib_1_1adj_list.html#a01a7eb08e676f75a339403079e004e00">AlgLib::adjList</a>
@@ -423,6 +406,13 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </ul>
 
 
+<h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
+<li>rref()
+: <a class="el" href="class_alg_lib_1_1_matrix.html#af76fd1d1b40ec8b52a361ab6720fea03">AlgLib::Matrix&lt; T &gt;</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
 <li>setContainer()
 : <a class="el" href="class_alg_lib_1_1_heap.html#a0c406e0e00559e3372637d1547af1023">AlgLib::Heap&lt; T &gt;</a>
@@ -437,8 +427,18 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>top()
 : <a class="el" href="class_alg_lib_1_1_heap.html#a4f1ab496a7f4a4cc4d5c917fe10514ff">AlgLib::Heap&lt; T &gt;</a>
 </li>
-<li>toString()
-: <a class="el" href="class_alg_lib_1_1_fraction.html#a28d61a593ab5abaac86f091398cf7e00">AlgLib::Fraction</a>
+<li>transpose()
+: <a class="el" href="class_alg_lib_1_1_matrix.html#aed457e2022a9567c09aa7d59f8557aa0">AlgLib::Matrix&lt; T &gt;</a>
+</li>
+<li>triangulate()
+: <a class="el" href="class_alg_lib_1_1_matrix.html#a7647026b9f9b4b97856d384d19e079c5">AlgLib::Matrix&lt; T &gt;</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_v"></a>- v -</h3><ul>
+<li>Vector()
+: <a class="el" href="class_alg_lib_1_1_vector.html#a75da767d0a6b57cec1cb09363d1c2ff5">AlgLib::Vector&lt; T &gt;</a>
 </li>
 </ul>
 
@@ -464,6 +464,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>~Polynomial()
 : <a class="el" href="class_alg_lib_1_1_polynomial.html#ad9c5777af178f70a1ef83abfdf1b2397">AlgLib::Polynomial&lt; coeff &gt;</a>
+</li>
+<li>~Vector()
+: <a class="el" href="class_alg_lib_1_1_vector.html#aedf79cf8c91e4dd8a44a6f9d08c230fe">AlgLib::Vector&lt; T &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->

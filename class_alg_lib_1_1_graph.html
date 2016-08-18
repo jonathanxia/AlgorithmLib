@@ -55,7 +55,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -121,8 +120,6 @@ $(document).ready(function(){initNavTree('class_alg_lib_1_1_graph.html','');});
 <div class="title">AlgLib::Graph Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="_graph_8h_source.html">Graph.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for AlgLib::Graph:</div>
 <div class="dyncontent">
@@ -131,16 +128,16 @@ Collaboration diagram for AlgLib::Graph:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a365631724157558b77009a33f08104bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#a365631724157558b77009a33f08104bd">Graph</a> (int numVertices, <a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337">dbType</a> storageType=<a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337a9d8e68c3898f769422174fed0be93fd2">dbType::ADJACENCY_MATRIX</a>)</td></tr>
+<tr class="memitem:a365631724157558b77009a33f08104bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#a365631724157558b77009a33f08104bd">Graph</a> (int numVertices, dbType storageType=dbType::ADJACENCY_MATRIX)</td></tr>
 <tr class="memdesc:a365631724157558b77009a33f08104bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor.  <a href="#a365631724157558b77009a33f08104bd">More...</a><br /></td></tr>
 <tr class="separator:a365631724157558b77009a33f08104bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99e286da01db1f3e8130cbef8ead77d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#a99e286da01db1f3e8130cbef8ead77d5">Graph</a> (const std::vector&lt; std::tuple&lt; int, int, double &gt; &gt; &amp;edgepairs, <a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337">dbType</a> storageType=<a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337a6d02e698876f8aa2b2e975e8c0010c10">dbType::ADJACENCY_LIST</a>)</td></tr>
+<tr class="memitem:a99e286da01db1f3e8130cbef8ead77d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#a99e286da01db1f3e8130cbef8ead77d5">Graph</a> (const std::vector&lt; std::tuple&lt; int, int, double &gt; &gt; &amp;edgepairs, dbType storageType=dbType::ADJACENCY_LIST)</td></tr>
 <tr class="memdesc:a99e286da01db1f3e8130cbef8ead77d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor that takes in edge pairs.  <a href="#a99e286da01db1f3e8130cbef8ead77d5">More...</a><br /></td></tr>
 <tr class="separator:a99e286da01db1f3e8130cbef8ead77d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cc9e7a1ff569edc8c019a5f2d9e4ee8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#a0cc9e7a1ff569edc8c019a5f2d9e4ee8">Graph</a> (const <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a>&lt; double &gt; &amp;adjMat, <a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337">dbType</a> storageType=<a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337a9d8e68c3898f769422174fed0be93fd2">dbType::ADJACENCY_MATRIX</a>)</td></tr>
+<tr class="memitem:a0cc9e7a1ff569edc8c019a5f2d9e4ee8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#a0cc9e7a1ff569edc8c019a5f2d9e4ee8">Graph</a> (const <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a>&lt; double &gt; &amp;adjMat, dbType storageType=dbType::ADJACENCY_MATRIX)</td></tr>
 <tr class="memdesc:a0cc9e7a1ff569edc8c019a5f2d9e4ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that takes in an adjacency matrix.  <a href="#a0cc9e7a1ff569edc8c019a5f2d9e4ee8">More...</a><br /></td></tr>
 <tr class="separator:a0cc9e7a1ff569edc8c019a5f2d9e4ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abeb1fbb52b7f9ed8346f085b935fb7a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#abeb1fbb52b7f9ed8346f085b935fb7a8">Graph</a> (const std::vector&lt; std::vector&lt; std::tuple&lt; int, double &gt; &gt; &gt; &amp;inAdjList, <a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337">dbType</a> storageType=<a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337a6d02e698876f8aa2b2e975e8c0010c10">dbType::ADJACENCY_LIST</a>)</td></tr>
+<tr class="memitem:abeb1fbb52b7f9ed8346f085b935fb7a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#abeb1fbb52b7f9ed8346f085b935fb7a8">Graph</a> (const std::vector&lt; std::vector&lt; std::tuple&lt; int, double &gt; &gt; &gt; &amp;inAdjList, dbType storageType=dbType::ADJACENCY_LIST)</td></tr>
 <tr class="memdesc:abeb1fbb52b7f9ed8346f085b935fb7a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes in an adjacency list to construct a graph.  <a href="#abeb1fbb52b7f9ed8346f085b935fb7a8">More...</a><br /></td></tr>
 <tr class="separator:abeb1fbb52b7f9ed8346f085b935fb7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32cc4dfc6d81626b0175a237b0f2f765"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_graph.html#a32cc4dfc6d81626b0175a237b0f2f765">~Graph</a> ()</td></tr>
@@ -205,8 +202,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337">dbType</a>&#160;</td>
-          <td class="paramname"><em>storageType</em> = <code><a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337a9d8e68c3898f769422174fed0be93fd2">dbType::ADJACENCY_MATRIX</a></code>&#160;</td>
+          <td class="paramtype">dbType&#160;</td>
+          <td class="paramname"><em>storageType</em> = <code>dbType::ADJACENCY_MATRIX</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -224,7 +221,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337" title="Specifies the method of data storage for the Graph. ">dbType</a> for more information on the types of graph databases available </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>dbType for more information on the types of graph databases available </dd></dl>
 
 <p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00012">12</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
@@ -243,8 +240,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337">dbType</a>&#160;</td>
-          <td class="paramname"><em>storageType</em> = <code><a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337a6d02e698876f8aa2b2e975e8c0010c10">dbType::ADJACENCY_LIST</a></code>&#160;</td>
+          <td class="paramtype">dbType&#160;</td>
+          <td class="paramname"><em>storageType</em> = <code>dbType::ADJACENCY_LIST</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -262,7 +259,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337" title="Specifies the method of data storage for the Graph. ">dbType</a> for more information on the types of graph databases available </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>dbType for more information on the types of graph databases available </dd></dl>
 
 </div>
 </div>
@@ -279,8 +276,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337">dbType</a>&#160;</td>
-          <td class="paramname"><em>storageType</em> = <code><a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337a9d8e68c3898f769422174fed0be93fd2">dbType::ADJACENCY_MATRIX</a></code>&#160;</td>
+          <td class="paramtype">dbType&#160;</td>
+          <td class="paramname"><em>storageType</em> = <code>dbType::ADJACENCY_MATRIX</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -298,7 +295,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337" title="Specifies the method of data storage for the Graph. ">dbType</a> for more information on the types of graph databases available </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>dbType for more information on the types of graph databases available </dd></dl>
 
 <p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00053">53</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
@@ -317,8 +314,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337">dbType</a>&#160;</td>
-          <td class="paramname"><em>storageType</em> = <code><a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337a6d02e698876f8aa2b2e975e8c0010c10">dbType::ADJACENCY_LIST</a></code>&#160;</td>
+          <td class="paramtype">dbType&#160;</td>
+          <td class="paramname"><em>storageType</em> = <code>dbType::ADJACENCY_LIST</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -336,7 +333,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespace_alg_lib.html#a11966d2ea6c430adfb83a6ebaa05e337" title="Specifies the method of data storage for the Graph. ">dbType</a> for more information on the types of graph databases available </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>dbType for more information on the types of graph databases available </dd></dl>
 
 </div>
 </div>
@@ -362,7 +359,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Default destructor </p>
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00103">103</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00099">99</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -416,7 +413,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <p>This will create a directed edge from nodeS to nodeE with weight </p>
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00114">114</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00110">110</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -444,7 +441,7 @@ Public Member Functions</h2></td></tr>
 <p>Adds a vertex to the graph. </p>
 <p>The node number that is added is the graph's highest node number + 1, regardless of whether other nodes deleted. </p>
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00109">109</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00105">105</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -490,7 +487,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <p>The edge is set to 0. It is no longer considered and adjacent edge of nodeS and nodeE </p>
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00119">119</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00115">115</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -525,7 +522,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <p>The removal of this vertex will not affect the numbering of the nodes. It will simply be recorded that the node is not in the graph anymore. </p>
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00124">124</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00120">120</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -571,7 +568,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the weight of edge nodeS-&gt;nodeE </dd></dl>
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00159">159</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00155">155</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -600,7 +597,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The highest numbered node in the graph. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_alg_lib_1_1_graph.html#ad755bcd2eb09640252df1b137e18d129" title="Gives the number of vertices in the graph. ">numVertex()</a> to find the number of ways to get the number of nodes </dd></dl>
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00134">134</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00130">130</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -635,7 +632,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A std::vector of std::tuple&lt;int, double&gt; where the int is the connected node and double is the weight of the edge </dd></dl>
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00174">174</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00170">170</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -670,7 +667,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of non zero directed edges going into that node </dd></dl>
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00139">139</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00135">135</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -705,7 +702,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if node is in the graph, false otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00164">164</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00160">160</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -740,7 +737,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The total weight going into <code>node</code> </dd></dl>
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00149">149</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00145">145</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -769,7 +766,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The number of vertices in the graph. Removed nodes are not counted </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_alg_lib_1_1_graph.html#afcf119c74be1f705e76929fcdf8c6532" title="Returns the highest numbered node. ">highestNode()</a> for how to get the highest numbered node </dd></dl>
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00129">129</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00125">125</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -804,7 +801,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A std::vector of std::tuple&lt;int, double&gt; where the int is the connected node and double is the weight of the edge </dd></dl>
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00169">169</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00165">165</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -839,7 +836,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of non zero directed edges going out of that node </dd></dl>
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00144">144</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00140">140</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -874,7 +871,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The total weight going out of <code>node</code> </dd></dl>
 
-<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00154">154</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_graph_8cpp_source.html#l00150">150</a> of file <a class="el" href="_graph_8cpp_source.html">Graph.cpp</a>.</p>
 
 </div>
 </div>
@@ -883,7 +880,7 @@ Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespace_alg_lib.html">AlgLib</a></li><li class="navelem"><a class="el" href="class_alg_lib_1_1_graph.html">Graph</a></li>
+    <li class="navelem"><b>AlgLib</b></li><li class="navelem"><a class="el" href="class_alg_lib_1_1_graph.html">Graph</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

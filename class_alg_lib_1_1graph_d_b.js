@@ -15,6 +15,5 @@ var class_alg_lib_1_1graph_d_b =
     [ "numVertex", "class_alg_lib_1_1graph_d_b.html#a8d64de3b748352ed05aa0272c3a51195", null ],
     [ "outAdj", "class_alg_lib_1_1graph_d_b.html#ae3c91d0775e8c2b28824a11f55571665", null ],
     [ "outDegree", "class_alg_lib_1_1graph_d_b.html#a8ac8d9aa118a2584d36d881f2f22a0c8", null ],
-    [ "outWeight", "class_alg_lib_1_1graph_d_b.html#a86dea18aed8b3bbcfaf834776d36f20f", null ],
-    [ "isInGraph", "class_alg_lib_1_1graph_d_b.html#adc2ea4ed0aec4a2cd22cbe292c4152ae", null ]
+    [ "outWeight", "class_alg_lib_1_1graph_d_b.html#a86dea18aed8b3bbcfaf834776d36f20f", null ]
 ];
