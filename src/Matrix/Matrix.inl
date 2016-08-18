@@ -355,6 +355,36 @@ namespace AlgLib
     {
         Matrix<T> triangle = this->triangulate();
         auto the_rows = triangle.getRowVectors();
-        return *this; //temporary prototyping
+
+        /* We are going to loop from right to left. In each row, we take the left most non-zero.
+         * After that, we will make everything above that entry 0.
+         */
+        int r = rows - 1;
+        int pivot = columns - 1;
+        T zero = T(0);
+        for(r = rows - 1; r >= 0; r--)
+        {
+            int leftMostZero; // This is meant to store the left most NON-zero (oops sorry for the confusing var name
+            for(leftMostZero = 0; leftMostZero < columns; leftMostZero++)
+            {
+                if(the_rows[r][leftMostZero] != zero)
+                    break;
+            }
+            // leftMostZero now holds the index of the leftMostZero.
+            // We must check if it is columns, because that means that row is completely zeros!
+            if(leftMostZero != columns)
+            {
+                // First, make the coefficient of the non-free variable a 1
+                the_rows[r] = the_rows[r] / (the_rows[r][leftMostZero]);
+                // Now, we want to make everything above the_rows[r][leftMostZero] a zero
+                for(int i = 0; i < r; i++)
+                {
+                    the_rows[i] -= the_rows[r] * (the_rows[i][leftMostZero]);
+                }
+                pivot = leftMostZero;
+            }
+        }
+        return Matrix<T>(the_rows);
+
     }
 }

@@ -37,6 +37,15 @@ namespace AlgLib
         */
         virtual Vector<T> operator* (const T& scalar) const;
 
+        /** \brief Divides the Vector by a scalar
+        * \param scalar The scalar to divide by
+        * \return The Vector that results when divided by the scalar.
+        * \throw std::invalid_argument When scalar is 0
+        */
+        virtual Vector<T> operator/ (const T& scalar) const;
+
+        virtual Vector<T>& operator/= (const T& scalar);
+
         template <typename U>
         friend Vector<U> operator* (const U& scalar, const Vector<U>& vec);
 

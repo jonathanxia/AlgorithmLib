@@ -108,6 +108,26 @@ namespace AlgLib
     }
 
     template <typename T>
+    Vector<T> Vector<T>::operator/(const T& scalar) const
+    {
+        if(scalar == T(0))
+            throw std::invalid_argument("Attempted to divide Vector by a 0-scalar");
+        Vector<T> ret(this->size());
+        for(int i = 0; i < static_cast<int>(this->size()); i++)
+        {
+            ret[i] = (*this)[i] / scalar;
+        }
+        return ret;
+    }
+
+    template <typename T>
+    Vector<T>& Vector<T>::operator/= (const T& scalar)
+    {
+        *this = (*this) / scalar;
+        return *this;
+    }
+
+    template <typename T>
     Vector<T>& Vector<T>::operator+= (const Vector<T>& other)
     {
         if(other.size() != this->size())
