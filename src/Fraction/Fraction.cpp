@@ -185,13 +185,6 @@ int AlgLib::Fraction::lcm(int a, int b)
     return a * b / gcd(a, b);
 }
 
-std::string AlgLib::Fraction::toString()
-{
-    std::ostringstream ostr;
-    ostr << mNumerator << "/" << mDenominator;
-    return ostr.str();
-}
-
 void AlgLib::Fraction::simplify()
 {
     int g = gcd(mNumerator, mDenominator);
