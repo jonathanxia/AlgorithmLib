@@ -2,6 +2,8 @@
 #include <string>
 #include <stdexcept>
 #include "AlExcept.h"
+#include "Vector.h"
+
 namespace AlgLib
 {
     template <typename T>
@@ -72,7 +74,9 @@ namespace AlgLib
 
     template <typename T>
     Matrix<T>::Matrix(const Matrix<T>& rhs) :
-        mMatrix(rhs.mMatrix)
+        mMatrix(rhs.mMatrix),
+        rows(rhs.rows),
+        columns(rhs.columns)
     {
 
     }
@@ -225,18 +229,14 @@ namespace AlgLib
         if(mMatrix.size() == 1)
             return mMatrix[0][0];
 
-        // Now we do expansion by minors; should replace this algorithm
-        int sign = 1;
-        T ret = T(0);
-        for(int i = 0; i < static_cast<int>(mMatrix.size()); i++)
+        // We now have to triangulate this matrix
+        T ret(1);
+        auto triangle = this->triangulate();
+        for(int r = 0; r < rows; r++)
         {
-            //if(mMatrix.size() == 3) std::cout << ret << std::endl;
-            ret += this->getValue(0, i) * sign * (this->getMinor(0, i)).det();
-            sign *= -1;
-
+            ret *= triangle[r][r];
         }
         return ret;
-
     }
 
     template <typename T>
@@ -279,7 +279,7 @@ namespace AlgLib
     template <typename T>
     void Matrix<T>::addColumn(const std::vector<T>& newColumn)
     {
-        if(newColumn.size() != rows)
+        if((int) newColumn.size() != rows)
             throw bad_dimension("The new column does not match the dimensions of the Matrix!");
         for(int i = 0; i < rows; i++)
         {
@@ -299,5 +299,92 @@ namespace AlgLib
             tmp[i][i] = T(1);
         }
         return tmp;
+    }
+
+    template <typename T>
+    Matrix<T> Matrix<T>::triangulate() const
+    {
+        auto the_rows = this->getRowVectors();
+        T zero = T(0); // Defines zero variable so we don't have to repeatedly construct
+        /* Algorithm:
+         *
+         * Start at the left of the Matrix, with the first row. Find the leftmost column that does contain a non-zero value
+         * Use that to change all entries below it to 0
+         * Move on to the next row.
+         */
+
+        int pivot = 0; // This is meant to store the left most non-zero value in the Matrix on row r
+
+        for(int r = 0; r < static_cast<int>(the_rows.size()); r++)
+        {
+            /* The value of r will loop through the row indexes */
+            for(int c = pivot; c < columns; c++)
+            {
+                /* Tries to see if there are any nonzero entries from [r][c] to [rows-1][c] */
+                bool allZero = true;
+                int rest;
+                for(rest = r; rest < rows; rest++)
+                {
+                    if (the_rows[rest][c] != zero)
+                    {
+                        allZero = false;
+                        break;
+                    }
+                }
+
+                /* If there is a nonzero... */
+                if(!allZero)
+                {
+                    the_rows[r] += the_rows[rest]; // This will make the_rows[r][c] a nonzero entry
+
+                    /* Time to eliminate everything below the_rows[r][c] */
+                    for(int i = r + 1; i < rows; i++)
+                    {
+                        the_rows[i] -= (the_rows[i][c] / the_rows[r][c]) * the_rows[r];
+                    }
+                    pivot = c + 1; // Put the pivot position one after the column position
+                    break;
+                }
+            }
+        }
+        return Matrix<T>(the_rows);
+    }
+
+    template <typename T>
+    Matrix<T> Matrix<T>::rref() const
+    {
+        Matrix<T> triangle = this->triangulate();
+        auto the_rows = triangle.getRowVectors();
+
+        /* We are going to loop from right to left. In each row, we take the left most non-zero.
+         * After that, we will make everything above that entry 0.
+         */
+        int r = rows - 1;
+        int pivot = columns - 1;
+        T zero = T(0);
+        for(r = rows - 1; r >= 0; r--)
+        {
+            int leftMostZero; // This is meant to store the left most NON-zero (oops sorry for the confusing var name
+            for(leftMostZero = 0; leftMostZero < columns; leftMostZero++)
+            {
+                if(the_rows[r][leftMostZero] != zero)
+                    break;
+            }
+            // leftMostZero now holds the index of the leftMostZero.
+            // We must check if it is columns, because that means that row is completely zeros!
+            if(leftMostZero != columns)
+            {
+                // First, make the coefficient of the non-free variable a 1
+                the_rows[r] = the_rows[r] / (the_rows[r][leftMostZero]);
+                // Now, we want to make everything above the_rows[r][leftMostZero] a zero
+                for(int i = 0; i < r; i++)
+                {
+                    the_rows[i] -= the_rows[r] * (the_rows[i][leftMostZero]);
+                }
+                pivot = leftMostZero;
+            }
+        }
+        return Matrix<T>(the_rows);
+
     }
 }

@@ -52,7 +52,10 @@ namespace AlgLib
         return mNumerator * other.mDenominator > mDenominator * other.mNumerator;
     }
 
-
+    std::ostream& operator<<(std::ostream& out, const Fraction& frac)
+    {
+        out << frac.mNumerator << "/" << frac.mDenominator;
+    }
 }
 
 
