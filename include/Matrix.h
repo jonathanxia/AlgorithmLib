@@ -1,19 +1,13 @@
 #ifndef MATRIX_H
 #define MATRIX_H
 
-<<<<<<< HEAD
-#include<initializer_list>
-#include<vector>
-#include<iostream>
-#include<string>
-#include "Permutation.h"
-=======
 #include <initializer_list>
 #include <vector>
 #include <iostream>
 #include <string>
 #include "Vector.h"
->>>>>>> origin/master
+#include "Permutation.h"
+
 
 namespace AlgLib {
 
@@ -173,13 +167,7 @@ namespace AlgLib {
 		int columns;
 	};
 
-	class PermutationMatrix : public Matrix<bool> {
-	public:
-		PermutationMatrix(const Permutation<int>& p, int n);
 
-		template<typename T>
-		std::vector<T> operator* (const std::vector<T>& other) const;
-	};
 }
 
 #include "../src/Matrix/Matrix.inl"
