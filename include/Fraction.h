@@ -1,6 +1,7 @@
 #ifndef FRACTION_H
 #define FRACTION_H
-#include <string>
+
+#include <iostream>
 namespace AlgLib
 {
     class Fraction
@@ -84,10 +85,11 @@ namespace AlgLib
             */
             static int lcm(int a, int b);
 
-            /** \brief Returns a string representation of the Fraction
-            * \return "numerator/denominator". So, the `Fraction` that has a value of \f$ \frac{3}{5} \f$ would cause this to return ` "3/5" `.
+            /** \brief Prints the `Fraction` as numerator/denominator
+            *
+            * "numerator/denominator". So, the `Fraction` that has a value of \f$ \frac{3}{5} \f$ would cause this to return ` "3/5" `.
             */
-            virtual std::string toString();
+            friend std::ostream& operator<< (std::ostream& out, const Fraction& frac);
 
             /** \brief Returns the `double` value of the Fraction
             * \return The value of the Fraction as a double.
