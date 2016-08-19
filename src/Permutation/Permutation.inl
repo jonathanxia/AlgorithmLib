@@ -34,7 +34,7 @@ namespace AlgLib
     template <typename T>
     T Permutation::operator() (const T& container, int start, int last) const
     {
-        if(last - start != numElements())
+        if(last - start != size())
             throw std::length_error("Permutation object has a different length than the object being acted on");
         T copyOf(container);
         for(int i = start; i < last; i++)
@@ -44,7 +44,25 @@ namespace AlgLib
         return copyOf;
     }
 
-    int Permutation::numElements() const
+    Permutation Permutation::operator*(const Permutation& other) const
+    {
+        if(other.size() != this->size())
+            throw std::length_error("Attempted to compose two Permutations of differing lengths");
+        Permutation ret = this->operator() (other);
+        return ret;
+    }
+
+    int& Permutation::operator[](int n)
+    {
+        return mPermutation[n];
+    }
+
+    const int& Permutation::operator[](int n) const
+    {
+        return mPermutation[n];
+    }
+
+    int Permutation::size() const
     {
         return mPermutation.size();
     }

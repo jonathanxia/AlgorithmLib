@@ -7,12 +7,12 @@ namespace AlgLib
     {
     }
 
-    /*template <typename T>
+    template <typename T>
     Vector<T>::~Vector<T>()
     {
         // dtor
-    }*/
-    /*
+    }
+
     template <typename T>
     Vector<T>::Vector(const Vector<T>& theVec) :
         std::vector<T>(theVec.size())
@@ -31,7 +31,7 @@ namespace AlgLib
         std::vector<T>::operator=(other);
         return *this;
     }
-    */
+
     template <typename T>
     T Vector<T>::operator* (const Vector<T>& other) const
     {

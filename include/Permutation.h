@@ -18,7 +18,7 @@ namespace AlgLib
 		* Constructs the identity Permutation for `n` objects. `n` will default to 1
 		* \param n The number of elements
 		*/
-        Permutation(int n = 1);
+        explicit Permutation(int n = 1);
 
         /** \brief Constructor that takes in a std::vector<int> of permutation
         *
@@ -53,7 +53,26 @@ namespace AlgLib
         /** \brief Returns the number of elements in the Permutation
         * \return Describes the number of elements that the Permutation object can perform on.
         */
-        virtual int numElements() const;
+        virtual int size() const;
+
+        /** \brief The multiplication operator is overloaded to act like Permutation composition
+        *
+        * Usage would be something like:
+        * `Permutation perm1({3, 2, 1}); Permutation perm2({2, 1, 3}); Permutation perm3 = perm1 * perm2;`
+        *
+        * This will result in a Permutation of (2, 3, 1).
+        * \return The Permutation object that is the composition of the two Permutation objects
+        * \throw std::length_error When the Permutations do not have the same size.
+        */
+        virtual Permutation operator* (const Permutation& other) const;
+
+        /** \brief The subscript operator will return what the Permutation maps to.
+        *
+        * So, if we have a Permutation object called `perm`, then `perm[1]` will return what index 1 will map to.
+        * \throw std::out_of_range This error is thrown when the index is out of range. Must be in between 0 and numElements()-1 inclusive.
+        */
+        virtual int& operator[](int n);
+        virtual const int& operator[](int n) const;
 
     private:
         Vector<int> mPermutation;
