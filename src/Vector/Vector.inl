@@ -173,13 +173,13 @@ namespace AlgLib
     {
         if(n < 0 || n >= this->size())
             throw std::out_of_range("Attempted to index Vector out of range");
-        return this->operator[](n);
+        return this->at(n);
     }
 
     std::vector<bool>::const_reference Vector<bool>::operator[](size_type n) const
     {
         if(n < 0 || n >= this->size())
             throw std::out_of_range("Attempted to index Vector out of range");
-        return this->operator[](n);
+        return this->at(n);
     }
 }
