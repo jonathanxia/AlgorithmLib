@@ -15,11 +15,11 @@ namespace AlgLib
         /** Constructor that takes in an std::vector<T> */
         Vector(const std::vector<T>& theVec);
 
-        Vector(const Vector<T>& theVec);
-        /** Default destructor */
-        virtual ~Vector();
+        //Vector(const Vector<T>& theVec);
 
-        virtual Vector<T>& operator=(const Vector<T>& other);
+        //virtual ~Vector();
+
+        //virtual Vector<T>& operator=(const Vector<T>& other);
 
         /** \brief Gives the dot product of two Vector objects
         *
