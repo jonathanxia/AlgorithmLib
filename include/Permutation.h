@@ -4,6 +4,7 @@
 #include <initializer_list>
 #include "Vector.h"
 #include <utility>
+#include <algorithm>
 
 namespace AlgLib
 {
@@ -66,6 +67,8 @@ namespace AlgLib
         */
         virtual Permutation operator* (const Permutation& other) const;
 
+        //virtual Permutation operator^ (int exp) const;
+
         /** \brief The subscript operator will return what the Permutation maps to.
         *
         * So, if we have a Permutation object called `perm`, then `perm[1]` will return what index 1 will map to.
@@ -73,6 +76,18 @@ namespace AlgLib
         */
         virtual int& operator[](int n);
         virtual const int& operator[](int n) const;
+
+        /** \brief Gives the next Permutation that is lexicographically larger. What this means is that given the Permutation (1, 2, 0), this will be larger
+        * than (1, 0, 2) because going from left to right and comparing, the 2 in the second position is bigger than the 0.
+        * \param is_largest A boolean storage variable to see whether or not the Permutation was already the largest one (where the elements will be in reverse order)
+                            When the largest Permutation has been reached, the identity Permutation (which is the smallest out of all Permutations) will be returned
+                            and `is_largest` will be set to `true`. Otherwise, `is_largest` will be set to `true`.
+        * \return The smallest Permutation object that is lexicographically larger.
+        */
+        virtual Permutation next(bool& is_largest) const;
+
+        /** \brief Gives the next Permutation. See Permutation::next(bool & is_largest) for more details. This function just lacks the storage parameter. */
+        virtual Permutation next() const;
 
     private:
         Vector<int> mPermutation;

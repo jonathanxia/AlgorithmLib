@@ -1,5 +1,6 @@
 #include <stdexcept>
 #include "Vector.h"
+#include <algorithm>
 namespace AlgLib
 {
     Permutation::Permutation(int n) :
@@ -65,5 +66,19 @@ namespace AlgLib
     int Permutation::size() const
     {
         return mPermutation.size();
+    }
+
+    Permutation Permutation::next(bool& is_largest) const
+    {
+        is_largest = true;
+        auto copyOf = mPermutation;
+        is_largest = std::next_permutation(copyOf.begin(), copyOf.end());
+        return Permutation(copyOf);
+    }
+
+    Permutation Permutation::next() const
+    {
+        bool dummy;
+        return next(dummy);
     }
 }
