@@ -63,12 +63,15 @@ namespace AlgLib
             virtual Fraction& operator-=(const Fraction& other);
             virtual Fraction& operator*=(const Fraction& other);
             virtual Fraction& operator/=(const Fraction& other);
-            virtual bool operator>(const Fraction& other);
-            virtual bool operator<(const Fraction& other);
-            virtual bool operator==(const Fraction& other);
-            virtual bool operator!=(const Fraction& other);
-            virtual bool operator>=(const Fraction& other);
-            virtual bool operator<=(const Fraction& other);
+
+            virtual Fraction operator-() const;
+            virtual Fraction operator+() const;
+            virtual bool operator>(const Fraction& other) const;
+            virtual bool operator<(const Fraction& other) const;
+            virtual bool operator==(const Fraction& other) const;
+            virtual bool operator!=(const Fraction& other) const;
+            virtual bool operator>=(const Fraction& other) const;
+            virtual bool operator<=(const Fraction& other) const;
 
             /** \brief Returns the greatest common divisor
             * \param a
