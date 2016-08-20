@@ -131,7 +131,7 @@ Inheritance diagram for AlgLib::Matrix&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_alg_lib_1_1_matrix__inherit__graph.png" border="0" usemap="#_alg_lib_1_1_matrix_3_01_t_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="_alg_lib_1_1_matrix_3_01_t_01_4_inherit__map" id="_alg_lib_1_1_matrix_3_01_t_01_4_inherit__map">
-<area shape="rect" id="node2" href="class_alg_lib_1_1_matrix.html" title="{AlgLib::Matrix\&lt; double \&gt;\n||+ Matrix()\l+ Matrix()\l+ Matrix()\l+ Matrix()\l+ Matrix()\l+ operator[]()\l+ operator*()\l+ operator+()\l+ operator&#45;()\l+ transpose()\land 14 more...\l+ identity()\l}" alt="" coords="5,307,169,545"/>
+<area shape="rect" id="node2" href="class_alg_lib_1_1_matrix.html" title="{AlgLib::Matrix\&lt; double \&gt;\n||+ Matrix()\l+ Matrix()\l+ Matrix()\l+ Matrix()\l+ Matrix()\l+ operator[]()\l+ operator[]()\l+ operator*()\l+ operator*()\l+ operator+()\land 19 more...\l+ identity()\l}" alt="" coords="5,307,169,545"/>
 <area shape="rect" id="node3" href="class_alg_lib_1_1adj_matrix.html" title="{AlgLib::adjMatrix\n||+ adjMatrix()\l+ adjMatrix()\l+ ~adjMatrix()\l+ addVertex()\l+ addEdge()\l+ deleteEdge()\l+ deleteVertex()\l+ inDegree()\l+ outDegree()\l+ inWeight()\l+ outWeight()\l+ getWeight()\l+ outAdj()\l+ inAdj()\l}" alt="" coords="28,595,147,863"/>
 </map>
 </div>
@@ -165,6 +165,10 @@ Public Member Functions</h2></td></tr>
 virtual <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#abd934caac0e4025576d38f2b9ebc85d0">operator*</a> (const <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a> &amp;other) const </td></tr>
 <tr class="memdesc:abd934caac0e4025576d38f2b9ebc85d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies two matrices. <br /></td></tr>
 <tr class="separator:abd934caac0e4025576d38f2b9ebc85d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fa793b0953c1068cdc27418b3029c28"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fa793b0953c1068cdc27418b3029c28"></a>
+virtual <a class="el" href="class_alg_lib_1_1_vector.html">AlgLib::Vector</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#a2fa793b0953c1068cdc27418b3029c28">operator*</a> (const std::vector&lt; T &gt; &amp;other) const </td></tr>
+<tr class="memdesc:a2fa793b0953c1068cdc27418b3029c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> with an std::vector&lt;T&gt;. Note that AlgLib::Vector&lt;T&gt; inherits from std::vector&lt;T&gt;. <br /></td></tr>
+<tr class="separator:a2fa793b0953c1068cdc27418b3029c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac85ab14586f80045033981c7751fd124"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac85ab14586f80045033981c7751fd124"></a>
 virtual <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#ac85ab14586f80045033981c7751fd124">operator+</a> (const <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a> &amp;other) const </td></tr>
 <tr class="memdesc:ac85ab14586f80045033981c7751fd124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two matrices. <br /></td></tr>
@@ -173,6 +177,17 @@ virtual <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a>&#160;</td>
 virtual <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#ae947b17fc992a714c6fc5dfa7365deb8">operator-</a> (const <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a> &amp;other) const </td></tr>
 <tr class="memdesc:ae947b17fc992a714c6fc5dfa7365deb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts two matrices. <br /></td></tr>
 <tr class="separator:ae947b17fc992a714c6fc5dfa7365deb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a535c0e5eb267218e54d693dbec3d58d0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#a535c0e5eb267218e54d693dbec3d58d0">operator^</a> (int exp) const </td></tr>
+<tr class="memdesc:a535c0e5eb267218e54d693dbec3d58d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads the ^ operator.  <a href="#a535c0e5eb267218e54d693dbec3d58d0">More...</a><br /></td></tr>
+<tr class="separator:a535c0e5eb267218e54d693dbec3d58d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12bf88f70c2b9ab740f2f6a66a47408d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12bf88f70c2b9ab740f2f6a66a47408d"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#a12bf88f70c2b9ab740f2f6a66a47408d">operator==</a> (const <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a12bf88f70c2b9ab740f2f6a66a47408d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality operator for <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> objects. Returns <code>true</code> if all of the entries are identical. <br /></td></tr>
+<tr class="separator:a12bf88f70c2b9ab740f2f6a66a47408d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c478d1c7a9e362117acdf3d5d2ccedd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c478d1c7a9e362117acdf3d5d2ccedd"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#a3c478d1c7a9e362117acdf3d5d2ccedd">operator!=</a> (const <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a3c478d1c7a9e362117acdf3d5d2ccedd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests for non-equality of <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> objects. <br /></td></tr>
+<tr class="separator:a3c478d1c7a9e362117acdf3d5d2ccedd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed457e2022a9567c09aa7d59f8557aa0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_matrix.html#aed457e2022a9567c09aa7d59f8557aa0">transpose</a> () const </td></tr>
 <tr class="memdesc:aed457e2022a9567c09aa7d59f8557aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the transpose of the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>.  <a href="#aed457e2022a9567c09aa7d59f8557aa0">More...</a><br /></td></tr>
 <tr class="separator:aed457e2022a9567c09aa7d59f8557aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,7 +254,7 @@ class AlgLib::Matrix&lt; T &gt;</h3>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_matrix_8h_source.html#l00016">16</a> of file <a class="el" href="_matrix_8h_source.html">Matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="_matrix_8h_source.html#l00020">20</a> of file <a class="el" href="_matrix_8h_source.html">Matrix.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa928f1b4f97f3689739fb76f37ea8b32"></a>
 <div class="memitem">
@@ -443,7 +458,7 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00280">280</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
+<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00372">372</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
 
 </div>
 </div>
@@ -485,7 +500,7 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00197">197</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
+<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00289">289</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
 
 </div>
 </div>
@@ -521,7 +536,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00221">221</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
+<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00313">313</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
 
 </div>
 </div>
@@ -592,7 +607,7 @@ template&lt;typename T &gt; </div>
 <p>Gives the minor of the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> at entry i, j. </p>
 <p>A minor of an entry i, j is the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> that results when the i-th row and the j-th column are deleted. This can be used to evaluate determinants. </p>
 
-<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00243">243</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
+<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00335">335</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
 
 </div>
 </div>
@@ -670,7 +685,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The value at <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>[row][col] </dd></dl>
 
-<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00215">215</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
+<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00307">307</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
 
 </div>
 </div>
@@ -713,7 +728,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00292">292</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
+<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00384">384</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
 
 </div>
 </div>
@@ -743,7 +758,7 @@ template&lt;typename T &gt; </div>
 <p>Gives the number of columns in the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The number of columns in the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00184">184</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
+<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00276">276</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
 
 </div>
 </div>
@@ -773,7 +788,7 @@ template&lt;typename T &gt; </div>
 <p>Gives the number of rows in the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The number of rows in the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00179">179</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
+<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00271">271</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
 
 </div>
 </div>
@@ -814,6 +829,50 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a535c0e5eb267218e54d693dbec3d58d0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_alg_lib_1_1_matrix.html">Matrix</a>&lt; T &gt; <a class="el" href="class_alg_lib_1_1_matrix.html">AlgLib::Matrix</a>&lt; T &gt;::operator^ </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>exp</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overloads the ^ operator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">exp</td><td>Must be an int. This is the exponent to raise the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> to. So, a <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> object matr with matr^3 will return matr * matr * matr. If exp is negative, note that matr^(-1) will be the inverse of the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> object raised to the exp power. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_alg_lib_1_1inverse__zero.html">AlgLib::inverse_zero</a></td><td>Throws this exception if exp &lt; 0 and the determinant is 0. </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_alg_lib_1_1bad__dimension.html">AlgLib::bad_dimension</a></td><td>Throws this exception if the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> is not square. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00163">163</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="af76fd1d1b40ec8b52a361ab6720fea03"></a>
 <div class="memitem">
 <div class="memproto">
@@ -840,7 +899,7 @@ template&lt;typename T &gt; </div>
 <p>Row reduces the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> object. </p>
 <dl class="section return"><dt>Returns</dt><dd>Gives the RREF of the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> object </dd></dl>
 
-<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00354">354</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
+<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00447">447</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
 
 </div>
 </div>
@@ -925,7 +984,7 @@ template&lt;typename T &gt; </div>
 <p>It reverses the indices, basically</p>
 <dl class="section return"><dt>Returns</dt><dd>The transpose of the <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> object. </dd></dl>
 
-<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00260">260</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
+<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00352">352</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
 
 </div>
 </div>
@@ -955,7 +1014,7 @@ template&lt;typename T &gt; </div>
 <p>Returns an upper triangular <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>. </p>
 <p>Anything below the main diagonal will be a 0. The main diagonal is formed by the entries <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a>[i][i] for all valid i. </p><dl class="section return"><dt>Returns</dt><dd>An upper triangular <a class="el" href="class_alg_lib_1_1_matrix.html" title="The Matrix class, which stores a rectangular Matrix. ">Matrix</a> that is row-reduced from <code>this</code>. Basically, it will have the same determinant as <code>this</code>. </dd></dl>
 
-<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00305">305</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
+<p>Definition at line <a class="el" href="_matrix_8inl_source.html#l00397">397</a> of file <a class="el" href="_matrix_8inl_source.html">Matrix.inl</a>.</p>
 
 </div>
 </div>

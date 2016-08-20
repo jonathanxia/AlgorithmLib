@@ -2,7 +2,6 @@ var class_alg_lib_1_1_vector =
 [
     [ "Vector", "class_alg_lib_1_1_vector.html#a75da767d0a6b57cec1cb09363d1c2ff5", null ],
     [ "Vector", "class_alg_lib_1_1_vector.html#a8e1cd692cdff05d620d84d1821875bac", null ],
-    [ "~Vector", "class_alg_lib_1_1_vector.html#aedf79cf8c91e4dd8a44a6f9d08c230fe", null ],
     [ "operator*", "class_alg_lib_1_1_vector.html#ada7ce8cab7c740c45204f1885bd219c1", null ],
     [ "operator*", "class_alg_lib_1_1_vector.html#a045e7bb3e96d6a861cf28fd684f3f923", null ],
     [ "operator+", "class_alg_lib_1_1_vector.html#a6d49358f6cadc9101857aa25fbf96359", null ],

@@ -7,6 +7,7 @@ var searchData=
   ['insertionsort',['insertionSort',['../group__sorting.html#ga1ed64ebbf3ff0bda9327b5e71706ca48',1,'AlgLib']]],
   ['integerpolynomial',['IntegerPolynomial',['../class_alg_lib_1_1_integer_polynomial.html',1,'AlgLib']]],
   ['integral',['integral',['../class_alg_lib_1_1_polynomial.html#a81380711ec4e7c9be6f0a4bfc608c301',1,'AlgLib::Polynomial']]],
+  ['inverse_5fzero',['inverse_zero',['../class_alg_lib_1_1inverse__zero.html',1,'AlgLib']]],
   ['inversions',['inversions',['../group__searching.html#ga97a13becf845332c126803e014b03286',1,'AlgLib']]],
   ['inweight',['inWeight',['../class_alg_lib_1_1adj_list.html#a74fbc3342cdd18cfbd1a3c26982d03a0',1,'AlgLib::adjList::inWeight()'],['../class_alg_lib_1_1adj_matrix.html#aab4ecb9801ba43d2ce3c0f542e44643e',1,'AlgLib::adjMatrix::inWeight()'],['../class_alg_lib_1_1_graph.html#a320cb53252cef3ea2f1995dde174c727',1,'AlgLib::Graph::inWeight()'],['../class_alg_lib_1_1graph_d_b.html#a873a4aa752f53702fad8cd36ab409c0e',1,'AlgLib::graphDB::inWeight()']]]
 ];

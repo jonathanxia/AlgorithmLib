@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>AlgorithmLib: AlgLib::Permutation&lt; T &gt; Class Template Reference</title>
+<title>AlgorithmLib: AlgLib::Permutation Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -115,46 +115,391 @@ $(document).ready(function(){initNavTree('class_alg_lib_1_1_permutation.html',''
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="class_alg_lib_1_1_permutation-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">AlgLib::Permutation&lt; T &gt; Class Template Reference</div>  </div>
+<div class="title">AlgLib::Permutation Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_permutation_8h_source.html">Permutation.h</a>&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for AlgLib::Permutation&lt; T &gt;:</div>
+Collaboration diagram for AlgLib::Permutation:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_alg_lib_1_1_permutation__coll__graph.png" border="0" usemap="#_alg_lib_1_1_permutation_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
+<div class="center"><img src="class_alg_lib_1_1_permutation__coll__graph.png" border="0" usemap="#_alg_lib_1_1_permutation_coll__map" alt="Collaboration graph"/></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae72beae52a1669396d13441b72709683"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_permutation.html#ae72beae52a1669396d13441b72709683">Permutation</a> ()</td></tr>
-<tr class="separator:ae72beae52a1669396d13441b72709683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a934a569d4cd84da2310b90b5eca58826"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_permutation.html#a934a569d4cd84da2310b90b5eca58826">Permutation</a> (int n=1)</td></tr>
+<tr class="memdesc:a934a569d4cd84da2310b90b5eca58826"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a934a569d4cd84da2310b90b5eca58826">More...</a><br /></td></tr>
+<tr class="separator:a934a569d4cd84da2310b90b5eca58826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dc532ea8e5e443d64b4920d502d64b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_permutation.html#a4dc532ea8e5e443d64b4920d502d64b0">Permutation</a> (const std::vector&lt; int &gt; &amp;perm)</td></tr>
+<tr class="memdesc:a4dc532ea8e5e443d64b4920d502d64b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that takes in a std::vector&lt;int&gt; of permutation.  <a href="#a4dc532ea8e5e443d64b4920d502d64b0">More...</a><br /></td></tr>
+<tr class="separator:a4dc532ea8e5e443d64b4920d502d64b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0b3bc6385217c27909cfe1033b19f68"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad0b3bc6385217c27909cfe1033b19f68"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_permutation.html#ad0b3bc6385217c27909cfe1033b19f68">operator()</a> (const T &amp;container, int start, int last) const </td></tr>
+<tr class="memdesc:ad0b3bc6385217c27909cfe1033b19f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permutes the elements of container[start...(last-1)]. Note that last is not included in the permutation.  <a href="#ad0b3bc6385217c27909cfe1033b19f68">More...</a><br /></td></tr>
+<tr class="separator:ad0b3bc6385217c27909cfe1033b19f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac720b039cc7e6f3c8251c03c14a0cff9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_permutation.html#ac720b039cc7e6f3c8251c03c14a0cff9">size</a> () const </td></tr>
+<tr class="memdesc:ac720b039cc7e6f3c8251c03c14a0cff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of elements in the <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a>.  <a href="#ac720b039cc7e6f3c8251c03c14a0cff9">More...</a><br /></td></tr>
+<tr class="separator:ac720b039cc7e6f3c8251c03c14a0cff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a277114c0ad29b7c9bb6eedcabb78307a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_permutation.html#a277114c0ad29b7c9bb6eedcabb78307a">operator*</a> (const <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> &amp;other) const </td></tr>
+<tr class="memdesc:a277114c0ad29b7c9bb6eedcabb78307a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The multiplication operator is overloaded to act like <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> composition.  <a href="#a277114c0ad29b7c9bb6eedcabb78307a">More...</a><br /></td></tr>
+<tr class="separator:a277114c0ad29b7c9bb6eedcabb78307a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad296429be24be0847d1fe488587a2820"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_permutation.html#ad296429be24be0847d1fe488587a2820">operator^</a> (int exp) const </td></tr>
+<tr class="memdesc:ad296429be24be0847d1fe488587a2820"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs exponentiation on a <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> object.  <a href="#ad296429be24be0847d1fe488587a2820">More...</a><br /></td></tr>
+<tr class="separator:ad296429be24be0847d1fe488587a2820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dbcd23d01b3861144d8ce98ec210871"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_permutation.html#a8dbcd23d01b3861144d8ce98ec210871">next</a> (bool &amp;is_largest) const </td></tr>
+<tr class="memdesc:a8dbcd23d01b3861144d8ce98ec210871"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the next <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> that is lexicographically larger. What this means is that given the <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> (1, 2, 0), this will be larger than (1, 0, 2) because going from left to right and comparing, the 2 in the second position is bigger than the 0.  <a href="#a8dbcd23d01b3861144d8ce98ec210871">More...</a><br /></td></tr>
+<tr class="separator:a8dbcd23d01b3861144d8ce98ec210871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f5aa41f804a3c7bee8377880fa2e867"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f5aa41f804a3c7bee8377880fa2e867"></a>
+virtual <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_permutation.html#a5f5aa41f804a3c7bee8377880fa2e867">next</a> () const </td></tr>
+<tr class="memdesc:a5f5aa41f804a3c7bee8377880fa2e867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the next <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a>. See Permutation::next(bool &amp; is_largest) for more details. This function just lacks the storage parameter. <br /></td></tr>
+<tr class="separator:a5f5aa41f804a3c7bee8377880fa2e867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a749ace65df451f6105cfaa9efd99a820"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_permutation.html#a749ace65df451f6105cfaa9efd99a820">prev</a> (bool &amp;is_smallest) const </td></tr>
+<tr class="memdesc:a749ace65df451f6105cfaa9efd99a820"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the previous <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a>. Works similarly to Permutation::next(bool&amp; is_largest) but gives the <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> that is lexicographically smaller.  <a href="#a749ace65df451f6105cfaa9efd99a820">More...</a><br /></td></tr>
+<tr class="separator:a749ace65df451f6105cfaa9efd99a820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12e191db75714c6d25ae20481415af1b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12e191db75714c6d25ae20481415af1b"></a>
+virtual <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_permutation.html#a12e191db75714c6d25ae20481415af1b">prev</a> () const </td></tr>
+<tr class="memdesc:a12e191db75714c6d25ae20481415af1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the previous <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a>. This time, there is not is_smallest bool reference to set. <br /></td></tr>
+<tr class="separator:a12e191db75714c6d25ae20481415af1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aa0ee3f7f724363207d4f7667a18d690f"><td class="memItemLeft" align="right" valign="top">virtual int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alg_lib_1_1_permutation.html#aa0ee3f7f724363207d4f7667a18d690f">operator[]</a> (int n)</td></tr>
+<tr class="memdesc:aa0ee3f7f724363207d4f7667a18d690f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The subscript operator will return what the <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> maps to.  <a href="#aa0ee3f7f724363207d4f7667a18d690f">More...</a><br /></td></tr>
+<tr class="separator:aa0ee3f7f724363207d4f7667a18d690f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T&gt;<br />
-class AlgLib::Permutation&lt; T &gt;</h3>
+<div class="textblock"><p>The <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> class, which stores a <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> object. The <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> object can act like a functor, which can permute the elements of a container. </p>
 
-
-<p>Definition at line <a class="el" href="_permutation_8h_source.html#l00012">12</a> of file <a class="el" href="_permutation_8h_source.html">Permutation.h</a>.</p>
+<p>Definition at line <a class="el" href="_permutation_8h_source.html#l00014">14</a> of file <a class="el" href="_permutation_8h_source.html">Permutation.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ae72beae52a1669396d13441b72709683"></a>
+<a class="anchor" id="a934a569d4cd84da2310b90b5eca58826"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AlgLib::Permutation::Permutation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em> = <code>1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+<p>Constructs the identity <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> for <code>n</code> objects. <code>n</code> will default to 1 </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>The number of elements </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_permutation_8inl_source.html#l00006">6</a> of file <a class="el" href="_permutation_8inl_source.html">Permutation.inl</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4dc532ea8e5e443d64b4920d502d64b0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AlgLib::Permutation::Permutation </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>perm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor that takes in a std::vector&lt;int&gt; of permutation. </p>
+<p>Constructs the <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> object that has the mapping of perm. Basically, position i should map to position perm[i] </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">perm</td><td>The std::vector&lt;int&gt; that stores the <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a>. Position i should map to position perm[i]. Note that the elements should be a permutation of 0 to perm.size() - 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Throws this exception if the elements of perm are not a permutation of 0 to perm.size() - 1 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_permutation_8inl_source.html#l00015">15</a> of file <a class="el" href="_permutation_8inl_source.html">Permutation.inl</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a8dbcd23d01b3861144d8ce98ec210871"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> AlgLib::Permutation::next </td>
+          <td>(</td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>is_largest</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gives the next <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> that is lexicographically larger. What this means is that given the <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> (1, 2, 0), this will be larger than (1, 0, 2) because going from left to right and comparing, the 2 in the second position is bigger than the 0. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is_largest</td><td>A boolean storage variable to see whether or not the <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> was already the largest one (where the elements will be in reverse order) When the largest <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> has been reached, the identity <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> (which is the smallest out of all Permutations) will be returned and <code>is_largest</code> will be set to <code>true</code>. Otherwise, <code>is_largest</code> will be set to <code>false</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The smallest <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> object that is lexicographically larger. </dd></dl>
+
+<p>Definition at line <a class="el" href="_permutation_8inl_source.html#l00100">100</a> of file <a class="el" href="_permutation_8inl_source.html">Permutation.inl</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad0b3bc6385217c27909cfe1033b19f68"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_alg_lib_1_1_permutation.html">AlgLib::Permutation</a>&lt; T &gt;::<a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> </td>
+          <td class="memname">T AlgLib::Permutation::operator() </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>container</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Default constructor </p>
 
-<p>Definition at line <a class="el" href="_permutation_8inl_source.html#l00013">13</a> of file <a class="el" href="_permutation_8inl_source.html">Permutation.inl</a>.</p>
+<p>Permutes the elements of container[start...(last-1)]. Note that last is not included in the permutation. </p>
+<p>This functor will rearrange (or permute) the elements of the container. So, a <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> of (2, 1, 0, 4, 3) will mean that container[start + 0] is mapped to container[start + 2]. This also means that container[start + 4] and container[start + 3] will be flipped. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the container. So, if the container is an std::vector&lt;int&gt;, then T would be <code>std::vector&lt;int&gt;</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>Where to start the permuting. Defaults to 0. </td></tr>
+    <tr><td class="paramname">last</td><td>The index after where the permutation stops. Thus, container[last] is not in the permutation. Defaults to container.size().</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the permuted container. Note that the container itself was not modified.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::length_error</td><td>Throws this exception if the size of the container (or last - start) is not the same as the <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> length. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_permutation_8inl_source.html#l00036">36</a> of file <a class="el" href="_permutation_8inl_source.html">Permutation.inl</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a277114c0ad29b7c9bb6eedcabb78307a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> AlgLib::Permutation::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The multiplication operator is overloaded to act like <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> composition. </p>
+<p>Usage would be something like: <code><a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> perm1({3, 2, 1}); <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> perm2({2, 1, 3}); <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> perm3 = perm1 * perm2;</code></p>
+<p>This will result in a <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> of (2, 3, 1). </p><dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> object that is the composition of the two <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> objects </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::length_error</td><td>When the Permutations do not have the same size. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_permutation_8inl_source.html#l00048">48</a> of file <a class="el" href="_permutation_8inl_source.html">Permutation.inl</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa0ee3f7f724363207d4f7667a18d690f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int &amp; AlgLib::Permutation::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The subscript operator will return what the <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> maps to. </p>
+<p>So, if we have a <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> object called <code>perm</code>, then <code>perm[1]</code> will return what index 1 will map to. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>This error is thrown when the index is out of range. Must be in between 0 and numElements()-1 inclusive. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_permutation_8inl_source.html#l00056">56</a> of file <a class="el" href="_permutation_8inl_source.html">Permutation.inl</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad296429be24be0847d1fe488587a2820"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> AlgLib::Permutation::operator^ </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>exp</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Performs exponentiation on a <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">exp</td><td>Will basically compose the <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> object exp times. Note that if perm^(-1) will result in the inverse of the <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> object composed exp times. </dd></dl>
+
+<p>Definition at line <a class="el" href="_permutation_8inl_source.html#l00066">66</a> of file <a class="el" href="_permutation_8inl_source.html">Permutation.inl</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a749ace65df451f6105cfaa9efd99a820"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> AlgLib::Permutation::prev </td>
+          <td>(</td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>is_smallest</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gives the previous <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a>. Works similarly to Permutation::next(bool&amp; is_largest) but gives the <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> that is lexicographically smaller. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is_smallest</td><td>A <code>bool</code> reference that will be set to <code>true</code> if the <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> object is already the identity <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a>. Otherwise it will </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_permutation_8inl_source.html#l00113">113</a> of file <a class="el" href="_permutation_8inl_source.html">Permutation.inl</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac720b039cc7e6f3c8251c03c14a0cff9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AlgLib::Permutation::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the number of elements in the <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>Describes the number of elements that the <a class="el" href="class_alg_lib_1_1_permutation.html">Permutation</a> object can perform on. </dd></dl>
+
+<p>Definition at line <a class="el" href="_permutation_8inl_source.html#l00095">95</a> of file <a class="el" href="_permutation_8inl_source.html">Permutation.inl</a>.</p>
 
 </div>
 </div>

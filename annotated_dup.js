@@ -9,10 +9,12 @@ var annotated_dup =
       [ "graphDB", "class_alg_lib_1_1graph_d_b.html", "class_alg_lib_1_1graph_d_b" ],
       [ "Heap", "class_alg_lib_1_1_heap.html", "class_alg_lib_1_1_heap" ],
       [ "IntegerPolynomial", "class_alg_lib_1_1_integer_polynomial.html", "class_alg_lib_1_1_integer_polynomial" ],
+      [ "inverse_zero", "class_alg_lib_1_1inverse__zero.html", null ],
       [ "Matrix", "class_alg_lib_1_1_matrix.html", "class_alg_lib_1_1_matrix" ],
       [ "not_square_matrix", "class_alg_lib_1_1not__square__matrix.html", null ],
       [ "Permutation", "class_alg_lib_1_1_permutation.html", "class_alg_lib_1_1_permutation" ],
       [ "Polynomial", "class_alg_lib_1_1_polynomial.html", "class_alg_lib_1_1_polynomial" ],
-      [ "Vector", "class_alg_lib_1_1_vector.html", "class_alg_lib_1_1_vector" ]
+      [ "Vector", "class_alg_lib_1_1_vector.html", "class_alg_lib_1_1_vector" ],
+      [ "Vector< bool >", "class_alg_lib_1_1_vector_3_01bool_01_4.html", "class_alg_lib_1_1_vector_3_01bool_01_4" ]
     ] ]
 ];
