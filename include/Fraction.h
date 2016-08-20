@@ -4,6 +4,7 @@
 #include <iostream>
 namespace AlgLib
 {
+    /** A Fraction class that represents ratios of integers. This class comes equipped with arithmetic operations! */
     class Fraction
     {
         public:

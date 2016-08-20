@@ -63,6 +63,35 @@ namespace AlgLib
         return mPermutation[n];
     }
 
+    Permutation Permutation::operator^(int exp) const
+    {
+        Permutation ret(this->size());
+        if(exp >= 0)
+        {
+            int counter = 0;
+            while(counter < exp)
+            {
+                ret = (*this) * ret;
+                counter++;
+            }
+        }
+        if(exp < 0)
+        {
+            int counter = 1; // We start at 1 because we will already find the inverse.
+            int mag = -exp;
+            // Find the inverse of the Permutation object
+            for(size_t i = 0; i < this->size(); i++)
+            {
+                ret[ mPermutation[i] ] = i;
+            }
+            while (counter < mag)
+            {
+                ret = (*this) * ret;
+            }
+        }
+        return ret;
+    }
+
     int Permutation::size() const
     {
         return mPermutation.size();
@@ -70,9 +99,8 @@ namespace AlgLib
 
     Permutation Permutation::next(bool& is_largest) const
     {
-        is_largest = true;
         auto copyOf = mPermutation;
-        is_largest = std::next_permutation(copyOf.begin(), copyOf.end());
+        is_largest = !std::next_permutation(copyOf.begin(), copyOf.end());
         return Permutation(copyOf);
     }
 
@@ -80,5 +108,18 @@ namespace AlgLib
     {
         bool dummy;
         return next(dummy);
+    }
+
+    Permutation Permutation::prev(bool& is_smallest) const
+    {
+        auto copyOf = mPermutation;
+        is_smallest = !std::next_permutation(copyOf.begin(), copyOf.end(), [] (int x, int y) -> bool { return x > y; });
+        return Permutation(copyOf);
+    }
+
+    Permutation Permutation::prev() const
+    {
+        bool dummy;
+        return prev(dummy);
     }
 }
