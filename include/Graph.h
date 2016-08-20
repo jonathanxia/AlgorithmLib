@@ -18,6 +18,7 @@ namespace AlgLib
         ADJACENCY_MATRIX,
         ADJACENCY_LIST
     };
+    /** \brief A Graph class that represents a Graph object. You can specify the storage type. */
     class Graph
     {
         public:

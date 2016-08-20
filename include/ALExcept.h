@@ -19,4 +19,10 @@ namespace AlgLib
     public:
         using bad_dimension::bad_dimension;
     };
+
+    class inverse_zero : public std::invalid_argument
+    {
+    public:
+        inverse_zero(const std::string& er) : std::invalid_argument(er){}
+    };
 }

@@ -16,7 +16,7 @@ namespace AlgLib
         Vector(const std::vector<T>& theVec);
 
         Vector(const Vector<T>& theVec);
-        /** Default destructor */
+
         virtual ~Vector();
 
         virtual Vector<T>& operator=(const Vector<T>& other);
@@ -80,6 +80,26 @@ namespace AlgLib
         */
         virtual const T& operator[](int n) const;
         virtual T& operator[](int n);
+    };
+
+    template<>
+    class Vector<bool> : public std::vector<bool>
+    {
+    public:
+        using std::vector<bool>::vector;
+
+        /** Default constructor */
+        Vector() : std::vector<bool>() {};
+
+        /** Copy constructor */
+        Vector(const std::vector<bool>& rhs) : std::vector<bool>(rhs) {};
+
+        /** Assignment operator */
+        virtual Vector<bool>& operator=(const std::vector<bool>& rhs);
+
+        virtual std::vector<bool>::reference operator[](size_type n);
+
+        virtual std::vector<bool>::const_reference operator[](size_type n) const;
     };
 }
 #include "../src/Vector/Vector.inl"

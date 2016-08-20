@@ -6,6 +6,10 @@
 #include <iostream>
 #include <string>
 #include "Vector.h"
+#include "Permutation.h"
+#include "ALExcept.h"
+
+
 
 namespace AlgLib {
 
@@ -71,6 +75,21 @@ namespace AlgLib {
 		* \brief Subtracts two matrices
 		*/
 		virtual Matrix operator-(const Matrix& other) const;
+
+		/** \brief Overloads the ^ operator.
+		* \param exp Must be an int. This is the exponent to raise the Matrix to. So, a Matrix object matr with matr^3 will return matr * matr * matr.
+		*            If exp is negative, note that matr^(-1) will be the inverse of the Matrix.
+		* \return The Matrix object raised to the exp power.
+		* \throw AlgLib::inverse_zero Throws this exception if exp < 0 and the determinant is 0.
+		* \throw AlgLib::bad_dimension Throws this exception if the Matrix is not square.
+		*/
+		virtual Matrix<T> operator^(int exp) const;
+
+		/** \brief Equality operator for Matrix objects. Returns `true` if all of the entries are identical. */
+		virtual bool operator==(const Matrix& rhs) const;
+
+		/** \brief Tests for non-equality of Matrix objects */
+		virtual bool operator!=(const Matrix& rhs) const;
 
 		/** \brief Gives the transpose of the Matrix
 		*
@@ -164,6 +183,8 @@ namespace AlgLib {
 		int rows;
 		int columns;
 	};
+
+
 }
 
 #include "../src/Matrix/Matrix.inl"

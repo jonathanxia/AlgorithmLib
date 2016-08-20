@@ -18,43 +18,55 @@ namespace AlgLib
     {
         return Fraction(f1.mNumerator * f2.mDenominator, f1.mDenominator * f2.mNumerator);
     }
+
+    Fraction Fraction::operator-() const
+    {
+        return Fraction(-mNumerator, mDenominator);
+    }
+    Fraction Fraction::operator+() const
+    {
+        return *this;
+    }
     double Fraction::getValue() const
     {
         return (double) mNumerator / mDenominator;
     }
-    bool Fraction::operator<=(const Fraction& other)
+    bool Fraction::operator<=(const Fraction& other) const
     {
         return mNumerator * other.mDenominator <= mDenominator * other.mNumerator;
     }
 
-    bool Fraction::operator>=(const Fraction& other)
+    bool Fraction::operator>=(const Fraction& other) const
     {
         return mNumerator * other.mDenominator >= mDenominator * other.mNumerator;
     }
 
-    bool Fraction::operator!=(const Fraction& other)
+    bool Fraction::operator!=(const Fraction& other) const
     {
         return mNumerator * other.mDenominator != mDenominator * other.mNumerator;
     }
 
-    bool Fraction::operator==(const Fraction& other)
+    bool Fraction::operator==(const Fraction& other) const
     {
         return mNumerator * other.mDenominator == mDenominator * other.mNumerator;
     }
 
-    bool Fraction::operator<(const Fraction& other)
+    bool Fraction::operator<(const Fraction& other) const
     {
         return mNumerator * other.mDenominator < mDenominator * other.mNumerator;
     }
 
-    bool Fraction::operator>(const Fraction& other)
+    bool Fraction::operator>(const Fraction& other) const
     {
         return mNumerator * other.mDenominator > mDenominator * other.mNumerator;
     }
 
-    std::ostream& operator<<(std::ostream& out, const Fraction& frac)
+    std::ostream& operator<<(std::ostream& ostr, const Fraction& frac)
     {
-        out << frac.mNumerator << "/" << frac.mDenominator;
+        ostr << frac.mNumerator;
+        if(frac.mDenominator != 1)
+            ostr << "/" << frac.mDenominator;
+        return ostr;
     }
 }
 
@@ -183,13 +195,6 @@ int AlgLib::Fraction::gcd(int a, int b)
 int AlgLib::Fraction::lcm(int a, int b)
 {
     return a * b / gcd(a, b);
-}
-
-std::string AlgLib::Fraction::toString()
-{
-    std::ostringstream ostr;
-    ostr << mNumerator << "/" << mDenominator;
-    return ostr.str();
 }
 
 void AlgLib::Fraction::simplify()

@@ -160,6 +160,78 @@ namespace AlgLib
     }
 
     template <typename T>
+    Matrix<T> Matrix<T>::operator^(int exp) const
+    {
+        if(rows != columns)
+            throw AlgLib::bad_dimension("Attempted to exponent a non-square matrix");
+        int counter = 0;
+        auto ret = identity(rows);
+        if(exp >= 0)
+        {
+            while(counter < exp)
+            {
+                counter++;
+                ret = ret * (*this);
+            }
+            return ret;
+        }
+        if(exp < 0)
+        {
+            int mag = -exp;
+            auto copyOf(*this);
+            // Now we append the identity matrix to the right of copyOf
+            auto idCols = ret.getColumnVectors();
+            for(auto col : idCols)
+            {
+                copyOf.addColumn(col);
+            }
+            copyOf = copyOf.rref();
+            for(int i = 0; i < rows; i++)
+            {
+                for(int j = 0; j < rows; j++)
+                {
+                    if(copyOf[i][j] != ret[i][j])
+                        throw inverse_zero("Attempted to take the inverse of an non-invertible Matrix");
+                }
+            }
+            idCols = copyOf.getColumnVectors();
+            idCols.erase(idCols.begin(), idCols.begin() + rows);
+            Matrix<T> inverse(idCols);
+            inverse = inverse.transpose();
+            while(counter < mag)
+            {
+                ret = ret * inverse;
+                counter++;
+            }
+            return ret;
+        }
+    }
+
+    template <typename T>
+    bool Matrix<T>::operator==(const Matrix<T>& rhs) const
+    {
+        if(rhs.rows != rows || rhs.columns != columns)
+        {
+            return false;
+        }
+        for(int i = 0; i < rhs.rows; i++)
+        {
+            for(int j = 0; j < rhs.columns; j++)
+            {
+                if((*this)[i][j] != rhs[i][j])
+                    return false;
+            }
+        }
+        return true;
+    }
+
+    template <typename T>
+    bool Matrix<T>::operator!=(const Matrix<T>& rhs) const
+    {
+        return !(this->operator==(rhs));
+    }
+
+    template <typename T>
     Matrix<T> Matrix<T>::operator* (const Matrix<T>& other) const
     {
         // Jonathan Xia 7/18/16: may implement Strassen's Algorithm later
@@ -355,7 +427,8 @@ namespace AlgLib
                 /* If there is a nonzero... */
                 if(!allZero)
                 {
-                    the_rows[r] += the_rows[rest]; // This will make the_rows[r][c] a nonzero entry
+                    if(r != rest)
+                        the_rows[r] += the_rows[rest]; // This will make the_rows[r][c] a nonzero entry
 
                     /* Time to eliminate everything below the_rows[r][c] */
                     for(int i = r + 1; i < rows; i++)
