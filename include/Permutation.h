@@ -104,6 +104,19 @@ namespace AlgLib
         /** \brief Gives the previous Permutation. This time, there is not is_smallest bool reference to set. */
         virtual Permutation prev() const;
 
+        /** \brief Returns the order of the Permutation.
+        * The order of the Permutation is the number of times it has to be composed with itself to return back to the identity Permutation.
+        * For example, the Permutation (3, 2, 1) has an order of 2, since performing this permutation twice will yield the identity.
+        * The Permutation (2, 3, 1) will have an order of 3. Note that the identity Permutation will return an order of 1
+        * \return An int which is the order of the Permutation.
+        */
+        virtual int order() const;
+
+        /** \brief Returns whether the Permutation is the identity Permutation
+        \return A boolean which is true if the Permutation is an identity Permutation and false otherwise.
+        */
+        virtual bool isIdentity() const;
+
     private:
         Vector<int> mPermutation;
     };

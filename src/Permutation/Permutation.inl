@@ -122,4 +122,26 @@ namespace AlgLib
         bool dummy;
         return prev(dummy);
     }
+
+    int Permutation::order() const
+    {
+        auto copyOf(*this); // We will compose this Permutation over and over again
+        int counter = 1;
+        while(!copyOf.isIdentity())
+        {
+            counter++;
+            copyOf = copyOf * (*this);
+        }
+        return counter;
+    }
+
+    bool Permutation::isIdentity() const
+    {
+        for(int i = 0; i < static_cast<int>(mPermutation.size()); i++)
+        {
+            if(mPermutation[i] != i)
+                return false;
+        }
+        return true;
+    }
 }
