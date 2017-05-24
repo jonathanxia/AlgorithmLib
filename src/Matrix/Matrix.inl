@@ -164,18 +164,21 @@ namespace AlgLib
     {
         if(rows != columns)
             throw AlgLib::bad_dimension("Attempted to exponent a non-square matrix");
-        int counter = 0;
+        // int counter = 0;
         auto ret = identity(rows);
         if(exp >= 0)
         {
-            while(counter < exp)
-            {
-                counter++;
-                ret = ret * (*this);
+            if (exp == 0) {
+                return Matrix::identity(rows);
             }
-            return ret;
+            Matrix tmp = (*this)^(exp / 2);
+            tmp = tmp * tmp;
+            if (exp % 2 == 1) {
+                tmp = tmp * (*this);
+            }
+            return tmp;
         }
-        if(exp < 0)
+        else
         {
             int mag = -exp;
             auto copyOf(*this);
@@ -198,12 +201,7 @@ namespace AlgLib
             idCols.erase(idCols.begin(), idCols.begin() + rows);
             Matrix<T> inverse(idCols);
             inverse = inverse.transpose();
-            while(counter < mag)
-            {
-                ret = ret * inverse;
-                counter++;
-            }
-            return ret;
+            return (inverse)^(mag);
         }
     }
 
@@ -251,6 +249,20 @@ namespace AlgLib
             }
         }
         return retMatrix;
+    }
+
+    template <typename T>
+    AlgLib::Matrix<T> Matrix<T>::operator*(const T& c) const
+    {
+        Matrix<T> m(*this);
+        for (int i = 0; i < m.rows; i++)
+        {
+            for (int j = 0; j < m.columns; j++)
+            {
+                m[i][j] *= c;
+            }
+        }
+        return m;
     }
 
     template <typename T>

@@ -5,6 +5,7 @@
 #include "Vector.h"
 #include <utility>
 #include <algorithm>
+#include <tuple>
 
 namespace AlgLib
 {
@@ -116,6 +117,8 @@ namespace AlgLib
         \return A boolean which is true if the Permutation is an identity Permutation and false otherwise.
         */
         virtual bool isIdentity() const;
+
+
 
     private:
         Vector<int> mPermutation;

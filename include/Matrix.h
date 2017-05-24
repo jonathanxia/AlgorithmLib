@@ -62,6 +62,8 @@ namespace AlgLib {
 		* \brief Multiplies two matrices
 		*/
 		virtual Matrix operator*(const Matrix& other) const;
+
+		virtual Matrix operator*(const T& c) const;
 		/**
 		* \brief Multiplies the Matrix with an std::vector<T>. Note that AlgLib::Vector<T> inherits from std::vector<T>.
 		*/
